@@ -73,6 +73,22 @@ docker compose -f docker/docker-compose.yml up -d --build
 docker compose -f docker/docker-compose.yml exec fast-livo2-go2w-humble bash
 ```
 
+If the host has an older Docker daemon, `docker compose` may fail with an API
+version error such as `client version 1.53 is too new. Maximum supported API
+version is 1.43`. In that case, pin the Docker API version used by the client:
+
+```bash
+DOCKER_API_VERSION=1.43 docker compose -f docker/docker-compose.yml up -d --build
+DOCKER_API_VERSION=1.43 docker compose -f docker/docker-compose.yml exec fast-livo2-go2w-humble bash
+```
+
+Or use the wrapper script, which applies this default automatically:
+
+```bash
+./docker/compose.sh up -d --build
+./docker/compose.sh exec fast-livo2-go2w-humble bash
+```
+
 The container uses host networking, privileged device access, and Cyclone DDS:
 
 - `network_mode: host` for ROS 2 and Unitree DDS discovery
