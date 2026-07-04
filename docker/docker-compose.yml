@@ -1,0 +1,25 @@
+name: fast-livo2-go2w
+
+services:
+  fast-livo2-go2w-humble:
+    image: fast-livo2-go2w:humble
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    network_mode: host
+    ipc: host
+    privileged: true
+    environment:
+      ROS_DISTRO: humble
+      RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
+      CYCLONEDDS_URI: file:///workspace/fast_livo2_go2w/src/fast-livo2-go2w/humble_ws/src/unitree_ros2/cyclonedds_ws/src/cyclonedds.xml
+      FAST_LIVO2_WS: /workspace/fast_livo2_go2w/src/fast-livo2-go2w/humble_ws
+      ROS_DOMAIN_ID: ${ROS_DOMAIN_ID:-0}
+      DISPLAY: ${DISPLAY:-}
+      QT_X11_NO_MITSHM: "1"
+    volumes:
+      - ../../..:/workspace/fast_livo2_go2w:rw
+      - /dev:/dev
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    working_dir: /workspace/fast_livo2_go2w/src/fast-livo2-go2w
+    command: sleep infinity

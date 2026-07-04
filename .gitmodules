@@ -1,0 +1,18 @@
+[submodule "humble_ws/src/fast-livo2"]
+	path = humble_ws/src/fast-livo2
+	url = https://github.com/torasuke12/fast-livo2.git
+[submodule "humble_ws/src/go2w-hesai-lidar-driver"]
+	path = humble_ws/src/go2w-hesai-lidar-driver
+	url = https://github.com/koki67/go2w-hesai-lidar-driver.git
+[submodule "humble_ws/src/go2w-imu-publisher"]
+	path = humble_ws/src/go2w-imu-publisher
+	url = https://github.com/koki67/go2w-imu-publisher.git
+[submodule "humble_ws/src/unitree_ros2"]
+	path = humble_ws/src/unitree_ros2
+	url = https://github.com/koki67/unitree_ros2.git
+[submodule "humble_ws/src/realsense-ros"]
+	path = humble_ws/src/realsense-ros
+	url = https://github.com/realsenseai/realsense-ros.git
+[submodule "humble_ws/src/librealsense"]
+	path = humble_ws/src/librealsense
+	url = https://github.com/realsenseai/librealsense.git

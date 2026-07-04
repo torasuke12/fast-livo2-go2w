@@ -1,0 +1,10 @@
+repositories:
+  realsense-ros:
+    type: git
+    url: https://github.com/realsenseai/realsense-ros.git
+    version: 4.58.2
+  librealsense:
+    type: git
+    url: https://github.com/realsenseai/librealsense.git
+    version: v2.58.2
+
