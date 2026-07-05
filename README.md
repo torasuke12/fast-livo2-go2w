@@ -86,7 +86,7 @@ If you run the same scripts against a newer Docker daemon that rejects API `1.43
 
    ```bash
    cd /external
-   ./scripts/build_humble_ws.sh
+   bash scripts/build_humble_ws.sh
    source humble_ws/install/setup.bash
    ```
 
