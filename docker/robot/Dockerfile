@@ -8,6 +8,27 @@ ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 ENV FAST_LIVO2_WS=/external/humble_ws
 ENV CYCLONEDDS_URI=file:///external/humble_ws/src/unitree_ros2/cyclonedds_ws/src/cyclonedds.xml
 
+RUN set -eux; \
+    codename="$(. /etc/os-release && echo "$VERSION_CODENAME")"; \
+    arch="$(dpkg --print-architecture)"; \
+    case "$arch" in \
+      amd64|i386) \
+        ubuntu_uri="http://archive.ubuntu.com/ubuntu"; \
+        security_uri="http://security.ubuntu.com/ubuntu"; \
+        ;; \
+      *) \
+        ubuntu_uri="http://ports.ubuntu.com/ubuntu-ports"; \
+        security_uri="$ubuntu_uri"; \
+        ;; \
+    esac; \
+    rm -f /etc/apt/sources.list /etc/apt/sources.list.d/*.list /etc/apt/sources.list.d/*.sources; \
+    { \
+      echo "deb $ubuntu_uri $codename main restricted universe multiverse"; \
+      echo "deb $ubuntu_uri $codename-updates main restricted universe multiverse"; \
+      echo "deb $ubuntu_uri $codename-backports main restricted universe multiverse"; \
+      echo "deb $security_uri $codename-security main restricted universe multiverse"; \
+    } > /etc/apt/sources.list
+
 RUN apt-get update -q && \
     apt-get install -y --no-install-recommends \
       apt-utils \
