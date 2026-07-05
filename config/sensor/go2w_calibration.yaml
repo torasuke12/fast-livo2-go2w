@@ -1,0 +1,78 @@
+# GO2-W Sensor Calibration Reference
+#
+# This file is the shared calibration reference for the Go2W sensor stack.
+# FAST-LIVO2 keeps algorithm-specific copies in
+# humble_ws/src/fast-livo2/config/go2w_fast_livo2.yaml.
+
+frames:
+  imu: imu_link
+  lidar: hesai_lidar
+  camera_color: camera_color_optical_frame
+  base_link: base_link
+  odom: odom
+
+topics:
+  imu: /go2w/imu
+  lidar: /hesai_node/points_raw
+  image: /camera/camera/color/image_raw
+  camera_info: /camera/camera/color/camera_info
+
+# --- Extrinsic calibration: base_link -> LiDAR ---
+# The PandarXT-16 native frame is rotated +90 deg around Z from REP-103:
+#   LiDAR X = Robot Left, LiDAR Y = Robot Backward, LiDAR Z = Robot Up
+T_baselink_lidar:
+  translation: [0.1634, 0.0, 0.116]
+  rotation_quaternion: [0.0, 0.0, 0.7071068, 0.7071068]  # [x, y, z, w]
+
+# --- Extrinsic calibration: base_link -> IMU ---
+# The Go2W IMU body frame is rotated +90 deg around Z from the robot body:
+#   IMU X = Robot Left, IMU Y = Robot Backward, IMU Z = Robot Up
+T_baselink_imu:
+  translation: [0.0, 0.0, 0.0]
+  rotation_quaternion: [0.0, 0.0, 0.7071068, 0.7071068]  # [x, y, z, w]
+
+# --- Extrinsic calibration: LiDAR -> RealSense color camera ---
+# Fill this from hand-eye calibration before field use.
+# FAST-LIVO2 maps this to extrin_calib.Pcl and extrin_calib.Rcl.
+T_lidar_camera_color:
+  translation: [0.0, 0.0, 0.0]
+  rotation_matrix: [1.0, 0.0, 0.0,
+                    0.0, 1.0, 0.0,
+                    0.0, 0.0, 1.0]
+
+# --- FAST-LIVO2 LiDAR -> Go2W IMU transform ---
+# FAST-LIVO2 maps these to extrin_calib.extrinsic_T/R.
+T_lidar_imu:
+  translation: [0.0, 0.0, 0.0]
+  rotation_matrix: [1.0, 0.0, 0.0,
+                    0.0, 1.0, 0.0,
+                    0.0, 0.0, 1.0]
+
+# --- RealSense color camera intrinsics ---
+# Replace with /camera/camera/color/camera_info for the exact camera, serial,
+# stream profile, and resolution used at runtime.
+camera_color:
+  model: RadTan
+  width: 640
+  height: 480
+  fx: 615.0
+  fy: 615.0
+  cx: 320.0
+  cy: 240.0
+  distortion: [0.0, 0.0, 0.0, 0.0, 0.0]
+
+imu_noise:
+  accelerometer: 0.05
+  gyroscope: 0.02
+  integration: 0.001
+  bias: 1.0e-5
+
+lidar:
+  model: PandarXT-16
+  ip: 192.168.123.20
+  port: 2368
+
+time_offset:
+  imu: 0.0
+  image: 0.0
+  lidar: 0.0

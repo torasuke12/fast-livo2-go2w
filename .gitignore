@@ -2,5 +2,7 @@ humble_ws/build/
 humble_ws/install/
 humble_ws/log/
 log/
+bags/
+.devcontainer/offline_fast_livo2/
 __pycache__/
 *.pyc
