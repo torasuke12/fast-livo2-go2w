@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -eu
+set -o pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
@@ -13,4 +14,3 @@ if ! command -v vcs >/dev/null 2>&1; then
 fi
 
 vcs import "${WS_DIR}/src" < "${PROJECT_DIR}/dependencies.repos"
-

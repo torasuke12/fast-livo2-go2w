@@ -4,7 +4,8 @@
 # Usage:
 #   bash scripts/fast_livo2/live_rviz.sh [--iface <desktop_interface>] [--config <rviz_config>]
 
-set -euo pipefail
+set -eu
+set -o pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
