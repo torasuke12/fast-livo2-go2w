@@ -61,6 +61,18 @@ git submodule update --init --recursive
 
 ## Docker Setup
 
+Before building or entering the container, make sure the source submodules are
+present. A clone made without `--recurse-submodules` leaves the directories
+under `humble_ws/src` empty, and `catmux_create_session` will later fail because
+the ROS packages are missing.
+
+From the repository root on the host:
+
+```bash
+git submodule sync --recursive
+git submodule update --init --recursive
+```
+
 The GO2-W Jetson Docker daemon may only support Docker API `1.43`. Newer Docker CLI/Compose clients can fail with:
 
 ```text
@@ -76,26 +88,32 @@ If you run the same scripts against a newer Docker daemon that rejects API `1.43
    bash docker/robot/build.sh
    ```
 
-2. Start an interactive robot container:
+2. Start an interactive robot container.
+
+   Standard robot script:
 
    ```bash
    bash docker/robot/run.sh
    ```
 
-3. Inside the container, build the workspace:
+   Compatibility Compose wrapper, if you prefer Docker Compose:
+
+   ```bash
+   ./docker/compose.sh up -d --build
+   ./docker/compose.sh exec fast-livo2-go2w-humble bash
+   ```
+
+   The Compose wrapper is only an alternative way to start and enter the same
+   robot container. It does not replace the workspace build step below.
+
+3. Required: inside the container, initialize/build the ROS workspace before
+   running any `catmux_create_session` command:
 
    ```bash
    cd /external
    bash scripts/build_humble_ws.sh
    source humble_ws/install/setup.bash
    ```
-
-Compatibility Compose wrapper:
-
-```bash
-./docker/compose.sh up -d --build
-./docker/compose.sh exec fast-livo2-go2w-humble bash
-```
 
 Do not use bare `docker compose -f docker/docker-compose.yml ...` on the Jetson unless you export `DOCKER_API_VERSION=1.43` yourself. A Compose file cannot reliably set the Docker client API version before the client connects to the daemon.
 

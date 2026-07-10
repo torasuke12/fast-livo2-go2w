@@ -34,6 +34,17 @@ list_missing_packages() {
   fi
 }
 
+ensure_git_safe_directories() {
+  local submodule_path
+
+  git -C "${PROJECT_DIR}" config --global --add safe.directory "${PROJECT_DIR}" || true
+
+  while IFS= read -r submodule_path; do
+    [ -n "${submodule_path}" ] || continue
+    git -C "${PROJECT_DIR}" config --global --add safe.directory "${PROJECT_DIR}/${submodule_path}" || true
+  done < <(git -C "${PROJECT_DIR}" config --file "${PROJECT_DIR}/.gitmodules" --get-regexp '^submodule\..*\.path$' 2>/dev/null | awk '{print $2}')
+}
+
 ensure_package_sources() {
   local missing_packages=()
 
@@ -51,7 +62,7 @@ ensure_package_sources() {
   fi
 
   echo "Initializing git submodules..." >&2
-  git -C "${PROJECT_DIR}" config --global --add safe.directory "${PROJECT_DIR}" || true
+  ensure_git_safe_directories
   if ! git -C "${PROJECT_DIR}" submodule update --init --recursive \
     humble_ws/src/fast-livo2 \
     humble_ws/src/go2w-hesai-lidar-driver \
