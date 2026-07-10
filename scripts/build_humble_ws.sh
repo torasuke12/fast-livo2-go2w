@@ -16,6 +16,15 @@ required_package_specs=(
   "realsense2_camera:src/realsense-ros/realsense2_camera/package.xml"
 )
 
+submodule_paths=(
+  "humble_ws/src/fast-livo2"
+  "humble_ws/src/go2w-hesai-lidar-driver"
+  "humble_ws/src/go2w-imu-publisher"
+  "humble_ws/src/unitree_ros2"
+  "humble_ws/src/realsense-ros"
+  "humble_ws/src/librealsense"
+)
+
 list_missing_packages() {
   local missing=()
   local spec package_name package_file
@@ -39,10 +48,20 @@ ensure_git_safe_directories() {
 
   git -C "${PROJECT_DIR}" config --global --add safe.directory "${PROJECT_DIR}" || true
 
-  while IFS= read -r submodule_path; do
-    [ -n "${submodule_path}" ] || continue
+  for submodule_path in "${submodule_paths[@]}"; do
     git -C "${PROJECT_DIR}" config --global --add safe.directory "${PROJECT_DIR}/${submodule_path}" || true
-  done < <(git -C "${PROJECT_DIR}" config --file "${PROJECT_DIR}/.gitmodules" --get-regexp '^submodule\..*\.path$' 2>/dev/null | awk '{print $2}')
+  done
+}
+
+update_submodules() {
+  git -C "${PROJECT_DIR}" submodule sync --recursive -- "${submodule_paths[@]}"
+  git -C "${PROJECT_DIR}" submodule update --init --recursive --force --checkout -- "${submodule_paths[@]}"
+}
+
+repair_submodules() {
+  echo "Retrying submodule initialization after clearing stale submodule state..." >&2
+  git -C "${PROJECT_DIR}" submodule deinit -f -- "${submodule_paths[@]}" || true
+  update_submodules
 }
 
 ensure_package_sources() {
@@ -63,20 +82,24 @@ ensure_package_sources() {
 
   echo "Initializing git submodules..." >&2
   ensure_git_safe_directories
-  if ! git -C "${PROJECT_DIR}" submodule update --init --recursive \
-    humble_ws/src/fast-livo2 \
-    humble_ws/src/go2w-hesai-lidar-driver \
-    humble_ws/src/go2w-imu-publisher \
-    humble_ws/src/unitree_ros2 \
-    humble_ws/src/realsense-ros \
-    humble_ws/src/librealsense; then
+  if ! update_submodules; then
     echo "Failed to initialize submodules. Check network access and git credentials." >&2
     exit 1
   fi
 
   mapfile -t missing_packages < <(list_missing_packages)
   if [ "${#missing_packages[@]}" -gt 0 ]; then
+    echo "Still missing ROS package sources after forced submodule update: ${missing_packages[*]}" >&2
+    if ! repair_submodules; then
+      echo "Failed to repair submodules. Check network access and git credentials." >&2
+      exit 1
+    fi
+    mapfile -t missing_packages < <(list_missing_packages)
+  fi
+
+  if [ "${#missing_packages[@]}" -gt 0 ]; then
     echo "Still missing ROS package sources after submodule initialization: ${missing_packages[*]}" >&2
+    git -C "${PROJECT_DIR}" submodule status --recursive -- "${submodule_paths[@]}" >&2 || true
     exit 1
   fi
 }
