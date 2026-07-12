@@ -129,11 +129,15 @@ catmux_create_session /external/catmux/online_fast_livo2.yaml
 This is the pure live launch session. It starts:
 
 - GO2-W IMU publisher
-- Hesai LiDAR driver
+- Hesai LiDAR driver through `scripts/run_hesai_lidar_points.sh`
 - RealSense color camera driver
 - FAST-LIVO2 mapping node
 
 It does not start RViz and does not record bags.
+
+The Hesai wrapper remaps the driver's relative `points_raw` publisher to
+`/hesai_node/points_raw`, matching the FAST-LIVO2 config, and sets
+`publish_type:=points` so the unused raw packet topic is not published.
 
 CycloneDDS uses the Unitree config at `humble_ws/src/unitree_ros2/cyclonedds_ws/src/cyclonedds.xml`.
 
@@ -240,6 +244,23 @@ Live RViz over WiFi:
 bash scripts/fast_livo2/live_rviz.sh --iface enp97s0
 ```
 
+The live RViz helper uses CycloneDDS when `rmw_cyclonedds_cpp` is installed. If
+the desktop reports that `librmw_cyclonedds_cpp.so` is missing, install the
+package for the desktop ROS 2 distro:
+
+```bash
+sudo apt install ros-${ROS_DISTRO}-rmw-cyclonedds-cpp
+```
+
+For Ubuntu 24.04 / ROS 2 Jazzy, use `sudo apt install
+ros-jazzy-rmw-cyclonedds-cpp`.
+
+If you intentionally want to use the desktop's current ROS 2 RMW instead, run:
+
+```bash
+bash scripts/fast_livo2/live_rviz.sh --iface enp97s0 --rmw system
+```
+
 Replay processed FAST-LIVO2 output:
 
 ```bash
@@ -324,6 +345,12 @@ ros2 topic echo /go2w/imu --once
 ros2 topic hz /hesai_node/points_raw
 ros2 topic hz /camera/camera/color/image_raw
 ```
+
+If `/hesai_node/points_raw` is missing, check the `hesai_lidar_node` catmux
+window. The expected launch path is `bash /external/scripts/run_hesai_lidar_points.sh`;
+using the upstream `ros2 launch hesai_lidar hesai_lidar_launch.py` directly can
+publish the point cloud on a different topic and also enables the unused raw
+packet publisher.
 
 Rebuild only FAST-LIVO2:
 

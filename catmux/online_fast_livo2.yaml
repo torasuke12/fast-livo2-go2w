@@ -15,7 +15,7 @@ windows:
   - commands:
       - source ${source}
       - source ${unitree_ros2}
-      - ros2 launch hesai_lidar hesai_lidar_launch.py
+      - bash /external/scripts/run_hesai_lidar_points.sh
     name: hesai_lidar_node
 
   - commands:
