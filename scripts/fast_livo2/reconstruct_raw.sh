@@ -13,7 +13,7 @@ EXTRA_ARGS=("$@")
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 ROS_SETUP="/opt/ros/humble/setup.bash"
-RVIZ_CFG="$REPO_ROOT/humble_ws/src/fast-livo2/rviz_cfg/fast_livo2.rviz"
+RVIZ_CFG="$REPO_ROOT/config/fast_livo2/fast_livo2.rviz"
 WS_SETUP=""
 WS_SETUP_CANDIDATES=(
     "$REPO_ROOT/humble_ws/install/setup.bash"

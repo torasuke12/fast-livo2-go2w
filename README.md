@@ -28,6 +28,7 @@ fast-livo2-go2w/
 ├── .devcontainer/                   Desktop devcontainer for bag replay/reconstruction
 ├── catmux/                          Robot-side tmux session definitions
 ├── scripts/fast_livo2/              Desktop/robot offline helpers
+├── config/fast_livo2/               RViz config for FAST-LIVO2 outputs
 ├── config/sensor/                   Shared Go2W calibration reference
 └── bags/                            Bag storage (gitignored)
 ```
@@ -125,14 +126,41 @@ Complete Docker setup first, then inside the robot container:
 catmux_create_session /external/catmux/online_fast_livo2.yaml
 ```
 
-This starts:
+This is the pure live launch session. It starts:
 
 - GO2-W IMU publisher
 - Hesai LiDAR driver
 - RealSense color camera driver
 - FAST-LIVO2 mapping node
 
+It does not start RViz and does not record bags.
+
 CycloneDDS uses the Unitree config at `humble_ws/src/unitree_ros2/cyclonedds_ws/src/cyclonedds.xml`.
+
+## Online FAST-LIVO2 With RViz
+
+Use this when you want the same live sensor/FAST-LIVO2 stack plus robot-side
+RViz visualization:
+
+```bash
+catmux_create_session /external/catmux/online_fast_livo2_rviz.yaml
+```
+
+RViz uses `config/fast_livo2/fast_livo2.rviz` and visualizes the main FAST-LIVO2
+outputs:
+
+- `/aft_mapped_to_init`
+- `/path`
+- `/cloud_registered`
+- `/Laser_map`
+- `/rgb_img`
+- `/LIVO2/imu_propagate`
+
+For desktop-side live RViz over WiFi, use:
+
+```bash
+bash scripts/fast_livo2/live_rviz.sh --iface enp97s0
+```
 
 ## Bag Types
 
@@ -141,10 +169,55 @@ CycloneDDS uses the Unitree config at `humble_ws/src/unitree_ros2/cyclonedds_ws/
 | `fast_livo2_YYYYMMDD_HHMMSS` | FAST-LIVO2 output topics such as odom, path, map, image, and TF | Fast replay without rerunning FAST-LIVO2 |
 | `raw_YYYYMMDD_HHMMSS` | Raw sensors: IMU, LiDAR, color image, camera info | Re-running FAST-LIVO2 with changed parameters |
 
+## Record FAST-LIVO2 Outputs
+
+Use this when you want compact replay of already-computed FAST-LIVO2 results.
+This starts the live stack and records only processed output topics:
+
+```bash
+catmux_create_session /external/catmux/record_fast_livo2.yaml
+```
+
+Recorded topics:
+
+```text
+/aft_mapped_to_init
+/path
+/cloud_registered
+/Laser_map
+/rgb_img
+/LIVO2/imu_propagate
+/tf
+/tf_static
+```
+
+Bags are saved to `/external/bags/fast_livo2_YYYYMMDD_HHMMSS`.
+
+## Record Raw Sensor Data
+
+Use this when you want to re-run FAST-LIVO2 later with changed parameters. This
+starts only the sensor bringup and records raw sensor topics:
+
+```bash
+catmux_create_session /external/catmux/record_raw.yaml
+```
+
+Recorded topics:
+
+```text
+/go2w/imu
+/hesai_node/points_raw
+/camera/camera/color/image_raw
+/camera/camera/color/camera_info
+```
+
+Bags are saved to `/external/bags/raw_YYYYMMDD_HHMMSS`.
+
 ## Common Robot Sessions
 
 ```bash
 catmux_create_session /external/catmux/online_fast_livo2.yaml
+catmux_create_session /external/catmux/online_fast_livo2_rviz.yaml
 catmux_create_session /external/catmux/record_fast_livo2.yaml
 catmux_create_session /external/catmux/record_raw.yaml
 ```
@@ -159,6 +232,7 @@ catmux_create_session /external/catmux/reconstruct_raw_fast_livo2.yaml
 ## Desktop Helpers
 
 Open the repository in the devcontainer for desktop-side RViz and offline runs.
+All helpers use `config/fast_livo2/fast_livo2.rviz`.
 
 Live RViz over WiFi:
 

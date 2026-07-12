@@ -25,7 +25,7 @@ done
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-RVIZ_CFG="$REPO_ROOT/humble_ws/src/fast-livo2/rviz_cfg/fast_livo2.rviz"
+RVIZ_CFG="$REPO_ROOT/config/fast_livo2/fast_livo2.rviz"
 ROS_SETUP="/opt/ros/humble/setup.bash"
 DESKTOP_SETUP="$REPO_ROOT/.devcontainer/offline_fast_livo2/install/setup.bash"
 
