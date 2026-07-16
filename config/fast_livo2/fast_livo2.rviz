@@ -57,15 +57,34 @@ Visualization Manager:
           Reference Frame: camera_init
           Show Trail: false
           Value: true
+        - Alpha: 0.5
+          Cell Count: 20
+          Cell Size: 1
+          Class: rviz_default_plugins/Grid
+          Color: 160; 160; 160
+          Enabled: true
+          Line Style:
+            Line Width: 0.03
+            Value: Lines
+          Name: Ground Grid
+          Normal Cell Count: 0
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Plane: XY
+          Plane Cell Count: 20
+          Reference Frame: camera_init
+          Value: true
         - Alpha: 1
           Class: rviz_default_plugins/Axes
-          Enabled: false
-          Length: 0.7
+          Enabled: true
+          Length: 2
           Name: aft_mapped
-          Radius: 0.08
+          Radius: 0.15
           Reference Frame: aft_mapped
           Show Trail: false
-          Value: false
+          Value: true
       Enabled: true
       Name: Frames
     - Class: rviz_common/Group
@@ -81,7 +100,7 @@ Visualization Manager:
           Class: rviz_default_plugins/PointCloud2
           Color: 239; 41; 41
           Color Transformer: FlatColor
-          Decay Time: 0
+          Decay Time: 10
           Enabled: true
           Invert Rainbow: false
           Max Color: 255; 255; 255
@@ -90,16 +109,16 @@ Visualization Manager:
           Min Intensity: 0
           Name: Registered Scan
           Position Transformer: XYZ
-          Queue Size: 10
+          Queue Size: 30
           Selectable: true
-          Size (Pixels): 2
-          Size (m): 0.01
+          Size (Pixels): 5
+          Size (m): 0.03
           Style: Points
           Topic:
             Depth: 10
             Durability Policy: Volatile
             History Policy: Keep Last
-            Reliability Policy: Best Effort
+            Reliability Policy: Reliable
             Value: /cloud_registered
           Unreliable: false
           Use Fixed Frame: true
@@ -134,7 +153,7 @@ Visualization Manager:
             Depth: 10
             Durability Policy: Volatile
             History Policy: Keep Last
-            Reliability Policy: Best Effort
+            Reliability Policy: Reliable
             Value: /Laser_map
           Unreliable: false
           Use Fixed Frame: true
@@ -169,7 +188,7 @@ Visualization Manager:
             Depth: 10
             Durability Policy: Volatile
             History Policy: Keep Last
-            Reliability Policy: Best Effort
+            Reliability Policy: Reliable
             Value: /cloud_effected
           Unreliable: false
           Use Fixed Frame: true
@@ -192,31 +211,31 @@ Visualization Manager:
               Value: false
             Value: false
           Enabled: true
-          Keep: 1
+          Keep: 100
           Name: Mapped Odometry
           Position Tolerance: 0.01
           Queue Size: 10
           Shape:
             Alpha: 1
-            Axes Length: 0.7
-            Axes Radius: 0.08
+            Axes Length: 1.5
+            Axes Radius: 0.12
             Color: 255; 25; 0
             Value: Axes
           Topic:
             Depth: 10
             Durability Policy: Volatile
             History Policy: Keep Last
-            Reliability Policy: Best Effort
+            Reliability Policy: Reliable
             Value: /aft_mapped_to_init
           Unreliable: false
           Value: true
         - Alpha: 1
-          Buffer Length: 1
+          Buffer Length: 20
           Class: rviz_default_plugins/Path
           Color: 0; 180; 255
           Enabled: true
           Line Style: Billboards
-          Line Width: 0.03
+          Line Width: 0.08
           Name: Trajectory
           Offset:
             X: 0
@@ -225,12 +244,12 @@ Visualization Manager:
           Pose Color: 255; 85; 255
           Pose Style: None
           Queue Size: 10
-          Radius: 0.03
+          Radius: 0.08
           Topic:
             Depth: 10
             Durability Policy: Volatile
             History Policy: Keep Last
-            Reliability Policy: Best Effort
+            Reliability Policy: Reliable
             Value: /path
           Unreliable: false
           Value: true
@@ -251,7 +270,7 @@ Visualization Manager:
             Depth: 10
             Durability Policy: Volatile
             History Policy: Keep Last
-            Reliability Policy: Best Effort
+            Reliability Policy: Reliable
             Value: /LIVO2/imu_propagate
           Unreliable: false
           Value: false
@@ -271,9 +290,10 @@ Visualization Manager:
             Depth: 2
             Durability Policy: Volatile
             History Policy: Keep Last
-            Reliability Policy: Best Effort
+            Reliability Policy: Reliable
             Value: /rgb_img
           Transport Hint: raw
+          Unreliable: false
           Value: true
         - Class: rviz_default_plugins/MarkerArray
           Enabled: false
@@ -329,7 +349,7 @@ Visualization Manager:
       Name: Current View
       Near Clip Distance: 0.01
       Pitch: 1
-      Target Frame: camera_init
+      Target Frame: aft_mapped
       Yaw: 3.14
     Saved: ~
 Window Geometry:

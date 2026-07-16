@@ -2,7 +2,7 @@
 # Launch RViz2 for live FAST-LIVO2 visualization.
 #
 # Usage:
-#   bash scripts/fast_livo2/live_rviz.sh [--iface <desktop_interface>] [--config <rviz_config>] [--rmw auto|cyclonedds|system] [--wait-topics <seconds>]
+#   bash scripts/fast_livo2/live_rviz.sh [--iface <desktop_interface>] [--config <rviz_config>] [--rmw auto|cyclonedds|system] [--wait-topics <seconds>] [--source-workspace auto|always|never] [--static-camera-init auto|always|never] [--check-only|--diagnose]
 
 set -eu
 set -o pipefail
@@ -69,11 +69,57 @@ cyclonedds_apt_package() {
     echo "ros-${distro}-rmw-cyclonedds-cpp"
 }
 
+setup_sources_without_missing_files() {
+    local setup_script="$1"
+    local output
+
+    output="$(bash -c "set +u; source \"$setup_script\"" 2>&1 >/dev/null || true)"
+    [ -z "$output" ]
+}
+
+source_workspace_setup() {
+    local mode="$1"
+    local setup
+
+    if [ "$mode" = "never" ]; then
+        return
+    fi
+
+    for setup in \
+        "$REPO_ROOT/humble_ws/install/setup.bash" \
+        "$REPO_ROOT/.devcontainer/offline_fast_livo2/install/setup.bash"; do
+        if [ ! -f "$setup" ]; then
+            continue
+        fi
+
+        if [ "$mode" = "always" ] || setup_sources_without_missing_files "$setup"; then
+            source_setup_safely "$setup"
+        else
+            echo "Warning: skipping incomplete workspace setup: $setup" >&2
+            echo "Use --source-workspace always only after rebuilding the workspace install space." >&2
+        fi
+        return
+    done
+}
+
 iface="$IFACE_DEFAULT"
 rviz_cfg="$RVIZ_CFG_DEFAULT"
 rmw_mode="${FAST_LIVO2_RVIZ_RMW:-auto}"
 topic_wait="${FAST_LIVO2_RVIZ_WAIT_TOPICS:-5}"
 topic_check=1
+source_workspace="${FAST_LIVO2_RVIZ_SOURCE_WORKSPACE:-auto}"
+static_camera_init="${FAST_LIVO2_RVIZ_STATIC_CAMERA_INIT:-auto}"
+check_only=0
+diagnose_only=0
+static_tf_pid=""
+
+cleanup() {
+    if [ -n "${static_tf_pid:-}" ] && kill -0 "$static_tf_pid" 2>/dev/null; then
+        kill "$static_tf_pid" 2>/dev/null || true
+        wait "$static_tf_pid" 2>/dev/null || true
+    fi
+}
+trap cleanup EXIT INT TERM
 
 while [ "$#" -gt 0 ]; do
     case "$1" in
@@ -93,8 +139,24 @@ while [ "$#" -gt 0 ]; do
             topic_wait="${2:?Error: --wait-topics requires a value}"
             shift 2
             ;;
+        --source-workspace)
+            source_workspace="${2:?Error: --source-workspace requires a value}"
+            shift 2
+            ;;
+        --static-camera-init)
+            static_camera_init="${2:?Error: --static-camera-init requires a value}"
+            shift 2
+            ;;
         --no-topic-check)
             topic_check=0
+            shift
+            ;;
+        --check-only)
+            check_only=1
+            shift
+            ;;
+        --diagnose)
+            diagnose_only=1
             shift
             ;;
         -h|--help)
@@ -117,6 +179,24 @@ case "$rmw_mode" in
         ;;
 esac
 
+case "$source_workspace" in
+    auto|always|never)
+        ;;
+    *)
+        echo "Error: --source-workspace must be one of: auto, always, never" >&2
+        exit 1
+        ;;
+esac
+
+case "$static_camera_init" in
+    auto|always|never)
+        ;;
+    *)
+        echo "Error: --static-camera-init must be one of: auto, always, never" >&2
+        exit 1
+        ;;
+esac
+
 case "$topic_wait" in
     ''|*[!0-9]*)
         echo "Error: --wait-topics must be a non-negative integer number of seconds" >&2
@@ -128,14 +208,7 @@ if ! command -v ros2 >/dev/null 2>&1 || ! command -v rviz2 >/dev/null 2>&1; then
     source_ros_setup
 fi
 
-for setup in \
-    "$REPO_ROOT/humble_ws/install/setup.bash" \
-    "$REPO_ROOT/.devcontainer/offline_fast_livo2/install/setup.bash"; do
-    if [ -f "$setup" ]; then
-        source_setup_safely "$setup"
-        break
-    fi
-done
+source_workspace_setup "$source_workspace"
 
 if ! command -v rviz2 >/dev/null 2>&1; then
     echo "Error: rviz2 not found in PATH" >&2
@@ -187,8 +260,11 @@ else
 fi
 
 echo "RMW_IMPLEMENTATION=${RMW_IMPLEMENTATION:-system default}"
+echo "ROS_DISTRO=${ROS_DISTRO:-unknown}"
 echo "ROS_DOMAIN_ID=${ROS_DOMAIN_ID}"
 echo "ROS_LOCALHOST_ONLY=${ROS_LOCALHOST_ONLY}"
+echo "ros2: $(command -v ros2)"
+echo "rviz2: $(command -v rviz2)"
 if [ -n "${CYCLONEDDS_URI:-}" ]; then
     echo "CycloneDDS interface: $iface"
 fi
@@ -230,6 +306,140 @@ print_missing_topics() {
     return "$missing"
 }
 
+print_topic_info() {
+    local topic="$1"
+
+    echo
+    echo "== $topic =="
+    ros2 topic info -v "$topic" 2>&1 | sed 's/^/  /' || true
+}
+
+print_topic_sample() {
+    local topic="$1"
+    local tmp
+
+    echo "-- $topic sample"
+    tmp="$(mktemp)"
+    if timeout 10 ros2 topic echo --once "$topic" >"$tmp" 2>&1; then
+        sed -n '1,80p' "$tmp" | sed 's/^/  /'
+    else
+        if [ -s "$tmp" ]; then
+            sed -n '1,80p' "$tmp" | sed 's/^/  /'
+        else
+            echo "  <no sample received within 10 seconds>"
+        fi
+    fi
+    rm -f "$tmp"
+}
+
+print_topic_rate() {
+    local topic="$1"
+    local tmp
+
+    echo "-- $topic rate"
+    tmp="$(mktemp)"
+    timeout --signal=INT 6 ros2 topic hz "$topic" >"$tmp" 2>&1 || true
+    if [ -s "$tmp" ]; then
+        sed -n '1,40p' "$tmp" | sed 's/^/  /'
+    else
+        echo "  <no messages observed within 6 seconds>"
+    fi
+    rm -f "$tmp"
+}
+
+print_topic_field() {
+    local topic="$1"
+    local field="$2"
+    local tmp
+
+    echo "-- $topic.$field"
+    tmp="$(mktemp)"
+    if timeout 10 ros2 topic echo --once --field "$field" "$topic" >"$tmp" 2>&1; then
+        sed -n '1,20p' "$tmp" | sed 's/^/  /'
+    else
+        if [ -s "$tmp" ]; then
+            sed -n '1,20p' "$tmp" | sed 's/^/  /'
+        else
+            echo "  <no field sample received within 10 seconds>"
+        fi
+    fi
+    rm -f "$tmp"
+}
+
+print_topic_metadata() {
+    echo
+    echo "Sample metadata:"
+    print_topic_field /cloud_registered header.frame_id
+    print_topic_field /cloud_registered width
+    print_topic_field /cloud_registered height
+    print_topic_field /cloud_registered point_step
+    print_topic_field /cloud_registered row_step
+    print_topic_field /cloud_registered is_dense
+    print_topic_field /aft_mapped_to_init header.frame_id
+    print_topic_field /aft_mapped_to_init child_frame_id
+    print_topic_field /aft_mapped_to_init pose.pose.position
+    print_topic_field /path header.frame_id
+    print_topic_field /rgb_img header.frame_id
+    print_topic_field /rgb_img width
+    print_topic_field /rgb_img height
+    print_topic_field /rgb_img encoding
+}
+
+print_tf_sample() {
+    echo
+    echo "TF sample:"
+    if ros2 pkg prefix tf2_ros >/dev/null 2>&1; then
+        timeout 5 ros2 run tf2_ros tf2_echo camera_init aft_mapped 2>&1 | sed -n '1,30p' | sed 's/^/  /' || true
+    else
+        echo "  <tf2_ros is not available>"
+    fi
+}
+
+diagnose_live_topics() {
+    local topic
+
+    echo
+    echo "Topic diagnostics from this RViz environment:"
+    for topic in /cloud_registered /aft_mapped_to_init /path /rgb_img /tf; do
+        print_topic_info "$topic"
+    done
+
+    echo
+    echo "Topic rates:"
+    print_topic_rate /cloud_registered
+    print_topic_rate /aft_mapped_to_init
+    print_topic_rate /path
+    print_topic_rate /rgb_img
+    print_topic_rate /tf
+
+    print_topic_metadata
+    print_tf_sample
+
+    echo
+    echo "Sample messages:"
+    print_topic_sample /cloud_registered
+    print_topic_sample /aft_mapped_to_init
+    print_topic_sample /path
+    print_topic_sample /rgb_img
+    print_topic_sample /tf
+}
+
+start_static_camera_init_tf() {
+    if [ "$static_camera_init" = "never" ]; then
+        return
+    fi
+
+    if ! ros2 pkg prefix tf2_ros >/dev/null 2>&1; then
+        echo "Warning: tf2_ros is not available; cannot publish static camera_init frame." >&2
+        return
+    fi
+
+    ros2 run tf2_ros static_transform_publisher \
+        0 0 0 0 0 0 rviz_world camera_init >/tmp/fast_livo2_rviz_static_tf.log 2>&1 &
+    static_tf_pid=$!
+    echo "Static TF fallback enabled: rviz_world -> camera_init (pid $static_tf_pid)"
+}
+
 if [ "$topic_check" -eq 1 ]; then
     visible_topics="$(ros2 topic list 2>/dev/null || true)"
     waited=0
@@ -255,5 +465,22 @@ if [ "$topic_check" -eq 1 ]; then
         echo "Missing topics can indicate that a sensor node is not publishing, or that RViz is using a different DDS environment than your echo terminal." >&2
     fi
 fi
+
+if [ "$diagnose_only" -eq 1 ]; then
+    diagnose_live_topics
+    exit 0
+fi
+
+if [ "$check_only" -eq 1 ]; then
+    echo "Visible topics from this RViz environment:"
+    if [ -n "${visible_topics:-}" ]; then
+        printf '%s\n' "$visible_topics" | sort
+    else
+        echo "  <none>"
+    fi
+    exit 0
+fi
+
+start_static_camera_init_tf
 
 rviz2 -d "$rviz_cfg"
