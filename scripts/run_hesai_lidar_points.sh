@@ -20,7 +20,6 @@ fi
 exec ros2 run hesai_lidar hesai_lidar_node --ros-args \
     -r __node:=hesai_node \
     -r points_raw:=/hesai_node/points_raw \
-    -p pcap_file:="" \
     -p server_ip:=192.168.123.20 \
     -p lidar_recv_port:=2368 \
     -p gps_port:=10110 \
@@ -30,9 +29,5 @@ exec ros2 run hesai_lidar hesai_lidar_node --ros-args \
     -p pcldata_type:=0 \
     -p publish_type:=points \
     -p timestamp_type:=realtime \
-    -p data_type:="" \
     -p lidar_correction_file:="$correction_file" \
-    -p multicast_ip:="" \
-    -p coordinate_correction_flag:=false \
-    -p fixed_frame:="" \
-    -p target_frame:=""
+    -p coordinate_correction_flag:=false
