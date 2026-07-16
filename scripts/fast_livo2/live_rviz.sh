@@ -2,7 +2,7 @@
 # Launch RViz2 for live FAST-LIVO2 visualization.
 #
 # Usage:
-#   bash scripts/fast_livo2/live_rviz.sh [--iface <desktop_interface>] [--config <rviz_config>] [--rmw auto|cyclonedds|system]
+#   bash scripts/fast_livo2/live_rviz.sh [--iface <desktop_interface>] [--config <rviz_config>] [--rmw auto|cyclonedds|system] [--wait-topics <seconds>]
 
 set -eu
 set -o pipefail
@@ -72,6 +72,8 @@ cyclonedds_apt_package() {
 iface="$IFACE_DEFAULT"
 rviz_cfg="$RVIZ_CFG_DEFAULT"
 rmw_mode="${FAST_LIVO2_RVIZ_RMW:-auto}"
+topic_wait="${FAST_LIVO2_RVIZ_WAIT_TOPICS:-5}"
+topic_check=1
 
 while [ "$#" -gt 0 ]; do
     case "$1" in
@@ -86,6 +88,14 @@ while [ "$#" -gt 0 ]; do
         --rmw)
             rmw_mode="${2:?Error: --rmw requires a value}"
             shift 2
+            ;;
+        --wait-topics)
+            topic_wait="${2:?Error: --wait-topics requires a value}"
+            shift 2
+            ;;
+        --no-topic-check)
+            topic_check=0
+            shift
             ;;
         -h|--help)
             sed -n '2,6p' "$0"
@@ -103,6 +113,13 @@ case "$rmw_mode" in
         ;;
     *)
         echo "Error: --rmw must be one of: auto, cyclonedds, system" >&2
+        exit 1
+        ;;
+esac
+
+case "$topic_wait" in
+    ''|*[!0-9]*)
+        echo "Error: --wait-topics must be a non-negative integer number of seconds" >&2
         exit 1
         ;;
 esac
@@ -142,6 +159,12 @@ if [ ! -d "/sys/class/net/$iface" ]; then
     exit 1
 fi
 
+export ROS_DOMAIN_ID="${ROS_DOMAIN_ID:-0}"
+if [ "${ROS_LOCALHOST_ONLY:-0}" != "0" ]; then
+    echo "Warning: ROS_LOCALHOST_ONLY=${ROS_LOCALHOST_ONLY}; overriding to 0 for live network RViz." >&2
+fi
+export ROS_LOCALHOST_ONLY=0
+
 if [ "$rmw_mode" = "system" ]; then
     echo "Using existing ROS 2 RMW implementation: ${RMW_IMPLEMENTATION:-system default}"
 else
@@ -164,9 +187,73 @@ else
 fi
 
 echo "RMW_IMPLEMENTATION=${RMW_IMPLEMENTATION:-system default}"
+echo "ROS_DOMAIN_ID=${ROS_DOMAIN_ID}"
+echo "ROS_LOCALHOST_ONLY=${ROS_LOCALHOST_ONLY}"
 if [ -n "${CYCLONEDDS_URI:-}" ]; then
     echo "CycloneDDS interface: $iface"
 fi
 echo "RViz config: $rviz_cfg"
+
+has_live_topics() {
+    local topics="$1"
+    local topic
+
+    for topic in /cloud_registered /aft_mapped_to_init /path /rgb_img; do
+        if printf '%s\n' "$topics" | grep -Fxq "$topic"; then
+            return 0
+        fi
+    done
+
+    return 1
+}
+
+print_missing_topics() {
+    local topics="$1"
+    local missing=0
+    local topic
+
+    for topic in \
+        /hesai_node/points_raw \
+        /go2w/imu \
+        /camera/camera/color/image_raw \
+        /cloud_registered \
+        /aft_mapped_to_init \
+        /path \
+        /rgb_img \
+        /tf; do
+        if ! printf '%s\n' "$topics" | grep -Fxq "$topic"; then
+            echo "  missing: $topic" >&2
+            missing=1
+        fi
+    done
+
+    return "$missing"
+}
+
+if [ "$topic_check" -eq 1 ]; then
+    visible_topics="$(ros2 topic list 2>/dev/null || true)"
+    waited=0
+    while ! has_live_topics "$visible_topics" && [ "$waited" -lt "$topic_wait" ]; do
+        sleep 1
+        waited=$((waited + 1))
+        visible_topics="$(ros2 topic list 2>/dev/null || true)"
+    done
+
+    if ! has_live_topics "$visible_topics"; then
+        echo "Warning: no FAST-LIVO2 live topics are visible from this RViz environment." >&2
+        echo "Check the interface, ROS_DOMAIN_ID, ROS_LOCALHOST_ONLY, and CycloneDDS settings." >&2
+        echo "Visible topics:" >&2
+        if [ -n "$visible_topics" ]; then
+            printf '%s\n' "$visible_topics" >&2
+        else
+            echo "  <none>" >&2
+        fi
+    elif print_missing_topics "$visible_topics"; then
+        :
+    else
+        echo "Warning: some expected live topics are missing from this RViz environment." >&2
+        echo "Missing topics can indicate that a sensor node is not publishing, or that RViz is using a different DDS environment than your echo terminal." >&2
+    fi
+fi
 
 rviz2 -d "$rviz_cfg"
