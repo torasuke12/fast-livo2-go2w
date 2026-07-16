@@ -52,6 +52,14 @@ source_setup_safely() {
     return "$rc"
 }
 
+setup_sources_without_missing_files() {
+    local setup_script="$1"
+    local output
+
+    output="$(bash -c "set +u; source \"$setup_script\"" 2>&1 >/dev/null || true)"
+    [ -z "$output" ]
+}
+
 if [ ! -d "$BAG" ] && [ -d "$REPO_ROOT/$BAG" ]; then
     BAG="$REPO_ROOT/$BAG"
 fi
@@ -71,12 +79,14 @@ if [ ! -f "$ROS_SETUP" ]; then
     exit 1
 fi
 
-if ! command -v ros2 >/dev/null 2>&1 || ! command -v rviz2 >/dev/null 2>&1; then
-    source_setup_safely "$ROS_SETUP"
-fi
+source_setup_safely "$ROS_SETUP"
 
 if [ -f "$DESKTOP_SETUP" ]; then
-    source_setup_safely "$DESKTOP_SETUP"
+    if setup_sources_without_missing_files "$DESKTOP_SETUP"; then
+        source_setup_safely "$DESKTOP_SETUP"
+    else
+        echo "Warning: skipping incomplete desktop workspace setup: $DESKTOP_SETUP" >&2
+    fi
 fi
 
 if ! command -v ros2 >/dev/null 2>&1; then
@@ -89,8 +99,23 @@ if ! command -v rviz2 >/dev/null 2>&1; then
     exit 1
 fi
 
+if ros2 pkg prefix rmw_cyclonedds_cpp >/dev/null 2>&1; then
+    export RMW_IMPLEMENTATION="${FAST_LIVO2_PLAYBACK_RMW:-rmw_cyclonedds_cpp}"
+fi
+export ROS_DOMAIN_ID="${FAST_LIVO2_PLAYBACK_DOMAIN_ID:-42}"
+export ROS_LOCALHOST_ONLY="${FAST_LIVO2_PLAYBACK_LOCALHOST_ONLY:-1}"
+if [ "${FAST_LIVO2_PLAYBACK_KEEP_CYCLONEDDS_URI:-0}" != "1" ]; then
+    unset CYCLONEDDS_URI
+fi
+
 echo "Bag:  $BAG"
 echo "RViz: $RVIZ_CFG"
+echo "RMW_IMPLEMENTATION=${RMW_IMPLEMENTATION:-system default}"
+echo "ROS_DISTRO=${ROS_DISTRO:-unknown}"
+echo "ROS_DOMAIN_ID=${ROS_DOMAIN_ID}"
+echo "ROS_LOCALHOST_ONLY=${ROS_LOCALHOST_ONLY}"
+echo "ros2: $(command -v ros2)"
+echo "rviz2: $(command -v rviz2)"
 echo ""
 
 PLAY_ARGS=(--clock)
