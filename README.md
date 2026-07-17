@@ -217,6 +217,100 @@ Recorded topics:
 
 Bags are saved to `/external/bags/raw_YYYYMMDD_HHMMSS`.
 
+## Copy and Replay Bags on a Visualization PC
+
+Use this workflow when live RViz over DDS is unstable or when you want to inspect
+the FAST-LIVO2 output offline on the visualization PC. Record on the robot side
+first, copy the whole bag directory, then replay it locally with RViz.
+
+1. Record a processed FAST-LIVO2 output bag inside the robot container:
+
+   ```bash
+   mkdir -p /external/bags
+   catmux_create_session /external/catmux/record_fast_livo2.yaml
+   ```
+
+   Stop the `bag_record` pane when the run is finished. Confirm the recorded bag
+   directory and metadata:
+
+   ```bash
+   ls -lh /external/bags
+   ros2 bag info /external/bags/fast_livo2_YYYYMMDD_HHMMSS
+   ```
+
+   If you need to re-run FAST-LIVO2 later with changed parameters, record raw
+   sensor data instead:
+
+   ```bash
+   catmux_create_session /external/catmux/record_raw.yaml
+   ros2 bag info /external/bags/raw_YYYYMMDD_HHMMSS
+   ```
+
+2. Copy the complete bag directory to the visualization PC. Do not copy only the
+   `.db3` file; `metadata.yaml` must be copied with it.
+
+   From the robot host or container:
+
+   ```bash
+   scp -r /external/bags/fast_livo2_YYYYMMDD_HHMMSS \
+     srg-f-rei@192.168.123.203:/home/srg-f-rei/fast_livo2_go2w/src/fast-livo2-go2w/bags/
+   ```
+
+   Use the destination user's home directory, not `/home` itself. If the local
+   `bags` directory does not exist on the visualization PC, create it first:
+
+   ```bash
+   mkdir -p ~/fast_livo2_go2w/src/fast-livo2-go2w/bags
+   ```
+
+3. Replay the processed FAST-LIVO2 output on the visualization PC:
+
+   ```bash
+   cd ~/fast_livo2_go2w/src/fast-livo2-go2w
+   bash scripts/fast_livo2/playback.sh bags/fast_livo2_YYYYMMDD_HHMMSS
+   ```
+
+   The helper plays the bag with `/clock`, isolates playback on a local ROS
+   domain, and opens RViz with `use_sim_time:=true`.
+
+4. Check replayed topics from another terminal if RViz does not show an output:
+
+   ```bash
+   source /opt/ros/humble/setup.bash
+   export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+   export ROS_DOMAIN_ID=42
+   export ROS_LOCALHOST_ONLY=1
+   unset CYCLONEDDS_URI
+
+   ros2 topic list
+   ros2 topic hz /cloud_registered
+   ros2 topic echo --once --field width /cloud_registered
+   ros2 topic hz /tf
+   ```
+
+For looped playback, run the bag player manually in one terminal and RViz in
+another:
+
+```bash
+source /opt/ros/humble/setup.bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+export ROS_DOMAIN_ID=42
+export ROS_LOCALHOST_ONLY=1
+unset CYCLONEDDS_URI
+
+ros2 bag play bags/fast_livo2_YYYYMMDD_HHMMSS --clock --loop
+```
+
+```bash
+source /opt/ros/humble/setup.bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+export ROS_DOMAIN_ID=42
+export ROS_LOCALHOST_ONLY=1
+unset CYCLONEDDS_URI
+
+rviz2 -d config/fast_livo2/fast_livo2.rviz --ros-args -p use_sim_time:=true
+```
+
 ## Common Robot Sessions
 
 ```bash
