@@ -289,8 +289,8 @@ print_missing_topics() {
     local topic
 
     for topic in \
-        /hesai_node/points_raw \
-        /go2w/imu \
+        /livox/lidar \
+        /livox/imu \
         /camera/camera/color/image_raw \
         /cloud_registered \
         /aft_mapped_to_init \

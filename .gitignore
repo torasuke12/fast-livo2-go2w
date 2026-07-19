@@ -1,6 +1,7 @@
 humble_ws/build/
 humble_ws/install/
 humble_ws/log/
+humble_ws/src/livox_ros_driver2
 log/
 bags/*
 !bags/.gitkeep

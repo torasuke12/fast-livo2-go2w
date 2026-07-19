@@ -1,6 +1,6 @@
 # fast-livo2-go2w
 
-ROS 2 Humble workspace for running **FAST-LIVO2** on a Unitree GO2-W with a Hesai PandarXT-16 LiDAR, the GO2-W body IMU, and an Intel RealSense color camera.
+ROS 2 Humble workspace for running **FAST-LIVO2** on a Unitree GO2-W with a Livox MID360 LiDAR, the MID360 internal IMU, and an Intel RealSense color camera.
 
 This repository follows the same deployment shape as `dlio-go2w`: the robot-side stack lives in `humble_ws/src`, the Jetson image is under `docker/robot`, robot sessions are defined by `catmux`, and bag replay/reconstruction helpers live under `scripts/fast_livo2`.
 
@@ -19,6 +19,7 @@ This workspace uses a ROS 2 Humble Go2W integration package at `humble_ws/src/fa
 fast-livo2-go2w/
 ├── humble_ws/src/
 │   ├── fast-livo2/                  FAST-LIVO2 ROS 2 Humble port (submodule)
+│   ├── livox_ros_driver2/           Livox MID360 ROS 2 driver (linked from sibling clone)
 │   ├── go2w-imu-publisher/          IMU republisher from GO2-W lowstate (submodule)
 │   ├── go2w-hesai-lidar-driver/     Hesai PandarXT-16 ROS 2 driver (submodule)
 │   ├── unitree_ros2/                Unitree DDS bindings + setup.sh (submodule)
@@ -33,13 +34,14 @@ fast-livo2-go2w/
 └── bags/                            Bag storage (gitignored)
 ```
 
-`config/sensor/go2w_calibration.yaml` is the shared calibration reference. FAST-LIVO2 still consumes its native parameter file at `humble_ws/src/fast-livo2/config/go2w_fast_livo2.yaml`.
+`config/sensor/go2w_mid360_calibration.yaml` is the shared Livox MID360 calibration reference. FAST-LIVO2 still consumes its native parameter file at `humble_ws/src/fast-livo2/config/go2w_fast_livo2.yaml`. The previous Hesai/GO2-W IMU parameter file is preserved as `humble_ws/src/fast-livo2/config/go2w_hesai_fast_livo2.yaml`.
 
-## Submodules
+## Package Sources
 
 | Package | Repository | Purpose |
 |---|---|---|
 | `fast-livo2` | `torasuke12/fast-livo2` | FAST-LIVO2 ROS 2 Humble port |
+| `livox_ros_driver2` | `Livox-SDK/livox_ros_driver2` | Livox MID360 ROS 2 driver |
 | `go2w-imu-publisher` | `koki67/go2w-imu-publisher` | GO2-W IMU republisher |
 | `go2w-hesai-lidar-driver` | `koki67/go2w-hesai-lidar-driver` | Hesai XT16 ROS 2 driver |
 | `unitree_ros2` | `koki67/unitree_ros2` | Unitree ROS 2 bindings and DDS setup |
@@ -59,6 +61,21 @@ If you already cloned without submodules:
 git submodule sync --recursive
 git submodule update --init --recursive
 ```
+
+The Livox MID360 driver is expected to be cloned next to this repository, for
+example:
+
+```bash
+cd ~/fast_livo2_go2w/src
+git clone https://github.com/Livox-SDK/livox_ros_driver2.git
+```
+
+`scripts/build_humble_ws.sh` links that clone into `humble_ws/src/livox_ros_driver2`
+and copies `package_ROS2.xml` to `package.xml` before building. In the robot
+container, `docker/robot/run.sh` mounts the sibling clone at
+`/fast_livo2/src/livox_ros_driver2`. If your clone lives elsewhere, set
+`LIVOX_ROS_DRIVER2_HOST=/path/to/livox_ros_driver2` before starting the
+container.
 
 ## Docker Setup
 
@@ -88,6 +105,10 @@ If you run the same scripts against a newer Docker daemon that rejects API `1.43
    ```bash
    bash docker/robot/build.sh
    ```
+
+   The image installs Livox-SDK2, which is required to build and run
+   `livox_ros_driver2`. Rebuild this image after pulling the Livox MID360
+   support changes.
 
 2. Start an interactive robot container.
 
@@ -128,18 +149,20 @@ catmux_create_session /external/catmux/online_fast_livo2.yaml
 
 This is the pure live launch session. It starts:
 
-- GO2-W IMU publisher
-- Hesai LiDAR driver through `scripts/run_hesai_lidar_points.sh`
+- Livox MID360 driver through `scripts/run_livox_mid360_points.sh`
+- MID360 internal IMU published by `livox_ros_driver2`
 - RealSense color camera driver
 - FAST-LIVO2 mapping node
 
 It does not start RViz and does not record bags.
 
-The Hesai wrapper remaps the driver's relative `points_raw` publisher to
-`/hesai_node/points_raw`, matching the FAST-LIVO2 config, and sets
-`publish_type:=points` so the unused raw packet topic is not published.
+The Livox wrapper launches `livox_ros_driver2` with `xfer_format:=1`, so FAST-LIVO2 subscribes to `/livox/lidar` as `livox_ros_driver2/msg/CustomMsg` and `/livox/imu` as `sensor_msgs/msg/Imu`.
 
-CycloneDDS uses the Unitree config at `humble_ws/src/unitree_ros2/cyclonedds_ws/src/cyclonedds.xml`.
+The previous Hesai XT16 + GO2-W IMU session is still available:
+
+```bash
+catmux_create_session /external/catmux/online_fast_livo2_hesai.yaml
+```
 
 ## Online FAST-LIVO2 With RViz
 
@@ -209,8 +232,8 @@ catmux_create_session /external/catmux/record_raw.yaml
 Recorded topics:
 
 ```text
-/go2w/imu
-/hesai_node/points_raw
+/livox/lidar
+/livox/imu
 /camera/camera/color/image_raw
 /camera/camera/color/camera_info
 ```
@@ -320,6 +343,15 @@ catmux_create_session /external/catmux/record_fast_livo2.yaml
 catmux_create_session /external/catmux/record_raw.yaml
 ```
 
+Legacy Hesai XT16 + GO2-W IMU sessions:
+
+```bash
+catmux_create_session /external/catmux/online_fast_livo2_hesai.yaml
+catmux_create_session /external/catmux/online_fast_livo2_hesai_rviz.yaml
+catmux_create_session /external/catmux/record_fast_livo2_hesai.yaml
+catmux_create_session /external/catmux/record_raw_hesai.yaml
+```
+
 Edit the `bag:` parameter in these files before replay/reconstruction:
 
 ```bash
@@ -371,12 +403,20 @@ bash scripts/fast_livo2/reconstruct_raw.sh bags/raw_YYYYMMDD_HHMMSS
 
 | Stream | Topic | Type |
 |---|---|---|
-| Hesai XT16 LiDAR | `/hesai_node/points_raw` | `sensor_msgs/msg/PointCloud2` |
-| GO2-W IMU | `/go2w/imu` | `sensor_msgs/msg/Imu` |
+| Livox MID360 LiDAR | `/livox/lidar` | `livox_ros_driver2/msg/CustomMsg` |
+| Livox MID360 IMU | `/livox/imu` | `sensor_msgs/msg/Imu` |
 | RealSense color image | `/camera/camera/color/image_raw` | `sensor_msgs/msg/Image` |
 | RealSense camera info | `/camera/camera/color/camera_info` | `sensor_msgs/msg/CameraInfo` |
 
 FAST-LIVO2 subscribes to LiDAR, IMU, and image. Use `camera_info` to fill camera intrinsics in the FAST-LIVO2 config.
+
+Legacy Hesai topics are still supported through the `_hesai` catmux files and
+`go2w_hesai_fast_livo2.yaml`:
+
+| Stream | Topic | Type |
+|---|---|---|
+| Hesai XT16 LiDAR | `/hesai_node/points_raw` | `sensor_msgs/msg/PointCloud2` |
+| GO2-W IMU | `/go2w/imu` | `sensor_msgs/msg/Imu` |
 
 ## Direct Launch
 
@@ -384,7 +424,6 @@ Run FAST-LIVO2 with sensor bringup:
 
 ```bash
 source humble_ws/install/setup.bash
-source humble_ws/src/unitree_ros2/setup.sh
 ros2 launch fast_livo2 go2w_fast_livo2.launch.py
 ```
 
@@ -401,13 +440,19 @@ ros2 launch fast_livo2 go2w_fast_livo2.launch.py \
   params_file:=/path/to/go2w_fast_livo2_calibrated.yaml
 ```
 
+Run the legacy Hesai XT16 + GO2-W IMU stack with the preserved catmux file:
+
+```bash
+catmux_create_session /external/catmux/online_fast_livo2_hesai.yaml
+```
+
 ## Calibration Requirements
 
-`humble_ws/src/fast-livo2/config/go2w_fast_livo2.yaml` contains bootstrapping values only. Replace these before collecting meaningful odometry:
+`humble_ws/src/fast-livo2/config/go2w_fast_livo2.yaml` is the Livox MID360 default. It contains bootstrapping camera values and the initial MID360 LiDAR-to-IMU translation from `fastlio-go2w`. Replace or verify these before collecting meaningful odometry:
 
 - `camera.cam_fx`, `camera.cam_fy`, `camera.cam_cx`, `camera.cam_cy`
 - `camera.cam_d0` through `camera.cam_d4`
-- `extrin_calib.extrinsic_T`
+- `extrin_calib.extrinsic_T` currently `[-0.011, -0.02329, 0.04412]`
 - `extrin_calib.extrinsic_R`
 - `extrin_calib.Pcl`
 - `extrin_calib.Rcl`
@@ -417,10 +462,10 @@ ros2 launch fast_livo2 go2w_fast_livo2.launch.py \
 
 Interpretation:
 
-- `extrinsic_T` and `extrinsic_R`: LiDAR to GO2-W IMU transform used by the LIO state.
+- `extrinsic_T` and `extrinsic_R`: Livox LiDAR to Livox IMU transform used by the LIO state.
 - `Pcl` and `Rcl`: LiDAR to RealSense color camera transform used by visual projection.
 
-Do not use the identity extrinsics in the default config for evaluation or field operation.
+Do not use unverified camera intrinsics or camera extrinsics in the default config for evaluation or field operation.
 
 ## Useful Commands
 
@@ -435,16 +480,16 @@ Check expected topics:
 
 ```bash
 ros2 topic list
-ros2 topic echo /go2w/imu --once
-ros2 topic hz /hesai_node/points_raw
+ros2 topic echo /livox/imu --once
+ros2 topic hz /livox/lidar
 ros2 topic hz /camera/camera/color/image_raw
 ```
 
-If `/hesai_node/points_raw` is missing, check the `hesai_lidar_node` catmux
-window. The expected launch path is `bash /external/scripts/run_hesai_lidar_points.sh`;
-using the upstream `ros2 launch hesai_lidar hesai_lidar_launch.py` directly can
-publish the point cloud on a different topic and also enables the unused raw
-packet publisher.
+If `/livox/lidar` or `/livox/imu` is missing, check the `livox_mid360` catmux
+window. The expected launch path is `bash /external/scripts/run_livox_mid360_points.sh`.
+If the MID360 host IP or LiDAR IP differs from the default, update
+`humble_ws/src/fast-livo2/config/MID360_config.json` or run with
+`LIVOX_MID360_CONFIG=/path/to/MID360_config.json`.
 
 Rebuild only FAST-LIVO2:
 

@@ -19,6 +19,7 @@ services:
       QT_X11_NO_MITSHM: "1"
     volumes:
       - ..:/external:rw
+      - ${LIVOX_ROS_DRIVER2_HOST:-../../livox_ros_driver2}:/fast_livo2/src/livox_ros_driver2:rw
       - /dev:/dev
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     working_dir: /external

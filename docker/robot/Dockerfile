@@ -84,6 +84,7 @@ RUN apt-get update -q && \
       ros-humble-pcl-conversions \
       ros-humble-pcl-ros \
       ros-humble-rmw-cyclonedds-cpp \
+      ros-humble-rosidl-default-generators \
       ros-humble-rosidl-generator-dds-idl \
       ros-humble-sophus \
       ros-humble-tf2-geometry-msgs \
@@ -91,6 +92,17 @@ RUN apt-get update -q && \
     python3 -m pip install --no-cache-dir catmux distro transforms3d websocket-client && \
     rosdep init || true && \
     rm -rf /var/lib/apt/lists/*
+
+RUN git clone --depth 1 --branch v1.3.1 https://github.com/Livox-SDK/Livox-SDK2.git && \
+    cd Livox-SDK2 && \
+    mkdir -p build && \
+    cd build && \
+    cmake .. && \
+    make -j"$(nproc)" && \
+    make install && \
+    cd / && \
+    rm -rf Livox-SDK2 && \
+    ldconfig
 
 RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc && \
     echo "[ -f /external/humble_ws/install/setup.bash ] && source /external/humble_ws/install/setup.bash" >> /root/.bashrc && \

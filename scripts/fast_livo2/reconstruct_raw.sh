@@ -44,11 +44,38 @@ for t in info.get('topics_with_message_count', []):
 " "$BAG/metadata.yaml" 2>/dev/null) \
     || { echo "Error: failed to parse $BAG/metadata.yaml" >&2; exit 1; }
 
-for required in /hesai_node/points_raw /go2w/imu /camera/camera/color/image_raw; do
+has_topic() {
+    local topic="$1"
+    grep -qxF "$topic" <<< "$bag_topics"
+}
+
+print_bag_topics() {
+    echo "Topics found in bag:" >&2
+    while IFS= read -r t; do echo "  $t" >&2; done <<< "$bag_topics"
+}
+
+PARAMS_FILE="$REPO_ROOT/humble_ws/src/fast-livo2/config/go2w_fast_livo2.yaml"
+SENSOR_PROFILE=""
+
+if has_topic /livox/lidar && has_topic /livox/imu; then
+    SENSOR_PROFILE="livox_mid360"
+    PARAMS_FILE="$REPO_ROOT/humble_ws/src/fast-livo2/config/go2w_fast_livo2.yaml"
+elif has_topic /hesai_node/points_raw && has_topic /go2w/imu; then
+    SENSOR_PROFILE="hesai_go2w_imu"
+    PARAMS_FILE="$REPO_ROOT/humble_ws/src/fast-livo2/config/go2w_hesai_fast_livo2.yaml"
+else
+    echo "Error: bag is missing a supported LiDAR/IMU topic pair." >&2
+    echo "Expected either:" >&2
+    echo "  - /livox/lidar and /livox/imu" >&2
+    echo "  - /hesai_node/points_raw and /go2w/imu" >&2
+    print_bag_topics
+    exit 1
+fi
+
+for required in /camera/camera/color/image_raw; do
     if ! grep -qxF "$required" <<< "$bag_topics"; then
         echo "Error: bag is missing required topic: $required" >&2
-        echo "Topics found in bag:" >&2
-        while IFS= read -r t; do echo "  $t" >&2; done <<< "$bag_topics"
+        print_bag_topics
         exit 1
     fi
 done
@@ -136,12 +163,15 @@ trap cleanup EXIT INT TERM
 echo "Bag:  $BAG"
 echo "RViz: $RVIZ_CFG"
 echo "FAST-LIVO2 setup: $WS_SETUP"
+echo "Sensor profile: $SENSOR_PROFILE"
+echo "FAST-LIVO2 params: $PARAMS_FILE"
 echo "Mode: replay raw topics, run FAST-LIVO2 offline, visualize generated outputs"
 echo ""
 
 setsid ros2 launch fast_livo2 go2w_fast_livo2.launch.py \
     use_sensor_bringup:=false \
-    use_sim_time:=true &
+    use_sim_time:=true \
+    params_file:="$PARAMS_FILE" &
 FAST_LIVO2_PID=$!
 FAST_LIVO2_PGID=$FAST_LIVO2_PID
 

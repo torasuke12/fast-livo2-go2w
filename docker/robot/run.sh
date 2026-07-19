@@ -45,6 +45,12 @@ if [ -n "${DISPLAY:-}" ]; then
   fi
 fi
 
+livox_driver_host="${LIVOX_ROS_DRIVER2_HOST:-$REPO_ROOT/../livox_ros_driver2}"
+livox_args=()
+if [ -d "$livox_driver_host" ]; then
+  livox_args+=(--volume="$livox_driver_host:/fast_livo2/src/livox_ros_driver2:rw")
+fi
+
 docker run -it --rm \
   --name "$CONTAINER_NAME" \
   --privileged \
@@ -56,6 +62,7 @@ docker run -it --rm \
   --env="FAST_LIVO2_WS=/external/humble_ws" \
   --env="CYCLONEDDS_URI=file:///external/humble_ws/src/unitree_ros2/cyclonedds_ws/src/cyclonedds.xml" \
   "${x11_args[@]}" \
+  "${livox_args[@]}" \
   --volume="/dev:/dev" \
   --volume="$REPO_ROOT:/external:rw" \
   --workdir="/external" \

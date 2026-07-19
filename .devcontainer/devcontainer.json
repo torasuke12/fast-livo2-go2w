@@ -14,7 +14,8 @@
   "runArgs": ["--net=host"],
 
   "mounts": [
-    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached"
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder}/../livox_ros_driver2,target=/fast_livo2/src/livox_ros_driver2,type=bind,consistency=cached"
   ],
 
   "postCreateCommand": "bash .devcontainer/postCreate.sh",

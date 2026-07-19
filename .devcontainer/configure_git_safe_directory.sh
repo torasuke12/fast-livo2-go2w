@@ -36,4 +36,7 @@ if [ -f "$REPO_ROOT/.gitmodules" ]; then
     done < <(git config --file "$REPO_ROOT/.gitmodules" --get-regexp '^submodule\..*\.path$' | awk '{print $2}')
 fi
 
+add_safe_directory "$REPO_ROOT/humble_ws/src/livox_ros_driver2"
+add_safe_directory "/fast_livo2/src/livox_ros_driver2"
+
 echo "Configured git safe.directory for this workspace."

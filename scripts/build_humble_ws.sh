@@ -8,6 +8,7 @@ WS_DIR="${PROJECT_DIR}/humble_ws"
 
 required_package_specs=(
   "fast_livo2:src/fast-livo2/package.xml"
+  "livox_ros_driver2:src/livox_ros_driver2/package.xml"
   "hesai_lidar:src/go2w-hesai-lidar-driver/package.xml"
   "go2w_imu_publisher:src/go2w-imu-publisher/package.xml"
   "unitree_api:src/unitree_ros2/cyclonedds_ws/src/unitree/unitree_api/package.xml"
@@ -41,6 +42,45 @@ list_missing_packages() {
   if [ "${#missing[@]}" -gt 0 ]; then
     printf '%s\n' "${missing[@]}"
   fi
+}
+
+prepare_livox_manifest() {
+  local driver_dir="$1"
+  local ros2_manifest="${driver_dir}/package_ROS2.xml"
+  local manifest="${driver_dir}/package.xml"
+
+  if [ -f "${ros2_manifest}" ]; then
+    cp -f "${ros2_manifest}" "${manifest}"
+  fi
+}
+
+ensure_livox_driver_source() {
+  local driver_dir="${WS_DIR}/src/livox_ros_driver2"
+  local candidate
+  local candidates=(
+    "${PROJECT_DIR}/../livox_ros_driver2"
+    "/fast_livo2/src/livox_ros_driver2"
+    "/external/../livox_ros_driver2"
+  )
+
+  if [ -e "${driver_dir}" ]; then
+    prepare_livox_manifest "${driver_dir}"
+    return
+  fi
+
+  for candidate in "${candidates[@]}"; do
+    if [ -f "${candidate}/CMakeLists.txt" ] && [ -f "${candidate}/package_ROS2.xml" ]; then
+      ln -s "${candidate}" "${driver_dir}"
+      prepare_livox_manifest "${driver_dir}"
+      echo "Linked Livox ROS 2 driver: ${driver_dir} -> ${candidate}"
+      return
+    fi
+  done
+
+  echo "Missing livox_ros_driver2 source." >&2
+  echo "Clone it next to this repository or under /fast_livo2/src:" >&2
+  echo "  git clone https://github.com/Livox-SDK/livox_ros_driver2.git ../livox_ros_driver2" >&2
+  exit 1
 }
 
 ensure_git_safe_directories() {
@@ -113,6 +153,7 @@ set +u
 source /opt/ros/humble/setup.bash
 set -u
 
+ensure_livox_driver_source
 ensure_package_sources
 
 cd "${WS_DIR}"
@@ -135,6 +176,7 @@ colcon build \
   --packages-up-to \
     unitree_api \
     unitree_go \
+    livox_ros_driver2 \
     hesai_lidar \
     go2w_imu_publisher \
     realsense2_description \
@@ -142,6 +184,8 @@ colcon build \
     fast_livo2 \
   --cmake-args \
     -DCMAKE_BUILD_TYPE=Release \
+    -DROS_EDITION=ROS2 \
+    -DDISTRO_ROS=humble \
     -DBUILD_EXAMPLES=OFF \
     -DBUILD_GRAPHICAL_EXAMPLES=OFF \
     -DBUILD_TOOLS=OFF \

@@ -1,0 +1,58 @@
+# GO2-W + Livox MID360 calibration reference.
+#
+# FAST-LIVO2 consumes algorithm-specific copies in
+# humble_ws/src/fast-livo2/config/go2w_fast_livo2.yaml.
+
+frames:
+  base_link: base_link
+  lidar_frame: livox_frame
+  imu_frame: livox_imu_frame
+  camera_color: camera_color_optical_frame
+  camera_init: camera_init
+  odom: odom
+
+topics:
+  lidar: /livox/lidar
+  imu: /livox/imu
+  image: /camera/camera/color/image_raw
+  camera_info: /camera/camera/color/camera_info
+
+extrinsics:
+  T_baselink_lidar:
+    translation: [0.211, 0.0, 0.2008]
+    rotation_quaternion: [0.0, 0.15883, 0.0, 0.987306]
+  T_baselink_imu:
+    translation: [0.207608, 0.02329, 0.155456]
+    rotation_quaternion: [0.0, 0.15883, 0.0, 0.987306]
+  T_lidar_imu:
+    translation: [0.011, 0.02329, -0.04412]
+    rotation_quaternion: [0.0, 0.0, 0.0, 1.0]
+  T_fast_livo2_lidar_to_imu:
+    translation: [-0.011, -0.02329, 0.04412]
+    rotation_matrix: [1.0, 0.0, 0.0,
+                      0.0, 1.0, 0.0,
+                      0.0, 0.0, 1.0]
+  T_lidar_camera_color:
+    translation: [0.0, 0.0, 0.0]
+    rotation_matrix: [1.0, 0.0, 0.0,
+                      0.0, 1.0, 0.0,
+                      0.0, 0.0, 1.0]
+
+network:
+  host_ip: 192.168.123.18
+  lidar_ip: 192.168.123.40
+
+camera_color:
+  model: RadTan
+  width: 640
+  height: 480
+  fx: 615.0
+  fy: 615.0
+  cx: 320.0
+  cy: 240.0
+  distortion: [0.0, 0.0, 0.0, 0.0, 0.0]
+
+time_offset:
+  imu: 0.0
+  image: 0.0
+  lidar: 0.0
