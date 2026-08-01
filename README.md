@@ -77,6 +77,10 @@ container, `docker/robot/run.sh` mounts the sibling clone at
 `LIVOX_ROS_DRIVER2_HOST=/path/to/livox_ros_driver2` before starting the
 container.
 
+If you already cloned the driver directly under `humble_ws/src` as either
+`livox_ros_driver2` or `livox_ros_driver`, `scripts/build_humble_ws.sh` will use
+that source tree and prepare the ROS 2 manifest.
+
 ## Docker Setup
 
 Before building or entering the container, make sure the source submodules are

@@ -8,7 +8,6 @@ WS_DIR="${PROJECT_DIR}/humble_ws"
 
 required_package_specs=(
   "fast_livo2:src/fast-livo2/package.xml"
-  "livox_ros_driver2:src/livox_ros_driver2/package.xml"
   "hesai_lidar:src/go2w-hesai-lidar-driver/package.xml"
   "go2w_imu_publisher:src/go2w-imu-publisher/package.xml"
   "unitree_api:src/unitree_ros2/cyclonedds_ws/src/unitree/unitree_api/package.xml"
@@ -58,21 +57,21 @@ ensure_livox_driver_source() {
   local driver_dir="${WS_DIR}/src/livox_ros_driver2"
   local candidate
   local candidates=(
+    "${WS_DIR}/src/livox_ros_driver2"
+    "${WS_DIR}/src/livox_ros_driver"
     "${PROJECT_DIR}/../livox_ros_driver2"
     "/fast_livo2/src/livox_ros_driver2"
     "/external/../livox_ros_driver2"
   )
 
-  if [ -e "${driver_dir}" ]; then
-    prepare_livox_manifest "${driver_dir}"
-    return
-  fi
-
   for candidate in "${candidates[@]}"; do
     if [ -f "${candidate}/CMakeLists.txt" ] && [ -f "${candidate}/package_ROS2.xml" ]; then
-      ln -s "${candidate}" "${driver_dir}"
-      prepare_livox_manifest "${driver_dir}"
-      echo "Linked Livox ROS 2 driver: ${driver_dir} -> ${candidate}"
+      if [ "${candidate}" != "${driver_dir}" ] && [[ "${candidate}" != "${WS_DIR}/src/"* ]] && [ ! -e "${driver_dir}" ]; then
+        ln -s "${candidate}" "${driver_dir}"
+        candidate="${driver_dir}"
+        echo "Linked Livox ROS 2 driver: ${driver_dir}"
+      fi
+      prepare_livox_manifest "${candidate}"
       return
     fi
   done

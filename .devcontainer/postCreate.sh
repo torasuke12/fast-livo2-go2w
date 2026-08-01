@@ -23,16 +23,19 @@ prepare_livox_driver() {
     local candidate
     local candidates=(
         "$REPO_ROOT/humble_ws/src/livox_ros_driver2"
+        "$REPO_ROOT/humble_ws/src/livox_ros_driver"
         "$REPO_ROOT/../livox_ros_driver2"
         "/fast_livo2/src/livox_ros_driver2"
     )
 
     for candidate in "${candidates[@]}"; do
         if [ -f "$candidate/CMakeLists.txt" ] && [ -f "$candidate/package_ROS2.xml" ]; then
-            if [ "$candidate" != "$LIVOX_DRIVER_SRC" ] && [ ! -e "$LIVOX_DRIVER_SRC" ]; then
+            if [ "$candidate" != "$LIVOX_DRIVER_SRC" ] && [[ "$candidate" != "$REPO_ROOT/humble_ws/src/"* ]] && [ ! -e "$LIVOX_DRIVER_SRC" ]; then
                 ln -s "$candidate" "$LIVOX_DRIVER_SRC"
+                candidate="$LIVOX_DRIVER_SRC"
             fi
-            cp -f "$LIVOX_DRIVER_SRC/package_ROS2.xml" "$LIVOX_DRIVER_SRC/package.xml"
+            cp -f "$candidate/package_ROS2.xml" "$candidate/package.xml"
+            LIVOX_DRIVER_SRC="$candidate"
             return
         fi
     done

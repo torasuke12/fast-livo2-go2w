@@ -4,6 +4,25 @@
 set -eu
 set -o pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+ROS_SETUP="/opt/ros/${ROS_DISTRO:-humble}/setup.bash"
+WS_SETUP="${FAST_LIVO2_WS:-${REPO_ROOT}/humble_ws}/install/setup.bash"
+
+if ! command -v ros2 >/dev/null 2>&1 && [ -f "$ROS_SETUP" ]; then
+    # Allow direct execution from a fresh shell.
+    # shellcheck source=/dev/null
+    source "$ROS_SETUP"
+fi
+
+if [ -f "$WS_SETUP" ]; then
+    # shellcheck source=/dev/null
+    source "$WS_SETUP"
+elif [ -f /external/humble_ws/install/setup.bash ]; then
+    # shellcheck source=/dev/null
+    source /external/humble_ws/install/setup.bash
+fi
+
 if ! command -v ros2 >/dev/null 2>&1; then
     echo "Error: ros2 not found. Source the ROS 2 and workspace setup files first." >&2
     exit 1
@@ -11,6 +30,12 @@ fi
 
 if ! ros2 pkg prefix livox_ros_driver2 >/dev/null 2>&1; then
     echo "Error: livox_ros_driver2 is not available. Build the workspace with Livox driver first." >&2
+    echo "Run inside the container:" >&2
+    echo "  cd /external" >&2
+    echo "  bash scripts/build_humble_ws.sh" >&2
+    echo "  source humble_ws/install/setup.bash" >&2
+    echo "Then check:" >&2
+    echo "  ros2 pkg prefix livox_ros_driver2" >&2
     exit 1
 fi
 
