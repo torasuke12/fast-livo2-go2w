@@ -491,9 +491,27 @@ ros2 topic hz /camera/camera/color/image_raw
 
 If `/livox/lidar` or `/livox/imu` is missing, check the `livox_mid360` catmux
 window. The expected launch path is `bash /external/scripts/run_livox_mid360_points.sh`.
+The wrapper runs `livox_ros_driver2_node` directly and uses
+`humble_ws/src/fast-livo2/config/MID360_config.json` if the installed
+`fast_livo2` share directory is stale.
 If the MID360 host IP or LiDAR IP differs from the default, update
 `humble_ws/src/fast-livo2/config/MID360_config.json` or run with
 `LIVOX_MID360_CONFIG=/path/to/MID360_config.json`.
+
+If `colcon build` reports duplicate `livox_ros_driver2` packages, only one
+driver source can remain visible to colcon. This commonly happens when both
+`humble_ws/src/livox_ros_driver2` and
+`humble_ws/src/ws_livox/src/livox_ros_driver2` exist. The normal build script
+now ignores duplicates automatically. To fix an already-failed workspace
+manually:
+
+```bash
+touch /external/humble_ws/src/ws_livox/src/livox_ros_driver2/COLCON_IGNORE
+cd /external
+bash scripts/build_humble_ws.sh
+source humble_ws/install/setup.bash
+ros2 pkg prefix livox_ros_driver2
+```
 
 Rebuild only FAST-LIVO2:
 

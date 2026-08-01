@@ -28,7 +28,8 @@ if ! command -v ros2 >/dev/null 2>&1; then
     exit 1
 fi
 
-if ! ros2 pkg prefix livox_ros_driver2 >/dev/null 2>&1; then
+livox_prefix="$(ros2 pkg prefix livox_ros_driver2 2>/dev/null || true)"
+if [ -z "$livox_prefix" ]; then
     echo "Error: livox_ros_driver2 is not available. Build the workspace with Livox driver first." >&2
     echo "Run inside the container:" >&2
     echo "  cd /external" >&2
@@ -39,18 +40,38 @@ if ! ros2 pkg prefix livox_ros_driver2 >/dev/null 2>&1; then
     exit 1
 fi
 
-launch_args=(
-    xfer_format:="${LIVOX_XFER_FORMAT:-1}"
-    multi_topic:="${LIVOX_MULTI_TOPIC:-0}"
-    data_src:="${LIVOX_DATA_SRC:-0}"
-    publish_freq:="${LIVOX_PUBLISH_FREQ:-10.0}"
-    output_data_type:="${LIVOX_OUTPUT_DATA_TYPE:-0}"
-    frame_id:="${LIVOX_FRAME_ID:-livox_frame}"
-    cmdline_input_bd_code:="${LIVOX_BD_CODE:-livox0000000001}"
-)
+livox_config="${LIVOX_MID360_CONFIG:-}"
+if [ -z "$livox_config" ]; then
+    fast_livo2_prefix="$(ros2 pkg prefix fast_livo2 2>/dev/null || true)"
+    config_candidates=(
+        "${fast_livo2_prefix}/share/fast_livo2/config/MID360_config.json"
+        "${REPO_ROOT}/humble_ws/src/fast-livo2/config/MID360_config.json"
+        "/external/humble_ws/src/fast-livo2/config/MID360_config.json"
+    )
 
-if [ -n "${LIVOX_MID360_CONFIG:-}" ]; then
-    launch_args+=(user_config_path:="${LIVOX_MID360_CONFIG}")
+    for candidate in "${config_candidates[@]}"; do
+        if [ -f "$candidate" ]; then
+            livox_config="$candidate"
+            break
+        fi
+    done
 fi
 
-exec ros2 launch fast_livo2 go2w_livox_mid360.launch.py "${launch_args[@]}"
+if [ ! -f "$livox_config" ]; then
+    echo "Error: MID360 config file not found." >&2
+    echo "Set LIVOX_MID360_CONFIG or rebuild FAST-LIVO2 after pulling the Livox config:" >&2
+    echo "  cd /external" >&2
+    echo "  bash scripts/build_humble_ws.sh" >&2
+    exit 1
+fi
+
+exec ros2 run livox_ros_driver2 livox_ros_driver2_node --ros-args \
+    -r __node:=livox_lidar_publisher \
+    -p xfer_format:="${LIVOX_XFER_FORMAT:-1}" \
+    -p multi_topic:="${LIVOX_MULTI_TOPIC:-0}" \
+    -p data_src:="${LIVOX_DATA_SRC:-0}" \
+    -p publish_freq:="${LIVOX_PUBLISH_FREQ:-10.0}" \
+    -p output_data_type:="${LIVOX_OUTPUT_DATA_TYPE:-0}" \
+    -p frame_id:="${LIVOX_FRAME_ID:-livox_frame}" \
+    -p user_config_path:="$livox_config" \
+    -p cmdline_input_bd_code:="${LIVOX_BD_CODE:-livox0000000001}"

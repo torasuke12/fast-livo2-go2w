@@ -5,6 +5,7 @@ set -o pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 WS_DIR="${PROJECT_DIR}/humble_ws"
+LIVOX_DRIVER_SOURCE=""
 
 required_package_specs=(
   "fast_livo2:src/fast-livo2/package.xml"
@@ -59,6 +60,7 @@ ensure_livox_driver_source() {
   local candidates=(
     "${WS_DIR}/src/livox_ros_driver2"
     "${WS_DIR}/src/livox_ros_driver"
+    "${WS_DIR}/src/ws_livox/src/livox_ros_driver2"
     "${PROJECT_DIR}/../livox_ros_driver2"
     "/fast_livo2/src/livox_ros_driver2"
     "/external/../livox_ros_driver2"
@@ -72,6 +74,7 @@ ensure_livox_driver_source() {
         echo "Linked Livox ROS 2 driver: ${driver_dir}"
       fi
       prepare_livox_manifest "${candidate}"
+      LIVOX_DRIVER_SOURCE="$(cd "${candidate}" && pwd -P)"
       return
     fi
   done
@@ -80,6 +83,30 @@ ensure_livox_driver_source() {
   echo "Clone it next to this repository or under /fast_livo2/src:" >&2
   echo "  git clone https://github.com/Livox-SDK/livox_ros_driver2.git ../livox_ros_driver2" >&2
   exit 1
+}
+
+ignore_duplicate_livox_driver_sources() {
+  local selected="${LIVOX_DRIVER_SOURCE:-}"
+  local manifest package_dir resolved
+
+  if [ -z "${selected}" ]; then
+    return
+  fi
+
+  while IFS= read -r manifest; do
+    package_dir="$(dirname "${manifest}")"
+    if ! grep -q "<name>livox_ros_driver2</name>" "${manifest}"; then
+      continue
+    fi
+
+    resolved="$(cd "${package_dir}" && pwd -P)"
+    if [ "${resolved}" != "${selected}" ]; then
+      touch "${package_dir}/COLCON_IGNORE"
+      echo "Ignoring duplicate livox_ros_driver2 source: ${package_dir}" >&2
+    fi
+  done < <(find "${WS_DIR}/src" \
+    -path "*/.git" -prune -o \
+    -type f \( -name package.xml -o -name package_ROS2.xml \) -print)
 }
 
 ensure_git_safe_directories() {
@@ -153,6 +180,7 @@ source /opt/ros/humble/setup.bash
 set -u
 
 ensure_livox_driver_source
+ignore_duplicate_livox_driver_sources
 ensure_package_sources
 
 cd "${WS_DIR}"
