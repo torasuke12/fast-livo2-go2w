@@ -9,18 +9,24 @@ REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 ROS_SETUP="/opt/ros/${ROS_DISTRO:-humble}/setup.bash"
 WS_SETUP="${FAST_LIVO2_WS:-${REPO_ROOT}/humble_ws}/install/setup.bash"
 
+source_setup() {
+    local setup_file="$1"
+
+    set +u
+    # shellcheck source=/dev/null
+    source "$setup_file"
+    set -u
+}
+
 if ! command -v ros2 >/dev/null 2>&1 && [ -f "$ROS_SETUP" ]; then
     # Allow direct execution from a fresh shell.
-    # shellcheck source=/dev/null
-    source "$ROS_SETUP"
+    source_setup "$ROS_SETUP"
 fi
 
 if [ -f "$WS_SETUP" ]; then
-    # shellcheck source=/dev/null
-    source "$WS_SETUP"
+    source_setup "$WS_SETUP"
 elif [ -f /external/humble_ws/install/setup.bash ]; then
-    # shellcheck source=/dev/null
-    source /external/humble_ws/install/setup.bash
+    source_setup /external/humble_ws/install/setup.bash
 fi
 
 if ! command -v ros2 >/dev/null 2>&1; then
