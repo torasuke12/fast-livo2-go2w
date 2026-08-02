@@ -499,6 +499,24 @@ If the MID360 host IP or LiDAR IP differs from the default, update
 `humble_ws/src/fast-livo2/config/MID360_config.json` or run with
 `LIVOX_MID360_CONFIG=/path/to/MID360_config.json`.
 
+If the Livox driver prints `bind failed`, the MID360 config usually names a
+host IP that is not assigned to the robot, or another Livox process is already
+using the UDP ports. The wrapper checks both before launching the driver. To
+inspect manually inside the robot container:
+
+```bash
+ip -o -4 addr show
+ss -H -lunp | grep -E ':(56101|56201|56301|56401|56501)\b' || true
+pkill -f livox_ros_driver2_node
+```
+
+If the FAST-LIVO2 MID360 config is missing after pulling the repository, update
+the submodules before rebuilding:
+
+```bash
+git submodule update --init --recursive humble_ws/src/fast-livo2
+```
+
 If `colcon build` reports duplicate `livox_ros_driver2` packages, only one
 driver source can remain visible to colcon. This commonly happens when both
 `humble_ws/src/livox_ros_driver2` and
