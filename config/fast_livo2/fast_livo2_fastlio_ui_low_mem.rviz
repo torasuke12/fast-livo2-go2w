@@ -1,0 +1,335 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Name: Tool Properties
+  - Class: rviz_common/Views
+    Name: Views
+  - Class: rviz_common/Time
+    Name: Time
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_default_plugins/TF
+          Enabled: false
+          Frame Timeout: 9999
+          Frames:
+            All Enabled: true
+          Marker Alpha: 1
+          Marker Scale: 1
+          Name: TF Tree
+          Show Arrows: true
+          Show Axes: true
+          Show Names: false
+          Tree:
+            {}
+          Update Interval: 0
+          Value: false
+        - Alpha: 1
+          Class: rviz_default_plugins/Axes
+          Enabled: true
+          Length: 0.7
+          Name: camera_init
+          Radius: 0.08
+          Reference Frame: camera_init
+          Show Trail: false
+          Value: true
+        - Alpha: 0.5
+          Cell Count: 20
+          Cell Size: 1
+          Class: rviz_default_plugins/Grid
+          Color: 160; 160; 160
+          Enabled: true
+          Line Style:
+            Line Width: 0.03
+            Value: Lines
+          Name: Ground Grid
+          Normal Cell Count: 0
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Plane: XY
+          Plane Cell Count: 20
+          Reference Frame: camera_init
+          Value: true
+        - Alpha: 1
+          Class: rviz_default_plugins/Axes
+          Enabled: false
+          Length: 0.7
+          Name: aft_mapped
+          Radius: 0.08
+          Reference Frame: aft_mapped
+          Show Trail: false
+          Value: false
+      Enabled: true
+      Name: Frames
+    - Class: rviz_common/Group
+      Displays:
+        - Alpha: 1
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -3
+            Value: false
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 239; 41; 41
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 1024
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: Registered Scan
+          Position Transformer: XYZ
+          Queue Size: 5
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.015
+          Style: Points
+          Topic:
+            Depth: 10
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /cloud_registered
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: false
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 20
+            Min Value: -5
+            Value: false
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 238; 238; 236
+          Color Transformer: RGB8
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 1024
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: Laser Map
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.01
+          Style: Points
+          Topic:
+            Depth: 10
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /Laser_map
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: false
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -3
+            Value: false
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 255; 255; 0
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 1024
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: Effective Points
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.01
+          Style: Points
+          Topic:
+            Depth: 10
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /cloud_effected
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: false
+          Value: false
+      Enabled: true
+      Name: FAST-LIVO2 Outputs
+    - Class: rviz_common/Group
+      Displays:
+        - Angle Tolerance: 0.01
+          Class: rviz_default_plugins/Odometry
+          Covariance:
+            Orientation:
+              Alpha: 0.5
+              Color: 255; 255; 127
+              Value: false
+            Position:
+              Alpha: 0.3
+              Color: 204; 51; 204
+              Value: false
+            Value: false
+          Enabled: true
+          Keep: 100
+          Name: Mapped Odometry
+          Position Tolerance: 0.01
+          Queue Size: 10
+          Shape:
+            Alpha: 1
+            Axes Length: 1.5
+            Axes Radius: 0.12
+            Color: 255; 25; 0
+            Value: Axes
+          Topic:
+            Depth: 10
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /aft_mapped_to_init
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 5
+          Class: rviz_default_plugins/Path
+          Color: 0; 180; 255
+          Enabled: true
+          Line Style: Billboards
+          Line Width: 0.03
+          Name: Trajectory
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Queue Size: 10
+          Radius: 0.08
+          Topic:
+            Depth: 10
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /path
+          Unreliable: false
+          Value: true
+        - Angle Tolerance: 0.01
+          Class: rviz_default_plugins/Odometry
+          Enabled: false
+          Keep: 50
+          Name: IMU Propagated Odometry
+          Position Tolerance: 0.01
+          Queue Size: 10
+          Shape:
+            Alpha: 1
+            Axes Length: 0.3
+            Axes Radius: 0.04
+            Color: 255; 170; 0
+            Value: Arrow
+          Topic:
+            Depth: 10
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /LIVO2/imu_propagate
+          Unreliable: false
+          Value: false
+      Enabled: true
+      Name: Odometry
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_default_plugins/Image
+          Enabled: true
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: RGB Image
+          Normalize Range: true
+          Queue Size: 2
+          Topic:
+            Depth: 2
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /rgb_img
+          Transport Hint: raw
+          Unreliable: false
+          Value: true
+        - Class: rviz_default_plugins/MarkerArray
+          Enabled: false
+          Marker Topic: /visualization_marker
+          Name: Visualization Markers
+          Namespaces:
+            {}
+          Queue Size: 10
+          Value: false
+        - Class: rviz_default_plugins/MarkerArray
+          Enabled: false
+          Marker Topic: /planes
+          Name: Plane Markers
+          Namespaces:
+            {}
+          Queue Size: 10
+          Value: false
+      Enabled: true
+      Name: Debug
+  Enabled: true
+  Global Options:
+    Background Color: 0; 0; 0
+    Default Light: true
+    Fixed Frame: camera_init
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+    - Class: rviz_default_plugins/SetInitialPose
+      Theta std deviation: 0.261799
+      Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz_default_plugins/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 20
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Name: Current View
+      Near Clip Distance: 0.01
+      Pitch: 1
+      Target Frame: camera_init
+      Yaw: 3.14
+    Saved: ~
