@@ -27,16 +27,22 @@ extrinsics:
   T_lidar_imu:
     translation: [0.011, 0.02329, -0.04412]
     rotation_quaternion: [0.0, 0.0, 0.0, 1.0]
+  T_baselink_camera_color:
+    # Provisional base_link -> camera_color_optical_frame offset: [x, y, z, roll, pitch, yaw].
+    translation: [0.30, 0.0, 0.05]
+    rotation_rpy: [0.0, 0.0, 0.0]
   T_fast_livo2_lidar_to_imu:
     translation: [-0.011, -0.02329, 0.04412]
     rotation_matrix: [1.0, 0.0, 0.0,
                       0.0, 1.0, 0.0,
                       0.0, 0.0, 1.0]
   T_lidar_camera_color:
-    translation: [0.0, 0.0, 0.0]
-    rotation_matrix: [1.0, 0.0, 0.0,
+    # TF-style livox_frame -> camera_color_optical_frame, derived from
+    # inv(T_baselink_lidar) * T_baselink_camera_color.
+    translation: [0.131805, 0.0, -0.115279]
+    rotation_matrix: [0.949546, 0.0, -0.313628,
                       0.0, 1.0, 0.0,
-                      0.0, 0.0, 1.0]
+                      0.313628, 0.0, 0.949546]
 
 network:
   host_ip: 192.168.123.18

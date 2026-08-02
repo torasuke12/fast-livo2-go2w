@@ -458,7 +458,7 @@ catmux_create_session /external/catmux/online_fast_livo2_hesai.yaml
 - `camera.cam_d0` through `camera.cam_d4`
 - `extrin_calib.extrinsic_T` currently `[-0.011, -0.02329, 0.04412]`
 - `extrin_calib.extrinsic_R`
-- `extrin_calib.Pcl`
+- `extrin_calib.Pcl` currently `[-0.089, 0.0, 0.1508]`
 - `extrin_calib.Rcl`
 - `time_offset.imu_time_offset`
 - `time_offset.img_time_offset`
@@ -468,6 +468,10 @@ Interpretation:
 
 - `extrinsic_T` and `extrinsic_R`: Livox LiDAR to Livox IMU transform used by the LIO state.
 - `Pcl` and `Rcl`: LiDAR to RealSense color camera transform used by visual projection.
+
+The current `Pcl`/`Rcl` values are provisional. They are derived from a temporary
+`base_link -> camera_color_optical_frame` offset of `[0.30, 0.0, 0.05, 0.0, 0.0,
+0.0]` and the MID360 mount reference in `config/sensor/go2w_mid360_calibration.yaml`.
 
 Do not use unverified camera intrinsics or camera extrinsics in the default config for evaluation or field operation.
 
