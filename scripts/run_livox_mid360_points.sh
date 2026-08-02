@@ -227,6 +227,8 @@ livox_config="${LIVOX_MID360_CONFIG:-}"
 if [ -z "$livox_config" ]; then
     fast_livo2_prefix="$(ros2 pkg prefix fast_livo2 2>/dev/null || true)"
     config_candidates=(
+        "${REPO_ROOT}/config/livox/MID360_config.json"
+        "/external/config/livox/MID360_config.json"
         "${fast_livo2_prefix}/share/fast_livo2/config/MID360_config.json"
         "${REPO_ROOT}/humble_ws/src/fast-livo2/config/MID360_config.json"
         "/external/humble_ws/src/fast-livo2/config/MID360_config.json"
