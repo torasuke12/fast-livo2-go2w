@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run the Livox MID360 ROS 2 driver for FAST-LIVO2 CustomMsg input.
+# Run the Livox MID360 ROS 2 driver for FAST-LIVO2 PointCloud2 input.
 
 set -eu
 set -o pipefail
@@ -264,7 +264,7 @@ preflight_livox_network_config "$livox_config"
 driver_cmd=(
     ros2 run livox_ros_driver2 livox_ros_driver2_node --ros-args
     -r __node:=livox_lidar_publisher
-    -p "xfer_format:=${LIVOX_XFER_FORMAT:-1}"
+    -p "xfer_format:=${LIVOX_XFER_FORMAT:-0}"
     -p "multi_topic:=${LIVOX_MULTI_TOPIC:-0}"
     -p "data_src:=${LIVOX_DATA_SRC:-0}"
     -p "publish_freq:=${LIVOX_PUBLISH_FREQ:-10.0}"

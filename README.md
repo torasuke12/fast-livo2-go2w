@@ -160,7 +160,7 @@ This is the pure live launch session. It starts:
 
 It does not start RViz and does not record bags.
 
-The Livox wrapper launches `livox_ros_driver2` with `xfer_format:=1`, so FAST-LIVO2 subscribes to `/livox/lidar` as `livox_ros_driver2/msg/CustomMsg` and `/livox/imu` as `sensor_msgs/msg/Imu`.
+The Livox wrapper launches `livox_ros_driver2` with `xfer_format:=0`, so FAST-LIVO2 subscribes to `/livox/lidar` as `sensor_msgs/msg/PointCloud2` and `/livox/imu` as `sensor_msgs/msg/Imu`.
 
 The previous Hesai XT16 + GO2-W IMU session is still available:
 
@@ -407,7 +407,7 @@ bash scripts/fast_livo2/reconstruct_raw.sh bags/raw_YYYYMMDD_HHMMSS
 
 | Stream | Topic | Type |
 |---|---|---|
-| Livox MID360 LiDAR | `/livox/lidar` | `livox_ros_driver2/msg/CustomMsg` |
+| Livox MID360 LiDAR | `/livox/lidar` | `sensor_msgs/msg/PointCloud2` |
 | Livox MID360 IMU | `/livox/imu` | `sensor_msgs/msg/Imu` |
 | RealSense color image | `/camera/camera/color/image_raw` | `sensor_msgs/msg/Image` |
 | RealSense camera info | `/camera/camera/color/camera_info` | `sensor_msgs/msg/CameraInfo` |
