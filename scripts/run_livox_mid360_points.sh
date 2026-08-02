@@ -53,6 +53,9 @@ if [ -z "$livox_config" ]; then
         "${fast_livo2_prefix}/share/fast_livo2/config/MID360_config.json"
         "${REPO_ROOT}/humble_ws/src/fast-livo2/config/MID360_config.json"
         "/external/humble_ws/src/fast-livo2/config/MID360_config.json"
+        "${livox_prefix}/share/livox_ros_driver2/config/MID360_config.json"
+        "${REPO_ROOT}/humble_ws/src/livox_ros_driver2/config/MID360_config.json"
+        "/external/humble_ws/src/livox_ros_driver2/config/MID360_config.json"
     )
 
     for candidate in "${config_candidates[@]}"; do
@@ -65,6 +68,12 @@ fi
 
 if [ ! -f "$livox_config" ]; then
     echo "Error: MID360 config file not found." >&2
+    if [ -n "${LIVOX_MID360_CONFIG:-}" ]; then
+        echo "Configured LIVOX_MID360_CONFIG does not exist: ${LIVOX_MID360_CONFIG}" >&2
+    else
+        echo "Checked:" >&2
+        printf '  %s\n' "${config_candidates[@]}" >&2
+    fi
     echo "Set LIVOX_MID360_CONFIG or rebuild FAST-LIVO2 after pulling the Livox config:" >&2
     echo "  cd /external" >&2
     echo "  bash scripts/build_humble_ws.sh" >&2

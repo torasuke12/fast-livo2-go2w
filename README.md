@@ -493,7 +493,8 @@ If `/livox/lidar` or `/livox/imu` is missing, check the `livox_mid360` catmux
 window. The expected launch path is `bash /external/scripts/run_livox_mid360_points.sh`.
 The wrapper runs `livox_ros_driver2_node` directly and uses
 `humble_ws/src/fast-livo2/config/MID360_config.json` if the installed
-`fast_livo2` share directory is stale.
+`fast_livo2` share directory is stale. It also falls back to the
+`livox_ros_driver2` package config when the FAST-LIVO2 copy is missing.
 If the MID360 host IP or LiDAR IP differs from the default, update
 `humble_ws/src/fast-livo2/config/MID360_config.json` or run with
 `LIVOX_MID360_CONFIG=/path/to/MID360_config.json`.
