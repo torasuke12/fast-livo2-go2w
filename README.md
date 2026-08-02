@@ -412,7 +412,7 @@ bash scripts/fast_livo2/reconstruct_raw.sh bags/raw_YYYYMMDD_HHMMSS
 | RealSense color image | `/camera/camera/color/image_raw` | `sensor_msgs/msg/Image` |
 | RealSense camera info | `/camera/camera/color/camera_info` | `sensor_msgs/msg/CameraInfo` |
 
-FAST-LIVO2 subscribes to LiDAR, IMU, and image. Use `camera_info` to fill camera intrinsics in the FAST-LIVO2 config.
+FAST-LIVO2 subscribes to LiDAR, IMU, and image. Use `camera_info` to fill camera intrinsics in the FAST-LIVO2 config. If no parameter file is loaded, the compiled fallback defaults are the Livox MID360 topics: `/livox/lidar` and `/livox/imu`.
 
 Legacy Hesai topics are still supported through the `_hesai` catmux files and
 `go2w_hesai_fast_livo2.yaml`:
