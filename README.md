@@ -308,6 +308,12 @@ first, copy the whole bag directory, then replay it locally with RViz.
    bash scripts/fast_livo2/reconstruct_raw.sh bags/raw_YYYYMMDD_HHMMSS
    ```
 
+   The reconstruction helper delays `ros2 bag play` by 5 seconds by default so
+   FAST-LIVO2 subscriptions and bag publishers can finish DDS discovery before
+   sensor messages start. If startup sync warnings still appear, increase the
+   delay with `FAST_LIVO2_BAG_PLAY_DELAY=10` or pass `--delay 10` after the bag
+   path.
+
 4. Check replayed topics from another terminal if RViz does not show an output:
 
    ```bash
@@ -344,6 +350,63 @@ export ROS_LOCALHOST_ONLY=1
 unset CYCLONEDDS_URI
 
 rviz2 -d config/fast_livo2/fast_livo2.rviz --ros-args -p use_sim_time:=true
+```
+
+### CycloneDDS Domain Creation Error on a Visualization PC
+
+If every ROS 2 command fails on a non-robot visualization PC with an error like
+this:
+
+```text
+[rmw_cyclonedds_cpp]: rmw_create_node: failed to create domain
+what(): failed to initialize rcl node: rcl node's rmw handle is invalid
+```
+
+the usual cause is a robot-side CycloneDDS configuration being sourced on the
+visualization PC. In particular, `CYCLONEDDS_URI` may point to a Unitree or
+robot network config that names an interface that does not exist on the
+visualization PC.
+
+For local bag replay or raw-bag reconstruction on the visualization PC, use a
+local-only ROS 2 environment:
+
+```bash
+source /opt/ros/humble/setup.bash
+source humble_ws/install/setup.bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+export ROS_DOMAIN_ID=42
+export ROS_LOCALHOST_ONLY=1
+unset CYCLONEDDS_URI
+
+ros2 daemon stop
+ros2 topic list
+```
+
+Check the current DDS-related environment when diagnosing this:
+
+```bash
+env | grep -E '^(RMW_IMPLEMENTATION|ROS_DOMAIN_ID|ROS_LOCALHOST_ONLY|CYCLONEDDS_URI)='
+ip -br link
+```
+
+Do not source the Unitree `setup.sh` on the visualization PC for offline bag
+work unless you also provide a CycloneDDS XML file that matches that PC's
+network interface. If you need live DDS communication with the robot instead of
+local bag replay, set `ROS_LOCALHOST_ONLY=0` and make `CYCLONEDDS_URI` point to
+a CycloneDDS config whose network interface exists on the visualization PC.
+
+If CycloneDDS still fails and you only need local bag playback, switch to the
+default Fast DDS RMW for that terminal:
+
+```bash
+source /opt/ros/humble/setup.bash
+source humble_ws/install/setup.bash
+export ROS_DOMAIN_ID=42
+export ROS_LOCALHOST_ONLY=1
+unset CYCLONEDDS_URI
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+
+ros2 topic list
 ```
 
 ## Common Robot Sessions

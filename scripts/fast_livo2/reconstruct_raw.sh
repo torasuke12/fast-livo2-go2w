@@ -9,6 +9,7 @@ set -eo pipefail
 BAG="${1:?Error: bag path required. Usage: $0 <bag_directory> [ros2 bag play args...]}"
 shift
 EXTRA_ARGS=("$@")
+DEFAULT_BAG_PLAY_DELAY="${FAST_LIVO2_BAG_PLAY_DELAY:-5}"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
@@ -85,6 +86,22 @@ if grep -qxF "/clock" <<< "$bag_topics"; then
     CLOCK_ARG=()
 fi
 
+has_bag_play_delay_arg=0
+for arg in "${EXTRA_ARGS[@]}"; do
+    case "$arg" in
+        --delay|-d|--delay=*)
+            has_bag_play_delay_arg=1
+            break
+            ;;
+    esac
+done
+
+BAG_PLAY_ARGS=("$BAG" "${CLOCK_ARG[@]}")
+if [ "$has_bag_play_delay_arg" -eq 0 ]; then
+    BAG_PLAY_ARGS+=(--delay "$DEFAULT_BAG_PLAY_DELAY")
+fi
+BAG_PLAY_ARGS+=("${EXTRA_ARGS[@]}")
+
 if [ ! -f "$ROS_SETUP" ]; then
     echo "Error: ROS 2 setup not found: $ROS_SETUP" >&2
     exit 1
@@ -140,7 +157,8 @@ cleanup() {
     CLEANUP_STARTED=1
 
     echo "Stopping raw-bag FAST-LIVO2 reconstruction..."
-    for pgid in "${RVIZ_PGID:-}" "${BAG_PGID:-}" "${FAST_LIVO2_PGID:-}"; do
+    terminate_process_group TERM "${RVIZ_PGID:-}"
+    for pgid in "${BAG_PGID:-}" "${FAST_LIVO2_PGID:-}"; do
         terminate_process_group INT "$pgid"
     done
 
@@ -177,6 +195,11 @@ echo "RViz: $RVIZ_CFG"
 echo "FAST-LIVO2 setup: $WS_SETUP"
 echo "Sensor profile: $SENSOR_PROFILE"
 echo "FAST-LIVO2 params: $PARAMS_FILE"
+if [ "$has_bag_play_delay_arg" -eq 0 ]; then
+    echo "Bag play delay: ${DEFAULT_BAG_PLAY_DELAY}s"
+else
+    echo "Bag play delay: set by ros2 bag play arguments"
+fi
 echo "Mode: replay raw topics, run FAST-LIVO2 offline, visualize generated outputs"
 echo ""
 
@@ -194,7 +217,7 @@ if ! kill -0 "$FAST_LIVO2_PID" 2>/dev/null; then
     exit 1
 fi
 
-setsid ros2 bag play "$BAG" "${CLOCK_ARG[@]}" "${EXTRA_ARGS[@]}" &
+setsid ros2 bag play "${BAG_PLAY_ARGS[@]}" &
 BAG_PID=$!
 BAG_PGID=$BAG_PID
 
