@@ -1,10 +1,6 @@
 Panels:
   - Class: rviz_common/Displays
     Name: Displays
-  - Class: rviz_common/Selection
-    Name: Selection
-  - Class: rviz_common/Tool Properties
-    Name: Tool Properties
   - Class: rviz_common/Views
     Name: Views
   - Class: rviz_common/Time
@@ -59,13 +55,13 @@ Visualization Manager:
           Value: true
         - Alpha: 1
           Class: rviz_default_plugins/Axes
-          Enabled: false
+          Enabled: true
           Length: 0.7
           Name: aft_mapped
           Radius: 0.08
           Reference Frame: aft_mapped
           Show Trail: false
-          Value: false
+          Value: true
       Enabled: true
       Name: Frames
     - Class: rviz_common/Group
@@ -80,7 +76,7 @@ Visualization Manager:
           Channel Name: intensity
           Class: rviz_default_plugins/PointCloud2
           Color: 239; 41; 41
-          Color Transformer: FlatColor
+          Color Transformer: AxisColor
           Decay Time: 0
           Enabled: false
           Invert Rainbow: false
@@ -191,7 +187,7 @@ Visualization Manager:
               Color: 204; 51; 204
               Value: false
             Value: false
-          Enabled: true
+          Enabled: false
           Keep: 100
           Name: Mapped Odometry
           Position Tolerance: 0.01
@@ -209,7 +205,7 @@ Visualization Manager:
             Reliability Policy: Reliable
             Value: /aft_mapped_to_init
           Unreliable: false
-          Value: true
+          Value: false
         - Alpha: 1
           Buffer Length: 5
           Class: rviz_default_plugins/Path

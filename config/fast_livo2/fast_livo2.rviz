@@ -8,14 +8,6 @@ Panels:
         - /Odometry1
       Splitter Ratio: 0.64
     Tree Height: 520
-  - Class: rviz_common/Selection
-    Name: Selection
-  - Class: rviz_common/Tool Properties
-    Expanded:
-      - /2D Pose Estimate1
-      - /2D Nav Goal1
-      - /Publish Point1
-    Name: Tool Properties
   - Class: rviz_common/Views
     Expanded:
       - /Current View1
@@ -78,13 +70,13 @@ Visualization Manager:
           Value: true
         - Alpha: 1
           Class: rviz_default_plugins/Axes
-          Enabled: false
+          Enabled: true
           Length: 0.7
           Name: aft_mapped
           Radius: 0.08
           Reference Frame: aft_mapped
           Show Trail: false
-          Value: false
+          Value: true
       Enabled: true
       Name: Frames
     - Class: rviz_common/Group
@@ -99,7 +91,7 @@ Visualization Manager:
           Channel Name: intensity
           Class: rviz_default_plugins/PointCloud2
           Color: 239; 41; 41
-          Color Transformer: FlatColor
+          Color Transformer: AxisColor
           Decay Time: 10
           Enabled: true
           Invert Rainbow: false
@@ -210,7 +202,7 @@ Visualization Manager:
               Color: 204; 51; 204
               Value: false
             Value: false
-          Enabled: true
+          Enabled: false
           Keep: 100
           Name: Mapped Odometry
           Position Tolerance: 0.01
@@ -228,7 +220,7 @@ Visualization Manager:
             Reliability Policy: Reliable
             Value: /aft_mapped_to_init
           Unreliable: false
-          Value: true
+          Value: false
         - Alpha: 1
           Buffer Length: 20
           Class: rviz_default_plugins/Path
@@ -358,11 +350,7 @@ Window Geometry:
   Height: 1080
   Hide Left Dock: false
   Hide Right Dock: true
-  Selection:
-    collapsed: false
   Time:
-    collapsed: false
-  Tool Properties:
     collapsed: false
   Views:
     collapsed: true
