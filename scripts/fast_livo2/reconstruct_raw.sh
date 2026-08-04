@@ -129,15 +129,24 @@ is_process_group_alive() {
     [ -n "$pgid" ] && kill -0 -- "-$pgid" 2>/dev/null
 }
 
+CLEANUP_STARTED=0
+
 cleanup() {
+    local status=$?
+    trap - EXIT INT TERM
+    if [ "$CLEANUP_STARTED" -eq 1 ]; then
+        return "$status"
+    fi
+    CLEANUP_STARTED=1
+
     echo "Stopping raw-bag FAST-LIVO2 reconstruction..."
-    for pgid in "${BAG_PGID:-}" "${FAST_LIVO2_PGID:-}"; do
+    for pgid in "${RVIZ_PGID:-}" "${BAG_PGID:-}" "${FAST_LIVO2_PGID:-}"; do
         terminate_process_group INT "$pgid"
     done
 
     for _ in 1 2 3 4 5; do
         local any_alive=0
-        for pgid in "${BAG_PGID:-}" "${FAST_LIVO2_PGID:-}"; do
+        for pgid in "${RVIZ_PGID:-}" "${BAG_PGID:-}" "${FAST_LIVO2_PGID:-}"; do
             if is_process_group_alive "$pgid"; then
                 any_alive=1
                 break
@@ -147,18 +156,21 @@ cleanup() {
         sleep 1
     done
 
-    for pgid in "${BAG_PGID:-}" "${FAST_LIVO2_PGID:-}"; do
+    for pgid in "${RVIZ_PGID:-}" "${BAG_PGID:-}" "${FAST_LIVO2_PGID:-}"; do
         terminate_process_group KILL "$pgid"
     done
 
-    for pid in "${BAG_PID:-}" "${FAST_LIVO2_PID:-}"; do
+    for pid in "${RVIZ_PID:-}" "${BAG_PID:-}" "${FAST_LIVO2_PID:-}"; do
         if [ -n "${pid:-}" ]; then
             wait "$pid" 2>/dev/null || true
         fi
     done
+
+    return "$status"
 }
 
-trap cleanup EXIT INT TERM
+trap cleanup EXIT
+trap 'cleanup; exit 130' INT TERM
 
 echo "Bag:  $BAG"
 echo "RViz: $RVIZ_CFG"
@@ -191,4 +203,8 @@ if ! kill -0 "$BAG_PID" 2>/dev/null; then
     wait "$BAG_PID"
 fi
 
-rviz2 -d "$RVIZ_CFG" --ros-args -p use_sim_time:=true
+setsid rviz2 -d "$RVIZ_CFG" --ros-args -p use_sim_time:=true &
+RVIZ_PID=$!
+RVIZ_PGID=$RVIZ_PID
+
+wait "$RVIZ_PID"
