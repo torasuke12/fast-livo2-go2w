@@ -300,6 +300,14 @@ first, copy the whole bag directory, then replay it locally with RViz.
    The helper plays the bag with `/clock`, isolates playback on a local ROS
    domain, and opens RViz with `use_sim_time:=true`.
 
+   If you copied a raw sensor bag and want to re-run FAST-LIVO2 from the
+   recorded LiDAR, IMU, and camera topics, use the reconstruction helper:
+
+   ```bash
+   cd ~/fast_livo2_go2w/src/fast-livo2-go2w
+   bash scripts/fast_livo2/reconstruct_raw.sh bags/raw_YYYYMMDD_HHMMSS
+   ```
+
 4. Check replayed topics from another terminal if RViz does not show an output:
 
    ```bash
@@ -389,18 +397,6 @@ If you intentionally want to use the desktop's current ROS 2 RMW instead, run:
 
 ```bash
 bash scripts/fast_livo2/live_rviz.sh --iface enp97s0 --rmw system
-```
-
-Replay processed FAST-LIVO2 output:
-
-```bash
-bash scripts/fast_livo2/playback.sh bags/fast_livo2_YYYYMMDD_HHMMSS
-```
-
-Reconstruct FAST-LIVO2 output from raw sensors:
-
-```bash
-bash scripts/fast_livo2/reconstruct_raw.sh bags/raw_YYYYMMDD_HHMMSS
 ```
 
 ## Sensor Topics
