@@ -101,8 +101,10 @@ The GO2-W Jetson Docker daemon may only support Docker API `1.43`. Newer Docker 
 client version 1.53 is too new. Maximum supported API version is 1.43
 ```
 
-The robot scripts below set `DOCKER_API_VERSION=1.43` by default, matching the workaround used for older Jetson Docker daemons.
-If you run the same scripts against a newer Docker daemon that rejects API `1.43` as too old, override it explicitly, for example `DOCKER_API_VERSION=1.44 bash docker/robot/build.sh`.
+The standard robot build/run scripts let the Docker CLI negotiate the API
+version with the daemon. If an older Jetson daemon instead rejects the client
+API as too new, pin the compatible version for that command, for example
+`DOCKER_API_VERSION=1.43 bash docker/robot/build.sh`.
 
 1. Build the robot Docker image on the Jetson:
 
@@ -122,6 +124,10 @@ If you run the same scripts against a newer Docker daemon that rejects API `1.43
    bash docker/robot/run.sh
    ```
 
+   The run helper selects the `nvidia` container runtime when it is registered
+   with Docker and otherwise uses Docker's default runtime. Set
+   `DOCKER_RUNTIME=nvidia` only when you want to require it explicitly.
+
    Compatibility Compose wrapper, if you prefer Docker Compose:
 
    ```bash
@@ -131,6 +137,14 @@ If you run the same scripts against a newer Docker daemon that rejects API `1.43
 
    The Compose wrapper is only an alternative way to start and enter the same
    robot container. It does not replace the workspace build step below.
+   Because the Xwayland authorization file belongs to the current desktop
+   login session, recreate a persistent Compose container after rebooting or
+   logging in again before starting RViz:
+
+   ```bash
+   ./docker/compose.sh up -d --force-recreate
+   ./docker/compose.sh exec fast-livo2-go2w-humble bash
+   ```
 
 3. Required: inside the container, initialize/build the ROS workspace before
    running any `catmux_create_session` command:
@@ -141,7 +155,9 @@ If you run the same scripts against a newer Docker daemon that rejects API `1.43
    source humble_ws/install/setup.bash
    ```
 
-Do not use bare `docker compose -f docker/docker-compose.yml ...` on the Jetson unless you export `DOCKER_API_VERSION=1.43` yourself. A Compose file cannot reliably set the Docker client API version before the client connects to the daemon.
+If an older Jetson Docker daemon rejects the Compose client API as too new,
+run the wrapper with `DOCKER_API_VERSION=1.43`. A Compose file cannot set the
+Docker client API version before the client connects to the daemon.
 
 ## Quick Start: Online FAST-LIVO2
 
@@ -308,11 +324,30 @@ first, copy the whole bag directory, then replay it locally with RViz.
    bash scripts/fast_livo2/reconstruct_raw.sh bags/raw_YYYYMMDD_HHMMSS
    ```
 
+   Run the direct command above inside the desktop Dev Container. Its
+   post-create step builds
+   `.devcontainer/offline_fast_livo2/install/setup.bash` at the desktop
+   workspace path. The robot workspace under `humble_ws/install` is built with
+   `/external` symlinks and cannot be sourced directly from the host shell.
+   If the robot Docker image is available locally, launch reconstruction from
+   the host through the same `/external` mount instead:
+
+   ```bash
+   bash docker/robot/run.sh bash scripts/fast_livo2/reconstruct_raw.sh bags/raw_YYYYMMDD_HHMMSS
+   ```
+
    The reconstruction helper delays `ros2 bag play` by 5 seconds by default so
    FAST-LIVO2 subscriptions and bag publishers can finish DDS discovery before
    sensor messages start. If startup sync warnings still appear, increase the
    delay with `FAST_LIVO2_BAG_PLAY_DELAY=10` or pass `--delay 10` after the bag
-   path.
+   path. Reconstruction defaults to local-only ROS domain 42 and clears any
+   live-robot `CYCLONEDDS_URI`, so stale interface names such as `eth0` do not
+   prevent offline replay from starting. Raw reconstruction also defaults to
+   0.25x playback so LiDAR, IMU, and image callbacks cannot outrun mapping on
+   long bags. Offline reconstruction also uses Reliable sensor subscriptions
+   and single-threaded OpenMP/OpenCV/Eigen processing to keep the input stream
+   and floating-point reduction order repeatable. Override the playback rate
+   with `FAST_LIVO2_BAG_PLAY_RATE` or `--rate` when needed.
 
 4. Check replayed topics from another terminal if RViz does not show an output:
 

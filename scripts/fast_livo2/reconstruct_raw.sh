@@ -10,6 +10,7 @@ BAG="${1:?Error: bag path required. Usage: $0 <bag_directory> [ros2 bag play arg
 shift
 EXTRA_ARGS=("$@")
 DEFAULT_BAG_PLAY_DELAY="${FAST_LIVO2_BAG_PLAY_DELAY:-5}"
+DEFAULT_BAG_PLAY_RATE="${FAST_LIVO2_BAG_PLAY_RATE:-0.25}"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
@@ -20,6 +21,24 @@ WS_SETUP_CANDIDATES=(
     "$REPO_ROOT/humble_ws/install/setup.bash"
     "$REPO_ROOT/.devcontainer/offline_fast_livo2/install/setup.bash"
 )
+REJECTED_WS_SETUPS=()
+
+setup_provides_fast_livo2() {
+    local setup_script="$1"
+
+    env \
+        -u AMENT_PREFIX_PATH \
+        -u CMAKE_PREFIX_PATH \
+        -u COLCON_PREFIX_PATH \
+        -u LD_LIBRARY_PATH \
+        -u PYTHONPATH \
+        bash -c '
+        set +u
+        source "$1" >/dev/null 2>&1 || exit 1
+        source "$2" >/dev/null 2>&1 || exit 1
+        ros2 pkg prefix fast_livo2 >/dev/null 2>&1
+    ' bash "$ROS_SETUP" "$setup_script"
+}
 
 if [ ! -d "$BAG" ] && [ -d "$REPO_ROOT/$BAG" ]; then
     BAG="$REPO_ROOT/$BAG"
@@ -87,11 +106,14 @@ if grep -qxF "/clock" <<< "$bag_topics"; then
 fi
 
 has_bag_play_delay_arg=0
+has_bag_play_rate_arg=0
 for arg in "${EXTRA_ARGS[@]}"; do
     case "$arg" in
         --delay|-d|--delay=*)
             has_bag_play_delay_arg=1
-            break
+            ;;
+        --rate|-r|--rate=*)
+            has_bag_play_rate_arg=1
             ;;
     esac
 done
@@ -99,6 +121,9 @@ done
 BAG_PLAY_ARGS=("$BAG" "${CLOCK_ARG[@]}")
 if [ "$has_bag_play_delay_arg" -eq 0 ]; then
     BAG_PLAY_ARGS+=(--delay "$DEFAULT_BAG_PLAY_DELAY")
+fi
+if [ "$has_bag_play_rate_arg" -eq 0 ]; then
+    BAG_PLAY_ARGS+=(--rate "$DEFAULT_BAG_PLAY_RATE")
 fi
 BAG_PLAY_ARGS+=("${EXTRA_ARGS[@]}")
 
@@ -108,19 +133,36 @@ if [ ! -f "$ROS_SETUP" ]; then
 fi
 
 for candidate in "${WS_SETUP_CANDIDATES[@]}"; do
-    if [ -f "$candidate" ]; then
+    if [ ! -f "$candidate" ]; then
+        continue
+    fi
+
+    if setup_provides_fast_livo2 "$candidate"; then
         WS_SETUP="$candidate"
         break
     fi
+
+    REJECTED_WS_SETUPS+=("$candidate")
 done
 
 if [ -z "$WS_SETUP" ]; then
-    echo "Error: no FAST-LIVO2 workspace setup was found." >&2
-    echo "Looked for:" >&2
+    echo "Error: no usable FAST-LIVO2 workspace setup was found." >&2
+    if [ "${#REJECTED_WS_SETUPS[@]}" -gt 0 ]; then
+        echo "Found but rejected because fast_livo2 is not discoverable:" >&2
+        for candidate in "${REJECTED_WS_SETUPS[@]}"; do
+            echo "  - $candidate" >&2
+        done
+    fi
+    echo "Checked:" >&2
     for candidate in "${WS_SETUP_CANDIDATES[@]}"; do
         echo "  - $candidate" >&2
     done
-    echo "Build the workspace first, then rerun this script." >&2
+    echo "" >&2
+    echo "A humble_ws/install built in the robot container contains /external paths" >&2
+    echo "and must be used through the container mount. From the repository root, run:" >&2
+    echo "  bash docker/robot/run.sh bash scripts/fast_livo2/reconstruct_raw.sh \"$BAG\"" >&2
+    echo "" >&2
+    echo "For the desktop Dev Container, rebuild its local offline workspace first." >&2
     exit 1
 fi
 
@@ -131,6 +173,21 @@ if ! ros2 pkg prefix fast_livo2 >/dev/null 2>&1; then
     echo "Error: fast_livo2 is not available after sourcing:" >&2
     echo "  $WS_SETUP" >&2
     exit 1
+fi
+
+if ros2 pkg prefix rmw_cyclonedds_cpp >/dev/null 2>&1; then
+    export RMW_IMPLEMENTATION="${FAST_LIVO2_RECONSTRUCTION_RMW:-rmw_cyclonedds_cpp}"
+fi
+export ROS_DOMAIN_ID="${FAST_LIVO2_RECONSTRUCTION_DOMAIN_ID:-42}"
+export ROS_LOCALHOST_ONLY="${FAST_LIVO2_RECONSTRUCTION_LOCALHOST_ONLY:-1}"
+DETERMINISTIC_PROCESSING="${FAST_LIVO2_RECONSTRUCTION_DETERMINISTIC:-1}"
+if [ "$DETERMINISTIC_PROCESSING" = "1" ]; then
+    export FAST_LIVO2_DETERMINISTIC=1
+else
+    unset FAST_LIVO2_DETERMINISTIC
+fi
+if [ "${FAST_LIVO2_RECONSTRUCTION_KEEP_CYCLONEDDS_URI:-0}" != "1" ]; then
+    unset CYCLONEDDS_URI
 fi
 
 terminate_process_group() {
@@ -195,10 +252,20 @@ echo "RViz: $RVIZ_CFG"
 echo "FAST-LIVO2 setup: $WS_SETUP"
 echo "Sensor profile: $SENSOR_PROFILE"
 echo "FAST-LIVO2 params: $PARAMS_FILE"
+echo "RMW_IMPLEMENTATION=${RMW_IMPLEMENTATION:-system default}"
+echo "ROS_DOMAIN_ID=$ROS_DOMAIN_ID"
+echo "ROS_LOCALHOST_ONLY=$ROS_LOCALHOST_ONLY"
+echo "CYCLONEDDS_URI=${CYCLONEDDS_URI:-unset}"
+echo "Deterministic processing: $DETERMINISTIC_PROCESSING"
 if [ "$has_bag_play_delay_arg" -eq 0 ]; then
     echo "Bag play delay: ${DEFAULT_BAG_PLAY_DELAY}s"
 else
     echo "Bag play delay: set by ros2 bag play arguments"
+fi
+if [ "$has_bag_play_rate_arg" -eq 0 ]; then
+    echo "Bag play rate: ${DEFAULT_BAG_PLAY_RATE}x"
+else
+    echo "Bag play rate: set by ros2 bag play arguments"
 fi
 echo "Mode: replay raw topics, run FAST-LIVO2 offline, visualize generated outputs"
 echo ""
@@ -206,6 +273,7 @@ echo ""
 setsid ros2 launch fast_livo2 go2w_fast_livo2.launch.py \
     use_sensor_bringup:=false \
     use_sim_time:=true \
+    reliable_sensor_qos:=true \
     params_file:="$PARAMS_FILE" &
 FAST_LIVO2_PID=$!
 FAST_LIVO2_PGID=$FAST_LIVO2_PID

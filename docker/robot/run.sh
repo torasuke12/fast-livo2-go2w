@@ -5,27 +5,27 @@ set -o pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
-export DOCKER_API_VERSION="${DOCKER_API_VERSION:-1.43}"
-
 IMAGE="${FAST_LIVO2_GO2W_IMAGE:-fast-livo2-go2w:latest}"
 CONTAINER_NAME="${FAST_LIVO2_GO2W_CONTAINER:-fast-livo2-go2w}"
-DOCKER_RUNTIME="${DOCKER_RUNTIME:-nvidia}"
-XAUTH=/tmp/.docker.xauth
+DOCKER_RUNTIME="${DOCKER_RUNTIME-auto}"
+TEMP_XAUTH=""
 
-if [ -n "${DISPLAY:-}" ]; then
-  xhost +local:docker >/dev/null 2>&1 || true
-
-  if command -v xauth >/dev/null 2>&1; then
-    touch "$XAUTH"
-    xauth_list="$(xauth nlist "${DISPLAY}" 2>/dev/null | sed -e 's/^..../ffff/' || true)"
-    if [ -n "$xauth_list" ]; then
-      echo "$xauth_list" | xauth -f "$XAUTH" nmerge - >/dev/null 2>&1 || true
-    fi
-    chmod a+r "$XAUTH"
+cleanup() {
+  if [ -n "$TEMP_XAUTH" ] && [ -f "$TEMP_XAUTH" ]; then
+    rm -f -- "$TEMP_XAUTH"
   fi
-fi
+}
+trap cleanup EXIT
 
 runtime_args=()
+if [ "$DOCKER_RUNTIME" = "auto" ]; then
+  docker_runtimes="$(docker info --format '{{json .Runtimes}}' 2>/dev/null || true)"
+  if [[ "$docker_runtimes" == *'"nvidia"'* ]]; then
+    DOCKER_RUNTIME="nvidia"
+  else
+    DOCKER_RUNTIME=""
+  fi
+fi
 if [ -n "$DOCKER_RUNTIME" ]; then
   runtime_args+=(--runtime="$DOCKER_RUNTIME")
 fi
@@ -37,11 +37,29 @@ if [ -n "${DISPLAY:-}" ]; then
     --env="QT_X11_NO_MITSHM=1"
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw"
   )
-  if [ -f "$XAUTH" ]; then
+
+  if [ -n "${XAUTHORITY:-}" ] && [ -r "$XAUTHORITY" ]; then
     x11_args+=(
-      --env="XAUTHORITY=$XAUTH"
-      --volume="$XAUTH:$XAUTH:rw"
+      --env="XAUTHORITY=/tmp/.host.xauthority"
+      --volume="$XAUTHORITY:/tmp/.host.xauthority:ro"
     )
+  elif command -v xauth >/dev/null 2>&1; then
+    TEMP_XAUTH="$(mktemp /tmp/fast_livo2.xauth.XXXXXX)"
+    xauth_list="$(xauth nlist "$DISPLAY" 2>/dev/null | sed -e 's/^..../ffff/' || true)"
+    if [ -n "$xauth_list" ] && \
+        printf '%s\n' "$xauth_list" | xauth -f "$TEMP_XAUTH" nmerge - >/dev/null 2>&1; then
+      chmod a+r "$TEMP_XAUTH"
+      x11_args+=(
+        --env="XAUTHORITY=/tmp/.host.xauthority"
+        --volume="$TEMP_XAUTH:/tmp/.host.xauthority:ro"
+      )
+    else
+      echo "Warning: no X11 authorization cookie was available for DISPLAY=$DISPLAY." >&2
+      echo "RViz2 may not start. Check DISPLAY and XAUTHORITY in the host terminal." >&2
+    fi
+  else
+    echo "Warning: XAUTHORITY is unavailable and xauth is not installed." >&2
+    echo "RViz2 may not start." >&2
   fi
 fi
 
