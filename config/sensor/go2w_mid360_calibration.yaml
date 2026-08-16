@@ -28,9 +28,11 @@ extrinsics:
     translation: [0.011, 0.02329, -0.04412]
     rotation_quaternion: [0.0, 0.0, 0.0, 1.0]
   T_baselink_camera_color:
-    # Provisional base_link -> camera_color_optical_frame offset: [x, y, z, roll, pitch, yaw].
+    # Provisional forward-facing camera optical pose: [x, y, z, roll, pitch, yaw].
+    # The rotation converts REP-103 body axes (x forward, y left, z up) to
+    # optical axes (x right, y down, z forward).
     translation: [0.30, 0.0, 0.05]
-    rotation_rpy: [0.0, 0.0, 0.0]
+    rotation_rpy: [-1.57079632679, 0.0, -1.57079632679]
   T_fast_livo2_lidar_to_imu:
     translation: [-0.011, -0.02329, 0.04412]
     rotation_matrix: [1.0, 0.0, 0.0,
@@ -40,9 +42,9 @@ extrinsics:
     # TF-style livox_frame -> camera_color_optical_frame, derived from
     # inv(T_baselink_lidar) * T_baselink_camera_color.
     translation: [0.131805, 0.0, -0.115279]
-    rotation_matrix: [0.949546, 0.0, -0.313628,
-                      0.0, 1.0, 0.0,
-                      0.313628, 0.0, 0.949546]
+    rotation_matrix: [0.0, 0.313628, 0.949546,
+                      -1.0, 0.0, 0.0,
+                      0.0, -0.949546, 0.313628]
 
 network:
   host_ip: 192.168.123.18

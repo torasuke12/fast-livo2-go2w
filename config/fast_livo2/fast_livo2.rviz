@@ -341,7 +341,7 @@ Visualization Manager:
       Name: Current View
       Near Clip Distance: 0.01
       Pitch: 1
-      Target Frame: camera_init
+      Target Frame: aft_mapped
       Yaw: 3.14
     Saved: ~
 Window Geometry:

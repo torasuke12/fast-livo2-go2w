@@ -2,13 +2,65 @@
 # Reconstruct FAST-LIVO2 outputs from a raw sensor bag and open RViz2.
 #
 # Usage:
-#   bash scripts/fast_livo2/reconstruct_raw.sh <bag_directory> [ros2 bag play args...]
+#   bash scripts/fast_livo2/reconstruct_raw.sh <bag_directory> [--lio-only] [ros2 bag play args...]
 
 set -eo pipefail
 
-BAG="${1:?Error: bag path required. Usage: $0 <bag_directory> [ros2 bag play args...]}"
+usage() {
+    cat <<EOF
+Usage: $0 <bag_directory> [--lio-only] [ros2 bag play args...]
+
+Modes:
+  default       Run LiDAR-inertial-visual odometry (LIVO).
+  --lio-only    Disable image processing and run LiDAR-inertial odometry only.
+
+Examples:
+  $0 bags/raw_YYYYMMDD_HHMMSS
+  $0 bags/raw_YYYYMMDD_HHMMSS --lio-only
+  $0 bags/raw_YYYYMMDD_HHMMSS --lio-only --rate 0.25
+EOF
+}
+
+if [ "$#" -eq 0 ]; then
+    usage >&2
+    exit 1
+fi
+if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+    usage
+    exit 0
+fi
+
+BAG="$1"
 shift
-EXTRA_ARGS=("$@")
+RECONSTRUCTION_MODE="${FAST_LIVO2_RECONSTRUCTION_MODE:-livo}"
+EXTRA_ARGS=()
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        --lio-only)
+            RECONSTRUCTION_MODE="lio"
+            ;;
+        *)
+            EXTRA_ARGS+=("$1")
+            ;;
+    esac
+    shift
+done
+
+case "$RECONSTRUCTION_MODE" in
+    livo)
+        FAST_LIVO2_IMG_EN=1
+        ;;
+    lio|lio-only)
+        RECONSTRUCTION_MODE="lio"
+        FAST_LIVO2_IMG_EN=0
+        ;;
+    *)
+        echo "Error: unsupported reconstruction mode: $RECONSTRUCTION_MODE" >&2
+        echo "Expected livo or lio." >&2
+        exit 1
+        ;;
+esac
+
 DEFAULT_BAG_PLAY_DELAY="${FAST_LIVO2_BAG_PLAY_DELAY:-5}"
 DEFAULT_BAG_PLAY_RATE="${FAST_LIVO2_BAG_PLAY_RATE:-0.25}"
 
@@ -92,13 +144,11 @@ else
     exit 1
 fi
 
-for required in /camera/camera/color/image_raw; do
-    if ! grep -qxF "$required" <<< "$bag_topics"; then
-        echo "Error: bag is missing required topic: $required" >&2
-        print_bag_topics
-        exit 1
-    fi
-done
+if [ "$RECONSTRUCTION_MODE" = "livo" ] && ! has_topic /camera/camera/color/image_raw; then
+    echo "Error: bag is missing required topic: /camera/camera/color/image_raw" >&2
+    print_bag_topics
+    exit 1
+fi
 
 CLOCK_ARG=(--clock)
 if grep -qxF "/clock" <<< "$bag_topics"; then
@@ -257,6 +307,11 @@ echo "ROS_DOMAIN_ID=$ROS_DOMAIN_ID"
 echo "ROS_LOCALHOST_ONLY=$ROS_LOCALHOST_ONLY"
 echo "CYCLONEDDS_URI=${CYCLONEDDS_URI:-unset}"
 echo "Deterministic processing: $DETERMINISTIC_PROCESSING"
+if [ "$RECONSTRUCTION_MODE" = "lio" ]; then
+    echo "Reconstruction mode: LIO-only (VIO disabled, common.img_en=0)"
+else
+    echo "Reconstruction mode: LIVO (LiDAR + IMU + camera)"
+fi
 if [ "$has_bag_play_delay_arg" -eq 0 ]; then
     echo "Bag play delay: ${DEFAULT_BAG_PLAY_DELAY}s"
 else
@@ -274,6 +329,7 @@ setsid ros2 launch fast_livo2 go2w_fast_livo2.launch.py \
     use_sensor_bringup:=false \
     use_sim_time:=true \
     reliable_sensor_qos:=true \
+    img_en:="$FAST_LIVO2_IMG_EN" \
     params_file:="$PARAMS_FILE" &
 FAST_LIVO2_PID=$!
 FAST_LIVO2_PGID=$FAST_LIVO2_PID
