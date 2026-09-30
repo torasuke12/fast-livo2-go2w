@@ -1,0 +1,27 @@
+{
+  "status": "not_adopted",
+  "reason": "Estimated corridor displacement/speed diverged during first 60 seconds; do not advance this conditional-map comparison to a full replay.",
+  "last_visual_state": {
+    "time": 59.7107653618,
+    "px": 187.554475918,
+    "py": 1.83765846062,
+    "pz": -0.00374910626361,
+    "vx": 10.7431034861,
+    "vy": 0.224602574004,
+    "vz": -0.0732463906235,
+    "bax": -0.148338085661,
+    "bay": 0.0468897785164,
+    "baz": -0.0520760314432
+  },
+  "summary": {
+    "complete": true,
+    "bag_exhausted": true,
+    "imu_messages": 12001,
+    "lidar_messages": 600,
+    "image_messages": 1798,
+    "updates": 282,
+    "keyframes": 94,
+    "last_time": 59.71076536178589
+  },
+  "full_route": false
+}

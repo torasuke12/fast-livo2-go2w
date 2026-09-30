@@ -1,0 +1,29 @@
+{
+  "point_imu": [
+    4.0,
+    1.0,
+    -0.5
+  ],
+  "right_tangent_covariance": [
+    [
+      0.0004,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.001,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.002
+    ]
+  ],
+  "correct_jacobian": "-R * skew(p_imu)",
+  "finite_difference_jacobian_max_abs": 3.9364085324677944e-09,
+  "current_formula_world_rotation_equivariance_error_fro": 0.04351602968932195,
+  "correct_formula_world_rotation_equivariance_error_fro": 2.1466107833567237e-18,
+  "scope": "Synthetic algebra check of current rotation-covariance term; not a replay or estimate of causal effect on the U-turn."
+}

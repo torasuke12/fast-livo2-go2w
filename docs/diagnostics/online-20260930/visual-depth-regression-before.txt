@@ -1,0 +1,82 @@
+[ 10%] Built target fast_livo2_xicp
+[ 42%] Built target fast_livo2_temporal
+[ 50%] Built target fast_livo2_diagnostics
+[ 57%] Built target fast_livo2_normals
+Consolidate compiler generated dependencies of target fast_livo2_vio
+[ 75%] Built target fast_livo2_lio
+[ 92%] Built target fast_livo2_vio
+[ 96%] Building CXX object CMakeFiles/temporal_visual_map_test.dir/tests/temporal_visual_map_test.cpp.o
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/tests/temporal_visual_map_test.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: In constructor 'VoxelOctoTree::VoxelOctoTree(int, int, int, int, float)':
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:185:7: warning: 'VoxelOctoTree::max_layer_' will be initialized after [-Wreorder]
+  185 |   int max_layer_;
+      |       ^~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:175:7: warning:   'int VoxelOctoTree::layer_' [-Wreorder]
+  175 |   int layer_;
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:184:7: warning: 'VoxelOctoTree::max_points_num_' will be initialized after [-Wreorder]
+  184 |   int max_points_num_;
+      |       ^~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:181:9: warning:   'float VoxelOctoTree::planer_threshold_' [-Wreorder]
+  181 |   float planer_threshold_;
+      |         ^~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:17,
+                 from /external/humble_ws/src/fast-livo2/tests/temporal_visual_map_test.cpp:1:
+/external/humble_ws/src/fast-livo2/include/feature.h: In constructor 'Feature::Feature(VisualPoint*, float*, const Vector2d&, const Vector3d&, const SE3&, int)':
+/external/humble_ws/src/fast-livo2/include/feature.h:40:9: warning: 'Feature::mean_' will be initialized after [-Wreorder]
+   40 |   float mean_;           //!< Mean intensity of the image patch feature, used for normalization.
+      |         ^~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning:   'float Feature::score_' [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning: 'Feature::score_' will be initialized after [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:34:7: warning:   'int Feature::level_' [-Wreorder]
+   34 |   int level_;            //!< Image pyramid level where patch feature was extracted.
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:38:10: warning: 'Feature::patch_' will be initialized after [-Wreorder]
+   38 |   float *patch_;         //!< Pointer to the image patch data.
+      |          ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:35:16: warning:   'VisualPoint* Feature::point_' [-Wreorder]
+   35 |   VisualPoint *point_;   //!< Pointer to 3D point which corresponds to the patch feature.
+      |                ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/tests/temporal_visual_map_test.cpp:1:
+/external/humble_ws/src/fast-livo2/include/vio.h: In constructor 'Warp::Warp(int, Eigen::Matrix2d)':
+/external/humble_ws/src/fast-livo2/include/vio.h:65:7: warning: 'Warp::search_level' will be initialized after [-Wreorder]
+   65 |   int search_level;
+      |       ^~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:64:12: warning:   'Eigen::Matrix2d Warp::A_cur_ref' [-Wreorder]
+   64 |   Matrix2d A_cur_ref;
+      |            ^~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:66:3: warning:   when initialized here [-Wreorder]
+   66 |   Warp(int level, Matrix2d warp_matrix) : search_level(level), A_cur_ref(warp_matrix) {}
+      |   ^~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/tests/temporal_visual_map_test.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: At global scope:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:36:12: warning: 'voxel_plane_id' defined but not used [-Wunused-variable]
+   36 | static int voxel_plane_id = 0;
+      |            ^~~~~~~~~~~~~~
+[100%] Linking CXX executable temporal_visual_map_test
+[100%] Built target temporal_visual_map_test
+point behind camera created an image feature
+intrinsic: 600.000000, 600.000000, 320.000000, 240.000000
+width: 640, height: 480, scale: 1.000000
+[ VIO ] Append 1 new visual map points

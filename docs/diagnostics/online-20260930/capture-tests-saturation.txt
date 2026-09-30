@@ -1,0 +1,7 @@
+....................Capture preparation failed; partial files: /tmp/tmpzxejpdoq/lio-reconstruction-20260930-175807-dwifoymm
+[Errno 2] No such file or directory: '/tmp/tmpzxejpdoq/missing'
+..
+----------------------------------------------------------------------
+Ran 22 tests in 73.227s
+
+OK

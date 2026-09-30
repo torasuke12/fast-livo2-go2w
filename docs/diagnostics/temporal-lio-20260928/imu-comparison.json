@@ -1,0 +1,17 @@
+{
+  "received_count": 72059,
+  "raw_count_between_received_endpoints": 72059,
+  "received_stamps_equal_raw": true,
+  "processed_count": 71442,
+  "processed_start": 3.09707,
+  "processed_end": 360.291,
+  "processed_timestamps_equal_raw": true,
+  "processed_all_columns_equal_raw_midpoints": true,
+  "processed_max_abs_vs_raw": 0.0,
+  "processed_sensor_midpoints_exact": true,
+  "processed_timestamp_mismatch_count": 0,
+  "reference_prefix_rows": 66582,
+  "reference_prefix_all_columns_exact": true,
+  "max_processed_gap_sec": 0.008340000000000014,
+  "max_raw_gap_sec": 0.008346048
+}

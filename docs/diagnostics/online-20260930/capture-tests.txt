@@ -1,0 +1,7 @@
+....................Capture preparation failed; partial files: /tmp/tmpnap4ys83/lio-reconstruction-20260930-163921-vg_d2sjz
+[Errno 2] No such file or directory: '/tmp/tmpnap4ys83/missing'
+..
+----------------------------------------------------------------------
+Ran 22 tests in 72.907s
+
+OK

@@ -1,0 +1,23 @@
+{
+  "temporal_window.csv": {
+    "before_rows": 91,
+    "after_rows": 91,
+    "compared_rows": 91,
+    "compared_fields": 494,
+    "excluded_fields": [
+      "solve_ms"
+    ],
+    "differing_cells": 0,
+    "first_differences": []
+  },
+  "temporal_states.csv": {
+    "before_rows": 741,
+    "after_rows": 741,
+    "compared_rows": 741,
+    "compared_fields": 20,
+    "excluded_fields": [],
+    "differing_cells": 0,
+    "first_differences": []
+  },
+  "rebuilt_binary_sha256": "cf44b42aeac233fd152f642d7ca461e21c17e6477d7cc87406cb678203bf7787"
+}

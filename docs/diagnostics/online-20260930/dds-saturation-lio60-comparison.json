@@ -1,0 +1,15 @@
+{
+  "rows": 567,
+  "shutdown_exit": 0,
+  "max_numeric_difference_direct_vs_ros": 0.0,
+  "old_snapshot_max_position_difference_m": 0.29788708630000116,
+  "old_snapshot_full_prefix_matches": false,
+  "compared_columns_except_status_and_solve_ms": 500,
+  "scans_with_saturated_imu_intervals": 6,
+  "parameter_differences": {},
+  "input_counts": {
+    "/livox/lidar": 600,
+    "/livox/imu": 12001
+  },
+  "current_binary_full_route_prefix_max_difference": 0.0
+}

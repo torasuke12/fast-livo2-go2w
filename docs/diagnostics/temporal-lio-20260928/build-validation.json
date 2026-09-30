@@ -1,0 +1,14 @@
+{
+  "branch": "feat/temporal-lio-window",
+  "long_replay_binary_sha256": "05ceab6bb8a64e00c217f6f4e476a2a97a7c6f87b638c5cf8bd3557e2fd1212c",
+  "installed_binary_sha256": "adc6eb8cedbf6c30e8e9a56624c1bc14a09d31eb68cabee102564b1dadda5ff4",
+  "difference": "Eviction guard > 2 nodes changed to > 1 to respect horizons shorter than a scan interval; the 6 s replay remains above two nodes once eviction begins.",
+  "ctest_passed": 7,
+  "capture_tests_passed": 18,
+  "long_capture": "diagnostic_captures/temporal-validation/lio-reconstruction-20260928-103605-kvnl2o13",
+  "parity_capture": "diagnostic_captures/temporal-final-parity/lio-reconstruction-20260928-104710-v5afma7s",
+  "parity_comparison": "final-binary-parity.json",
+  "disabled_regression": "disabled-comparison.json",
+  "replay_rate": 0.3,
+  "recommended_rate": 0.25
+}

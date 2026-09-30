@@ -1,0 +1,26 @@
+{
+  "outer": {
+    "head": "7c261e9c48d0426db16f0307368dafc21c7567b9",
+    "tracked_diff_unchanged": true,
+    "diff_sha256": "3381c5757e68c986d3392c62567da374459039828c557d6b73e8556712b93991"
+  },
+  "inner": {
+    "head": "f281e70ce50a7126b4a8d6bb38df9d95a98bc0df",
+    "tracked_diff_unchanged": true,
+    "diff_sha256": "70474319069f9d8d598eddcb388a75b89c8c236aaf7faed5ac57b44e7d80a46c"
+  },
+  "binary": {
+    "sha256": "f979f5287124020b51891387923948ef80ebaaae7e05ab5c844ebbe64c7d447f",
+    "matches_capture": true
+  },
+  "captured_source_hash_matches": 60,
+  "captured_source_hash_count": 60,
+  "summary_reproduced": true,
+  "figures_reproduced": {
+    "state-comparison.png": true,
+    "remaining-geometry.png": true
+  },
+  "analysis_script_syntax": "PASS",
+  "geometry_passed": true,
+  "filter_passed": true
+}

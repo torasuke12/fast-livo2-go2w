@@ -1,0 +1,1 @@
+Joint plane gradient error 8.04992e-08; static scene and marginal prior correlations OK

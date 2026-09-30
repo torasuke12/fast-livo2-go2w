@@ -1,0 +1,15 @@
+1790587606.922603 [213] fastlivo2_: selected interface "lo" is not multicast-capable: disabling multicast
+[INFO] [1790587606.928210070] [laserMapping]: Deterministic processing enabled (single-threaded OpenCV/Eigen/OpenMP)
+[INFO] [1790587606.929394021] [laserMapping]: Source/map normal gate: disabled (30.0 deg, 20 source neighbors)
+[INFO] [1790587606.929423736] [laserMapping]: X-ICP constrained LIO update: enabled (diagnostics enabled)
+[INFO] [1790587606.929436987] [laserMapping]: LIO correspondence mode: voxel_plane
+[INFO] [1790587606.929561801] [laserMapping]: LIO diagnostics enabled (detail enabled, [0.000, 360.000) s)
+[INFO] [1790587606.952372078] [laserMapping]: Initial covariance: rotation 1, position 1, velocity 1, gyro bias 0.0001, accel bias 0.001
+[INFO] [1790587606.952428051] [laserMapping]: Loaded camera model 'radtan' (640x480, scale 1.000)
+Multi thread started 
+intrinsic: 607.067810, 607.022583, 313.942291, 253.383209
+width: 640, height: 480, scale: 1.000000
+Online Gravity Estimation Disabled !!!!!
+[INFO] [1790587606.952500009] [laserMapping]: Sensor subscription reliability: RELIABLE
+[INFO] [1790587609.360536907] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+Rebuild thread terminated normally

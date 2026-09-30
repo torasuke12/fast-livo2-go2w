@@ -1,0 +1,47 @@
+{
+  "rows": [
+    567,
+    567
+  ],
+  "shutdown_exit": 0,
+  "direct_vs_ros_max_component_differences": {
+    "px": 0.31751666729999783,
+    "py": 0.020834009599999925,
+    "pz": 0.027041589042999997,
+    "qw": 0.0002352050870000344,
+    "qx": 0.0007421718379999991,
+    "qy": 0.00020886031199998656,
+    "qz": 0.0006620083290000411,
+    "vx": 0.11514404471000006,
+    "vy": 0.026598791077,
+    "vz": 0.018611921695999983,
+    "bgx": 0.0005299240959600001,
+    "bgy": 0.00043258408693999987,
+    "bgz": 0.0007583071368600005,
+    "bax": 0.005961251477600002,
+    "bay": 0.0013950223548000011,
+    "baz": 0.0017702245608299996
+  },
+  "direct_vs_full_max_component_differences": {
+    "px": 0.0,
+    "py": 0.0,
+    "pz": 0.0,
+    "qw": 0.0,
+    "qx": 0.0,
+    "qy": 0.0,
+    "qz": 0.0,
+    "vx": 0.0,
+    "vy": 0.0,
+    "vz": 0.0,
+    "bgx": 0.0,
+    "bgy": 0.0,
+    "bgz": 0.0,
+    "bax": 0.0,
+    "bay": 0.0,
+    "baz": 0.0
+  },
+  "parameter_differences": {},
+  "first_detectable_state_difference_time": 3.40009045601,
+  "first_difference_order": 2e-14,
+  "interpretation": "Numeric reproducibility check failed: tiny initialization differences amplify through discrete association. No estimator changes made to hide the mismatch."
+}

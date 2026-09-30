@@ -1,0 +1,17 @@
+{
+  "repo": "/home/srg-f-rei/fast_livo2_go2w/src/fast-livo2-go2w",
+  "prior_evidence": "/tmp/fast-livo2-xicp-327s.ELNtlC",
+  "sha256": {
+    "humble_ws/build/fast_livo2/fastlivo2_mapping": "88740378e9b283028f539197dab03ecbe31cb9726cacb95d64be47ac6c380dc5",
+    "humble_ws/src/fast-livo2/config/go2w_fast_livo2.yaml": "f86566c9e30a8648ee552f108a1503f9b1f1ae7ffd4b81c49764242538f71386"
+  },
+  "observer_sha256": "10de3c99d2f1f543e6b9530db6fcfbfb70c240d77ac5a19c6afb55605742f79d",
+  "smoke": {
+    "state_rows": 88,
+    "exact_output_equal_to_enabled337_prefix": true,
+    "constraints_error": 0,
+    "correction_identity_max_error": 9.917067167464211e-14
+  },
+  "docker_image": "sha256:4a7f294e39a8ad5dbe23223ceb0124752e52c8caa473c5253a2c05999f764a47",
+  "installed_executable_matches_build": true
+}

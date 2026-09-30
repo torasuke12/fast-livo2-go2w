@@ -1,0 +1,105 @@
+{
+  "frontend": {
+    "complete": true,
+    "bag_exhausted": true,
+    "imu_messages": 129619,
+    "lidar_messages": 6481,
+    "image_messages": 0,
+    "updates": 6448,
+    "keyframes": 1215,
+    "last_time": 648.0996406078339
+  },
+  "backend": {
+    "submaps": 395,
+    "keyframes": 1215,
+    "accepted_loops": 404,
+    "complete": true,
+    "confirmed_return_constraints": 15,
+    "optimization": {
+      "first": {
+        "cost": 98.65284654777815,
+        "evaluations": 416,
+        "optimality": 0.11269843673355778,
+        "status": 2
+      },
+      "second": {
+        "cost": 240.14799839972102,
+        "evaluations": 124,
+        "optimality": 0.22121535857405175,
+        "status": 2
+      }
+    },
+    "retained_loops": 404,
+    "map_points": 909037,
+    "endpoint_displacement_before": 8.08621956722221,
+    "endpoint_displacement_after": 1.1419285046422356,
+    "note": "Endpoint displacement is not absolute trajectory error; the robot need not return to the identical pose."
+  },
+  "final_short_common_rows": 87,
+  "max_short_full_numeric_difference": 0.0,
+  "rotation_orthogonality_error": 1.5543122344752192e-15,
+  "room_metrics": {
+    "before": {
+      "start_to_return": {
+        "points": 20839,
+        "overlap_15cm": 0.0,
+        "nearest_median_m": 6.187045286360984,
+        "nearest_p90_m": 7.859795750025618,
+        "inlier_plane_rmse_m": null
+      },
+      "return_to_start": {
+        "points": 16684,
+        "overlap_15cm": 0.0,
+        "nearest_median_m": 4.789978216614371,
+        "nearest_p90_m": 6.070756047181352,
+        "inlier_plane_rmse_m": null
+      }
+    },
+    "after": {
+      "start_to_return": {
+        "points": 18535,
+        "overlap_15cm": 0.2444564337739412,
+        "nearest_median_m": 0.7050469749629511,
+        "nearest_p90_m": 1.972919610663495,
+        "inlier_plane_rmse_m": 0.03500057398296511
+      },
+      "return_to_start": {
+        "points": 10524,
+        "overlap_15cm": 0.4171417711896617,
+        "nearest_median_m": 0.2702971460018412,
+        "nearest_p90_m": 1.3534445419407102,
+        "inlier_plane_rmse_m": 0.03141479573464463
+      }
+    },
+    "definition": "Held-out odd returns; no evaluation-time alignment. Nearest distances include visibility/occlusion differences. Inlier plane RMSE only uses correspondences within 15 cm, not absolute trajectory accuracy.",
+    "windows_seconds": [
+      [
+        4.0,
+        12.0
+      ],
+      [
+        632.0,
+        648.0
+      ]
+    ]
+  },
+  "viewer": {
+    "trajectory_poses": 1215,
+    "map_points": 909037,
+    "returncode": 0
+  },
+  "sha256": {
+    "reconstruction_results/raw_20260907_114335/map.ply": "3cf4731cdea9901e8e332841e3288000ccc3187da09c372380b43d474b9efed1",
+    "reconstruction_results/raw_20260907_114335/trajectory.tum": "6359e31f7314550a435424374aa309f830f0696f3bd30176e90592c4e6e2782e",
+    "reconstruction_results/raw_20260907_114335/comparison.png": "ee2d8c3949db5e7b7d4b05cb32fb9f2b946d79fb370e77e86aae828ad2b79b44",
+    "reconstruction_results/raw_20260907_114335/frontend_params.yaml": "b5c7be61096cc559d4a1e8d672ca5ea875ddfbf4f8d7452476270f750c4acbde",
+    "humble_ws/build/fast_livo2/fastlivo2_offline": "dfb0e6596c36a24387f5357288d6f7416a1fe3f073d613656eada3e8b8108acd",
+    "humble_ws/build/fast_livo2/fastlivo2_mapping": "f51c500862d647ee3458f2dd1d17800f3f8c013033f57235086070bcf623e227",
+    "scripts/fast_livo2/reconstruction_capture.py": "15a181c243dd26d9641e9ab6b95dc029a5d519744bb8a87fddb3a14074d7a2df",
+    "scripts/fast_livo2/view_reconstruction.py": "54849a4f44322bbba7811dc5f382f68d09566517c8182f380a81392cd12b8d23",
+    "scripts/fast_livo2/evaluate_reconstruction.py": "f4362872bd96b08dd46ea6754f5af94eff99f4ccdb9b401520469cb3d238b468",
+    "scripts/fast_livo2/optimize_reconstruction.py": "ebffe6a62f2197cad45870a2ca08fad157ce68aaf81ae997c80219b2654f426e",
+    "scripts/fast_livo2/reconstruct_offline.sh": "6c6ddaf82c9950b360d2c0706513c0fe9aeb63d4e3a0b0604272dab997384725",
+    "humble_ws/src/fast-livo2/src/offline.cpp": "1a37bab63b630401c73a73840177168c55a82b62e242c664a52efd0e121b348d"
+  }
+}

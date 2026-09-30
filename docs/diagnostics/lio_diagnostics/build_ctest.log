@@ -1,0 +1,18 @@
+Starting >>> fast_livo2
+Finished <<< fast_livo2 [4.77s]
+
+Summary: 1 package finished [4.91s]
+Internal ctest changing into directory: /external/humble_ws/build/fast_livo2
+Test project /external/humble_ws/build/fast_livo2
+    Start 1: lio_diagnostics_recording
+1/4 Test #1: lio_diagnostics_recording ..............   Passed    0.02 sec
+    Start 2: xicp_geometry_and_constrained_filter
+2/4 Test #2: xicp_geometry_and_constrained_filter ...   Passed    0.00 sec
+    Start 3: imu_propagation_no_new_samples
+3/4 Test #3: imu_propagation_no_new_samples .........   Passed    0.01 sec
+    Start 4: voxel_map_initialization
+4/4 Test #4: voxel_map_initialization ...............   Passed    0.30 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.34 sec

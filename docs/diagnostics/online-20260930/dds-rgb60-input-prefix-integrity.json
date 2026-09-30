@@ -1,0 +1,13 @@
+{
+  "all_serialized_messages_identical": true,
+  "storage_times_identical": true,
+  "topic_order_identical": true,
+  "messages": 14399,
+  "counts": {
+    "/livox/imu": 12001,
+    "/camera/camera/color/image_raw": 1798,
+    "/livox/lidar": 600
+  },
+  "sha256": "dc0f5a76c0571df74259932b4415e2fb99b3eecca7fd8588d15c7ade24d3dee6",
+  "definition": "Exact serialized prefix of the three sensor topics from the original bag, without deserializing or rewriting sensor data."
+}

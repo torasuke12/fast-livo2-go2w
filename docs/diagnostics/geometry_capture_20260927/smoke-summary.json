@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "run": "/tmp/fast-livo2-geometry-8ke4matr/smoke-geometry-diagnostics/run-1790505753247068088-0",
+  "scans": 88,
+  "iterations": 338,
+  "committed_updates": 88,
+  "scan_status_counts": {
+    "updated": 88
+  },
+  "checks": {
+    "correction_identity_max_abs": 4.5102810375396984e-17,
+    "constraint_correction_max_abs": 0.0,
+    "covariance_asymmetry_max_abs": 0.0,
+    "covariance_min_eigenvalue": 9.999999999999904e-09
+  },
+  "iteration_logging_ms": {
+    "mean_per_scan": 4.653270090909091,
+    "max_per_scan": 7.48339
+  },
+  "csv_bytes": {
+    "iterations.csv": 3598861,
+    "scans.csv": 1021664,
+    "geometry.csv": 250456291,
+    "geometry_states.csv": 125749,
+    "correspondences.csv": 76484147
+  },
+  "notes": [
+    "NIS is descriptive; map/correspondence independence is not guaranteed.",
+    "P_prior, P_iter and P_after refer to their respective tangent frames.",
+    "K0 is a same-state counterfactual, not a separately replayed trajectory."
+  ],
+  "windows": [
+    {
+      "start": 0,
+      "end": 170,
+      "committed_updates": 88,
+      "residual_rms_median": 0.044876003260137416,
+      "normalized_hessian_eigenvalues_median": [
+        0.17709155686856992,
+        0.3383518462550781,
+        0.6157950792098288,
+        1.0542448558652864,
+        1.7537094421070292,
+        2.056606803380558
+      ],
+      "nis_per_match_median": 2.0140314589338253,
+      "Kinnovation_sum": [
+        -0.0012758210442342945,
+        -0.0033313373747708187,
+        -0.0008842724938838673,
+        0.013858490241242829,
+        0.009826538572254379,
+        -0.0033172892873788496,
+        0.0,
+        0.09569564526310165,
+        0.06171937635396167,
+        -0.006712746680052305,
+        0.00010558067823749454,
+        0.00016584581785108904,
+        -0.0004906925659481842,
+        0.004420647173249794,
+        -0.022990198711270327,
+        0.006319606538761794,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "K0innovation_sum": [
+        -0.0012758210442342806,
+        -0.0033313373747708426,
+        -0.0008842724938838811,
+        0.013858490241242812,
+        0.00982653857225441,
+        -0.003317289287378868,
+        0.0,
+        0.0956956452631016,
+        0.06171937635396164,
+        -0.0067127466800523845,
+        0.00010558067823749011,
+        0.00016584581785109107,
+        -0.0004906925659481823,
+        0.0044206471732497,
+        -0.022990198711270286,
+        0.006319606538761756,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "detail": {
+    "groups": 74,
+    "points": 177855,
+    "max_scaled_errors": {
+      "hessian": 3.062587574121477e-13,
+      "score": 2.9080785303027146e-12,
+      "innovation": 2.4664259059829182e-17,
+      "distance_sign": 0.0,
+      "gain_contribution": 1.4682960117828156e-16,
+      "gain_noise": 1.0164136908171716e-20,
+      "gain_norm": 1.947908299510833e-16,
+      "KH": 7.23207834955193e-15,
+      "residual_stats": 1.9936280042634097e-17
+    },
+    "passed": true
+  },
+  "passed": true
+}

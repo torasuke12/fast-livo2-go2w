@@ -1,0 +1,18 @@
+1 frames, 40 query points; geometry checks PASS
+build/normal-gate-fixtures-final/off-baseline/run-1790579529447404875-0: 1 scans, 2 iterations, 1 committed; checks PASS
+Results: /tmp/normal-gate-schema-final/off-baseline/run-1790579529447404875-0/filter/summary.json
+1 frames, 40 query points; geometry checks PASS
+build/normal-gate-fixtures-final/off-xicp/run-1790579529473016342-0: 1 scans, 2 iterations, 1 committed; checks PASS
+Results: /tmp/normal-gate-schema-final/off-xicp/run-1790579529473016342-0/filter/summary.json
+1 frames, 40 query points; geometry checks PASS
+build/normal-gate-fixtures-final/on-baseline/run-1790579529498500799-0: 1 scans, 2 iterations, 1 committed; checks PASS
+Results: /tmp/normal-gate-schema-final/on-baseline/run-1790579529498500799-0/filter/summary.json
+1 frames, 40 query points; geometry checks PASS
+build/normal-gate-fixtures-final/on-xicp/run-1790579529524124455-0: 1 scans, 2 iterations, 1 committed; checks PASS
+Results: /tmp/normal-gate-schema-final/on-xicp/run-1790579529524124455-0/filter/summary.json
+1 frames, 40 query points; geometry checks PASS
+/tmp/normal-schema-rrdp29oj/v2: 1 scans, 2 iterations, 1 committed; checks PASS
+Results: /tmp/normal-gate-schema-final/legacy-v2/filter/summary.json
+/tmp/normal-schema-rrdp29oj/v2: 1 scans, 2 iterations, 1 committed; checks PASS
+Results: /tmp/normal-gate-schema-final/legacy-v1/filter/summary.json
+Schema-v3 roundtrip, filtered-set joins/gains, v1/v2 compatibility, corruption detection: PASS

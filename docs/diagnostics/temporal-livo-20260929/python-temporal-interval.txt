@@ -1,0 +1,11 @@
+test_temporal_capture_bypasses_broken_daemon (test_reconstruction_capture.CaptureTests) ... ok
+test_temporal_capture_finalizes_without_legacy_scan_files (test_reconstruction_capture.CaptureTests) ... ok
+test_temporal_lifecycle_rviz_close (test_reconstruction_capture.CaptureTests) ... ok
+test_temporal_livo_requires_image_diagnostics (test_reconstruction_capture.CaptureTests) ... ok
+test_temporal_missing_binary_parameter_is_rejected (test_reconstruction_capture.CaptureTests) ... ok
+test_temporal_profile_is_exclusive_and_reversible (test_reconstruction_capture.CaptureTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 20.096s
+
+OK

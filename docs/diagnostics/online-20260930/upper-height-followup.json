@@ -1,0 +1,52 @@
+{
+  "confidence-sat100-lio": {
+    "interval_seconds": [
+      110,
+      290
+    ],
+    "minimum_height": 3.3540368103,
+    "maximum_height": 3.62137051197,
+    "height_range_m": 0.26733370167000015,
+    "interpretation": "Estimated body height, not ground-truth height error."
+  },
+  "confidence-sat100-repeat": {
+    "interval_seconds": [
+      110,
+      290
+    ],
+    "minimum_height": 3.32980110959,
+    "maximum_height": 3.5212816698,
+    "height_range_m": 0.19148056021000004,
+    "interpretation": "Estimated body height, not ground-truth height error."
+  },
+  "confidence-window4-lio": {
+    "interval_seconds": [
+      110,
+      290
+    ],
+    "minimum_height": 3.39369796068,
+    "maximum_height": 3.79076264906,
+    "height_range_m": 0.39706468838,
+    "interpretation": "Estimated body height, not ground-truth height error."
+  },
+  "confidence-sat100-livo": {
+    "interval_seconds": [
+      110,
+      290
+    ],
+    "minimum_height": 3.52543707429,
+    "maximum_height": 3.59563505781,
+    "height_range_m": 0.07019798351999995,
+    "interpretation": "Estimated body height, not ground-truth height error."
+  },
+  "confidence-visual1000-livo": {
+    "interval_seconds": [
+      110,
+      290
+    ],
+    "minimum_height": 3.37306106977,
+    "maximum_height": 3.45427397102,
+    "height_range_m": 0.08121290125000025,
+    "interpretation": "Estimated body height, not ground-truth height error."
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "capture": "diagnostic_captures/temporal-startup-validation/lio-reconstruction-20260928-110911-tj03zpy0",
+  "entrypoint": "scripts/fast_livo2/reconstruct_raw.sh (real ros2 launch, bag player, estimator and IMU monitor)",
+  "gui": "RViz display replaced by an idle process for headless testing; GUI not validated",
+  "environment": {
+    "ROS_DOMAIN_ID": "43",
+    "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp",
+    "ROS_LOCALHOST_ONLY": "1",
+    "CYCLONEDDS_URI": null,
+    "FAST_LIVO2_DETERMINISTIC": "1"
+  },
+  "binary_sha256": "adc6eb8cedbf6c30e8e9a56624c1bc14a09d31eb68cabee102564b1dadda5ff4",
+  "effective_temporal_parameters": {
+    "enabled": true,
+    "huber_delta": 2.5,
+    "iterations": 3,
+    "keyframe_sec": 0.5,
+    "max_imu_gap": 0.02,
+    "max_nodes": 16,
+    "max_residual": 0.2,
+    "max_source_points": 1200,
+    "min_plane_points": 6,
+    "min_plane_spread": 0.01,
+    "plane_ratio": 0.05,
+    "point_sigma": 0.03,
+    "sample_size": 0.15,
+    "voxel_size": 0.5,
+    "window_sec": 6.0
+  },
+  "summary": {
+    "stop_reason": "interrupt",
+    "exit_statuses": {
+      "node": {
+        "returncode": 0,
+        "node_exit_codes": [
+          -2
+        ]
+      },
+      "player": {
+        "returncode": 0,
+        "node_exit_codes": []
+      },
+      "rviz": {
+        "returncode": 0,
+        "node_exit_codes": []
+      },
+      "monitor": {
+        "returncode": 0
+      }
+    },
+    "imu": {
+      "count": 4101,
+      "first_stamp_ns": 1788781416423539328,
+      "last_stamp_ns": 1788781436922898688,
+      "max_forward_gap_ns": 8346048,
+      "nonincreasing": 0,
+      "gaps_over_20ms": 0,
+      "finished": true,
+      "topic": "/livox/imu",
+      "note": "Counts describe this subscriber; they do not prove estimator receipt or raw-bag completeness."
+    },
+    "last_lio_time_sec": 20.4997220039,
+    "reached_360_sec": false,
+    "capture_integrity": "ok",
+    "problems": [],
+    "temporal_window": true,
+    "temporal_status_counts": {
+      "initialized": 1,
+      "updated": 173
+    },
+    "diagnostic_runs": []
+  },
+  "duplicate_startup": "Rejected before launch/playback/capture creation while the real estimator was running in domain 43",
+  "failure_cause_evidence": {
+    "failed_capture": "lio-reconstruction-20260928-110428-q53d2ovk",
+    "stale_capture": "lio-reconstruction-20260928-093848-xfyj5zxg",
+    "stale_container_pid": 114,
+    "domain": 42,
+    "stale_running_executable_sha256": "0b6627da701e0655183e72150d70351e37e3d4bfcc75aa1afda38cb00c12c863",
+    "stale_executable_sha_matches_093848_capture": true,
+    "new_node_logged_temporal_enabled": true,
+    "failed_dump_missing_temporal_parameters": true
+  }
+}

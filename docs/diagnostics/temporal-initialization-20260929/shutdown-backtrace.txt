@@ -1,0 +1,11 @@
+Shutdown fault backtrace (test-only preload):
+/work/segtrace.so(+0x125d)[0x7b30186a925d]
+/lib/x86_64-linux-gnu/libc.so.6(+0x4251f)[0x7b301686551f]
+/lib/x86_64-linux-gnu/libc.so.6(free+0x1e)[0x7b30168c83be]
+/external/humble_ws/install/fast_livo2/lib/fast_livo2/fastlivo2_mapping(+0x750af)[0x5e14645820af]
+/external/humble_ws/install/fast_livo2/lib/fast_livo2/fastlivo2_mapping(_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv+0x39)[0x5e146454e0b9]
+/external/humble_ws/install/fast_livo2/lib/fast_livo2/fastlivo2_mapping(+0x4856c)[0x5e146455556c]
+/external/humble_ws/install/fast_livo2/lib/fast_livo2/fastlivo2_mapping(+0x40155)[0x5e146454d155]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d8f)[0x7b301684cd8f]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x7f)[0x7b301684ce3f]
+/external/humble_ws/install/fast_livo2/lib/fast_livo2/fastlivo2_mapping(+0x40644)[0x5e146454d644]

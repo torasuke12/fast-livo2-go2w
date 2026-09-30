@@ -1,0 +1,83 @@
+{
+  "capture": "diagnostic_captures/lio-reconstruction-20260928-113320-mx5y2ada",
+  "effective_parameters_verified": true,
+  "recorded_binary_sha256": "adc6eb8cedbf6c30e8e9a56624c1bc14a09d31eb68cabee102564b1dadda5ff4",
+  "current_binary_matches_recorded": true,
+  "provenance_source_files": 79,
+  "provenance_source_mismatches": [],
+  "numeric_logs": {
+    "mat_pre.txt": {
+      "rows": 6481,
+      "columns": 19,
+      "first_time": 0.0,
+      "last_time": 648.1
+    },
+    "mat_out.txt": {
+      "rows": 6450,
+      "columns": 20,
+      "first_time": 3.19929647446,
+      "last_time": 648.099640608
+    },
+    "imu.txt": {
+      "rows": 129004,
+      "columns": 7,
+      "first_time": 3.09707,
+      "last_time": 648.091
+    }
+  },
+  "temporal": {
+    "scans": 6450,
+    "start": 3.19929647446,
+    "end": 648.099640608,
+    "status_counts": {
+      "initialized": 1,
+      "updated": 6449
+    },
+    "max_nodes": 13,
+    "max_span": 6.00000095367,
+    "solve_ms_quantiles": {
+      "p50": 236.610171,
+      "p95": 328.0260291,
+      "max": 404.311229
+    },
+    "max_imu_step_sec": 0.0106685161591,
+    "min_covariance_eigenvalue": 1.3131530837340325e-06,
+    "covariance_information_identity_max": 1.504513602590407e-08,
+    "max_speed": 2.0216009646678894,
+    "first_negative_after_318_sec": 597.799380779,
+    "longest_negative_after_318_duration_sec": 1.4998929500000031
+  },
+  "temporal_state_rows": 74819,
+  "state_count_matches_every_window": true,
+  "latest_state_max_difference": 0.0,
+  "imu_vs_bag": {
+    "received_count": 129619,
+    "raw_bag_imu_count": 129619,
+    "received_stamps_equal_entire_raw_bag": true,
+    "processed_count": 129004,
+    "processed_all_columns_equal_contiguous_raw_midpoints": true,
+    "processed_max_abs_vs_raw": 0.0,
+    "max_processed_timestamp_gap_sec": 0.010999999999967258,
+    "raw_first_lidar_stamp_ns": 1788781416386306528,
+    "raw_last_lidar_header_relative_sec": 647.999075328,
+    "raw_last_imu_relative_sec": 648.10524144
+  },
+  "logs_stable_during_audit": true,
+  "missing_completion_records": [
+    "summary.json",
+    "monitor.exit.json",
+    "rviz.exit.json"
+  ],
+  "capture_error_present": false,
+  "all_log_files_end_with_newline": true,
+  "assessment": "Estimator data are saved through the final scan and can be analyzed; capture completion metadata are incomplete.",
+  "process_observation": {
+    "latest_estimator_running": false,
+    "latest_monitor_running": false,
+    "reconstruction_parent_running": false,
+    "latest_rviz_wrapper_pid": 1083,
+    "latest_rviz_pid": 1085,
+    "note": "Observed at audit time; PIDs may later change. No processes were stopped."
+  },
+  "scope": "Read-only audit of the original capture. No completion records were reconstructed. Numerical checks do not establish ground-truth accuracy."
+}

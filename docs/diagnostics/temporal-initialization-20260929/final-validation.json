@@ -1,0 +1,75 @@
+{
+  "final_capture": "/work/final-legacy/lio-reconstruction-20260929-074234-nr84bs49",
+  "final_binary_sha256": "27baf23ed5c5c36e2f943b79b96a279433461bdafebd579f8137023353746bac",
+  "summary": {
+    "stop_reason": "estimator_duration_reached",
+    "exit_statuses": {
+      "node": {
+        "returncode": 0,
+        "node_exit_codes": []
+      },
+      "player": {
+        "returncode": 0,
+        "node_exit_codes": []
+      },
+      "rviz": {
+        "returncode": 0,
+        "note": "headless validation; RViz not started"
+      },
+      "monitor": {
+        "returncode": 0
+      }
+    },
+    "imu": {
+      "count": 2435,
+      "first_stamp_ns": 1788781416423539328,
+      "last_stamp_ns": 1788781428593063392,
+      "max_forward_gap_ns": 8346048,
+      "nonincreasing": 0,
+      "gaps_over_20ms": 0,
+      "finished": true,
+      "topic": "/livox/imu",
+      "note": "Counts describe this subscriber; they do not prove estimator receipt or raw-bag completeness."
+    },
+    "last_lio_time_sec": 12.2000703812,
+    "reached_360_sec": false,
+    "capture_integrity": "ok",
+    "problems": [],
+    "temporal_window": true,
+    "temporal_status_counts": {
+      "initialized": 1,
+      "updated": 88
+    },
+    "temporal_initialization": {
+      "time": "3.40009045601",
+      "mode": "legacy_voxel",
+      "status": "ready",
+      "gate_applied": "1",
+      "scans": "3",
+      "points": "15791",
+      "planes": "625",
+      "normal_eigenvalue_0": "0.298269548387",
+      "normal_eigenvalue_1": "0.31324613665",
+      "normal_eigenvalue_2": "0.388484314963",
+      "duration_sec": "0.200793981552",
+      "resets": "0",
+      "reference_points": "15791",
+      "temporal_reference_planes": "245"
+    },
+    "diagnostic_runs": []
+  },
+  "parity": {
+    "temporal_window.csv": {
+      "rows": 89,
+      "different_rows_excluding_solve_ms": 0
+    },
+    "temporal_states.csv": {
+      "rows": 731,
+      "different_rows_excluding_solve_ms": 0
+    },
+    "temporal_initialization.csv": {
+      "rows": 3,
+      "different_rows_excluding_solve_ms": 0
+    }
+  }
+}

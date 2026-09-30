@@ -1,0 +1,18 @@
+1 frames, 40 query points; geometry checks PASS
+/tmp/voxel-plane-switch/normal-fixtures-final/off-baseline/run-1790587131421467118-0: 1 scans, 2 iterations, 1 committed; checks PASS
+Results: /tmp/voxel-plane-switch/normal-analysis/off-baseline/run-1790587131421467118-0/filter/summary.json
+1 frames, 40 query points; geometry checks PASS
+/tmp/voxel-plane-switch/normal-fixtures-final/off-xicp/run-1790587131457115999-0: 1 scans, 2 iterations, 1 committed; checks PASS
+Results: /tmp/voxel-plane-switch/normal-analysis/off-xicp/run-1790587131457115999-0/filter/summary.json
+1 frames, 40 query points; geometry checks PASS
+/tmp/voxel-plane-switch/normal-fixtures-final/on-baseline/run-1790587131482567317-0: 1 scans, 2 iterations, 1 committed; checks PASS
+Results: /tmp/voxel-plane-switch/normal-analysis/on-baseline/run-1790587131482567317-0/filter/summary.json
+1 frames, 40 query points; geometry checks PASS
+/tmp/voxel-plane-switch/normal-fixtures-final/on-xicp/run-1790587131517931829-0: 1 scans, 2 iterations, 1 committed; checks PASS
+Results: /tmp/voxel-plane-switch/normal-analysis/on-xicp/run-1790587131517931829-0/filter/summary.json
+1 frames, 40 query points; geometry checks PASS
+/tmp/normal-schema-wsnwun0_/v2: 1 scans, 2 iterations, 1 committed; checks PASS
+Results: /tmp/voxel-plane-switch/normal-analysis/legacy-v2/filter/summary.json
+/tmp/normal-schema-wsnwun0_/v2: 1 scans, 2 iterations, 1 committed; checks PASS
+Results: /tmp/voxel-plane-switch/normal-analysis/legacy-v1/filter/summary.json
+Schema-v3 roundtrip, filtered-set joins/gains, v1/v2 compatibility, corruption detection: PASS

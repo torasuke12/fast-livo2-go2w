@@ -1,0 +1,14 @@
+/tmp/voxel-plane-switch/fixtures-final/baseline/run-1790587131157827259-0: 1 scans, 3 iterations, 1 committed; checks PASS
+Results: /tmp/voxel-plane-switch/analysis/baseline/filter/summary.json
+1 voxel-plane frames, 80 queries; geometry checks PASS
+/tmp/voxel-plane-switch/fixtures-final/xicp/run-1790587131243598910-0: 1 scans, 3 iterations, 1 committed; checks PASS
+Results: /tmp/voxel-plane-switch/analysis/xicp/filter/summary.json
+1 voxel-plane frames, 80 queries; geometry checks PASS
+/tmp/voxel-plane-switch/fixtures-final/empty-baseline/run-1790587131218620939-0: 1 scans, 0 iterations, 0 committed; checks PASS
+Results: /tmp/voxel-plane-switch/analysis/empty-baseline/filter/summary.json
+1 voxel-plane frames, 1 queries; geometry checks PASS
+/tmp/voxel-plane-switch/fixtures-final/empty-xicp/run-1790587131294517635-0: 1 scans, 0 iterations, 0 committed; checks PASS
+Results: /tmp/voxel-plane-switch/analysis/empty-xicp/filter/summary.json
+1 voxel-plane frames, 1 queries; geometry checks PASS
+1 voxel-plane frames, 80 queries; geometry checks FAIL
+Voxel-plane schema, covariance/gain, terminal rejection, and corruption checks PASS

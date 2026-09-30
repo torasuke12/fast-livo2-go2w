@@ -1,0 +1,369 @@
+{
+  "baseline": "/external/diagnostic_captures/voxel-plane-analysis-20260928/data",
+  "temporal": "/external/diagnostic_captures/lio-reconstruction-20260929-080320-g0vyyobv",
+  "baseline_snapshot_hashes": {
+    "diagnostics/geometry_states.csv": "6c1db3c4a31150d92d1bda252d510c8eba8111c6a835375b23ab67951f4c64a8",
+    "logs/imu.txt": "48344718aec224aff932178738d18b559b7a3247d196dec8ecca270ed23e4cf9",
+    "effective_params.yaml": "e4fa1e29ae94bea97f4049b1e58371c7d0bd1f04097169bc2b878be44a74c202"
+  },
+  "matched_scans": 3166,
+  "timestamp_difference_max_sec": 4.997673386242241e-10,
+  "imu_equal_prefix_rows": 66582,
+  "imu_equal_all_columns": true,
+  "input_and_initialization_parameter_differences": {},
+  "alignment": {
+    "fit_start": 20,
+    "fit_end": 60,
+    "yaw_deg": 0.3209684743268922,
+    "translation_xy_m": [
+      0.4044688123804754,
+      0.40447874725375943
+    ],
+    "fit_rmse_m": 0.34346050633316144
+  },
+  "largest_new_position_update": {
+    "time": 145.69955158233643,
+    "norm_m": 0.31707451753332777
+  },
+  "windows": [
+    {
+      "start": 3.499115467071533,
+      "end": 10,
+      "scans": 66,
+      "old_rotation_update_deg": {
+        "median": 0.023154409856109573,
+        "p95": 0.04937199523066719,
+        "max": 0.34488246809543854
+      },
+      "new_rotation_update_deg": {
+        "median": 0.2164303038140177,
+        "p95": 20.040886819150092,
+        "max": 29.092800993979978
+      },
+      "old_position_update_m": {
+        "median": 0.0006284574914158347,
+        "p95": 0.0023739135359081022,
+        "max": 0.0050413628969062955
+      },
+      "new_position_update_m": {
+        "median": 0.005950051935501983,
+        "p95": 0.05430202177807443,
+        "max": 0.25591563920508364
+      }
+    },
+    {
+      "start": 10,
+      "end": 20,
+      "scans": 100,
+      "old_rotation_update_deg": {
+        "median": 0.06576975331986537,
+        "p95": 0.549750878601461,
+        "max": 0.6834314709821986
+      },
+      "new_rotation_update_deg": {
+        "median": 0.16061686913922074,
+        "p95": 0.5584405039429262,
+        "max": 0.6959284654719005
+      },
+      "old_position_update_m": {
+        "median": 0.001733714985512772,
+        "p95": 0.01701311071664424,
+        "max": 0.030826294280218144
+      },
+      "new_position_update_m": {
+        "median": 0.0051975002382800084,
+        "p95": 0.020034835020136112,
+        "max": 0.03490837969592894
+      }
+    },
+    {
+      "start": 20,
+      "end": 60,
+      "scans": 400,
+      "old_rotation_update_deg": {
+        "median": 0.062094500701903574,
+        "p95": 0.30092701117356574,
+        "max": 0.5584502694727226
+      },
+      "new_rotation_update_deg": {
+        "median": 0.09721137166721207,
+        "p95": 0.3084416311197832,
+        "max": 0.58107820605752
+      },
+      "old_position_update_m": {
+        "median": 0.003533285875471311,
+        "p95": 0.01234390090493031,
+        "max": 0.027169366971827657
+      },
+      "new_position_update_m": {
+        "median": 0.008292587371628517,
+        "p95": 0.028532041779335177,
+        "max": 0.09824711290457115
+      }
+    },
+    {
+      "start": 60,
+      "end": 140,
+      "scans": 800,
+      "old_rotation_update_deg": {
+        "median": 0.10398858369217111,
+        "p95": 0.6448578416177349,
+        "max": 1.246141527729221
+      },
+      "new_rotation_update_deg": {
+        "median": 0.14398504552946145,
+        "p95": 0.634787735235968,
+        "max": 1.2755075891403098
+      },
+      "old_position_update_m": {
+        "median": 0.007511077118967932,
+        "p95": 0.020070659885252713,
+        "max": 0.03448765222401765
+      },
+      "new_position_update_m": {
+        "median": 0.008200892687176723,
+        "p95": 0.04167675964849055,
+        "max": 0.17103858389920534
+      }
+    },
+    {
+      "start": 140,
+      "end": 180,
+      "scans": 400,
+      "old_rotation_update_deg": {
+        "median": 0.06890454009968405,
+        "p95": 0.3092566892514554,
+        "max": 0.9183975235136559
+      },
+      "new_rotation_update_deg": {
+        "median": 0.09448675145720362,
+        "p95": 0.3511788553308299,
+        "max": 1.1217582851670826
+      },
+      "old_position_update_m": {
+        "median": 0.018349782482664216,
+        "p95": 0.04725111896337847,
+        "max": 0.07473798665281559
+      },
+      "new_position_update_m": {
+        "median": 0.008265401598766483,
+        "p95": 0.04143389170174149,
+        "max": 0.31707451753332777
+      }
+    },
+    {
+      "start": 180,
+      "end": 220,
+      "scans": 400,
+      "old_rotation_update_deg": {
+        "median": 0.06106766136994969,
+        "p95": 0.2067646878150361,
+        "max": 0.39498436527332964
+      },
+      "new_rotation_update_deg": {
+        "median": 0.08984913369051566,
+        "p95": 0.22442716095168755,
+        "max": 0.5118885591422127
+      },
+      "old_position_update_m": {
+        "median": 0.005913664831243731,
+        "p95": 0.031280811211916205,
+        "max": 0.05621304731665891
+      },
+      "new_position_update_m": {
+        "median": 0.006296950596686559,
+        "p95": 0.02647557307488921,
+        "max": 0.06673668965853076
+      }
+    },
+    {
+      "start": 220,
+      "end": 300,
+      "scans": 800,
+      "old_rotation_update_deg": {
+        "median": 0.057695889886564475,
+        "p95": 0.2184524272130006,
+        "max": 0.6281317051938561
+      },
+      "new_rotation_update_deg": {
+        "median": 0.08737831439808683,
+        "p95": 0.2732799417941392,
+        "max": 0.7077995395731135
+      },
+      "old_position_update_m": {
+        "median": 0.006319913405889225,
+        "p95": 0.026125941876837373,
+        "max": 0.4635919486711706
+      },
+      "new_position_update_m": {
+        "median": 0.006284929750183547,
+        "p95": 0.03317998817120109,
+        "max": 0.1144468884754484
+      }
+    },
+    {
+      "start": 300,
+      "end": 320,
+      "scans": 200,
+      "old_rotation_update_deg": {
+        "median": 0.05871432334007104,
+        "p95": 0.3069767964906276,
+        "max": 0.4632324829505373
+      },
+      "new_rotation_update_deg": {
+        "median": 0.09079494183088332,
+        "p95": 0.3304183927178959,
+        "max": 0.5090249725497296
+      },
+      "old_position_update_m": {
+        "median": 0.006608497214849362,
+        "p95": 0.07395801637271451,
+        "max": 0.13731952405981349
+      },
+      "new_position_update_m": {
+        "median": 0.0068145013586774165,
+        "p95": 0.03518663121922267,
+        "max": 0.057639544298900953
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "time": 9.999245405197144,
+      "position_difference_unaligned_m": [
+        0.02118201817527115,
+        -0.22093907156695503,
+        -0.041088894737165205
+      ],
+      "rotation_difference_deg": 1.7064889486218757,
+      "aligned_xy_difference_m": 0.46470141047663643,
+      "nearest_keyframe_time": 10.2001748085,
+      "aligned_keyframe_xy_difference_m": 0.4647141149130994
+    },
+    {
+      "time": 19.99970030784607,
+      "position_difference_unaligned_m": [
+        0.040709081334400654,
+        -0.3525229793559179,
+        0.044968433389696354
+      ],
+      "rotation_difference_deg": 1.1471701358300725,
+      "aligned_xy_difference_m": 0.4580772170443453,
+      "nearest_keyframe_time": 19.6998689175,
+      "aligned_keyframe_xy_difference_m": 0.46090927039925433
+    },
+    {
+      "time": 29.999436616897583,
+      "position_difference_unaligned_m": [
+        -0.1968345733449084,
+        -0.46670873078778463,
+        0.13536246984198522
+      ],
+      "rotation_difference_deg": 1.1865743956344625,
+      "aligned_xy_difference_m": 0.22334578145658085,
+      "nearest_keyframe_time": 30.1995038986,
+      "aligned_keyframe_xy_difference_m": 0.24177711739896252
+    },
+    {
+      "time": 59.999332427978516,
+      "position_difference_unaligned_m": [
+        -0.9115391739697003,
+        -0.5447187811841911,
+        1.0644671818300744
+      ],
+      "rotation_difference_deg": 1.6453366797878206,
+      "aligned_xy_difference_m": 0.5177599001027237,
+      "nearest_keyframe_time": 59.999332428,
+      "aligned_keyframe_xy_difference_m": 0.5364741013335043
+    },
+    {
+      "time": 99.9991090297699,
+      "position_difference_unaligned_m": [
+        -0.9887497242852561,
+        -0.42784911897851186,
+        1.075374450590048
+      ],
+      "rotation_difference_deg": 2.1368057530423346,
+      "aligned_xy_difference_m": 0.6701959957799923,
+      "nearest_keyframe_time": 99.7993261814,
+      "aligned_keyframe_xy_difference_m": 0.6635055589306474
+    },
+    {
+      "time": 139.99977469444275,
+      "position_difference_unaligned_m": [
+        -0.6659143895645627,
+        -0.33840112010483514,
+        3.000247499688024
+      ],
+      "rotation_difference_deg": 2.582700835495133,
+      "aligned_xy_difference_m": 0.7211203130343485,
+      "nearest_keyframe_time": 140.19920969,
+      "aligned_keyframe_xy_difference_m": 0.27589925070781907
+    },
+    {
+      "time": 179.99940252304077,
+      "position_difference_unaligned_m": [
+        0.4676321237273342,
+        0.9186020330438778,
+        0.743481805480771
+      ],
+      "rotation_difference_deg": 3.4752376635283575,
+      "aligned_xy_difference_m": 1.8624869139153335,
+      "nearest_keyframe_time": 180.099330187,
+      "aligned_keyframe_xy_difference_m": 1.8695241559298739
+    },
+    {
+      "time": 219.99937844276428,
+      "position_difference_unaligned_m": [
+        1.9660550743975864,
+        4.142626944144173,
+        -0.18790213986243742
+      ],
+      "rotation_difference_deg": 3.8309440851860925,
+      "aligned_xy_difference_m": 5.122555049856641,
+      "nearest_keyframe_time": 220.199201822,
+      "aligned_keyframe_xy_difference_m": 5.153543719467049
+    },
+    {
+      "time": 259.9998209476471,
+      "position_difference_unaligned_m": [
+        2.2763771998380307,
+        8.888294445644728,
+        0.4864940507229476
+      ],
+      "rotation_difference_deg": 4.863490217276821,
+      "aligned_xy_difference_m": 9.345382932633223,
+      "nearest_keyframe_time": 260.199830055,
+      "aligned_keyframe_xy_difference_m": 9.358766736247606
+    },
+    {
+      "time": 299.9994306564331,
+      "position_difference_unaligned_m": [
+        2.754270798124992,
+        12.893611286923838,
+        2.8981661959137694
+      ],
+      "rotation_difference_deg": 5.2874820270739695,
+      "aligned_xy_difference_m": 13.01858590831798,
+      "nearest_keyframe_time": 299.900406599,
+      "aligned_keyframe_xy_difference_m": 13.095690491152148
+    },
+    {
+      "time": 319.8997416496277,
+      "position_difference_unaligned_m": [
+        3.3644562767371298,
+        13.742739216839382,
+        3.3180546807357216
+      ],
+      "rotation_difference_deg": 5.452075736616315,
+      "aligned_xy_difference_m": 13.963694590480115,
+      "nearest_keyframe_time": 319.599735975,
+      "aligned_keyframe_xy_difference_m": 13.868855321041888
+    }
+  ],
+  "caveats": [
+    "Differences between methods are not ground-truth errors.",
+    "Updates include each estimator own prediction; they do not isolate LiDAR-only causality.",
+    "Latest online states and last optimized keyframes are different output histories."
+  ]
+}

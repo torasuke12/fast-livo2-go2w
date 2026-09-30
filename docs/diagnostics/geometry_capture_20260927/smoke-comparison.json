@@ -1,0 +1,38 @@
+{
+  "mat_out.txt": {
+    "old_shape": [
+      88,
+      20
+    ],
+    "new_shape": [
+      88,
+      20
+    ],
+    "equal": true,
+    "max_abs_error": 0.0
+  },
+  "mat_pre.txt": {
+    "old_shape": [
+      120,
+      19
+    ],
+    "new_shape": [
+      120,
+      19
+    ],
+    "equal": true,
+    "max_abs_error": 0.0
+  },
+  "imu.txt": {
+    "old_shape": [
+      1780,
+      7
+    ],
+    "new_shape": [
+      1780,
+      7
+    ],
+    "equal": true,
+    "max_abs_error": 0.0
+  }
+}

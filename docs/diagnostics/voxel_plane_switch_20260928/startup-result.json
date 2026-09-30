@@ -1,0 +1,11 @@
+{
+  "startup_and_effective_parameters_passed": true,
+  "correspondence_mode": "voxel_plane",
+  "geometry_enabled": true,
+  "normal_gate_enabled": false,
+  "image_enabled": 0,
+  "exit_code": 0,
+  "binary_sha256": "0b6627da701e0655183e72150d70351e37e3d4bfcc75aa1afda38cb00c12c863",
+  "bag_replayed": false,
+  "sensor_messages_published": false
+}

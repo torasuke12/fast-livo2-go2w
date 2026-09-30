@@ -1,0 +1,38 @@
+{
+  "source_run": "/home/srg-f-rei/fast_livo2_go2w/src/fast-livo2-go2w/humble_ws/src/fast-livo2/Log/diagnostics/run-1790502604762878662-0",
+  "snapshot": "/tmp/fast-livo2-uturn2-hhrpwvwg",
+  "files": {
+    "logs/mat_out.txt": {
+      "bytes": 649508,
+      "sha256": "e874d6d27ea26e37e82e6ecde8d7eedf3b2037ae11fe7ed3b0cc2806bfd53c15"
+    },
+    "logs/xicp_diagnostic.csv": {
+      "bytes": 19587240,
+      "sha256": "f76a101066a3d171f9c1fbd90874778ff647cfefc7984e3dbb5be4f0e0aa7d3d"
+    },
+    "logs/imu.txt": {
+      "bytes": 5156785,
+      "sha256": "4fe0338b38685b6baf546ebb1600f814be61d45c25c3b6ea479b9f6b928832d6"
+    },
+    "logs/mat_pre.txt": {
+      "bytes": 630654,
+      "sha256": "e9e49057879a31e8d626c6d32ca9a175d3e3adaf9b646d6421ef82a1626621a5"
+    },
+    "diagnostics/iterations.csv": {
+      "bytes": 146403789,
+      "sha256": "3cbc96e2a4fe40d97080e4b66d02806c778dad29089bdff4ed2d6824164c17bc"
+    },
+    "diagnostics/scans.csv": {
+      "bytes": 39697884,
+      "sha256": "3bdd26ad5cb2de3cf894a220d0464fd98bca5f8f03278356d190d4448ba54a35"
+    },
+    "diagnostics/metadata.json": {
+      "bytes": 6742,
+      "sha256": "d5634fcee5ddd19b690644e9aeb0ea9fbaad620c86521b5e143adeae20512c61"
+    },
+    "diagnostics/correspondences.csv": {
+      "bytes": 1626636530,
+      "sha256": "71144f506e61be9c5042c0c552da1ab90d552816fcb0e41c2ae17db06540c5e6"
+    }
+  }
+}

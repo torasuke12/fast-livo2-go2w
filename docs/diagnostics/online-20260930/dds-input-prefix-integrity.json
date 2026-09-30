@@ -1,0 +1,8 @@
+{
+  "identical_serialized_prefix": true,
+  "counts": {
+    "/livox/imu": 12001,
+    "/livox/lidar": 600
+  },
+  "prefix_sha256": "cc973cf030c2224a1294353369014c7d72c74ca770974162d298e8be317d507a"
+}

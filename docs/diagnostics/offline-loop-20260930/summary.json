@@ -1,0 +1,26 @@
+{
+  "submaps": 395,
+  "keyframes": 1215,
+  "accepted_loops": 404,
+  "complete": true,
+  "confirmed_return_constraints": 15,
+  "optimization": {
+    "first": {
+      "cost": 98.65284654777815,
+      "evaluations": 416,
+      "optimality": 0.11269843673355778,
+      "status": 2
+    },
+    "second": {
+      "cost": 240.14799839972102,
+      "evaluations": 124,
+      "optimality": 0.22121535857405175,
+      "status": 2
+    }
+  },
+  "retained_loops": 404,
+  "map_points": 909037,
+  "endpoint_displacement_before": 8.08621956722221,
+  "endpoint_displacement_after": 1.1419285046422356,
+  "note": "Endpoint displacement is not absolute trajectory error; the robot need not return to the identical pose."
+}

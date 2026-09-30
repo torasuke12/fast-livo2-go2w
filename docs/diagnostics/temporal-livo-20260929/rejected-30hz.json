@@ -1,0 +1,9 @@
+{
+  "capture": "/work/livo-final/lio-reconstruction-20260929-092344-uh9sxhcb",
+  "capture_integrity": "ok",
+  "quality": "rejected",
+  "reason": "initial bias inconsistency and later speed divergence at the input camera rate",
+  "last_time": 60.2444946766,
+  "max_speed": 38.9047228124491,
+  "max_accel_bias_norm": 1.990243152641621
+}

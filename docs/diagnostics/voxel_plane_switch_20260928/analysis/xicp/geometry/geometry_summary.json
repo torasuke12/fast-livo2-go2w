@@ -1,0 +1,78 @@
+{
+  "run": "/tmp/voxel-plane-switch/fixtures-final/xicp/run-1790587131243598910-0",
+  "schema_version": 4,
+  "correspondence_mode": "voxel_plane",
+  "frames": 1,
+  "points": 80,
+  "status_order": [
+    "invalid_point",
+    "insufficient_neighbors",
+    "neighbor_distance",
+    "plane_fit",
+    "residual",
+    "accepted",
+    "normal_mismatch",
+    "no_voxel",
+    "no_plane",
+    "outside_extent",
+    "invalid_variance"
+  ],
+  "status_counts": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    75,
+    0,
+    1,
+    1,
+    1,
+    1
+  ],
+  "max_scaled_errors": {
+    "world_transform": 0.0,
+    "unit_normal": 0.0,
+    "plane_distance": 0.0,
+    "tangential_distance": 1.3328248458454784e-07,
+    "gate_distance": 0.0,
+    "gate_plane_variance": 6.776049479293489e-21,
+    "gate_point_variance": 8.638207355427104e-19,
+    "gate_variance": 8.637950215837529e-19,
+    "probability": 1.6525629311040343e-16,
+    "update_plane_variance": 5.420827760138293e-19,
+    "update_point_variance": 8.129601208976976e-20,
+    "update_variance": 6.497988317283819e-19,
+    "inverse_variance": 0.0,
+    "jacobian": 1.903559966548222e-16,
+    "residual": 0.0
+  },
+  "passed": true,
+  "frames_detail": [
+    {
+      "scan_id": 0,
+      "time": 205.1,
+      "iteration": 1,
+      "points": 80,
+      "accepted": 75,
+      "status_counts": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        75,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "distinct_accepted_planes": 3
+    }
+  ],
+  "notes": [
+    "Rejected rows represent one candidate, not every candidate examined.",
+    "Covariance and numerical consistency do not establish correct geometry or state accuracy."
+  ]
+}

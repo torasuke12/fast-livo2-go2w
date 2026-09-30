@@ -1,0 +1,93 @@
+{
+  "source": "/source/diagnostic_captures/lio-reconstruction-20260928-093848-xfyj5zxg",
+  "files": {
+    "rviz.console.log": {
+      "bytes": 780,
+      "sha256": "72a12f535f70e66b8e5df0ca6b97ee74ddb91c2b7fe5ff596f9f6fd0a6089a79"
+    },
+    "monitor.ready": {
+      "bytes": 11,
+      "sha256": "55a5b596c8287ac6ebe6a590be8233c2ace7e975fad0b037959cb5eb0a523fff"
+    },
+    "player.console.log": {
+      "bytes": 1048,
+      "sha256": "d7f6889ce44370dea9887d78463359cb2e257aac8876db3aaed274d2671d1bc8"
+    },
+    "rviz.exit.json": {
+      "bytes": 48,
+      "sha256": "64aeca6efc11244640abbb3800faa65b8d753a2c22bbb89cd13971a802437e1c"
+    },
+    "capture.json": {
+      "bytes": 918,
+      "sha256": "e07cd02ee370cc5004234185066dcd5b3f68ae017e3d2dad5a81e6ba515a9b35"
+    },
+    "effective_params.yaml": {
+      "bytes": 4891,
+      "sha256": "e4fa1e29ae94bea97f4049b1e58371c7d0bd1f04097169bc2b878be44a74c202"
+    },
+    "player.exit.json": {
+      "bytes": 47,
+      "sha256": "46d8d08c18bb4753aa0cc12f9b490b4cb3a7a5140299c0af55d2cda7ad984910"
+    },
+    "imu_summary.json": {
+      "bytes": 226,
+      "sha256": "7f4165554c3bc8e65c7ff8025a9a7ec18e919efc03821213e1e2e107f1f9f693"
+    },
+    "imu_stamps.csv": {
+      "bytes": 2811377,
+      "sha256": "e21d5e23db16c6d6e467b824b34a1e7958611ffcc4f645eeca3eb088921dae9d"
+    },
+    "node.console.log": {
+      "bytes": 5866949,
+      "sha256": "7f3b12f2c7584491a71ef13db67e665e3eef22ac01be3245777f7c00611d5e3c"
+    },
+    "params.yaml": {
+      "bytes": 4398,
+      "sha256": "4967551ff1209b483f1ebda56fcad5fb8e68874f2edfa483fac398687ef48fb2"
+    },
+    "original_params.yaml": {
+      "bytes": 7528,
+      "sha256": "79213b912306b5f4fccd6e11c9382bed9e8ed55afef34dbffa98880dbb61fc97"
+    },
+    "param_dump.stderr": {
+      "bytes": 210,
+      "sha256": "4ae8d44df644cd5ad8b21e70bf8c4de5b65652a26ad1491fc3c680e754b34559"
+    },
+    "monitor.console.log": {
+      "bytes": 105,
+      "sha256": "8fad06feeabc50f73e4110e8d80b44115fd8c7245951952f2e8e3a3b9ad197f3"
+    },
+    "diagnostics/iterations.csv": {
+      "bytes": 138906942,
+      "sha256": "27cc343f3b26151789c987f1458febe393e72d98b158fd320e2fd1bdf87198ee"
+    },
+    "diagnostics/scans.csv": {
+      "bytes": 38366112,
+      "sha256": "e3644e3bd26b49d8b7b39b3ad8a505c313b4b97ded95fb6ee61a8f24add61004"
+    },
+    "diagnostics/metadata.json": {
+      "bytes": 9493,
+      "sha256": "5008114970b811a826572b9d7374af535750792d082a8abaee65849a5b1a6467"
+    },
+    "diagnostics/geometry_states.csv": {
+      "bytes": 5455812,
+      "sha256": "6c1db3c4a31150d92d1bda252d510c8eba8111c6a835375b23ab67951f4c64a8"
+    },
+    "logs/mat_out.txt": {
+      "bytes": 628010,
+      "sha256": "b4a98932592ab0f184968e5f5bc136a73afd5958bc4bf218dfbab3890f191bca"
+    },
+    "logs/xicp_diagnostic.csv": {
+      "bytes": 18614054,
+      "sha256": "202be122bba94fb2067f920128508b8486f95bce0f9c667a5c043e82deeea095"
+    },
+    "logs/imu.txt": {
+      "bytes": 4970460,
+      "sha256": "48344718aec224aff932178738d18b559b7a3247d196dec8ecca270ed23e4cf9"
+    },
+    "logs/mat_pre.txt": {
+      "bytes": 610395,
+      "sha256": "015c968ac16809f12e2f1b43d44acee367135d435bb8185f90f94068f51809fc"
+    }
+  }
+}

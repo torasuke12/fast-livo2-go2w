@@ -1,0 +1,26 @@
+{
+  "visual-reference-off60": {
+    "end_position": [
+      51.2570111822,
+      -1.15932759578,
+      -0.0180552595579
+    ],
+    "reference_poses_max": 0,
+    "status_counts": {
+      "updated": 175,
+      "no_constraints": 107
+    }
+  },
+  "visual-reference-on60": {
+    "end_position": [
+      54.4965291977,
+      -1.09138437973,
+      -0.0521592411759
+    ],
+    "reference_poses_max": 3,
+    "status_counts": {
+      "updated": 173,
+      "no_constraints": 109
+    }
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "on_capture": "lio-reconstruction-20260930-032943-3gni82mp",
+  "off_capture": "lio-reconstruction-20260930-033237-7gjxt4yx",
+  "on_arguments": [
+    "--",
+    "bags/raw_20260907_114335",
+    "--lio-only",
+    "--temporal-window",
+    "on",
+    "--temporal-initialization",
+    "legacy_voxel",
+    "--capture-diagnostics",
+    "--rate",
+    "0.25"
+  ],
+  "off_arguments": [
+    "--",
+    "bags/raw_20260907_114335",
+    "--lio-only",
+    "--temporal-window",
+    "off",
+    "--capture-diagnostics",
+    "--rate",
+    "0.25"
+  ],
+  "same_binary": true,
+  "binary_sha256": "f51c500862d647ee3458f2dd1d17800f3f8c013033f57235086070bcf623e227",
+  "matched_scans": 60,
+  "interval_sec": [
+    3.499115467071533,
+    9.400121212005615
+  ],
+  "imu_identical_prefix_rows": 1260,
+  "parameter_differences": {
+    "debug.log_dir": [
+      "/external/diagnostic_captures/lio-reconstruction-20260930-032943-3gni82mp/logs",
+      "/external/diagnostic_captures/lio-reconstruction-20260930-033237-7gjxt4yx/logs"
+    ],
+    "lio.diagnostics.enabled": [
+      false,
+      true
+    ],
+    "lio.diagnostics.output_dir": [
+      "/external/diagnostic_captures/lio-reconstruction-20260930-032943-3gni82mp/diagnostics",
+      "/external/diagnostic_captures/lio-reconstruction-20260930-033237-7gjxt4yx/diagnostics"
+    ],
+    "lio.temporal.enabled": [
+      true,
+      false
+    ],
+    "lio.temporal.initialization_mode": [
+      "legacy_voxel",
+      "single_scan"
+    ],
+    "lio.xicp.diagnostics": [
+      false,
+      true
+    ],
+    "lio.xicp.enabled": [
+      false,
+      true
+    ]
+  },
+  "first_updates": [
+    {
+      "time": 3.499115467071533,
+      "on_rpy_deg": [
+        7.038332263286202,
+        21.11748431153117,
+        2.30962021175341
+      ],
+      "off_rpy_deg": [
+        1.5467872476223268,
+        21.078662419195556,
+        -0.0727654450918237
+      ],
+      "on_position_m": [
+        -0.000627108741051,
+        -0.0809883529208,
+        0.0307415257226
+      ],
+      "off_position_m": [
+        -0.0032385861934248854,
+        -0.004200902676928449,
+        0.0025698897353171233
+      ],
+      "on_prediction_correction_deg": 5.210127872260862,
+      "off_prediction_correction_deg": 0.34488246809543854,
+      "first_node_revised_rotation_deg": 5.30406655178197,
+      "first_node_revised_position_m": 0.052690324608625404,
+      "simultaneous_first_to_latest_rotation_deg": 0.1637093108270107,
+      "on_imu_rms": 0.112457176462,
+      "on_lidar_rms_m": 0.0556417127129
+    },
+    {
+      "time": 3.598874807357788,
+      "on_rpy_deg": [
+        -24.10878893387171,
+        21.973871275611664,
+        -6.350214745994952
+      ],
+      "off_rpy_deg": [
+        1.5215383195222347,
+        21.013560469497932,
+        -0.030314534168416337
+      ],
+      "on_position_m": [
+        -0.0178901139415,
+        -0.3739378171,
+        0.0902860564699
+      ],
+      "off_position_m": [
+        -0.004815498009676794,
+        -0.005772170379584703,
+        -0.0001129584838801361
+      ],
+      "on_prediction_correction_deg": 29.092800993979978,
+      "off_prediction_correction_deg": 0.07974577211261273,
+      "first_node_revised_rotation_deg": 23.88938003479009,
+      "first_node_revised_position_m": 0.35233925055512405,
+      "simultaneous_first_to_latest_rotation_deg": 0.10210991281577657,
+      "on_imu_rms": 0.175654958822,
+      "on_lidar_rms_m": 0.0557414328788
+    },
+    {
+      "time": 3.6985652446746826,
+      "on_rpy_deg": [
+        -19.931091844097875,
+        21.973887961509902,
+        -2.509647652513391
+      ],
+      "off_rpy_deg": [
+        1.5748179793151742,
+        20.989771310837334,
+        0.04990671271204618
+      ],
+      "on_position_m": [
+        -0.000874978472498,
+        -0.28651533421,
+        0.0482915896934
+      ],
+      "off_position_m": [
+        -0.0076601613799060254,
+        -0.003691873089058802,
+        -0.0016512757386387333
+      ],
+      "on_prediction_correction_deg": 4.480464401278181,
+      "off_prediction_correction_deg": 0.07621477962408507,
+      "first_node_revised_rotation_deg": 20.45720532735194,
+      "first_node_revised_position_m": 0.2982056463298033,
+      "simultaneous_first_to_latest_rotation_deg": 0.14086586292305298,
+      "on_imu_rms": 0.325527412584,
+      "on_lidar_rms_m": 0.0506161640808
+    },
+    {
+      "time": 3.7985825538635254,
+      "on_rpy_deg": [
+        -14.538085548876095,
+        22.584571514020965,
+        4.789731869570912
+      ],
+      "off_rpy_deg": [
+        1.6249689813708412,
+        21.003767726926075,
+        0.04280365339534263
+      ],
+      "on_position_m": [
+        0.0173724211283,
+        -0.181650914638,
+        0.0332157406818
+      ],
+      "off_position_m": [
+        -0.010680130968338747,
+        -0.0028006323571964906,
+        -0.0014073017844297776
+      ],
+      "on_prediction_correction_deg": 7.275002997116457,
+      "off_prediction_correction_deg": 0.04938500413575841,
+      "first_node_revised_rotation_deg": 18.198617469690163,
+      "first_node_revised_position_m": 0.23438750656528912,
+      "simultaneous_first_to_latest_rotation_deg": 0.0540171485765673,
+      "on_imu_rms": 2.19602128944,
+      "on_lidar_rms_m": 0.0569907914235
+    },
+    {
+      "time": 3.899214506149292,
+      "on_rpy_deg": [
+        -12.297938405052138,
+        21.174056478377747,
+        -23.211490540209095
+      ],
+      "off_rpy_deg": [
+        1.592060813346726,
+        20.99421343908682,
+        0.044128968638373754
+      ],
+      "on_position_m": [
+        -0.00873033730801,
+        -0.11210304083,
+        0.0207664698568
+      ],
+      "off_position_m": [
+        -0.014402544532005972,
+        -0.002199026436403154,
+        -0.0005170374822725274
+      ],
+      "on_prediction_correction_deg": 28.986148317732592,
+      "off_prediction_correction_deg": 0.0388946781786923,
+      "first_node_revised_rotation_deg": 22.513482605620027,
+      "first_node_revised_position_m": 0.2188745169897303,
+      "simultaneous_first_to_latest_rotation_deg": 0.08909518928529614,
+      "on_imu_rms": 2.74861337256,
+      "on_lidar_rms_m": 0.063657417155
+    },
+    {
+      "time": 4.000323295593262,
+      "on_rpy_deg": [
+        -6.21989005788008,
+        20.427314061205752,
+        0.9098558300753625
+      ],
+      "off_rpy_deg": [
+        1.5833631695070602,
+        21.02773794471521,
+        -0.013106023059270267
+      ],
+      "on_position_m": [
+        0.00179896218207,
+        -0.0400052694648,
+        0.00787963372545
+      ],
+      "off_position_m": [
+        -0.013861758738496462,
+        -0.0016221070190144645,
+        -0.0007220932077270829
+      ],
+      "on_prediction_correction_deg": 22.74460730211419,
+      "off_prediction_correction_deg": 0.02801949011685605,
+      "first_node_revised_rotation_deg": 7.96709914488022,
+      "first_node_revised_position_m": 0.1296094770619039,
+      "simultaneous_first_to_latest_rotation_deg": 0.11859583096499092,
+      "on_imu_rms": 0.660759135364,
+      "on_lidar_rms_m": 0.0621771217682
+    },
+    {
+      "time": 4.0991857051849365,
+      "on_rpy_deg": [
+        -1.1092382994187289,
+        17.018248644363666,
+        -24.036967947819107
+      ],
+      "off_rpy_deg": [
+        1.6075327519864457,
+        21.02057109044885,
+        0.046282102277114635
+      ],
+      "on_position_m": [
+        0.0202344824514,
+        -0.0319810402618,
+        0.00535366904891
+      ],
+      "off_position_m": [
+        -0.013169531237830764,
+        -0.0018121682203318754,
+        -0.0007270279496617218
+      ],
+      "on_prediction_correction_deg": 27.267384181753773,
+      "off_prediction_correction_deg": 0.010836606565818379,
+      "first_node_revised_rotation_deg": 23.885051272798172,
+      "first_node_revised_position_m": 0.07359672328715715,
+      "simultaneous_first_to_latest_rotation_deg": 0.23094798799117747,
+      "on_imu_rms": 0.293652873913,
+      "on_lidar_rms_m": 0.0532863996409
+    },
+    {
+      "time": 4.19925856590271,
+      "on_rpy_deg": [
+        0.3247470075678465,
+        18.600081531216155,
+        -11.839493206420018
+      ],
+      "off_rpy_deg": [
+        1.6313127831064638,
+        21.049605100575867,
+        0.08359117049740515
+      ],
+      "on_position_m": [
+        -0.00326305319284,
+        -0.0282217345501,
+        0.00141255058875
+      ],
+      "off_position_m": [
+        -0.01275010644965359,
+        -0.0019129631202663754,
+        -0.0008645797957606183
+      ],
+      "on_prediction_correction_deg": 11.929725370257803,
+      "off_prediction_correction_deg": 0.03626296630848617,
+      "first_node_revised_rotation_deg": 11.961957302789207,
+      "first_node_revised_position_m": 0.042187720805345996,
+      "simultaneous_first_to_latest_rotation_deg": 0.18944346985624183,
+      "on_imu_rms": 0.34375017131,
+      "on_lidar_rms_m": 0.0539750355399
+    }
+  ],
+  "max_prediction_rotation_update_deg": {
+    "on": 29.092800993979978,
+    "off": 0.34488246809543854
+  },
+  "max_prediction_position_update_m": {
+    "on": 0.25591563920508364,
+    "off": 0.0050413628969062955
+  },
+  "first_node_revision_max": {
+    "rotation_deg": 23.88938003479009,
+    "position_m": 0.35233925055512405
+  },
+  "source_sha256": {
+    "/external/diagnostic_captures/lio-reconstruction-20260930-032943-3gni82mp/capture.json": "d423654575d8d2daf88ca3f5e03a501c5f93e879fcde4723d9273654fb7e3d67",
+    "/external/diagnostic_captures/lio-reconstruction-20260930-033237-7gjxt4yx/capture.json": "d09a319b33a8dd9f4ae2d65d47536c9f9f2671695ec99f5d2beb1866ac4382a6",
+    "/external/diagnostic_captures/lio-reconstruction-20260930-032943-3gni82mp/effective_params.yaml": "0fde4c8f43861bb9f7c547d6c4341467448c34c89d4a94fe30b9cbd093d8efee",
+    "/external/diagnostic_captures/lio-reconstruction-20260930-033237-7gjxt4yx/effective_params.yaml": "14f80e0f0120469e527bd7f8e9bf514b3f1cc56537dec9437f1de6df3c2797bd",
+    "/external/diagnostic_captures/lio-reconstruction-20260930-033237-7gjxt4yx/diagnostics/run-1790739185371061494-0/geometry_states.csv": "2eac9e223f5296be780af633353f3e54470929c11809ccaf6cb6bb040a068d39",
+    "/external/diagnostic_captures/lio-reconstruction-20260930-032943-3gni82mp/logs/temporal_window.csv": "5510e818fb28078d2f20413c91b8bdb0e53d4dd7323997e12a29716c551b7185",
+    "/external/diagnostic_captures/lio-reconstruction-20260930-032943-3gni82mp/logs/temporal_states.csv": "f8b6a7d3a4cdfb10c3c2e32fd1f03a752499c68f8fa2b56c4ed16fd53b6315df",
+    "/external/diagnostic_captures/lio-reconstruction-20260930-032943-3gni82mp/logs/imu.txt": "8268b65369c8416eb9713aef5471eb892aef9d364648b361095a378e374c6dfe",
+    "/external/diagnostic_captures/lio-reconstruction-20260930-033237-7gjxt4yx/logs/imu.txt": "7db1ef8038504d093f198edace09fe0d2311fa3ea16d05edfa8ea77fdf0dde92"
+  },
+  "limitations": [
+    "OFF capture has no final summary; only fully saved rows are compared.",
+    "No ground truth; corrections and differences are not absolute errors.",
+    "Common IMU samples, scan times and binary are verified; this does not isolate every backend change.",
+    "The first-node revision is an optimized history change, not measured physical motion."
+  ]
+}

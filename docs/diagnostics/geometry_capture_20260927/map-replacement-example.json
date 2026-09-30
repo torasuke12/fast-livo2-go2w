@@ -1,0 +1,25 @@
+{
+  "candidate_world": [
+    20.267702102661133,
+    -1.3310247659683228,
+    0.9884520769119263
+  ],
+  "voxel_center": [
+    20.25,
+    -1.25,
+    0.75
+  ],
+  "candidate_distance_squared": 0.06373777240514755,
+  "neighbor_distance_squared": [
+    0.028189627453684807,
+    0.26184239983558655,
+    0.22085720300674438,
+    0.43534255027770996,
+    0.08350422233343124
+  ],
+  "bypass_downsample": false,
+  "closer_neighbors": [
+    0
+  ],
+  "decision": "not added by UpdateFastLioMap prefilter"
+}

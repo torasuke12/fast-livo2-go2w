@@ -1,0 +1,17 @@
+Test project /external/humble_ws/build/fast_livo2
+    Start 1: voxel_plane_diagnostics
+1/6 Test #1: voxel_plane_diagnostics ................   Passed    0.20 sec
+    Start 2: source_map_normal_consistency
+2/6 Test #2: source_map_normal_consistency ..........   Passed    0.20 sec
+    Start 3: lio_diagnostics_recording
+3/6 Test #3: lio_diagnostics_recording ..............   Passed    0.02 sec
+    Start 4: xicp_geometry_and_constrained_filter
+4/6 Test #4: xicp_geometry_and_constrained_filter ...   Passed    0.00 sec
+    Start 5: imu_propagation_no_new_samples
+5/6 Test #5: imu_propagation_no_new_samples .........   Passed    0.01 sec
+    Start 6: voxel_map_initialization
+6/6 Test #6: voxel_map_initialization ...............   Passed    0.29 sec
+
+100% tests passed, 0 tests failed out of 6
+
+Total Test time (real) =   0.72 sec

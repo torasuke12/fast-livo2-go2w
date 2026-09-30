@@ -1,0 +1,7 @@
+{
+  "strict_geometry_passed": false,
+  "tangential_float_roundoff_bound_passed": true,
+  "other_geometry_checks_passed": true,
+  "strict_tangential_max_scaled_error": 2.002191776773706e-06,
+  "explanation": "Strict 1e-6 threshold fails only for float square-root cancellation; each value lies in the documented float arithmetic bound. Original validator output is preserved."
+}

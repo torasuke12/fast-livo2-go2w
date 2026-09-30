@@ -1,0 +1,3 @@
+1790593797.302574 [43]       ros2: selected interface "lo" is not multicast-capable: disabling multicast
+Error: /laserMapping already exists in ROS_DOMAIN_ID=43; startup aborted before launch/playback.
+Stop the previous reconstruction, or choose an unused domain with FAST_LIVO2_RECONSTRUCTION_DOMAIN_ID=<id>.

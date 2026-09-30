@@ -1,0 +1,11 @@
+{
+  "binary_sha256": "7d31b8749920c30d5e2cd8d549a612ef5a29c6d08d067076e05c7ee6c0d720a1",
+  "params_sha256": "18f1199bed3da65b53b19f52644fa551af9b7e265a479c9a1780b9163ce891f1",
+  "parent_head": "7c261e9c48d0426db16f0307368dafc21c7567b9",
+  "fast_livo2_head": "f281e70ce50a7126b4a8d6bb38df9d95a98bc0df",
+  "capture_command": "replay.py capture --duration 330 --rate 0.5 --binary /validation/provenance/fastlivo2_mapping --params-file /validation/provenance/params.yaml --param lio.diagnostics.output_dir:=/validation/diagnostics",
+  "ros_domain_id": 153,
+  "network": "none",
+  "deterministic_environment": 1,
+  "note": "ikd-tree rebuild thread is still asynchronous; matching may differ across replays."
+}

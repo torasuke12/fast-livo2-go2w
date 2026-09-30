@@ -1,0 +1,9 @@
+{
+  "scan_end_minus_point_time_sec": 0.1,
+  "components": [
+    {"state": "velocity_z", "finite_difference_raw_residual": -0.0999999999973, "current_frozen_point_lidar_jacobian": 0},
+    {"state": "gyro_bias_x", "finite_difference_raw_residual": 0.0999999999918, "current_frozen_point_lidar_jacobian": 0},
+    {"state": "gyro_bias_y", "finite_difference_raw_residual": -0.299999999992, "current_frozen_point_lidar_jacobian": 0},
+    {"state": "accel_bias_z", "finite_difference_raw_residual": -0.00499999999737, "current_frozen_point_lidar_jacobian": 0}
+  ]
+}

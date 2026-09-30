@@ -1,0 +1,1160 @@
+{
+  "run": "/tmp/fast-livo2-geometry-8ke4matr/smoke-geometry-diagnostics/run-1790505753247068088-0",
+  "frames": 74,
+  "points": 396324,
+  "first_time": 3.598874807357788,
+  "last_time": 10.900086641311646,
+  "status_order": [
+    "invalid_point",
+    "insufficient_neighbors",
+    "neighbor_distance",
+    "plane_fit",
+    "residual",
+    "accepted"
+  ],
+  "status_counts": [
+    0,
+    0,
+    36,
+    216971,
+    1462,
+    177855
+  ],
+  "cached_neighbor_points": 257205,
+  "max_scaled_errors": {
+    "world_transform": 0.0,
+    "plane_distance": 8.881632591164812e-16,
+    "plane_fit_rms": 1.6325779079288453e-15,
+    "plane_fit_max": 3.4481186903310324e-15,
+    "plane_center": 0.0,
+    "unit_normal": 1.6653345369377348e-16,
+    "jacobian": 8.629133301430529e-16,
+    "residual": 0.0
+  },
+  "passed": true,
+  "geometry_logging_ms_mean": 13.267610954545454,
+  "geometry_logging_ms_max": 16.260875,
+  "csv_bytes": {
+    "iterations.csv": 3598861,
+    "scans.csv": 1021664,
+    "geometry.csv": 250456291,
+    "geometry_states.csv": 125749,
+    "correspondences.csv": 76484147
+  },
+  "frames_detail": [
+    {
+      "scan_id": 3,
+      "time": 3.598874807357788,
+      "iteration": 2,
+      "points": 5181,
+      "accepted": 3316,
+      "status_counts": [
+        0,
+        0,
+        2,
+        1814,
+        49,
+        3316
+      ]
+    },
+    {
+      "scan_id": 4,
+      "time": 3.6985652446746826,
+      "iteration": 2,
+      "points": 5289,
+      "accepted": 3160,
+      "status_counts": [
+        0,
+        0,
+        2,
+        2077,
+        50,
+        3160
+      ]
+    },
+    {
+      "scan_id": 5,
+      "time": 3.7985825538635254,
+      "iteration": 2,
+      "points": 5331,
+      "accepted": 3081,
+      "status_counts": [
+        0,
+        0,
+        0,
+        2203,
+        47,
+        3081
+      ]
+    },
+    {
+      "scan_id": 6,
+      "time": 3.899214506149292,
+      "iteration": 2,
+      "points": 5247,
+      "accepted": 2956,
+      "status_counts": [
+        0,
+        0,
+        2,
+        2244,
+        45,
+        2956
+      ]
+    },
+    {
+      "scan_id": 7,
+      "time": 4.000323295593262,
+      "iteration": 2,
+      "points": 5320,
+      "accepted": 2808,
+      "status_counts": [
+        0,
+        0,
+        0,
+        2481,
+        31,
+        2808
+      ]
+    },
+    {
+      "scan_id": 8,
+      "time": 4.0991857051849365,
+      "iteration": 2,
+      "points": 5293,
+      "accepted": 2677,
+      "status_counts": [
+        0,
+        0,
+        1,
+        2584,
+        31,
+        2677
+      ]
+    },
+    {
+      "scan_id": 9,
+      "time": 4.19925856590271,
+      "iteration": 2,
+      "points": 5235,
+      "accepted": 2718,
+      "status_counts": [
+        0,
+        0,
+        4,
+        2481,
+        32,
+        2718
+      ]
+    },
+    {
+      "scan_id": 10,
+      "time": 4.300277471542358,
+      "iteration": 2,
+      "points": 5256,
+      "accepted": 2632,
+      "status_counts": [
+        0,
+        0,
+        1,
+        2593,
+        30,
+        2632
+      ]
+    },
+    {
+      "scan_id": 11,
+      "time": 4.399319887161255,
+      "iteration": 2,
+      "points": 5285,
+      "accepted": 2698,
+      "status_counts": [
+        0,
+        0,
+        1,
+        2544,
+        42,
+        2698
+      ]
+    },
+    {
+      "scan_id": 12,
+      "time": 4.499181747436523,
+      "iteration": 2,
+      "points": 5361,
+      "accepted": 2682,
+      "status_counts": [
+        0,
+        0,
+        1,
+        2650,
+        28,
+        2682
+      ]
+    },
+    {
+      "scan_id": 13,
+      "time": 4.600315093994141,
+      "iteration": 2,
+      "points": 5269,
+      "accepted": 2608,
+      "status_counts": [
+        0,
+        0,
+        3,
+        2630,
+        28,
+        2608
+      ]
+    },
+    {
+      "scan_id": 14,
+      "time": 4.6993231773376465,
+      "iteration": 2,
+      "points": 5449,
+      "accepted": 2609,
+      "status_counts": [
+        0,
+        0,
+        1,
+        2805,
+        34,
+        2609
+      ]
+    },
+    {
+      "scan_id": 15,
+      "time": 4.799248456954956,
+      "iteration": 2,
+      "points": 5336,
+      "accepted": 2486,
+      "status_counts": [
+        0,
+        0,
+        1,
+        2813,
+        36,
+        2486
+      ]
+    },
+    {
+      "scan_id": 16,
+      "time": 4.900302886962891,
+      "iteration": 2,
+      "points": 5352,
+      "accepted": 2544,
+      "status_counts": [
+        0,
+        0,
+        2,
+        2771,
+        35,
+        2544
+      ]
+    },
+    {
+      "scan_id": 17,
+      "time": 4.999093532562256,
+      "iteration": 2,
+      "points": 5380,
+      "accepted": 2382,
+      "status_counts": [
+        0,
+        0,
+        1,
+        2967,
+        30,
+        2382
+      ]
+    },
+    {
+      "scan_id": 18,
+      "time": 5.099182844161987,
+      "iteration": 2,
+      "points": 5310,
+      "accepted": 2402,
+      "status_counts": [
+        0,
+        0,
+        1,
+        2878,
+        29,
+        2402
+      ]
+    },
+    {
+      "scan_id": 19,
+      "time": 5.199183225631714,
+      "iteration": 1,
+      "points": 5415,
+      "accepted": 2480,
+      "status_counts": [
+        0,
+        0,
+        2,
+        2904,
+        29,
+        2480
+      ]
+    },
+    {
+      "scan_id": 20,
+      "time": 5.300258159637451,
+      "iteration": 2,
+      "points": 5300,
+      "accepted": 2425,
+      "status_counts": [
+        0,
+        0,
+        3,
+        2839,
+        33,
+        2425
+      ]
+    },
+    {
+      "scan_id": 21,
+      "time": 5.39929986000061,
+      "iteration": 2,
+      "points": 5338,
+      "accepted": 2365,
+      "status_counts": [
+        0,
+        0,
+        2,
+        2946,
+        25,
+        2365
+      ]
+    },
+    {
+      "scan_id": 22,
+      "time": 5.500268459320068,
+      "iteration": 2,
+      "points": 5369,
+      "accepted": 2370,
+      "status_counts": [
+        0,
+        0,
+        1,
+        2962,
+        36,
+        2370
+      ]
+    },
+    {
+      "scan_id": 23,
+      "time": 5.600223064422607,
+      "iteration": 1,
+      "points": 5223,
+      "accepted": 2325,
+      "status_counts": [
+        0,
+        0,
+        2,
+        2864,
+        32,
+        2325
+      ]
+    },
+    {
+      "scan_id": 24,
+      "time": 5.699185132980347,
+      "iteration": 2,
+      "points": 5312,
+      "accepted": 2355,
+      "status_counts": [
+        0,
+        0,
+        3,
+        2919,
+        35,
+        2355
+      ]
+    },
+    {
+      "scan_id": 25,
+      "time": 5.8003318309783936,
+      "iteration": 2,
+      "points": 5328,
+      "accepted": 2324,
+      "status_counts": [
+        0,
+        0,
+        0,
+        2968,
+        36,
+        2324
+      ]
+    },
+    {
+      "scan_id": 26,
+      "time": 5.900198936462402,
+      "iteration": 2,
+      "points": 5286,
+      "accepted": 2265,
+      "status_counts": [
+        0,
+        0,
+        0,
+        2988,
+        33,
+        2265
+      ]
+    },
+    {
+      "scan_id": 27,
+      "time": 5.999378204345703,
+      "iteration": 2,
+      "points": 5256,
+      "accepted": 2284,
+      "status_counts": [
+        0,
+        0,
+        0,
+        2940,
+        32,
+        2284
+      ]
+    },
+    {
+      "scan_id": 28,
+      "time": 6.100250244140625,
+      "iteration": 2,
+      "points": 5388,
+      "accepted": 2236,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3120,
+        32,
+        2236
+      ]
+    },
+    {
+      "scan_id": 29,
+      "time": 6.199178457260132,
+      "iteration": 2,
+      "points": 5374,
+      "accepted": 2251,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3091,
+        32,
+        2251
+      ]
+    },
+    {
+      "scan_id": 30,
+      "time": 6.299177408218384,
+      "iteration": 1,
+      "points": 5263,
+      "accepted": 2235,
+      "status_counts": [
+        0,
+        0,
+        0,
+        2995,
+        33,
+        2235
+      ]
+    },
+    {
+      "scan_id": 31,
+      "time": 6.400195837020874,
+      "iteration": 1,
+      "points": 5463,
+      "accepted": 2385,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3044,
+        34,
+        2385
+      ]
+    },
+    {
+      "scan_id": 32,
+      "time": 6.500168561935425,
+      "iteration": 2,
+      "points": 5299,
+      "accepted": 2292,
+      "status_counts": [
+        0,
+        0,
+        0,
+        2974,
+        33,
+        2292
+      ]
+    },
+    {
+      "scan_id": 33,
+      "time": 6.60032320022583,
+      "iteration": 2,
+      "points": 5315,
+      "accepted": 2350,
+      "status_counts": [
+        0,
+        0,
+        0,
+        2930,
+        35,
+        2350
+      ]
+    },
+    {
+      "scan_id": 34,
+      "time": 6.700212240219116,
+      "iteration": 2,
+      "points": 5283,
+      "accepted": 2292,
+      "status_counts": [
+        0,
+        0,
+        0,
+        2955,
+        36,
+        2292
+      ]
+    },
+    {
+      "scan_id": 35,
+      "time": 6.799171209335327,
+      "iteration": 2,
+      "points": 5380,
+      "accepted": 2326,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3039,
+        15,
+        2326
+      ]
+    },
+    {
+      "scan_id": 36,
+      "time": 6.899242639541626,
+      "iteration": 2,
+      "points": 5392,
+      "accepted": 2284,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3093,
+        15,
+        2284
+      ]
+    },
+    {
+      "scan_id": 37,
+      "time": 6.99936842918396,
+      "iteration": 1,
+      "points": 5449,
+      "accepted": 2359,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3073,
+        17,
+        2359
+      ]
+    },
+    {
+      "scan_id": 38,
+      "time": 7.100321054458618,
+      "iteration": 2,
+      "points": 5460,
+      "accepted": 2360,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3087,
+        13,
+        2360
+      ]
+    },
+    {
+      "scan_id": 39,
+      "time": 7.1991941928863525,
+      "iteration": 2,
+      "points": 5395,
+      "accepted": 2359,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3023,
+        13,
+        2359
+      ]
+    },
+    {
+      "scan_id": 40,
+      "time": 7.300135374069214,
+      "iteration": 2,
+      "points": 5419,
+      "accepted": 2303,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3104,
+        12,
+        2303
+      ]
+    },
+    {
+      "scan_id": 41,
+      "time": 7.400143384933472,
+      "iteration": 2,
+      "points": 5311,
+      "accepted": 2320,
+      "status_counts": [
+        0,
+        0,
+        0,
+        2980,
+        11,
+        2320
+      ]
+    },
+    {
+      "scan_id": 42,
+      "time": 7.500131130218506,
+      "iteration": 2,
+      "points": 5450,
+      "accepted": 2414,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3021,
+        15,
+        2414
+      ]
+    },
+    {
+      "scan_id": 43,
+      "time": 7.600135564804077,
+      "iteration": 2,
+      "points": 5420,
+      "accepted": 2335,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3070,
+        15,
+        2335
+      ]
+    },
+    {
+      "scan_id": 44,
+      "time": 7.699169635772705,
+      "iteration": 2,
+      "points": 5429,
+      "accepted": 2398,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3018,
+        13,
+        2398
+      ]
+    },
+    {
+      "scan_id": 45,
+      "time": 7.800234079360962,
+      "iteration": 2,
+      "points": 5453,
+      "accepted": 2381,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3063,
+        9,
+        2381
+      ]
+    },
+    {
+      "scan_id": 46,
+      "time": 7.900174617767334,
+      "iteration": 2,
+      "points": 5418,
+      "accepted": 2370,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3036,
+        12,
+        2370
+      ]
+    },
+    {
+      "scan_id": 47,
+      "time": 8.000293493270874,
+      "iteration": 2,
+      "points": 5470,
+      "accepted": 2331,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3122,
+        17,
+        2331
+      ]
+    },
+    {
+      "scan_id": 48,
+      "time": 8.100138664245605,
+      "iteration": 2,
+      "points": 5348,
+      "accepted": 2314,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3021,
+        13,
+        2314
+      ]
+    },
+    {
+      "scan_id": 49,
+      "time": 8.200186729431152,
+      "iteration": 2,
+      "points": 5453,
+      "accepted": 2290,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3151,
+        12,
+        2290
+      ]
+    },
+    {
+      "scan_id": 50,
+      "time": 8.298924684524536,
+      "iteration": 2,
+      "points": 5480,
+      "accepted": 2377,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3092,
+        11,
+        2377
+      ]
+    },
+    {
+      "scan_id": 51,
+      "time": 8.400177001953125,
+      "iteration": 1,
+      "points": 5259,
+      "accepted": 2255,
+      "status_counts": [
+        0,
+        0,
+        0,
+        2991,
+        13,
+        2255
+      ]
+    },
+    {
+      "scan_id": 52,
+      "time": 8.500157594680786,
+      "iteration": 2,
+      "points": 5435,
+      "accepted": 2384,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3034,
+        17,
+        2384
+      ]
+    },
+    {
+      "scan_id": 53,
+      "time": 8.599163055419922,
+      "iteration": 2,
+      "points": 5392,
+      "accepted": 2322,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3049,
+        21,
+        2322
+      ]
+    },
+    {
+      "scan_id": 54,
+      "time": 8.70017957687378,
+      "iteration": 2,
+      "points": 5454,
+      "accepted": 2350,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3098,
+        6,
+        2350
+      ]
+    },
+    {
+      "scan_id": 55,
+      "time": 8.800132036209106,
+      "iteration": 2,
+      "points": 5293,
+      "accepted": 2312,
+      "status_counts": [
+        0,
+        0,
+        0,
+        2979,
+        2,
+        2312
+      ]
+    },
+    {
+      "scan_id": 56,
+      "time": 8.9000883102417,
+      "iteration": 2,
+      "points": 5436,
+      "accepted": 2284,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3151,
+        1,
+        2284
+      ]
+    },
+    {
+      "scan_id": 57,
+      "time": 8.99992299079895,
+      "iteration": 1,
+      "points": 5461,
+      "accepted": 2336,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3120,
+        5,
+        2336
+      ]
+    },
+    {
+      "scan_id": 58,
+      "time": 9.099311351776123,
+      "iteration": 2,
+      "points": 5300,
+      "accepted": 2237,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3061,
+        2,
+        2237
+      ]
+    },
+    {
+      "scan_id": 59,
+      "time": 9.20006537437439,
+      "iteration": 2,
+      "points": 5438,
+      "accepted": 2360,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3074,
+        4,
+        2360
+      ]
+    },
+    {
+      "scan_id": 60,
+      "time": 9.300055027008057,
+      "iteration": 2,
+      "points": 5299,
+      "accepted": 2268,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3024,
+        7,
+        2268
+      ]
+    },
+    {
+      "scan_id": 61,
+      "time": 9.400121212005615,
+      "iteration": 2,
+      "points": 5358,
+      "accepted": 2310,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3044,
+        4,
+        2310
+      ]
+    },
+    {
+      "scan_id": 62,
+      "time": 9.499921560287476,
+      "iteration": 1,
+      "points": 5265,
+      "accepted": 2259,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3002,
+        4,
+        2259
+      ]
+    },
+    {
+      "scan_id": 63,
+      "time": 9.600051641464233,
+      "iteration": 2,
+      "points": 5432,
+      "accepted": 2309,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3120,
+        3,
+        2309
+      ]
+    },
+    {
+      "scan_id": 64,
+      "time": 9.70011281967163,
+      "iteration": 2,
+      "points": 5350,
+      "accepted": 2300,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3046,
+        4,
+        2300
+      ]
+    },
+    {
+      "scan_id": 65,
+      "time": 9.800053119659424,
+      "iteration": 1,
+      "points": 5238,
+      "accepted": 2162,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3072,
+        4,
+        2162
+      ]
+    },
+    {
+      "scan_id": 66,
+      "time": 9.899930477142334,
+      "iteration": 1,
+      "points": 5371,
+      "accepted": 2256,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3110,
+        5,
+        2256
+      ]
+    },
+    {
+      "scan_id": 67,
+      "time": 9.999245405197144,
+      "iteration": 2,
+      "points": 5193,
+      "accepted": 2209,
+      "status_counts": [
+        0,
+        0,
+        0,
+        2983,
+        1,
+        2209
+      ]
+    },
+    {
+      "scan_id": 68,
+      "time": 10.100018739700317,
+      "iteration": 2,
+      "points": 5318,
+      "accepted": 2252,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3065,
+        1,
+        2252
+      ]
+    },
+    {
+      "scan_id": 69,
+      "time": 10.200174808502197,
+      "iteration": 1,
+      "points": 5283,
+      "accepted": 2205,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3074,
+        4,
+        2205
+      ]
+    },
+    {
+      "scan_id": 70,
+      "time": 10.300090789794922,
+      "iteration": 2,
+      "points": 5349,
+      "accepted": 2241,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3104,
+        4,
+        2241
+      ]
+    },
+    {
+      "scan_id": 71,
+      "time": 10.399979591369629,
+      "iteration": 2,
+      "points": 5262,
+      "accepted": 2183,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3074,
+        5,
+        2183
+      ]
+    },
+    {
+      "scan_id": 72,
+      "time": 10.500128030776978,
+      "iteration": 2,
+      "points": 5405,
+      "accepted": 2315,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3086,
+        4,
+        2315
+      ]
+    },
+    {
+      "scan_id": 73,
+      "time": 10.599274158477783,
+      "iteration": 2,
+      "points": 5423,
+      "accepted": 2197,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3223,
+        3,
+        2197
+      ]
+    },
+    {
+      "scan_id": 74,
+      "time": 10.700044870376587,
+      "iteration": 2,
+      "points": 5440,
+      "accepted": 2286,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3149,
+        5,
+        2286
+      ]
+    },
+    {
+      "scan_id": 75,
+      "time": 10.799290418624878,
+      "iteration": 2,
+      "points": 5537,
+      "accepted": 2361,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3171,
+        5,
+        2361
+      ]
+    },
+    {
+      "scan_id": 76,
+      "time": 10.900086641311646,
+      "iteration": 2,
+      "points": 5500,
+      "accepted": 2388,
+      "status_counts": [
+        0,
+        0,
+        0,
+        3100,
+        12,
+        2388
+      ]
+    }
+  ],
+  "notes": [
+    "Saved neighbors describe the map actually queried, not the complete tree or persistent point IDs.",
+    "Numerical consistency does not establish correct correspondence or accurate attitude."
+  ]
+}

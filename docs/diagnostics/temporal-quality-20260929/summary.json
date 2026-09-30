@@ -1,0 +1,974 @@
+{
+  "capture": "diagnostic_captures/lio-reconstruction-20260928-113320-mx5y2ada",
+  "scans": 6450,
+  "keyframes": 1150,
+  "final_position": [
+    1.32547613408,
+    5.99630307497,
+    -5.85625617036
+  ],
+  "position_extent": [
+    238.870183657,
+    33.3001606721,
+    10.35065432822
+  ],
+  "online_length": 769.9019994859509,
+  "mixed_path_length": 1056.063670147089,
+  "keyframe_length": 759.1735398874415,
+  "keyframe_first_to_last_revision_position_max": 3.7478875621885646,
+  "keyframe_first_to_last_revision_z_max": 3.74737581297,
+  "nonkeyframe_revision_position_max": 0.0,
+  "windows": [
+    {
+      "start": 3.2,
+      "end": 10,
+      "scans": 68,
+      "position_start": [
+        -0.0102581120148,
+        -0.00293772385201,
+        -0.0239582653909
+      ],
+      "position_end": [
+        -0.000520700655822,
+        -0.168085167952,
+        -0.027727521352
+      ],
+      "z_minmax": [
+        -0.0342242271026,
+        0.00253786637596
+      ],
+      "roll_range": [
+        -2.6662284782940664,
+        2.8708955241912073
+      ],
+      "pitch_range": [
+        19.575889224414063,
+        31.524249781005512
+      ],
+      "yaw_range": [
+        -15.97673510830813,
+        5.531481356207702
+      ],
+      "vertical_velocity_abs_max": 0.120647731309,
+      "online_position_step_max": 0.026120105559204587,
+      "mixed_path_step_max": 0.022410387635578677,
+      "online_step_vz_abs_max": 0.24000334443130103,
+      "mixed_path_step_vz_abs_max": 0.2041729357773912,
+      "keyframe_step_vz_abs_max": 0.011778605331818667,
+      "step_velocity_disagreement_rms": 0.03795897799108683,
+      "correction_position_max": 0.02793061353029207,
+      "correction_z_abs_max": 0.0275153350358,
+      "correction_rotation_deg_max": 12.717344892258494,
+      "imu_rms_median": 0.10364435401300001,
+      "imu_rms_max": 0.395764117707,
+      "lidar_rms_median": 0.0549331134731,
+      "matches_min": 869,
+      "cost_increases": 0,
+      "imu_accel_norm_g_max": 1.0802928649096457,
+      "imu_gyro_norm_rad_s_max": 0.06348988149998706
+    },
+    {
+      "start": 10,
+      "end": 60,
+      "scans": 500,
+      "position_start": [
+        -0.00115706574519,
+        -0.168679154764,
+        -0.0249218235851
+      ],
+      "position_end": [
+        53.7000816739,
+        10.6545700989,
+        0.0430260405399
+      ],
+      "z_minmax": [
+        -0.0601955330836,
+        0.0881886898897
+      ],
+      "roll_range": [
+        -2.258648591002913,
+        5.631855222667722
+      ],
+      "pitch_range": [
+        18.089317319439097,
+        23.604950747773906
+      ],
+      "yaw_range": [
+        -61.288538860446586,
+        15.586005177746529
+      ],
+      "vertical_velocity_abs_max": 0.414487113956,
+      "online_position_step_max": 0.1819461325639235,
+      "mixed_path_step_max": 0.5120127993758696,
+      "online_step_vz_abs_max": 0.35007467614383303,
+      "mixed_path_step_vz_abs_max": 0.822601280918839,
+      "keyframe_step_vz_abs_max": 0.21899966047441657,
+      "step_velocity_disagreement_rms": 0.13020732647741165,
+      "correction_position_max": 0.11277283348602224,
+      "correction_z_abs_max": 0.0212136226269,
+      "correction_rotation_deg_max": 3.3905593076567753,
+      "imu_rms_median": 0.0957340175375,
+      "imu_rms_max": 0.740987664061,
+      "lidar_rms_median": 0.0295818476921,
+      "matches_min": 832,
+      "cost_increases": 0,
+      "imu_accel_norm_g_max": 4.958840273370377,
+      "imu_gyro_norm_rad_s_max": 2.561816365933679
+    },
+    {
+      "start": 60,
+      "end": 140,
+      "scans": 800,
+      "position_start": [
+        53.8433418645,
+        10.6923862271,
+        0.0457210972389
+      ],
+      "position_end": [
+        107.180941111,
+        22.7363840163,
+        3.1665617954
+      ],
+      "z_minmax": [
+        -0.125150892475,
+        3.39902496685
+      ],
+      "roll_range": [
+        -3.641483278982364,
+        5.54606437129355
+      ],
+      "pitch_range": [
+        -16.217422701713193,
+        25.212637474370506
+      ],
+      "yaw_range": [
+        -83.0699872177769,
+        202.56305187285312
+      ],
+      "vertical_velocity_abs_max": 0.681183712149,
+      "online_position_step_max": 0.30639532174997824,
+      "mixed_path_step_max": 0.6536934301502603,
+      "online_step_vz_abs_max": 0.8101509841668704,
+      "mixed_path_step_vz_abs_max": 3.102452624611937,
+      "keyframe_step_vz_abs_max": 0.32754506997831156,
+      "step_velocity_disagreement_rms": 0.15254329383146517,
+      "correction_position_max": 0.2671125274432581,
+      "correction_z_abs_max": 0.0749960520694,
+      "correction_rotation_deg_max": 1.2246859818629314,
+      "imu_rms_median": 0.1223887263835,
+      "imu_rms_max": 0.818365795946,
+      "lidar_rms_median": 0.0288047416535,
+      "matches_min": 879,
+      "cost_increases": 0,
+      "imu_accel_norm_g_max": 6.194949684517219,
+      "imu_gyro_norm_rad_s_max": 3.7307321665592665
+    },
+    {
+      "start": 140,
+      "end": 280,
+      "scans": 1400,
+      "position_start": [
+        107.217937906,
+        22.6608739141,
+        3.16326407258
+      ],
+      "position_end": [
+        -87.1905214424,
+        -6.75761029639,
+        2.62092708299
+      ],
+      "z_minmax": [
+        2.61848863397,
+        3.43947782451
+      ],
+      "roll_range": [
+        -0.9585921003415835,
+        5.312813058655251
+      ],
+      "pitch_range": [
+        15.7516585506311,
+        25.223139803124223
+      ],
+      "yaw_range": [
+        -182.545060054936,
+        -44.02958521606604
+      ],
+      "vertical_velocity_abs_max": 0.260405224295,
+      "online_position_step_max": 0.6261792795993755,
+      "mixed_path_step_max": 0.9495547597665082,
+      "online_step_vz_abs_max": 0.4979456758700733,
+      "mixed_path_step_vz_abs_max": 1.7283611820069809,
+      "keyframe_step_vz_abs_max": 0.04344759846033438,
+      "step_velocity_disagreement_rms": 0.14358380770897228,
+      "correction_position_max": 0.6141377022191984,
+      "correction_z_abs_max": 0.0458493290945,
+      "correction_rotation_deg_max": 1.1814061583118594,
+      "imu_rms_median": 0.08020071657005,
+      "imu_rms_max": 0.82009172869,
+      "lidar_rms_median": 0.0268102729967,
+      "matches_min": 757,
+      "cost_increases": 0,
+      "imu_accel_norm_g_max": 5.318369861386687,
+      "imu_gyro_norm_rad_s_max": 2.491979585104982
+    },
+    {
+      "start": 280,
+      "end": 360,
+      "scans": 800,
+      "position_start": [
+        -87.3284903607,
+        -6.76769094596,
+        2.61930444477
+      ],
+      "position_end": [
+        -63.4144413587,
+        -4.21014788046,
+        2.51249228964
+      ],
+      "z_minmax": [
+        2.33288506367,
+        2.68973180728
+      ],
+      "roll_range": [
+        -0.6953096101942616,
+        3.5887503697869017
+      ],
+      "pitch_range": [
+        18.065507292155484,
+        23.330594147524906
+      ],
+      "yaw_range": [
+        -364.501557969347,
+        -171.90082047920777
+      ],
+      "vertical_velocity_abs_max": 0.293333527243,
+      "online_position_step_max": 0.21526228939388184,
+      "mixed_path_step_max": 0.3542187989091701,
+      "online_step_vz_abs_max": 0.6839994779216172,
+      "mixed_path_step_vz_abs_max": 2.2680381343516647,
+      "keyframe_step_vz_abs_max": 0.2586362742412258,
+      "step_velocity_disagreement_rms": 0.0936425335052787,
+      "correction_position_max": 0.13167743364437773,
+      "correction_z_abs_max": 0.0601393087461,
+      "correction_rotation_deg_max": 0.6298659797976156,
+      "imu_rms_median": 0.07606322331615001,
+      "imu_rms_max": 0.63786465633,
+      "lidar_rms_median": 0.02507569543385,
+      "matches_min": 839,
+      "cost_increases": 0,
+      "imu_accel_norm_g_max": 5.601274361910868,
+      "imu_gyro_norm_rad_s_max": 2.6258278756270377
+    },
+    {
+      "start": 360,
+      "end": 450,
+      "scans": 900,
+      "position_start": [
+        -63.2733177826,
+        -4.200932452,
+        2.51463439304
+      ],
+      "position_end": [
+        60.8343493508,
+        1.92738190409,
+        2.05063469971
+      ],
+      "z_minmax": [
+        2.01974268523,
+        2.51928747866
+      ],
+      "roll_range": [
+        -1.16153017212474,
+        2.403123090903647
+      ],
+      "pitch_range": [
+        17.456793841773447,
+        22.935175276302168
+      ],
+      "yaw_range": [
+        -363.8194858272416,
+        -334.70821187965214
+      ],
+      "vertical_velocity_abs_max": 0.263805540996,
+      "online_position_step_max": 0.19875491194843065,
+      "mixed_path_step_max": 0.22868253146276443,
+      "online_step_vz_abs_max": 0.2217907700113922,
+      "mixed_path_step_vz_abs_max": 0.8369942245714082,
+      "keyframe_step_vz_abs_max": 0.05461740503441279,
+      "step_velocity_disagreement_rms": 0.06039153853993315,
+      "correction_position_max": 0.06622390316056574,
+      "correction_z_abs_max": 0.0158535882573,
+      "correction_rotation_deg_max": 0.43600300168462464,
+      "imu_rms_median": 0.07480763176425001,
+      "imu_rms_max": 0.294967264148,
+      "lidar_rms_median": 0.0260904321547,
+      "matches_min": 761,
+      "cost_increases": 0,
+      "imu_accel_norm_g_max": 5.0240209112025,
+      "imu_gyro_norm_rad_s_max": 2.158239802231671
+    },
+    {
+      "start": 450,
+      "end": 470,
+      "scans": 200,
+      "position_start": [
+        60.9824874783,
+        1.92849752663,
+        2.05032550514
+      ],
+      "position_end": [
+        89.8300182213,
+        3.03101546912,
+        1.95318796361
+      ],
+      "z_minmax": [
+        1.95318796361,
+        2.05152493273
+      ],
+      "roll_range": [
+        -0.5726814090035174,
+        1.5414078807498615
+      ],
+      "pitch_range": [
+        18.181812177269805,
+        20.73423609747099
+      ],
+      "yaw_range": [
+        -364.1873099410752,
+        -348.12387272641826
+      ],
+      "vertical_velocity_abs_max": 0.347925453653,
+      "online_position_step_max": 0.18046495658064718,
+      "mixed_path_step_max": 0.48430850706045603,
+      "online_step_vz_abs_max": 0.2478869364669359,
+      "mixed_path_step_vz_abs_max": 0.4229683067096512,
+      "keyframe_step_vz_abs_max": 0.044742012263734275,
+      "step_velocity_disagreement_rms": 0.1878433717180898,
+      "correction_position_max": 0.12622098143277344,
+      "correction_z_abs_max": 0.0234052434364,
+      "correction_rotation_deg_max": 0.6205559814955122,
+      "imu_rms_median": 0.07235031974414999,
+      "imu_rms_max": 0.564017089447,
+      "lidar_rms_median": 0.0254859459269,
+      "matches_min": 879,
+      "cost_increases": 0,
+      "imu_accel_norm_g_max": 4.71928824504289,
+      "imu_gyro_norm_rad_s_max": 1.9479139884517487
+    },
+    {
+      "start": 470,
+      "end": 490,
+      "scans": 200,
+      "position_start": [
+        89.9793840515,
+        3.0412910076,
+        1.95068309081
+      ],
+      "position_end": [
+        108.941486322,
+        2.88353022449,
+        2.54437606975
+      ],
+      "z_minmax": [
+        1.75180408614,
+        2.56716370876
+      ],
+      "roll_range": [
+        -0.6485409954953811,
+        3.5229610482610747
+      ],
+      "pitch_range": [
+        18.318781883888047,
+        22.878209689482627
+      ],
+      "yaw_range": [
+        -538.9889549948273,
+        -356.4862624610103
+      ],
+      "vertical_velocity_abs_max": 0.314226470651,
+      "online_position_step_max": 0.18294868023235888,
+      "mixed_path_step_max": 0.795910302233317,
+      "online_step_vz_abs_max": 1.6682279725866398,
+      "mixed_path_step_vz_abs_max": 7.879183656920596,
+      "keyframe_step_vz_abs_max": 0.4486319380236001,
+      "step_velocity_disagreement_rms": 0.19695719210699536,
+      "correction_position_max": 0.16844346777236813,
+      "correction_z_abs_max": 0.167162507128,
+      "correction_rotation_deg_max": 0.6692631575677565,
+      "imu_rms_median": 0.09376956155364999,
+      "imu_rms_max": 0.392635759382,
+      "lidar_rms_median": 0.03112804023,
+      "matches_min": 887,
+      "cost_increases": 0,
+      "imu_accel_norm_g_max": 4.459952382610828,
+      "imu_gyro_norm_rad_s_max": 2.5202653640773627
+    },
+    {
+      "start": 490,
+      "end": 510,
+      "scans": 200,
+      "position_start": [
+        108.893653492,
+        2.90262859333,
+        2.50313081026
+      ],
+      "position_end": [
+        81.8791919068,
+        3.4102184002,
+        2.5334066746
+      ],
+      "z_minmax": [
+        2.49874289622,
+        2.65765513846
+      ],
+      "roll_range": [
+        -0.2673703943011053,
+        2.235812431192998
+      ],
+      "pitch_range": [
+        17.949345154725933,
+        23.13007535553674
+      ],
+      "yaw_range": [
+        -544.8164344919574,
+        -537.8992310506889
+      ],
+      "vertical_velocity_abs_max": 0.230394789346,
+      "online_position_step_max": 0.2224535911027889,
+      "mixed_path_step_max": 0.6470329305698714,
+      "online_step_vz_abs_max": 0.5654370783567422,
+      "mixed_path_step_vz_abs_max": 1.3237681008257578,
+      "keyframe_step_vz_abs_max": 0.028902809820293147,
+      "step_velocity_disagreement_rms": 0.14555810406720263,
+      "correction_position_max": 0.14336711051354106,
+      "correction_z_abs_max": 0.0560860025563,
+      "correction_rotation_deg_max": 0.39660428558697014,
+      "imu_rms_median": 0.0651689486226,
+      "imu_rms_max": 0.256743333982,
+      "lidar_rms_median": 0.02513455647805,
+      "matches_min": 892,
+      "cost_increases": 0,
+      "imu_accel_norm_g_max": 4.622436178899608,
+      "imu_gyro_norm_rad_s_max": 2.031711417030027
+    },
+    {
+      "start": 510,
+      "end": 590,
+      "scans": 800,
+      "position_start": [
+        81.7420089857,
+        3.42751597528,
+        2.535896797
+      ],
+      "position_end": [
+        11.8617871381,
+        3.71447280422,
+        -6.31455483857
+      ],
+      "z_minmax": [
+        -6.91117650371,
+        2.65054604246
+      ],
+      "roll_range": [
+        -6.631839282904463,
+        9.205641535076621
+      ],
+      "pitch_range": [
+        17.799762512598846,
+        57.101467963518225
+      ],
+      "yaw_range": [
+        -634.7169735847799,
+        -364.8807437672257
+      ],
+      "vertical_velocity_abs_max": 1.6276591998,
+      "online_position_step_max": 0.2928772603874585,
+      "mixed_path_step_max": 3.7474207913001747,
+      "online_step_vz_abs_max": 2.642112267877096,
+      "mixed_path_step_vz_abs_max": 37.56888911616032,
+      "keyframe_step_vz_abs_max": 1.6186520372487494,
+      "step_velocity_disagreement_rms": 0.2072059506014709,
+      "correction_position_max": 0.20590611600113176,
+      "correction_z_abs_max": 0.199274213514,
+      "correction_rotation_deg_max": 1.3803598663407612,
+      "imu_rms_median": 0.108605095574,
+      "imu_rms_max": 1.42745282629,
+      "lidar_rms_median": 0.028760123078900003,
+      "matches_min": 849,
+      "cost_increases": 0,
+      "imu_accel_norm_g_max": 5.980943667131466,
+      "imu_gyro_norm_rad_s_max": 4.163442967028611
+    },
+    {
+      "start": 590,
+      "end": 610,
+      "scans": 199,
+      "position_start": [
+        11.7256523463,
+        3.7114773132,
+        -6.31687525359
+      ],
+      "position_end": [
+        1.58160286528,
+        6.34767808739,
+        -6.01578196587
+      ],
+      "z_minmax": [
+        -6.44151389808,
+        -6.00175718418
+      ],
+      "roll_range": [
+        -0.99966099180288,
+        2.0406309994176417
+      ],
+      "pitch_range": [
+        19.142195950023233,
+        24.235112958328955
+      ],
+      "yaw_range": [
+        -621.0999074327223,
+        -537.5595136456578
+      ],
+      "vertical_velocity_abs_max": 0.241218512667,
+      "online_position_step_max": 0.18405372254922406,
+      "mixed_path_step_max": 0.48788912052914674,
+      "online_step_vz_abs_max": 0.5065414331206185,
+      "mixed_path_step_vz_abs_max": 4.815906899971133,
+      "keyframe_step_vz_abs_max": 0.2923403228393813,
+      "step_velocity_disagreement_rms": 0.08998640466354005,
+      "correction_position_max": 0.05469142040677885,
+      "correction_z_abs_max": 0.0505260255306,
+      "correction_rotation_deg_max": 0.6599512711862205,
+      "imu_rms_median": 0.0990385399102,
+      "imu_rms_max": 0.692403561102,
+      "lidar_rms_median": 0.0292519988545,
+      "matches_min": 785,
+      "cost_increases": 0,
+      "imu_accel_norm_g_max": 5.473372586895669,
+      "imu_gyro_norm_rad_s_max": 1.8784845931211387
+    },
+    {
+      "start": 610,
+      "end": 630,
+      "scans": 201,
+      "position_start": [
+        1.5810440545,
+        6.33968535146,
+        -6.016399971
+      ],
+      "position_end": [
+        1.39197383453,
+        6.14640849768,
+        -5.9913879231
+      ],
+      "z_minmax": [
+        -6.09414291104,
+        -5.98092390157
+      ],
+      "roll_range": [
+        -1.2145390210823277,
+        -0.06382793625867007
+      ],
+      "pitch_range": [
+        20.555652038283892,
+        22.644493680958306
+      ],
+      "yaw_range": [
+        -549.1898229510855,
+        -542.0090770639689
+      ],
+      "vertical_velocity_abs_max": 0.0781235216434,
+      "online_position_step_max": 0.0159552727882949,
+      "mixed_path_step_max": 0.08466620482717868,
+      "online_step_vz_abs_max": 0.12289335324868168,
+      "mixed_path_step_vz_abs_max": 0.2666918282532835,
+      "keyframe_step_vz_abs_max": 0.030763336763099607,
+      "step_velocity_disagreement_rms": 0.02399529145862007,
+      "correction_position_max": 0.014090542515072389,
+      "correction_z_abs_max": 0.0127985755213,
+      "correction_rotation_deg_max": 0.3509316281087578,
+      "imu_rms_median": 0.102590273733,
+      "imu_rms_max": 0.267739692817,
+      "lidar_rms_median": 0.0521453776754,
+      "matches_min": 935,
+      "cost_increases": 0,
+      "imu_accel_norm_g_max": 1.1626326011758832,
+      "imu_gyro_norm_rad_s_max": 0.2444050955457353
+    },
+    {
+      "start": 630,
+      "end": 648.2,
+      "scans": 181,
+      "position_start": [
+        1.39459350058,
+        6.14592663804,
+        -5.9911985902
+      ],
+      "position_end": [
+        1.32547613408,
+        5.99630307497,
+        -5.85625617036
+      ],
+      "z_minmax": [
+        -5.99479414403,
+        -5.85229108277
+      ],
+      "roll_range": [
+        -0.993925753165946,
+        -0.20796077590288073
+      ],
+      "pitch_range": [
+        21.170493924542495,
+        22.07192577504935
+      ],
+      "yaw_range": [
+        -547.313733384161,
+        -542.8911932797955
+      ],
+      "vertical_velocity_abs_max": 0.0381084781038,
+      "online_position_step_max": 0.012221763564371945,
+      "mixed_path_step_max": 0.07419483697585268,
+      "online_step_vz_abs_max": 0.09127502446024649,
+      "mixed_path_step_vz_abs_max": 0.09127502446024649,
+      "keyframe_step_vz_abs_max": 0.02415743913018358,
+      "step_velocity_disagreement_rms": 0.019387421842266616,
+      "correction_position_max": 0.010918013112319356,
+      "correction_z_abs_max": 0.00846435417355,
+      "correction_rotation_deg_max": 0.35912337491826746,
+      "imu_rms_median": 0.101356572826,
+      "imu_rms_max": 0.261963154735,
+      "lidar_rms_median": 0.0518095528351,
+      "matches_min": 937,
+      "cost_increases": 0,
+      "imu_accel_norm_g_max": 1.0168192278139123,
+      "imu_gyro_norm_rad_s_max": 0.0199847357657238
+    }
+  ],
+  "largest_z_corrections": [
+    {
+      "time": 533.099594116,
+      "dp": [
+        0.0189283747905,
+        -0.0482579844465,
+        -0.199274213514
+      ],
+      "z": 1.26369852481,
+      "vz": -0.741956534341,
+      "keyframe": true,
+      "matches": 1116,
+      "imu_rms": 0.861942193927
+    },
+    {
+      "time": 534.099525213,
+      "dp": [
+        -0.0174037850996,
+        0.0110072789102,
+        -0.190730890433
+      ],
+      "z": -0.65457784065,
+      "vz": -0.64138263454,
+      "keyframe": false,
+      "matches": 1055,
+      "imu_rms": 0.704135221735
+    },
+    {
+      "time": 532.999393702,
+      "dp": [
+        0.000152119034112,
+        -0.0139819778487,
+        -0.184635076468
+      ],
+      "z": 1.49948124772,
+      "vz": 0.0938190349577,
+      "keyframe": false,
+      "matches": 1094,
+      "imu_rms": 0.799126034091
+    },
+    {
+      "time": 533.599384546,
+      "dp": [
+        0.0130965031236,
+        -0.0554631118859,
+        -0.168959870493
+      ],
+      "z": 0.299951220317,
+      "vz": -0.473749944959,
+      "keyframe": false,
+      "matches": 1012,
+      "imu_rms": 0.558391948223
+    },
+    {
+      "time": 533.999308825,
+      "dp": [
+        0.00176053766199,
+        -0.0209348046572,
+        -0.168332330657
+      ],
+      "z": -0.40981193268,
+      "vz": -0.459630729733,
+      "keyframe": false,
+      "matches": 1058,
+      "imu_rms": 0.568721766428
+    },
+    {
+      "time": 487.599322796,
+      "dp": [
+        -0.0167868979675,
+        0.00602819128491,
+        0.167162507128
+      ],
+      "z": 2.30548057844,
+      "vz": 0.0804652901158,
+      "keyframe": true,
+      "matches": 914,
+      "imu_rms": 0.101281620213
+    },
+    {
+      "time": 487.499391556,
+      "dp": [
+        -0.0160201731881,
+        0.0217206709159,
+        0.166267159539
+      ],
+      "z": 2.13914728302,
+      "vz": -0.0727583362475,
+      "keyframe": false,
+      "matches": 907,
+      "imu_rms": 0.181386673397
+    },
+    {
+      "time": 541.800345421,
+      "dp": [
+        -0.00425358823937,
+        0.0457345236514,
+        -0.164315959395
+      ],
+      "z": -3.05838886583,
+      "vz": -0.167780527336,
+      "keyframe": false,
+      "matches": 1174,
+      "imu_rms": 1.34627280752
+    },
+    {
+      "time": 541.89930439,
+      "dp": [
+        -0.00164307045669,
+        0.0497450689839,
+        -0.16174341858
+      ],
+      "z": -3.2510479448,
+      "vz": -0.251104478618,
+      "keyframe": false,
+      "matches": 1182,
+      "imu_rms": 0.763283256887
+    },
+    {
+      "time": 533.699677467,
+      "dp": [
+        0.0195822639279,
+        -0.0838614336102,
+        -0.160512206391
+      ],
+      "z": 0.105803536011,
+      "vz": -0.184609028915,
+      "keyframe": true,
+      "matches": 1003,
+      "imu_rms": 0.55631851407
+    },
+    {
+      "time": 488.999292612,
+      "dp": [
+        0.0116812621635,
+        0.00300798542529,
+        -0.149855695606
+      ],
+      "z": 2.27349551447,
+      "vz": 0.037685910672,
+      "keyframe": false,
+      "matches": 996,
+      "imu_rms": 0.226402151999
+    },
+    {
+      "time": 542.999189854,
+      "dp": [
+        -0.00269434821887,
+        0.0391219845185,
+        -0.139041327303
+      ],
+      "z": -5.02474802861,
+      "vz": -1.02694857862,
+      "keyframe": false,
+      "matches": 1128,
+      "imu_rms": 0.897279087783
+    },
+    {
+      "time": 534.199582338,
+      "dp": [
+        -0.017923799161,
+        0.0448779963149,
+        -0.1373504372
+      ],
+      "z": -0.904457730687,
+      "vz": -1.41016584834,
+      "keyframe": false,
+      "matches": 1024,
+      "imu_rms": 0.835567451164
+    },
+    {
+      "time": 542.600339174,
+      "dp": [
+        -0.00321687128238,
+        0.0417308045822,
+        -0.134397148259
+      ],
+      "z": -4.32591678587,
+      "vz": -0.515692861501,
+      "keyframe": false,
+      "matches": 1143,
+      "imu_rms": 0.724284611591
+    },
+    {
+      "time": 553.999896526,
+      "dp": [
+        -0.0249813794188,
+        -0.044365603598,
+        0.129104379042
+      ],
+      "z": -6.56434567588,
+      "vz": -0.0178213726867,
+      "keyframe": false,
+      "matches": 999,
+      "imu_rms": 0.467920194582
+    },
+    {
+      "time": 554.099970579,
+      "dp": [
+        -0.0279834639018,
+        -0.0276627165203,
+        0.128183525646
+      ],
+      "z": -6.43633175216,
+      "vz": -0.0659505859198,
+      "keyframe": false,
+      "matches": 965,
+      "imu_rms": 0.52622688049
+    },
+    {
+      "time": 534.29955411,
+      "dp": [
+        -0.00622152442254,
+        -0.0134659817942,
+        -0.127970609227
+      ],
+      "z": -1.12891484999,
+      "vz": -0.364167424441,
+      "keyframe": true,
+      "matches": 1081,
+      "imu_rms": 0.805826993629
+    },
+    {
+      "time": 542.500273228,
+      "dp": [
+        -0.00489920518179,
+        0.0394602701502,
+        -0.126523325645
+      ],
+      "z": -4.15074638409,
+      "vz": -0.324566438275,
+      "keyframe": false,
+      "matches": 1168,
+      "imu_rms": 0.462671642684
+    },
+    {
+      "time": 533.499572992,
+      "dp": [
+        0.00516597172961,
+        -0.0234926348828,
+        -0.123860848032
+      ],
+      "z": 0.525924901568,
+      "vz": -0.468828660779,
+      "keyframe": false,
+      "matches": 1073,
+      "imu_rms": 0.634216248786
+    },
+    {
+      "time": 532.899474621,
+      "dp": [
+        -0.00291140893992,
+        0.00162428108684,
+        -0.119788914195
+      ],
+      "z": 1.70161439289,
+      "vz": -0.338089851735,
+      "keyframe": false,
+      "matches": 1107,
+      "imu_rms": 0.562796478188
+    },
+    {
+      "time": 542.699384212,
+      "dp": [
+        0.000276994973184,
+        0.0148268679358,
+        -0.109687648999
+      ],
+      "z": -4.54534920749,
+      "vz": -1.09538529453,
+      "keyframe": true,
+      "matches": 1145,
+      "imu_rms": 0.627659183661
+    },
+    {
+      "time": 488.000122309,
+      "dp": [
+        -0.0117854497412,
+        -0.0164637717072,
+        0.108015302494
+      ],
+      "z": 2.28841373731,
+      "vz": -0.0451620627412,
+      "keyframe": false,
+      "matches": 1038,
+      "imu_rms": 0.124220203067
+    },
+    {
+      "time": 487.799292088,
+      "dp": [
+        0.00695205788489,
+        -0.0141342330138,
+        -0.10535269344
+      ],
+      "z": 2.10629311959,
+      "vz": 0.0308713336457,
+      "keyframe": false,
+      "matches": 1018,
+      "imu_rms": 0.269924589271
+    },
+    {
+      "time": 487.699277401,
+      "dp": [
+        0.00577194675488,
+        -0.00931298261535,
+        -0.105036927364
+      ],
+      "z": 2.20607625374,
+      "vz": 0.0466422820969,
+      "keyframe": false,
+      "matches": 1038,
+      "imu_rms": 0.155752022587
+    },
+    {
+      "time": 542.899336338,
+      "dp": [
+        0.0121919119678,
+        0.00668817801817,
+        -0.101517695386
+      ],
+      "z": -4.81656217879,
+      "vz": -0.35892031663,
+      "keyframe": false,
+      "matches": 1135,
+      "imu_rms": 1.14367579313
+    }
+  ]
+}

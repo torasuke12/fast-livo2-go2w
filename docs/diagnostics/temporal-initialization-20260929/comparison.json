@@ -1,0 +1,231 @@
+{
+  "captures": {
+    "single_scan": {
+      "path": "/work/single/lio-reconstruction-20260929-072635-r3uc4jg5",
+      "binary_sha256": "49eb0f67d56ec7a42406f9db49e92d47266821e4be879eab0cf2b7cf8e057913",
+      "integrity": "ok",
+      "problems": [],
+      "scans": 571,
+      "initialization": [
+        {
+          "time": "3.19929647446",
+          "mode": "single_scan",
+          "status": "ready",
+          "gate_applied": "0",
+          "scans": "0",
+          "points": "0",
+          "planes": "0",
+          "normal_eigenvalue_0": "0",
+          "normal_eigenvalue_1": "0",
+          "normal_eigenvalue_2": "0",
+          "duration_sec": "0",
+          "resets": "0",
+          "reference_points": "14350",
+          "temporal_reference_planes": "200"
+        }
+      ],
+      "first_update_time": 3.29920625687,
+      "last_time": 60.1994299889,
+      "status_counts": {
+        "initialized": 1,
+        "updated": 570
+      },
+      "minimum_covariance_eigenvalue": 1.335296673881189e-06,
+      "windows": [
+        {
+          "begin": 3.499,
+          "end": 10,
+          "scans": 66,
+          "rotation_update_deg": {
+            "median": 0.508565711907708,
+            "p95": 5.578943749141871,
+            "max": 11.702427085250783
+          },
+          "position_update_m": {
+            "median": 0.005859343425452189,
+            "p95": 0.013846901061405497,
+            "max": 0.018666178216314395
+          }
+        },
+        {
+          "begin": 10,
+          "end": 20,
+          "scans": 100,
+          "rotation_update_deg": {
+            "median": 0.4919487451170986,
+            "p95": 3.0135018098705495,
+            "max": 3.390559534500027
+          },
+          "position_update_m": {
+            "median": 0.008747508842322406,
+            "p95": 0.040613870527271625,
+            "max": 0.07390636991906255
+          }
+        },
+        {
+          "begin": 20,
+          "end": 60,
+          "scans": 400,
+          "rotation_update_deg": {
+            "median": 0.10463107804657429,
+            "p95": 0.35311262623007655,
+            "max": 0.6020238947975931
+          },
+          "position_update_m": {
+            "median": 0.011625969722762001,
+            "p95": 0.04424277063732013,
+            "max": 0.1127728334385648
+          }
+        }
+      ],
+      "sha256": {
+        "logs/temporal_window.csv": "08b0d31e5bc2e09ae76395798f2d8e2c5cfc373520fc7d5042df2dcb9ba04f94",
+        "logs/temporal_states.csv": "daa723014b974850b2c6c4b2c508400afe3216ca8056aaed444e0067b6a8b865",
+        "logs/temporal_initialization.csv": "9cd82a91959bbf90f2a5385398b2b75311bb9221565e1b9579b48952d154d474",
+        "logs/imu.txt": "d252e50d06cce8f6376bdaa8a809dcbabf1552cbdb119d235aa55d9db4b27a1c"
+      }
+    },
+    "legacy_voxel": {
+      "path": "/work/legacy/lio-reconstruction-20260929-073045-4w341xbo",
+      "binary_sha256": "49eb0f67d56ec7a42406f9db49e92d47266821e4be879eab0cf2b7cf8e057913",
+      "integrity": "incomplete",
+      "problems": [
+        "node abnormal exit: {'returncode': -11, 'node_exit_codes': []}"
+      ],
+      "scans": 569,
+      "initialization": [
+        {
+          "time": "3.19929647446",
+          "mode": "legacy_voxel",
+          "status": "waiting",
+          "gate_applied": "1",
+          "scans": "1",
+          "points": "5325",
+          "planes": "0",
+          "normal_eigenvalue_0": "0",
+          "normal_eigenvalue_1": "0",
+          "normal_eigenvalue_2": "0",
+          "duration_sec": "0",
+          "resets": "0",
+          "reference_points": "0",
+          "temporal_reference_planes": "0"
+        },
+        {
+          "time": "3.29920625687",
+          "mode": "legacy_voxel",
+          "status": "waiting",
+          "gate_applied": "1",
+          "scans": "2",
+          "points": "10605",
+          "planes": "0",
+          "normal_eigenvalue_0": "0",
+          "normal_eigenvalue_1": "0",
+          "normal_eigenvalue_2": "0",
+          "duration_sec": "0.0999097824097",
+          "resets": "0",
+          "reference_points": "0",
+          "temporal_reference_planes": "0"
+        },
+        {
+          "time": "3.40009045601",
+          "mode": "legacy_voxel",
+          "status": "ready",
+          "gate_applied": "1",
+          "scans": "3",
+          "points": "15791",
+          "planes": "625",
+          "normal_eigenvalue_0": "0.298269548387",
+          "normal_eigenvalue_1": "0.31324613665",
+          "normal_eigenvalue_2": "0.388484314963",
+          "duration_sec": "0.200793981552",
+          "resets": "0",
+          "reference_points": "15791",
+          "temporal_reference_planes": "245"
+        }
+      ],
+      "first_update_time": 3.49911546707,
+      "last_time": 60.1994299889,
+      "status_counts": {
+        "initialized": 1,
+        "updated": 568
+      },
+      "minimum_covariance_eigenvalue": 1.3424640101383194e-06,
+      "windows": [
+        {
+          "begin": 3.499,
+          "end": 10,
+          "scans": 66,
+          "rotation_update_deg": {
+            "median": 0.21643030379369815,
+            "p95": 20.040886819150092,
+            "max": 29.092800993979978
+          },
+          "position_update_m": {
+            "median": 0.005950052341985368,
+            "p95": 0.05430202177807443,
+            "max": 0.25591563920508364
+          }
+        },
+        {
+          "begin": 10,
+          "end": 20,
+          "scans": 100,
+          "rotation_update_deg": {
+            "median": 0.1606168691646478,
+            "p95": 0.5584405041578944,
+            "max": 0.6959284650195818
+          },
+          "position_update_m": {
+            "median": 0.005197500194132938,
+            "p95": 0.020034835084441354,
+            "max": 0.03490838107334319
+          }
+        },
+        {
+          "begin": 20,
+          "end": 60,
+          "scans": 400,
+          "rotation_update_deg": {
+            "median": 0.09721137164300601,
+            "p95": 0.30844163107350436,
+            "max": 0.5810782056904177
+          },
+          "position_update_m": {
+            "median": 0.00829258738615921,
+            "p95": 0.028532041794695547,
+            "max": 0.09824711294603017
+          }
+        }
+      ],
+      "sha256": {
+        "logs/temporal_window.csv": "3a16d629b1b34b2b24bb7f9a5763fda12fa6935f83ff44ba5a4806af05c4c601",
+        "logs/temporal_states.csv": "8469a8d8533ae4b6b0f910bfd100e38ab7ab62827fbcce1432615e3bdca3f336",
+        "logs/temporal_initialization.csv": "dea85090631a9a9353d323de3e0f74b70e913215dc9414f5df8f573b97c2fc81",
+        "logs/imu.txt": "d252e50d06cce8f6376bdaa8a809dcbabf1552cbdb119d235aa55d9db4b27a1c"
+      }
+    }
+  },
+  "effective_parameter_differences_excluding_output_paths": {
+    "lio.temporal.initialization_mode": [
+      "single_scan",
+      "legacy_voxel"
+    ]
+  },
+  "identical_processed_imu_prefix_rows": 11420,
+  "default_parity": {
+    "temporal_window.csv": {
+      "rows": 91,
+      "numeric_columns": 493,
+      "max_absolute_difference": 0.0,
+      "statuses_equal": true,
+      "previous_sha256": "fdf13abbdaa9bb4fb278e03609bf66f83471675baa56d519edb303d0aa955fab"
+    },
+    "temporal_states.csv": {
+      "rows": 741,
+      "numeric_columns": 20,
+      "max_absolute_difference": 0.0,
+      "statuses_equal": true,
+      "previous_sha256": "b3cf8a589e927ed64872dc209b6b4542658036cf26a0b0e0729fac4f143142ba"
+    }
+  }
+}

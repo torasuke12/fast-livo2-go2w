@@ -1,0 +1,36 @@
+test_graph_edge_maps_source_into_target (test_loop_reconstruction.LoopReconstructionTests) ... ok
+test_large_rotation_graph_uses_true_angle_error (test_loop_reconstruction.LoopReconstructionTests) ... ok
+test_parallel_corridor_cannot_assert_loop (test_loop_reconstruction.LoopReconstructionTests) ... ok
+test_return_requires_temporal_consensus_and_rejects_room_symmetry (test_loop_reconstruction.LoopReconstructionTests) ... ok
+test_room_registration_recovers_measured_offset (test_loop_reconstruction.LoopReconstructionTests) ... ok
+test_derived_configuration_keeps_original_and_window (test_reconstruction_capture.CaptureTests) ... ok
+test_domain_check_prevents_launch_and_capture_creation (test_reconstruction_capture.CaptureTests) ... ok
+test_effective_mode_mismatch_aborts (test_reconstruction_capture.CaptureTests) ... ok
+test_expected_signal_exit_is_recorded_without_capture_error (test_reconstruction_capture.CaptureTests) ... ok
+test_initialization_override_changes_only_initialization (test_reconstruction_capture.CaptureTests) ... ok
+test_invalid_arguments_fail_before_ros (test_reconstruction_capture.CaptureTests) ... ok
+test_lifecycle_interrupt (test_reconstruction_capture.CaptureTests) ... ok
+test_lifecycle_rviz_close (test_reconstruction_capture.CaptureTests) ... ok
+test_mode_override_canonicalizes_dotted_keys (test_reconstruction_capture.CaptureTests) ... ok
+test_monitor_runtime_failure_keeps_partial_data (test_reconstruction_capture.CaptureTests) ... ok
+test_monitor_startup_failure_aborts_playback (test_reconstruction_capture.CaptureTests) ... ok
+test_node_crash_keeps_negative_exit_code (test_reconstruction_capture.CaptureTests) ... ok
+test_player_failure_keeps_partial_data (test_reconstruction_capture.CaptureTests) ... ok
+test_stamp_statistics (test_reconstruction_capture.CaptureTests) ... ok
+test_temporal_capture_bypasses_broken_daemon (test_reconstruction_capture.CaptureTests) ... ok
+test_temporal_capture_finalizes_without_legacy_scan_files (test_reconstruction_capture.CaptureTests) ... ok
+test_temporal_lifecycle_rviz_close (test_reconstruction_capture.CaptureTests) ... ok
+test_temporal_livo_requires_image_diagnostics (test_reconstruction_capture.CaptureTests) ... ok
+test_temporal_missing_binary_parameter_is_rejected (test_reconstruction_capture.CaptureTests) ... ok
+test_temporal_profile_is_exclusive_and_reversible (test_reconstruction_capture.CaptureTests) ... ok
+test_unique_capture_and_partial_preparation (test_reconstruction_capture.CaptureTests) ... Capture preparation failed; partial files: /tmp/tmphfm11hej/lio-reconstruction-20260930-134346-li1xofjt
+[Errno 2] No such file or directory: '/tmp/tmphfm11hej/missing'
+ok
+test_voxel_default_and_incompatible_gate (test_reconstruction_capture.CaptureTests) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 70.689s
+
+OK
+`gtol` termination condition is satisfied.
+Function evaluations 15, initial cost 3.2608e+02, final cost 0.0000e+00, first-order optimality 8.20e-08.

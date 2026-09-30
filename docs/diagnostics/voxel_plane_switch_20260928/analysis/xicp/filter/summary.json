@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "run": "/tmp/voxel-plane-switch/fixtures-final/xicp/run-1790587131243598910-0",
+  "scans": 1,
+  "iterations": 3,
+  "committed_updates": 1,
+  "scan_status_counts": {
+    "updated": 1
+  },
+  "checks": {
+    "correction_identity_max_abs": 0.0,
+    "constraint_correction_max_abs": 1.0842021724855044e-19,
+    "covariance_asymmetry_max_abs": 0.0,
+    "covariance_min_eigenvalue": 1.0558908529485043e-06
+  },
+  "iteration_logging_ms": {
+    "mean_per_scan": 0.23525400000000002,
+    "max_per_scan": 0.23525400000000002
+  },
+  "csv_bytes": {
+    "iterations.csv": 21589,
+    "scans.csv": 12669,
+    "geometry.csv": 121892,
+    "geometry_states.csv": 2630,
+    "correspondences.csv": 20246
+  },
+  "notes": [
+    "NIS is descriptive; map/correspondence independence is not guaranteed.",
+    "P_prior, P_iter and P_after refer to their respective tangent frames.",
+    "K0 is a same-state counterfactual, not a separately replayed trajectory."
+  ],
+  "windows": [
+    {
+      "start": 200,
+      "end": 220,
+      "committed_updates": 1,
+      "residual_rms_median": 0.0021473598801974502,
+      "normalized_hessian_eigenvalues_median": [
+        1.843714700757583e-05,
+        4.0228580112963236e-05,
+        0.000595225544253975,
+        1.002638645208807,
+        2.002710573030943,
+        2.9939968904888765
+      ],
+      "nis_per_match_median": 0.01127911647006585,
+      "Kinnovation_sum": [
+        0.0003317836571453275,
+        0.0008954784383299883,
+        -0.0011712080771497573,
+        -0.006958580500107882,
+        -0.001984014941684299,
+        -0.0016983731772481478,
+        0.0,
+        -0.0013917161000215775,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0006958580500107884,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "K0innovation_sum": [
+        0.001041477345083137,
+        0.0009117077585741436,
+        -0.0009479805617322498,
+        -0.006912373019014419,
+        -0.001971942559788938,
+        -0.0016867552875192999,
+        0.0,
+        -0.0013824746038028838,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0006912373019014419,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "detail": {
+    "groups": 1,
+    "points": 75,
+    "max_scaled_errors": {
+      "hessian": 2.438668733840618e-15,
+      "score": 1.58699898839316e-16,
+      "innovation": 1.7209528379595192e-18,
+      "distance_sign": 0.0,
+      "gain_contribution": 0.0,
+      "gain_noise": 1.058790333763575e-22,
+      "gain_norm": 1.7130571152295682e-18,
+      "KH": 1.2066506909380139e-17,
+      "residual_stats": 0.0
+    },
+    "passed": true
+  },
+  "passed": true
+}

@@ -1,0 +1,154 @@
+{
+  "label": "before",
+  "maps": [
+    {
+      "stamp": 1788781420.4854922,
+      "points": 2400,
+      "finite": 2400,
+      "frame": "camera_init",
+      "intensity_minmax": [
+        0.0,
+        162.0
+      ],
+      "extent": [
+        7.631353378295898,
+        6.846157550811768,
+        3.3928589820861816
+      ]
+    },
+    {
+      "stamp": 1788781421.4854894,
+      "points": 4800,
+      "finite": 4800,
+      "frame": "camera_init",
+      "intensity_minmax": [
+        0.0,
+        162.0
+      ],
+      "extent": [
+        7.828034400939941,
+        19.929534912109375,
+        3.395754814147949
+      ]
+    },
+    {
+      "stamp": 1788781422.4865568,
+      "points": 7200,
+      "finite": 7200,
+      "frame": "camera_init",
+      "intensity_minmax": [
+        0.0,
+        163.0
+      ],
+      "extent": [
+        7.649147987365723,
+        20.089393615722656,
+        3.3763248920440674
+      ]
+    },
+    {
+      "stamp": 1788781423.4866276,
+      "points": 8400,
+      "finite": 8400,
+      "frame": "camera_init",
+      "intensity_minmax": [
+        0.0,
+        163.0
+      ],
+      "extent": [
+        7.724523067474365,
+        20.041515350341797,
+        3.389177083969116
+      ]
+    },
+    {
+      "stamp": 1788781424.4864454,
+      "points": 10800,
+      "finite": 10800,
+      "frame": "camera_init",
+      "intensity_minmax": [
+        0.0,
+        163.0
+      ],
+      "extent": [
+        7.9688401222229,
+        20.004552841186523,
+        3.4211294651031494
+      ]
+    },
+    {
+      "stamp": 1788781425.4856179,
+      "points": 13200,
+      "finite": 13200,
+      "frame": "camera_init",
+      "intensity_minmax": [
+        0.0,
+        163.0
+      ],
+      "extent": [
+        8.30826473236084,
+        20.024459838867188,
+        3.4051709175109863
+      ]
+    },
+    {
+      "stamp": 1788781426.4863253,
+      "points": 12000,
+      "finite": 12000,
+      "frame": "camera_init",
+      "intensity_minmax": [
+        0.0,
+        163.0
+      ],
+      "extent": [
+        8.781156539916992,
+        20.036945343017578,
+        3.3918964862823486
+      ]
+    },
+    {
+      "stamp": 1788781427.4864976,
+      "points": 12000,
+      "finite": 12000,
+      "frame": "camera_init",
+      "intensity_minmax": [
+        0.0,
+        163.0
+      ],
+      "extent": [
+        8.868501663208008,
+        20.02204704284668,
+        3.3898916244506836
+      ]
+    },
+    {
+      "stamp": 1788781428.4864311,
+      "points": 13200,
+      "finite": 13200,
+      "frame": "camera_init",
+      "intensity_minmax": [
+        0.0,
+        163.0
+      ],
+      "extent": [
+        8.623172760009766,
+        20.249441146850586,
+        3.4991743564605713
+      ]
+    }
+  ],
+  "path_first": {
+    "stamp": 1788781419.585603,
+    "poses": 1,
+    "last_stamp": 1788781419.585603
+  },
+  "path_last": {
+    "stamp": 1788781428.586377,
+    "poses": 91,
+    "last_stamp": 1788781428.586377
+  },
+  "late_volatile_messages": [],
+  "late_transient_messages": [],
+  "maps_while_paused": 0,
+  "rviz_render_tested": false
+}

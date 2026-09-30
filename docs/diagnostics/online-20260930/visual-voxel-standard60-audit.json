@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "complete": true,
+    "bag_exhausted": true,
+    "imu_messages": 12001,
+    "lidar_messages": 600,
+    "image_messages": 1798,
+    "updates": 282,
+    "keyframes": 94,
+    "last_time": 59.71076536178589
+  },
+  "all_saved_states_finite": true,
+  "z_range": [
+    -1.0995022886714656,
+    0.039350828058103166
+  ],
+  "last_position": [
+    54.53783976895109,
+    -2.6753848954131105,
+    -1.0995022886714656
+  ],
+  "max_accel_bias_norm": 0.11136358243901127,
+  "interpretation": "No ground truth. Large floor-height drift in the first corridor is inconsistent with the more stable temporal trials; not selected for a full run."
+}

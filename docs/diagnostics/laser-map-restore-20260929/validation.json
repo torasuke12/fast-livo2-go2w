@@ -1,0 +1,20 @@
+{
+  "temporal_window.csv": {
+    "before_rows": 91,
+    "restored_rows": 91,
+    "compared_fields": 494,
+    "excluded_fields": [
+      "solve_ms"
+    ],
+    "differing_cells": 0
+  },
+  "temporal_states.csv": {
+    "before_rows": 741,
+    "restored_rows": 741,
+    "compared_fields": 20,
+    "excluded_fields": [],
+    "differing_cells": 0
+  },
+  "binary_sha256": "592b29335c048958125828a7e9dbf501b5377f9335489ce778098fe123cc0097",
+  "rviz_laser_map_and_registered_scan_match_pre_analysis_backup": true
+}

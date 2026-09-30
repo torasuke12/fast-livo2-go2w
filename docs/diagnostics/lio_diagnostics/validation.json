@@ -1,0 +1,1369 @@
+{
+  "repo": "/home/srg-f-rei/fast_livo2_go2w/src/fast-livo2-go2w",
+  "baseline_sha256": "88740378e9b283028f539197dab03ecbe31cb9726cacb95d64be47ac6c380dc5",
+  "final_binary_sha256": "9b79099fe63394bf44a70184f3b6657da5e01754cbafc55c055c0871884277da",
+  "final_build_log": "/tmp/fast-livo2-diagnostics-2dbp5e9q/build-final.log",
+  "ctest_passed": 4,
+  "conditions": {
+    "bag": "raw_20260907_114335",
+    "duration_sec": 360,
+    "rate": 1,
+    "mode": "LIO",
+    "xicp_enabled": true,
+    "reliable": true,
+    "deterministic": true,
+    "rviz": false,
+    "parallel_replays": false,
+    "log_directory_isolated": true,
+    "detail_window": [
+      170,
+      220
+    ]
+  },
+  "short": {
+    "smoke-base": {
+      "states": 88,
+      "state_time_first": 3.29921,
+      "state_time_last": 12.0,
+      "nonfinite": 0,
+      "reason": "duration",
+      "exit_codes": [
+        -6,
+        0
+      ],
+      "clock_elapsed": 12.021729946136475,
+      "integrated_imu_rows": 1780,
+      "received_imu": 2410,
+      "received_imu_gap_ms": {
+        "count": 2409,
+        "mean": 5.000060161062682,
+        "p95": 5.931712,
+        "max": 8.346048
+      },
+      "received_imu_gaps_gt_10ms": 0,
+      "mapping_ms": {
+        "all": {
+          "count": 87,
+          "mean": 37.15989655172414,
+          "p95": 44.3615,
+          "max": 59.568999999999996
+        },
+        "outside_detail_window": {
+          "count": 87,
+          "mean": 37.15989655172414,
+          "p95": 44.3615,
+          "max": 59.568999999999996
+        }
+      },
+      "diagnostic_disabled_warnings": 0,
+      "update_rejections": 0
+    },
+    "smoke-off": {
+      "states": 88,
+      "state_time_first": 3.29921,
+      "state_time_last": 12.0,
+      "nonfinite": 0,
+      "reason": "duration",
+      "exit_codes": [
+        -6,
+        0
+      ],
+      "clock_elapsed": 12.021973133087158,
+      "integrated_imu_rows": 1780,
+      "received_imu": 2410,
+      "received_imu_gap_ms": {
+        "count": 2409,
+        "mean": 5.000060161062682,
+        "p95": 5.931712,
+        "max": 8.346048
+      },
+      "received_imu_gaps_gt_10ms": 0,
+      "mapping_ms": {
+        "all": {
+          "count": 87,
+          "mean": 36.73155172413793,
+          "p95": 43.827600000000004,
+          "max": 46.580999999999996
+        },
+        "outside_detail_window": {
+          "count": 87,
+          "mean": 36.73155172413793,
+          "p95": 43.827600000000004,
+          "max": 46.580999999999996
+        }
+      },
+      "diagnostic_disabled_warnings": 0,
+      "update_rejections": 0,
+      "exact_state_match_to_original": true,
+      "exact_imu_match_to_original": true
+    },
+    "smoke-summary": {
+      "states": 88,
+      "state_time_first": 3.29921,
+      "state_time_last": 12.0,
+      "nonfinite": 0,
+      "reason": "duration",
+      "exit_codes": [
+        -11,
+        0
+      ],
+      "clock_elapsed": 12.022146463394165,
+      "integrated_imu_rows": 1780,
+      "received_imu": 2410,
+      "received_imu_gap_ms": {
+        "count": 2409,
+        "mean": 5.000060161062682,
+        "p95": 5.931712,
+        "max": 8.346048
+      },
+      "received_imu_gaps_gt_10ms": 0,
+      "mapping_ms": {
+        "all": {
+          "count": 87,
+          "mean": 38.706333333333326,
+          "p95": 48.670500000000004,
+          "max": 58.589
+        },
+        "outside_detail_window": {
+          "count": 87,
+          "mean": 38.706333333333326,
+          "p95": 48.670500000000004,
+          "max": 58.589
+        }
+      },
+      "diagnostic_disabled_warnings": 0,
+      "update_rejections": 0,
+      "exact_state_match_to_original": true,
+      "exact_imu_match_to_original": true
+    },
+    "smoke-detail": {
+      "states": 88,
+      "state_time_first": 3.29921,
+      "state_time_last": 12.0,
+      "nonfinite": 0,
+      "reason": "duration",
+      "exit_codes": [
+        -11,
+        0
+      ],
+      "clock_elapsed": 12.022178649902344,
+      "integrated_imu_rows": 1780,
+      "received_imu": 2410,
+      "received_imu_gap_ms": {
+        "count": 2409,
+        "mean": 5.000060161062682,
+        "p95": 5.931712,
+        "max": 8.346048
+      },
+      "received_imu_gaps_gt_10ms": 0,
+      "mapping_ms": {
+        "all": {
+          "count": 87,
+          "mean": 41.63220689655173,
+          "p95": 54.5706,
+          "max": 64.346
+        },
+        "outside_detail_window": {
+          "count": 87,
+          "mean": 41.63220689655173,
+          "p95": 54.5706,
+          "max": 64.346
+        }
+      },
+      "diagnostic_disabled_warnings": 0,
+      "update_rejections": 0,
+      "exact_state_match_to_original": true,
+      "exact_imu_match_to_original": true
+    },
+    "smoke-baseline-detail": {
+      "states": 88,
+      "state_time_first": 3.29921,
+      "state_time_last": 12.0,
+      "nonfinite": 0,
+      "reason": "duration",
+      "exit_codes": [
+        -11,
+        0
+      ],
+      "clock_elapsed": 12.022305250167847,
+      "integrated_imu_rows": 1780,
+      "received_imu": 2410,
+      "received_imu_gap_ms": {
+        "count": 2409,
+        "mean": 5.000060161062682,
+        "p95": 5.931712,
+        "max": 8.346048
+      },
+      "received_imu_gaps_gt_10ms": 0,
+      "mapping_ms": {
+        "all": {
+          "count": 87,
+          "mean": 39.65342528735631,
+          "p95": 53.80980000000001,
+          "max": 58.617000000000004
+        },
+        "outside_detail_window": {
+          "count": 87,
+          "mean": 39.65342528735631,
+          "p95": 53.80980000000001,
+          "max": 58.617000000000004
+        }
+      },
+      "diagnostic_disabled_warnings": 0,
+      "update_rejections": 0
+    },
+    "smoke-voxel": {
+      "states": 86,
+      "state_time_first": 3.49912,
+      "state_time_last": 12.0,
+      "nonfinite": 0,
+      "reason": "duration",
+      "exit_codes": [
+        -11,
+        0
+      ],
+      "clock_elapsed": 12.022242307662964,
+      "integrated_imu_rows": 1780,
+      "received_imu": 2410,
+      "received_imu_gap_ms": {
+        "count": 2409,
+        "mean": 5.000060161062682,
+        "p95": 5.931712,
+        "max": 8.346048
+      },
+      "received_imu_gaps_gt_10ms": 0,
+      "mapping_ms": {
+        "all": {
+          "count": 85,
+          "mean": 54.94024705882353,
+          "p95": 75.90039999999999,
+          "max": 80.993
+        },
+        "outside_detail_window": {
+          "count": 85,
+          "mean": 54.94024705882353,
+          "p95": 75.90039999999999,
+          "max": 80.993
+        }
+      },
+      "diagnostic_disabled_warnings": 0,
+      "update_rejections": 0
+    },
+    "smoke-io-failure": {
+      "states": 88,
+      "state_time_first": 3.29921,
+      "state_time_last": 12.0,
+      "nonfinite": 0,
+      "reason": "duration",
+      "exit_codes": [
+        -11,
+        0
+      ],
+      "clock_elapsed": 12.022045612335205,
+      "integrated_imu_rows": 1780,
+      "received_imu": 2410,
+      "received_imu_gap_ms": {
+        "count": 2409,
+        "mean": 5.000060161062682,
+        "p95": 5.931712,
+        "max": 8.346048
+      },
+      "received_imu_gaps_gt_10ms": 0,
+      "mapping_ms": {
+        "all": {
+          "count": 87,
+          "mean": 37.91724137931035,
+          "p95": 43.5595,
+          "max": 44.625
+        },
+        "outside_detail_window": {
+          "count": 87,
+          "mean": 37.91724137931035,
+          "p95": 43.5595,
+          "max": 44.625
+        }
+      },
+      "diagnostic_disabled_warnings": 1,
+      "update_rejections": 0,
+      "exact_state_match_to_original": true,
+      "exact_imu_match_to_original": true
+    }
+  },
+  "long": {
+    "long-off": {
+      "states": 3568,
+      "state_time_first": 3.29921,
+      "state_time_last": 359.999,
+      "nonfinite": 0,
+      "reason": "duration",
+      "exit_codes": [
+        -11,
+        0
+      ],
+      "clock_elapsed": 360.0199534893036,
+      "integrated_imu_rows": 71382,
+      "received_imu": 72012,
+      "received_imu_gap_ms": {
+        "count": 72011,
+        "mean": 4.999841605532488,
+        "p95": 5.954447999999999,
+        "max": 8.346048
+      },
+      "received_imu_gaps_gt_10ms": 0,
+      "mapping_ms": {
+        "all": {
+          "count": 3567,
+          "mean": 32.48097589010373,
+          "p95": 44.80329999999999,
+          "max": 62.833
+        },
+        "detail_window": {
+          "count": 500,
+          "mean": 32.866694,
+          "p95": 43.52494999999998,
+          "max": 54.853
+        },
+        "outside_detail_window": {
+          "count": 3067,
+          "mean": 32.418093902836645,
+          "p95": 45.01759999999997,
+          "max": 62.833
+        }
+      },
+      "diagnostic_disabled_warnings": 0,
+      "update_rejections": 0
+    },
+    "long-detail": {
+      "states": 3568,
+      "state_time_first": 3.29921,
+      "state_time_last": 359.999,
+      "nonfinite": 0,
+      "reason": "duration",
+      "exit_codes": [
+        -11,
+        0
+      ],
+      "clock_elapsed": 360.0196657180786,
+      "integrated_imu_rows": 71382,
+      "received_imu": 72012,
+      "received_imu_gap_ms": {
+        "count": 72011,
+        "mean": 4.999841605532488,
+        "p95": 5.954447999999999,
+        "max": 8.346048
+      },
+      "received_imu_gaps_gt_10ms": 0,
+      "mapping_ms": {
+        "all": {
+          "count": 3567,
+          "mean": 35.06380291561536,
+          "p95": 49.4101,
+          "max": 95.426
+        },
+        "detail_window": {
+          "count": 500,
+          "mean": 46.838528,
+          "p95": 68.08814999999997,
+          "max": 95.426
+        },
+        "outside_detail_window": {
+          "count": 3067,
+          "mean": 33.14421943267036,
+          "p95": 46.473299999999995,
+          "max": 93.614
+        }
+      },
+      "diagnostic_disabled_warnings": 0,
+      "update_rejections": 0,
+      "iteration_logging_ms": {
+        "all": {
+          "count": 3568,
+          "mean": 2.441285551569507,
+          "p95": 13.97501979999999,
+          "max": 43.669664999999995
+        },
+        "detail_window": {
+          "count": 500,
+          "mean": 13.529463904,
+          "p95": 19.804232049999992,
+          "max": 43.669664999999995
+        },
+        "outside_detail_window": {
+          "count": 3068,
+          "mean": 0.6342160677966102,
+          "p95": 0.85146485,
+          "max": 3.035533
+        }
+      }
+    }
+  },
+  "long_comparison": {
+    "exact_integrated_imu_equal": true,
+    "exact_state_time_and_raw_point_count_equal": true,
+    "exact_received_stamps_in_common_range_equal": true,
+    "exact_states_equal": false,
+    "received_imu_sha256_equal": true,
+    "received_imu_sha256": "5b8a4e8a19bcd01eb3e92d7abef88e2aeb867304f47b2d1a84e532f314dc9c6d"
+  },
+  "analysis": {
+    "smoke-summary": {
+      "schema_version": 1,
+      "run": "/tmp/fast-livo2-diagnostics-2dbp5e9q/smoke-summary-diagnostics/run-1790500864420302718-0",
+      "scans": 88,
+      "iterations": 338,
+      "committed_updates": 88,
+      "scan_status_counts": {
+        "updated": 88
+      },
+      "checks": {
+        "correction_identity_max_abs": 4.5102810375396984e-17,
+        "constraint_correction_max_abs": 0.0,
+        "covariance_asymmetry_max_abs": 0.0,
+        "covariance_min_eigenvalue": 9.999999999999904e-09
+      },
+      "iteration_logging_ms": {
+        "mean_per_scan": 0.7191767272727273,
+        "max_per_scan": 1.136617
+      },
+      "csv_bytes": {
+        "iterations.csv": 3598861,
+        "scans.csv": 1020584
+      },
+      "notes": [
+        "NIS is descriptive; map/correspondence independence is not guaranteed.",
+        "P_prior, P_iter and P_after refer to their respective tangent frames.",
+        "K0 is a same-state counterfactual, not a separately replayed trajectory."
+      ],
+      "windows": [
+        {
+          "start": 0,
+          "end": 170,
+          "committed_updates": 88,
+          "residual_rms_median": 0.044876003260137416,
+          "normalized_hessian_eigenvalues_median": [
+            0.17709155686856992,
+            0.3383518462550781,
+            0.6157950792098288,
+            1.0542448558652864,
+            1.7537094421070292,
+            2.056606803380558
+          ],
+          "nis_per_match_median": 2.0140314589338253,
+          "Kinnovation_sum": [
+            -0.0012758210442342945,
+            -0.0033313373747708187,
+            -0.0008842724938838673,
+            0.013858490241242829,
+            0.009826538572254379,
+            -0.0033172892873788496,
+            0.0,
+            0.09569564526310165,
+            0.06171937635396167,
+            -0.006712746680052305,
+            0.00010558067823749454,
+            0.00016584581785108904,
+            -0.0004906925659481842,
+            0.004420647173249794,
+            -0.022990198711270327,
+            0.006319606538761794,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "K0innovation_sum": [
+            -0.0012758210442342806,
+            -0.0033313373747708426,
+            -0.0008842724938838811,
+            0.013858490241242812,
+            0.00982653857225441,
+            -0.003317289287378868,
+            0.0,
+            0.0956956452631016,
+            0.06171937635396164,
+            -0.0067127466800523845,
+            0.00010558067823749011,
+            0.00016584581785109107,
+            -0.0004906925659481823,
+            0.0044206471732497,
+            -0.022990198711270286,
+            0.006319606538761756,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "passed": true
+    },
+    "smoke-detail": {
+      "schema_version": 1,
+      "run": "/tmp/fast-livo2-diagnostics-2dbp5e9q/smoke-detail-diagnostics/run-1790500882967752719-0",
+      "scans": 88,
+      "iterations": 338,
+      "committed_updates": 88,
+      "scan_status_counts": {
+        "updated": 88
+      },
+      "checks": {
+        "correction_identity_max_abs": 4.5102810375396984e-17,
+        "constraint_correction_max_abs": 0.0,
+        "covariance_asymmetry_max_abs": 0.0,
+        "covariance_min_eigenvalue": 9.999999999999904e-09
+      },
+      "iteration_logging_ms": {
+        "mean_per_scan": 4.538955863636363,
+        "max_per_scan": 20.157952
+      },
+      "csv_bytes": {
+        "iterations.csv": 3598861,
+        "scans.csv": 1020503,
+        "correspondences.csv": 75125371
+      },
+      "notes": [
+        "NIS is descriptive; map/correspondence independence is not guaranteed.",
+        "P_prior, P_iter and P_after refer to their respective tangent frames.",
+        "K0 is a same-state counterfactual, not a separately replayed trajectory."
+      ],
+      "windows": [
+        {
+          "start": 0,
+          "end": 170,
+          "committed_updates": 88,
+          "residual_rms_median": 0.044876003260137416,
+          "normalized_hessian_eigenvalues_median": [
+            0.17709155686856992,
+            0.3383518462550781,
+            0.6157950792098288,
+            1.0542448558652864,
+            1.7537094421070292,
+            2.056606803380558
+          ],
+          "nis_per_match_median": 2.0140314589338253,
+          "Kinnovation_sum": [
+            -0.0012758210442342945,
+            -0.0033313373747708187,
+            -0.0008842724938838673,
+            0.013858490241242829,
+            0.009826538572254379,
+            -0.0033172892873788496,
+            0.0,
+            0.09569564526310165,
+            0.06171937635396167,
+            -0.006712746680052305,
+            0.00010558067823749454,
+            0.00016584581785108904,
+            -0.0004906925659481842,
+            0.004420647173249794,
+            -0.022990198711270327,
+            0.006319606538761794,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "K0innovation_sum": [
+            -0.0012758210442342806,
+            -0.0033313373747708426,
+            -0.0008842724938838811,
+            0.013858490241242812,
+            0.00982653857225441,
+            -0.003317289287378868,
+            0.0,
+            0.0956956452631016,
+            0.06171937635396164,
+            -0.0067127466800523845,
+            0.00010558067823749011,
+            0.00016584581785109107,
+            -0.0004906925659481823,
+            0.0044206471732497,
+            -0.022990198711270286,
+            0.006319606538761756,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "detail": {
+        "groups": 75,
+        "points": 174585,
+        "max_scaled_errors": {
+          "hessian": 4.824365436807943e-13,
+          "score": 2.7854189070579064e-13,
+          "innovation": 2.4663782818588006e-17,
+          "distance_sign": 0.0,
+          "gain_contribution": 1.6228580640003066e-16,
+          "gain_noise": 6.7761319168363585e-21,
+          "gain_norm": 1.4566095777874147e-16,
+          "KH": 4.648048426815428e-15,
+          "residual_stats": 1.330295199440356e-17
+        },
+        "passed": true
+      },
+      "passed": true
+    },
+    "smoke-baseline-detail": {
+      "schema_version": 1,
+      "run": "/tmp/fast-livo2-diagnostics-2dbp5e9q/smoke-baseline-detail-diagnostics/run-1790500901566018924-0",
+      "scans": 88,
+      "iterations": 338,
+      "committed_updates": 88,
+      "scan_status_counts": {
+        "updated": 88
+      },
+      "checks": {
+        "correction_identity_max_abs": 7.28583859910259e-17,
+        "constraint_correction_max_abs": 0.0,
+        "covariance_asymmetry_max_abs": 8.235627230770677e-17,
+        "covariance_min_eigenvalue": 9.999999999999904e-09
+      },
+      "iteration_logging_ms": {
+        "mean_per_scan": 4.611540386363637,
+        "max_per_scan": 20.074256
+      },
+      "csv_bytes": {
+        "iterations.csv": 3598811,
+        "scans.csv": 1020403,
+        "correspondences.csv": 75126450
+      },
+      "notes": [
+        "NIS is descriptive; map/correspondence independence is not guaranteed.",
+        "P_prior, P_iter and P_after refer to their respective tangent frames.",
+        "K0 is a same-state counterfactual, not a separately replayed trajectory."
+      ],
+      "windows": [
+        {
+          "start": 0,
+          "end": 170,
+          "committed_updates": 88,
+          "residual_rms_median": 0.04487600297487215,
+          "normalized_hessian_eigenvalues_median": [
+            0.17709155694963968,
+            0.3383518463882591,
+            0.6157950793548581,
+            1.054244855864076,
+            1.7537094429978937,
+            2.05660680327233
+          ],
+          "nis_per_match_median": 2.014031433074708,
+          "Kinnovation_sum": [
+            -0.0012758199004621633,
+            -0.003331336213323662,
+            -0.0008842722683061299,
+            0.013858490602291294,
+            0.009826539002564947,
+            -0.003317289084086387,
+            0.0,
+            0.09569564770482682,
+            0.06171937821223209,
+            -0.00671274549758857,
+            0.0001055805317950481,
+            0.00016584570099249714,
+            -0.0004906926694278942,
+            0.004420646543146721,
+            -0.02299019939968519,
+            0.006319606173674563,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "K0innovation_sum": [
+            -0.0012758199004621418,
+            -0.003331336213323652,
+            -0.0008842722683061136,
+            0.013858490602291235,
+            0.00982653900256498,
+            -0.003317289084086453,
+            0.0,
+            0.09569564770482678,
+            0.06171937821223228,
+            -0.006712745497588898,
+            0.00010558053179504596,
+            0.00016584570099249687,
+            -0.0004906926694278959,
+            0.0044206465431466295,
+            -0.0229901993996853,
+            0.006319606173674639,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "detail": {
+        "groups": 75,
+        "points": 174585,
+        "max_scaled_errors": {
+          "hessian": 3.958413017858428e-13,
+          "score": 4.011947754929165e-13,
+          "innovation": 2.4611670984646613e-17,
+          "distance_sign": 0.0,
+          "gain_contribution": 1.4896721588088423e-16,
+          "gain_noise": 1.3552217930494585e-20,
+          "gain_norm": 1.9293634549828446e-16,
+          "KH": 4.995471980443028e-15,
+          "residual_stats": 1.9920981130083988e-17
+        },
+        "passed": true
+      },
+      "passed": true
+    },
+    "smoke-voxel": {
+      "schema_version": 1,
+      "run": "/tmp/fast-livo2-diagnostics-2dbp5e9q/smoke-voxel-diagnostics/run-1790500920354828230-0",
+      "scans": 86,
+      "iterations": 264,
+      "committed_updates": 86,
+      "scan_status_counts": {
+        "updated": 86
+      },
+      "checks": {
+        "correction_identity_max_abs": 4.85722573273506e-17,
+        "constraint_correction_max_abs": 0.0,
+        "covariance_asymmetry_max_abs": 0.0,
+        "covariance_min_eigenvalue": 9.999999999999904e-09
+      },
+      "iteration_logging_ms": {
+        "mean_per_scan": 0.9694936627906977,
+        "max_per_scan": 1.3334769999999998
+      },
+      "csv_bytes": {
+        "iterations.csv": 2812043,
+        "scans.csv": 998021
+      },
+      "notes": [
+        "NIS is descriptive; map/correspondence independence is not guaranteed.",
+        "P_prior, P_iter and P_after refer to their respective tangent frames.",
+        "K0 is a same-state counterfactual, not a separately replayed trajectory."
+      ],
+      "windows": [
+        {
+          "start": 0,
+          "end": 170,
+          "committed_updates": 86,
+          "residual_rms_median": 0.044359817396386364,
+          "normalized_hessian_eigenvalues_median": [
+            0.2880181674386294,
+            0.44108231154031596,
+            0.6896050149989505,
+            1.0181999291442054,
+            1.7223275943913126,
+            1.8352396385960708
+          ],
+          "nis_per_match_median": 0.13702355653115617,
+          "Kinnovation_sum": [
+            0.0033214222415727667,
+            0.0019264891063930701,
+            -0.004569357653043436,
+            0.00412687396903864,
+            0.0036034578424970665,
+            -0.009218770701008558,
+            0.0,
+            0.03253423835271081,
+            0.03092106647531106,
+            -0.07491374219194946,
+            0.0001237517902227832,
+            -4.596318531683601e-05,
+            -6.094909627782448e-05,
+            -0.0005874897519289612,
+            -0.013840897791807008,
+            0.007274886155164856,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "K0innovation_sum": [
+            0.0033214222415727684,
+            0.0019264891063930799,
+            -0.004569357653043436,
+            0.004126873969038635,
+            0.003603457842497077,
+            -0.009218770701008558,
+            0.0,
+            0.03253423835271072,
+            0.030921066475310975,
+            -0.07491374219194936,
+            0.00012375179022278338,
+            -4.596318531683675e-05,
+            -6.094909627782432e-05,
+            -0.0005874897519289507,
+            -0.013840897791806993,
+            0.007274886155164856,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "passed": true
+    },
+    "long-detail": {
+      "schema_version": 1,
+      "run": "/tmp/fast-livo2-diagnostics-2dbp5e9q/long-detail-diagnostics/run-1790501460215797836-0",
+      "scans": 3568,
+      "iterations": 14126,
+      "committed_updates": 3568,
+      "scan_status_counts": {
+        "updated": 3568
+      },
+      "checks": {
+        "correction_identity_max_abs": 5.551115123125783e-16,
+        "constraint_correction_max_abs": 2.7755575615628914e-16,
+        "covariance_asymmetry_max_abs": 2.4233807008389483e-27,
+        "covariance_min_eigenvalue": 9.999999999999904e-09
+      },
+      "iteration_logging_ms": {
+        "mean_per_scan": 2.441285551569507,
+        "max_per_scan": 43.669664999999995
+      },
+      "csv_bytes": {
+        "iterations.csv": 151699826,
+        "scans.csv": 41035501,
+        "correspondences.csv": 1440107503
+      },
+      "notes": [
+        "NIS is descriptive; map/correspondence independence is not guaranteed.",
+        "P_prior, P_iter and P_after refer to their respective tangent frames.",
+        "K0 is a same-state counterfactual, not a separately replayed trajectory."
+      ],
+      "windows": [
+        {
+          "start": 0,
+          "end": 170,
+          "committed_updates": 1668,
+          "residual_rms_median": 0.03778453648689786,
+          "normalized_hessian_eigenvalues_median": [
+            0.15175574397202946,
+            0.5066450010763257,
+            0.747824824133914,
+            1.004205602347271,
+            1.4534331523763013,
+            2.1955743896532995
+          ],
+          "nis_per_match_median": 1.4347377002697992,
+          "Kinnovation_sum": [
+            -0.12036692017265357,
+            0.06024576508911115,
+            -0.025938942139579407,
+            -3.071744400895077,
+            2.3720544159894854,
+            0.6594580108818081,
+            0.0,
+            -7.03751200756649,
+            10.240846574624074,
+            2.233904033977115,
+            0.004181100437034044,
+            -0.0024370067023223438,
+            0.0001600611602682898,
+            -0.0630078850110103,
+            -0.00265857245516502,
+            -0.03902262459180851,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "K0innovation_sum": [
+            -0.12547571481286401,
+            0.12108639892570736,
+            -0.017184978271799187,
+            -2.417263058812258,
+            2.227322156776122,
+            0.44528725580456135,
+            0.0,
+            -5.7034694665271735,
+            10.23040025323944,
+            1.9062113493645994,
+            0.004008752521910056,
+            -0.004319389080528843,
+            -0.0003187313353269968,
+            -0.01604939977196545,
+            -0.0007908348999846237,
+            -0.01148977606108739,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "start": 170,
+          "end": 180,
+          "committed_updates": 100,
+          "residual_rms_median": 0.03988992020643019,
+          "normalized_hessian_eigenvalues_median": [
+            0.24505316464718685,
+            0.5058537337520814,
+            0.7754541076953803,
+            0.9966411317665085,
+            1.4562276947106112,
+            2.005546437216602
+          ],
+          "nis_per_match_median": 1.5947635852070547,
+          "Kinnovation_sum": [
+            0.017868726989053237,
+            -0.004502714906898597,
+            -0.003671007892301788,
+            0.04923452783433328,
+            0.06165127345108233,
+            -0.03631366058026475,
+            0.0,
+            0.14245583628535893,
+            0.19308117155866755,
+            -0.15526047617027874,
+            -0.0005623762195213199,
+            0.00013087496846091756,
+            0.00011902751416213835,
+            0.002604612575133015,
+            0.0035160651956845828,
+            0.0061620968029338615,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "K0innovation_sum": [
+            0.03782163713050315,
+            -0.004897457373958504,
+            0.0016848097613605033,
+            0.03625968202908579,
+            0.05201266680839961,
+            -0.032841329432137724,
+            0.0,
+            0.1212653873019319,
+            0.20793978326141396,
+            -0.14761831486571544,
+            -0.001189858466050323,
+            0.00014413655281658993,
+            -4.9893408388055345e-05,
+            0.002035093343311983,
+            0.0022340155386876446,
+            0.005724497170414293,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "start": 180,
+          "end": 200,
+          "committed_updates": 200,
+          "residual_rms_median": 0.039453532248305334,
+          "normalized_hessian_eigenvalues_median": [
+            0.1321733265274309,
+            0.570955147918607,
+            0.8268437140258277,
+            0.9584435960900839,
+            1.1646107213398116,
+            2.33287365205327
+          ],
+          "nis_per_match_median": 1.5515405285851145,
+          "Kinnovation_sum": [
+            0.0017001574654918591,
+            -0.005644820185138687,
+            0.000729237634929189,
+            0.5338362029273269,
+            0.08102251966239031,
+            0.005266709291999962,
+            0.0,
+            1.1718114732143892,
+            0.2015317068500559,
+            0.07907425554237613,
+            -4.5577656861476264e-05,
+            0.00012697653729133368,
+            -1.6917656064842583e-05,
+            0.03485073403790613,
+            0.004528887547456605,
+            0.009679020594256961,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "K0innovation_sum": [
+            0.006844691562458144,
+            -0.01452094719443266,
+            0.009662461906952736,
+            -0.8052419800769072,
+            -0.04320753939686823,
+            0.04842377502729229,
+            0.0,
+            -1.0406344809152506,
+            0.005800417734757656,
+            0.1535252448608384,
+            -0.00020318837858297306,
+            0.0004616553330121869,
+            -0.0002993814620433363,
+            -0.0278773984095841,
+            0.0002935162076899276,
+            -0.014252502857425417,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "start": 200,
+          "end": 220,
+          "committed_updates": 200,
+          "residual_rms_median": 0.039674286211181804,
+          "normalized_hessian_eigenvalues_median": [
+            0.15631605813265625,
+            0.6095337484129751,
+            0.7852325690017374,
+            1.0640269375217208,
+            1.2520055768791003,
+            2.119975312333369
+          ],
+          "nis_per_match_median": 1.5738492140255809,
+          "Kinnovation_sum": [
+            -0.007738689695817528,
+            0.024446054382602635,
+            -0.005025135418529664,
+            1.996733245058823,
+            0.5056466888287904,
+            -0.05768305378721904,
+            0.0,
+            3.1497943325487467,
+            1.754321334293249,
+            -0.06508839284031387,
+            0.0002858999239571235,
+            -0.0008984292012041952,
+            0.0002006549663990889,
+            0.08913940991641343,
+            0.05361438804750175,
+            0.03553915870961792,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "K0innovation_sum": [
+            0.005873589891048748,
+            0.02171530342544813,
+            0.004797918094112164,
+            2.168598460770845,
+            0.49363123230789185,
+            -0.007311065305916475,
+            0.0,
+            2.7077818347575264,
+            1.6592309391971232,
+            0.009418108184829849,
+            -0.00014398634410045096,
+            -0.0007891546192498631,
+            -0.00011067365895443033,
+            0.0766352115253641,
+            0.05096757109627549,
+            0.028421704246608354,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "start": 220,
+          "end": 280,
+          "committed_updates": 600,
+          "residual_rms_median": 0.03982382833207904,
+          "normalized_hessian_eigenvalues_median": [
+            0.14868700746078437,
+            0.5780962206755167,
+            0.7442911238340686,
+            1.0155113220931233,
+            1.315972132841229,
+            2.188852178996597
+          ],
+          "nis_per_match_median": 1.5893925466142855,
+          "Kinnovation_sum": [
+            -0.008865328448344565,
+            -0.007541828087564186,
+            -0.006072875438163476,
+            4.863775892974225,
+            0.7822166600575322,
+            0.29417403113614776,
+            0.0,
+            11.037436780864182,
+            3.8167344480263576,
+            0.09661912611985404,
+            0.00043369761379974327,
+            -5.6307701937012247e-05,
+            0.0002574088072580144,
+            0.3107258724146718,
+            0.1219784720410385,
+            0.12243604738294156,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "K0innovation_sum": [
+            -0.2187770627376846,
+            -0.02181899086811156,
+            -0.07472098937355486,
+            4.369187004499763,
+            0.900139071172959,
+            0.17062526699084168,
+            0.0,
+            10.046731245557238,
+            4.013151136080736,
+            -0.24415537814093,
+            0.007064226116308552,
+            0.000424012060974929,
+            0.00243350671871938,
+            0.2786812497804037,
+            0.13560834627495336,
+            0.12144376363538434,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "start": 280,
+          "end": 310,
+          "committed_updates": 300,
+          "residual_rms_median": 0.041138920880111174,
+          "normalized_hessian_eigenvalues_median": [
+            0.15867859920361693,
+            0.6230689324769733,
+            0.7380573337975388,
+            1.0320152600085928,
+            1.2941640574279623,
+            2.166020131652475
+          ],
+          "nis_per_match_median": 1.6979217887390479,
+          "Kinnovation_sum": [
+            0.01338652630840203,
+            -0.016655604608260495,
+            0.006007254852742619,
+            3.1918696142279592,
+            0.10826801907532707,
+            0.2786381830672711,
+            0.0,
+            6.884478894155647,
+            0.5232913705146327,
+            0.18096834090974903,
+            -0.0004051435767607134,
+            0.0005877503953204356,
+            -0.00017298105314778303,
+            0.19343823550166261,
+            0.011015342052185502,
+            0.0793637801553471,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "K0innovation_sum": [
+            -0.001182443860951012,
+            -0.025255012563524106,
+            -0.0022928847783611653,
+            2.559551338097312,
+            0.12530271147643157,
+            0.19914432249045066,
+            0.0,
+            5.741459437723351,
+            0.5716199084568594,
+            0.024501438559461568,
+            5.906863790352975e-05,
+            0.000842300243977996,
+            9.095696636582327e-05,
+            0.15929130669125166,
+            0.012952008145425598,
+            0.06990360985264488,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "start": 310,
+          "end": 320,
+          "committed_updates": 100,
+          "residual_rms_median": 0.051729682602423006,
+          "normalized_hessian_eigenvalues_median": [
+            0.13116437187215352,
+            0.39775081413879876,
+            0.6454204265496857,
+            0.8412139365095891,
+            1.750773230075381,
+            2.192722704192204
+          ],
+          "nis_per_match_median": 2.681257798662351,
+          "Kinnovation_sum": [
+            -0.030284621232809825,
+            0.0015510649959594616,
+            0.012150980792294614,
+            3.5519305477955214,
+            0.5370070125572473,
+            0.3879213247122623,
+            0.0,
+            7.135046906481445,
+            2.622135968797457,
+            0.5068391168362568,
+            0.0009540828014389888,
+            6.466385974029912e-05,
+            -0.0003808513863132883,
+            -0.22787658269564223,
+            -0.021280627336644695,
+            -0.08263139227614086,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "K0innovation_sum": [
+            -0.029338215753566828,
+            0.003517554090732595,
+            0.014507863506696857,
+            2.98366697516729,
+            0.5391761815191237,
+            0.33123118664692636,
+            0.0,
+            5.877418594179575,
+            2.651120649333153,
+            0.37496327768353466,
+            0.0009612987925852967,
+            -6.322067603864845e-06,
+            -0.00043607654237926236,
+            -0.20398185373957883,
+            -0.026267519759343178,
+            -0.07231451665301193,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "start": 320,
+          "end": 337,
+          "committed_updates": 170,
+          "residual_rms_median": 0.05286983753062165,
+          "normalized_hessian_eigenvalues_median": [
+            0.25088941040430257,
+            0.6118161703194489,
+            0.7738052023970428,
+            0.9227976739520034,
+            1.4308093041697432,
+            1.9759931967539588
+          ],
+          "nis_per_match_median": 2.776361323679372,
+          "Kinnovation_sum": [
+            -0.0014179122601591112,
+            -0.012530098829037661,
+            0.04043275542426225,
+            6.640921709990979,
+            1.185717130074725,
+            0.6895866688442827,
+            0.0,
+            13.64043816605124,
+            3.7759375269031876,
+            1.1221054581706573,
+            0.0004510662369669171,
+            1.4893518317613176e-05,
+            -0.001140617386863033,
+            -0.398221828534688,
+            -0.13485216178174522,
+            -0.12777109299420578,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "K0innovation_sum": [
+            0.08258958879077319,
+            -0.00712876036001731,
+            0.053489544758899166,
+            7.114777047635242,
+            1.3579993774560648,
+            0.7462852130921851,
+            0.0,
+            13.436105823907122,
+            3.9366136811558845,
+            1.079985224751864,
+            -0.002216424630810599,
+            -9.614725190113374e-05,
+            -0.001559735259987977,
+            -0.3929457677640772,
+            -0.13706740129348333,
+            -0.12449374577437769,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "start": 337,
+          "end": 360,
+          "committed_updates": 230,
+          "residual_rms_median": 0.057029696896857336,
+          "normalized_hessian_eigenvalues_median": [
+            0.24552367496878588,
+            0.4773412240928051,
+            0.7458889683019061,
+            0.924630531566485,
+            1.4071007162725113,
+            2.1318779463964868
+          ],
+          "nis_per_match_median": 3.2110797921292287,
+          "Kinnovation_sum": [
+            0.14642816303215828,
+            -0.04642880267864841,
+            -0.14857517615162338,
+            12.462799464442758,
+            2.610325418293075,
+            1.7424887765024504,
+            0.0,
+            29.01559040293672,
+            5.363984586978831,
+            3.148255603899362,
+            -0.004461883244599435,
+            0.00037760553773033534,
+            0.00469446922207327,
+            -0.8612307995443683,
+            -0.03437603630046379,
+            -0.2434894942221406,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "K0innovation_sum": [
+            0.21879153465935214,
+            -0.04860478086030698,
+            -0.14087578712346488,
+            14.062450587530034,
+            2.87141939401141,
+            1.973989775750758,
+            0.0,
+            30.324948900069877,
+            5.557770418961093,
+            3.340003624567903,
+            -0.006721020313616548,
+            0.0004258489069685381,
+            0.0044607899389846745,
+            -0.8981661603583161,
+            -0.04109003772394767,
+            -0.25785530526228395,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "detail": {
+        "groups": 1980,
+        "points": 3322070,
+        "max_scaled_errors": {
+          "hessian": 1.676752044711731e-11,
+          "score": 7.706392387329324e-11,
+          "innovation": 7.21707366881045e-17,
+          "distance_sign": 0.0,
+          "gain_contribution": 3.516283602375646e-16,
+          "gain_noise": 2.7102420763576608e-20,
+          "gain_norm": 2.1422584619698674e-16,
+          "KH": 2.591976819388574e-14,
+          "residual_stats": 2.0160709584885182e-17
+        },
+        "passed": true
+      },
+      "passed": true
+    }
+  },
+  "checks_notes": [
+    "Short replays precede the metadata-only correction of inverse-exposure units; final binary passed all four CTests and both 360-second replays.",
+    "Mapping durations use the existing console timer; its last row was buffered at SIGINT (3567 of 3568 rows). Time windows use X-ICP scan times to avoid rounded mat_out boundaries.",
+    "Independent 19-state and 6-state unconstrained correction reconstructions agreed; disabled X-ICP gain contribution max error 8.674e-17.",
+    "Empty logs and missing iteration rows were rejected by the analyzer; no-map scans were accepted as uncommitted.",
+    "The existing SIGINT shutdown exit -11 occurred only after requested replay duration; trajectories remain subject to asynchronous ikd-tree rebuilding."
+  ]
+}

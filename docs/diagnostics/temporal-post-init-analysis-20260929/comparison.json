@@ -1,0 +1,101 @@
+{
+  "processed_imu_exact_match": true,
+  "processed_imu_rows": 129004,
+  "matched_scan_times": 6448,
+  "max_time_difference": 0.0,
+  "effective_parameter_differences": {
+    "debug.log_dir": [
+      "/external/diagnostic_captures/lio-reconstruction-20260928-113320-mx5y2ada/logs",
+      "/external/diagnostic_captures/lio-reconstruction-20260929-080320-g0vyyobv/logs"
+    ],
+    "lio.diagnostics.output_dir": [
+      "/external/diagnostic_captures/lio-reconstruction-20260928-113320-mx5y2ada/diagnostics",
+      "/external/diagnostic_captures/lio-reconstruction-20260929-080320-g0vyyobv/diagnostics"
+    ],
+    "lio.temporal.initialization_mode": [
+      null,
+      "legacy_voxel"
+    ]
+  },
+  "changed_source_files": [
+    "humble_ws/src/fast-livo2/config/go2w_fast_livo2.yaml",
+    "humble_ws/src/fast-livo2/include/LIVMapper.h",
+    "humble_ws/src/fast-livo2/include/temporal_lio.h",
+    "humble_ws/src/fast-livo2/include/temporal_trajectory.h",
+    "humble_ws/src/fast-livo2/include/voxel_map.h",
+    "humble_ws/src/fast-livo2/src/LIVMapper.cpp",
+    "humble_ws/src/fast-livo2/src/LIVMapper_temporal.cpp",
+    "humble_ws/src/fast-livo2/src/temporal_planes.cpp",
+    "humble_ws/src/fast-livo2/src/temporal_window.cpp",
+    "humble_ws/src/fast-livo2/src/voxel_map_initialization.cpp",
+    "humble_ws/src/fast-livo2/tests/temporal_lio_test.cpp",
+    "humble_ws/src/fast-livo2/tests/voxel_initialization_test.cpp",
+    "scripts/fast_livo2/reconstruct_raw.sh",
+    "scripts/fast_livo2/reconstruction_capture.py",
+    "scripts/fast_livo2/tests/test_reconstruction_capture.py",
+    "scripts/fast_livo2/validate_temporal_replay.py"
+  ],
+  "current_estimator_source_differs_from_new_capture": [],
+  "captures": {
+    "old": {
+      "capture": "/external/diagnostic_captures/lio-reconstruction-20260928-113320-mx5y2ada",
+      "scans": 6450,
+      "state_rows": 74819,
+      "first_last_time": [
+        3.19929647446,
+        648.099640608
+      ],
+      "status_counts": {
+        "initialized": 1,
+        "updated": 6449
+      },
+      "max_scan_gap": 0.10232996899992486,
+      "max_imu_gap": 0.0106685161591,
+      "summary_exists": false,
+      "minimum_covariance_eigenvalue": 1.3131530837340325e-06,
+      "final_position": [
+        1.32547613408,
+        5.99630307497,
+        -5.85625617036
+      ],
+      "lengths": {
+        "online_all_scans": 769.9019994859509,
+        "final_keyframes": 759.1735398874415,
+        "mixed_revisions_all_scans_not_current_publisher": 1056.063670147089
+      },
+      "keyframes": 1150,
+      "keyframe_revision_position_max": 3.7478875621885646,
+      "keyframe_revision_z_max": 3.74737581297
+    },
+    "new": {
+      "capture": "/external/diagnostic_captures/lio-reconstruction-20260929-080320-g0vyyobv",
+      "scans": 6448,
+      "state_rows": 74815,
+      "first_last_time": [
+        3.40009045601,
+        648.099640608
+      ],
+      "status_counts": {
+        "initialized": 1,
+        "updated": 6447
+      },
+      "max_scan_gap": 0.10232996899992486,
+      "max_imu_gap": 0.0106685161591,
+      "summary_exists": true,
+      "minimum_covariance_eigenvalue": 1.3075005742747916e-06,
+      "final_position": [
+        2.0446148416,
+        4.94810025635,
+        -5.90302118424
+      ],
+      "lengths": {
+        "online_all_scans": 768.4164620886925,
+        "final_keyframes": 758.782410979109,
+        "mixed_revisions_all_scans_not_current_publisher": 1035.1027534431005
+      },
+      "keyframes": 1150,
+      "keyframe_revision_position_max": 3.739501649009522,
+      "keyframe_revision_z_max": 3.7385270456899997
+    }
+  }
+}

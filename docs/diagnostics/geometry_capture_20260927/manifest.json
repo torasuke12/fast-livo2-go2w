@@ -1,0 +1,70 @@
+{
+  "capture": "/home/srg-f-rei/fast_livo2_go2w/src/fast-livo2-go2w/diagnostic_captures/lio-geometry-ehdz2pcz",
+  "run": "/home/srg-f-rei/fast_livo2_go2w/src/fast-livo2-go2w/diagnostic_captures/lio-geometry-ehdz2pcz/diagnostics/run-1790505839456699151-0",
+  "files": {
+    "capture/imu.txt": {
+      "bytes": 4880235,
+      "sha256": "76a3a7588c7d433204cb65aac693af843a7f54281e4bbb5cc473f459beb35195"
+    },
+    "capture/mat_out.txt": {
+      "bytes": 615392,
+      "sha256": "c1eb060ca5a4768ae966e8e3852b8aa82b492bf5557f6f425530e8dbd1e41ec2"
+    },
+    "capture/mat_pre.txt": {
+      "bytes": 597522,
+      "sha256": "1d2a8e9a6353a17e2ed76b16dedfb16a17f15628d0869bb872f590e7c2536eed"
+    },
+    "capture/node.log": {
+      "bytes": 4634727,
+      "sha256": "a0b5cec026a34dfc753837cbe0084ae167a3ebc650d77687dcc2e0fb8d0ae939"
+    },
+    "capture/player.log": {
+      "bytes": 654,
+      "sha256": "4847ee6a466596329efec60aea3ef762819fcaadcc24bbac69b4dff1d791108c"
+    },
+    "capture/received_imu_stamps.txt": {
+      "bytes": 1320140,
+      "sha256": "2a6e3098301d2f5295a472abfd3cfad19a65b9e811ac97d763b919b98715de03"
+    },
+    "capture/summary.json": {
+      "bytes": 4813,
+      "sha256": "edf3daeb61186bf13f38b48b8949963b5edc93b0a1c139a7a5c27aedede95091"
+    },
+    "capture/xicp_diagnostic.csv": {
+      "bytes": 18579126,
+      "sha256": "36c4d274506cdf2a5096336acc8507153785f3d856ce1d3c20df4a375438048e"
+    },
+    "diagnostics/run-1790505839456699151-0/correspondences.csv": {
+      "bytes": 1300522912,
+      "sha256": "d5f04832140b73f7b8db9e267662cfae1519c055d5d525d704cc8b6ffbade12b"
+    },
+    "diagnostics/run-1790505839456699151-0/geometry.csv": {
+      "bytes": 5071555467,
+      "sha256": "f793cf084a825e0e274409bba7cd66e54d733a08eed04ae57f30af93d27fbf8f"
+    },
+    "diagnostics/run-1790505839456699151-0/geometry_states.csv": {
+      "bytes": 3045999,
+      "sha256": "a08347ba9f841c08f777ef8d9e16545f9954b682d73dd2c8c2521021d85bb3b4"
+    },
+    "diagnostics/run-1790505839456699151-0/iterations.csv": {
+      "bytes": 138898183,
+      "sha256": "d84865dd8d14f7932e96e2bb3b7bafc50d4788681f5782989271334ab8ba37ad"
+    },
+    "diagnostics/run-1790505839456699151-0/metadata.json": {
+      "bytes": 7850,
+      "sha256": "d0c81260750826fa5835c062375e905ddccf2b3496f608582343faede0d5a2b5"
+    },
+    "diagnostics/run-1790505839456699151-0/scans.csv": {
+      "bytes": 37618776,
+      "sha256": "86c85f1e5eba5ea59bf9f48b32266d2c5d7f9dc7045422374d6ef648cadc632f"
+    }
+  },
+  "processed_imu_rows": 65382,
+  "imu_prefix_equal_to_previous_capture": true,
+  "received_imu_max_gap_sec": 0.008346048,
+  "received_imu_gaps_over_10ms": 0,
+  "received_imu_nonpositive_intervals": 0,
+  "previous_normal_logs_equal_to_backup": true,
+  "diagnostic_failures": 0,
+  "rejected_update_messages": 0
+}

@@ -1,0 +1,552 @@
+[
+  {
+    "start": 20,
+    "end": 60,
+    "samples": 8,
+    "floor_samples": 8,
+    "accepted": 3952.5,
+    "frozen_fraction": 0.2598862358288344,
+    "unique_planes": 1419.5,
+    "effective_forward_plane_count": 77.36202752179443,
+    "frozen_forward_information_fraction": 0.011395351498044106,
+    "top10_planes_forward_information_fraction": 0.2529511358310652,
+    "forward_information": 145782.29951842246,
+    "forward_after_rotation_marginalization": 145487.8622663793,
+    "selected_candidates_gate_flips": 3.0,
+    "matching_covariance_current_formula_max_abs": 2.0816681711721685e-16,
+    "inverse_variance_quantiles": [
+      726.810342183328,
+      890.1733001588639,
+      953.7638017678294
+    ],
+    "constant_variance_fraction_quantiles": [
+      0.7268103421833281,
+      0.8901733001588639,
+      0.9537638017678294
+    ],
+    "plane_variance_fraction_quantiles": [
+      0.0014435519756187142,
+      0.008599598121837818,
+      0.07936500123036758
+    ],
+    "frame_corrected_gate_ratio_quantiles": [
+      0.8202625733903508,
+      0.9904770205981681,
+      1.2863825738469234
+    ],
+    "floor_world_tilt_deg": 1.5371917676974292,
+    "map_floor_world_tilt_deg": 1.7239877299718416,
+    "map_floor_angle_deg": 1.1833930282388825,
+    "floor_frozen_fraction": 0.4397769949487281,
+    "floor_rms": 0.0067089474448120525,
+    "floor_status": [
+      0,
+      0,
+      0,
+      0,
+      90,
+      3652,
+      0,
+      0,
+      1,
+      116,
+      0
+    ],
+    "floor_acceptance": 0.9463591604042498
+  },
+  {
+    "start": 170,
+    "end": 180,
+    "samples": 10,
+    "floor_samples": 10,
+    "accepted": 4362.5,
+    "frozen_fraction": 0.5728477770903142,
+    "unique_planes": 1478.5,
+    "effective_forward_plane_count": 65.5529258413718,
+    "frozen_forward_information_fraction": 0.5206157969569071,
+    "top10_planes_forward_information_fraction": 0.31689780318273875,
+    "forward_information": 422422.3022607879,
+    "forward_after_rotation_marginalization": 408194.5268479523,
+    "selected_candidates_gate_flips": 7.0,
+    "matching_covariance_current_formula_max_abs": 8.326672684688674e-17,
+    "inverse_variance_quantiles": [
+      731.5568022324624,
+      892.7057400249854,
+      957.2895060759847
+    ],
+    "constant_variance_fraction_quantiles": [
+      0.7315568022324623,
+      0.8927057400249854,
+      0.9572895060759847
+    ],
+    "plane_variance_fraction_quantiles": [
+      0.0012682845954184773,
+      0.0066288922917447516,
+      0.053810268309324755
+    ],
+    "frame_corrected_gate_ratio_quantiles": [
+      0.8102385317460585,
+      0.9826278507101422,
+      1.2781934917613336
+    ],
+    "floor_world_tilt_deg": 1.8124052022255852,
+    "map_floor_world_tilt_deg": 1.559161683209143,
+    "map_floor_angle_deg": 1.1773059800158148,
+    "floor_frozen_fraction": 0.6413667343109852,
+    "floor_rms": 0.007005009422283372,
+    "floor_status": [
+      0,
+      0,
+      0,
+      0,
+      89,
+      6066,
+      0,
+      0,
+      0,
+      97,
+      0
+    ],
+    "floor_acceptance": 0.9702495201535508
+  },
+  {
+    "start": 180,
+    "end": 200,
+    "samples": 20,
+    "floor_samples": 20,
+    "accepted": 3897.0,
+    "frozen_fraction": 0.2567919153013722,
+    "unique_planes": 1382.0,
+    "effective_forward_plane_count": 78.44918624787697,
+    "frozen_forward_information_fraction": 0.012662296181988466,
+    "top10_planes_forward_information_fraction": 0.24996470836582535,
+    "forward_information": 125105.4078097078,
+    "forward_after_rotation_marginalization": 123905.10060278238,
+    "selected_candidates_gate_flips": 5.0,
+    "matching_covariance_current_formula_max_abs": 8.326672684688674e-17,
+    "inverse_variance_quantiles": [
+      733.1021361054036,
+      892.797522344566,
+      955.685827519585
+    ],
+    "constant_variance_fraction_quantiles": [
+      0.7331021361054035,
+      0.8927975223445661,
+      0.9556858275195851
+    ],
+    "plane_variance_fraction_quantiles": [
+      0.0014168541946831328,
+      0.008436306436056144,
+      0.07829148836231063
+    ],
+    "frame_corrected_gate_ratio_quantiles": [
+      0.8237500445464816,
+      0.9918572706983291,
+      1.282522415867433
+    ],
+    "floor_world_tilt_deg": 1.0183961966309198,
+    "map_floor_world_tilt_deg": 1.3855078932178406,
+    "map_floor_angle_deg": 0.9797016687390933,
+    "floor_frozen_fraction": 0.4338040915477863,
+    "floor_rms": 0.006480679593840156,
+    "floor_status": [
+      0,
+      0,
+      0,
+      0,
+      204,
+      8944,
+      0,
+      0,
+      4,
+      213,
+      0
+    ],
+    "floor_acceptance": 0.9550453817405232
+  },
+  {
+    "start": 200,
+    "end": 220,
+    "samples": 20,
+    "floor_samples": 20,
+    "accepted": 3716.0,
+    "frozen_fraction": 0.2558850989304068,
+    "unique_planes": 1326.0,
+    "effective_forward_plane_count": 47.833689781953126,
+    "frozen_forward_information_fraction": 0.010067523755776627,
+    "top10_planes_forward_information_fraction": 0.3552362340955568,
+    "forward_information": 77891.39652382742,
+    "forward_after_rotation_marginalization": 77112.20632444017,
+    "selected_candidates_gate_flips": 4.0,
+    "matching_covariance_current_formula_max_abs": 9.020562075079397e-17,
+    "inverse_variance_quantiles": [
+      734.475374681454,
+      889.0931360446245,
+      965.0351667053461
+    ],
+    "constant_variance_fraction_quantiles": [
+      0.7344753746814541,
+      0.8890931360446246,
+      0.9650351667053461
+    ],
+    "plane_variance_fraction_quantiles": [
+      0.001397550663421938,
+      0.008280604675378885,
+      0.08985473429677136
+    ],
+    "frame_corrected_gate_ratio_quantiles": [
+      0.8354854657242314,
+      0.9908193165277772,
+      1.317332443984701
+    ],
+    "floor_world_tilt_deg": 0.3521082990101801,
+    "map_floor_world_tilt_deg": 1.0666661580621306,
+    "map_floor_angle_deg": 1.0495698593191292,
+    "floor_frozen_fraction": 0.2781238327510821,
+    "floor_rms": 0.0066059151337270975,
+    "floor_status": [
+      0,
+      0,
+      0,
+      0,
+      488,
+      8482,
+      0,
+      0,
+      4,
+      304,
+      0
+    ],
+    "floor_acceptance": 0.9142056477689157
+  },
+  {
+    "start": 220,
+    "end": 260,
+    "samples": 8,
+    "floor_samples": 8,
+    "accepted": 4044.5,
+    "frozen_fraction": 0.26764128113385477,
+    "unique_planes": 1394.5,
+    "effective_forward_plane_count": 85.39679484205993,
+    "frozen_forward_information_fraction": 0.03699589795045265,
+    "top10_planes_forward_information_fraction": 0.22877800075549903,
+    "forward_information": 173221.68516112134,
+    "forward_after_rotation_marginalization": 169348.59798431268,
+    "selected_candidates_gate_flips": 5.0,
+    "matching_covariance_current_formula_max_abs": 5.551115123125783e-17,
+    "inverse_variance_quantiles": [
+      724.7836160984972,
+      889.8183209829484,
+      956.8759465906276
+    ],
+    "constant_variance_fraction_quantiles": [
+      0.7247836160984972,
+      0.8898183209829484,
+      0.9568759465906276
+    ],
+    "plane_variance_fraction_quantiles": [
+      0.001445689830867344,
+      0.008810554020726762,
+      0.09389761037850439
+    ],
+    "frame_corrected_gate_ratio_quantiles": [
+      0.8426574044308555,
+      0.9817551794850146,
+      1.2396055050068093
+    ],
+    "floor_world_tilt_deg": 1.2617521410853145,
+    "map_floor_world_tilt_deg": 1.1987947148520135,
+    "map_floor_angle_deg": 0.8071018674481083,
+    "floor_frozen_fraction": 0.4103146530769618,
+    "floor_rms": 0.0064896720151943876,
+    "floor_status": [
+      0,
+      0,
+      0,
+      0,
+      102,
+      4272,
+      0,
+      0,
+      0,
+      89,
+      0
+    ],
+    "floor_acceptance": 0.9572036746583016
+  },
+  {
+    "start": 260,
+    "end": 300,
+    "samples": 12,
+    "floor_samples": 12,
+    "accepted": 3927.5,
+    "frozen_fraction": 0.25561047177267454,
+    "unique_planes": 1435.5,
+    "effective_forward_plane_count": 91.82204891021448,
+    "frozen_forward_information_fraction": 0.015561414686019657,
+    "top10_planes_forward_information_fraction": 0.24312566274129666,
+    "forward_information": 109471.60494143036,
+    "forward_after_rotation_marginalization": 108263.74189470956,
+    "selected_candidates_gate_flips": 3.5,
+    "matching_covariance_current_formula_max_abs": 4.336808689942018e-17,
+    "inverse_variance_quantiles": [
+      735.299728082012,
+      891.434793198945,
+      959.7146975949327
+    ],
+    "constant_variance_fraction_quantiles": [
+      0.735299728082012,
+      0.891434793198945,
+      0.9597146975949327
+    ],
+    "plane_variance_fraction_quantiles": [
+      0.0015300533184502817,
+      0.008749662922162291,
+      0.08505745600857086
+    ],
+    "frame_corrected_gate_ratio_quantiles": [
+      0.8537308638311027,
+      0.9779457554545914,
+      1.2019112996420875
+    ],
+    "floor_world_tilt_deg": 3.2318151329288196,
+    "map_floor_world_tilt_deg": 3.463504678248878,
+    "map_floor_angle_deg": 0.7770833304021182,
+    "floor_frozen_fraction": 0.37737544109553567,
+    "floor_rms": 0.00640969019697269,
+    "floor_status": [
+      0,
+      0,
+      0,
+      0,
+      99,
+      5573,
+      0,
+      0,
+      5,
+      175,
+      0
+    ],
+    "floor_acceptance": 0.952323991797676
+  },
+  {
+    "start": 300,
+    "end": 310,
+    "samples": 10,
+    "floor_samples": 10,
+    "accepted": 3924.0,
+    "frozen_fraction": 0.2680382065992737,
+    "unique_planes": 1402.0,
+    "effective_forward_plane_count": 95.21179913345486,
+    "frozen_forward_information_fraction": 0.02931358468775707,
+    "top10_planes_forward_information_fraction": 0.21964008478428748,
+    "forward_information": 248478.29467649182,
+    "forward_after_rotation_marginalization": 242533.98515580635,
+    "selected_candidates_gate_flips": 9.5,
+    "matching_covariance_current_formula_max_abs": 3.0357660829594124e-18,
+    "inverse_variance_quantiles": [
+      715.2883935460529,
+      881.2211575452155,
+      966.1110013446305
+    ],
+    "constant_variance_fraction_quantiles": [
+      0.715288393546053,
+      0.8812211575452156,
+      0.9661110013446306
+    ],
+    "plane_variance_fraction_quantiles": [
+      0.0012419832303893143,
+      0.008939555323378048,
+      0.08649132591259015
+    ],
+    "frame_corrected_gate_ratio_quantiles": [
+      0.8284119234493585,
+      0.9775664340470275,
+      1.1448731709272124
+    ],
+    "floor_world_tilt_deg": 3.765296667399131,
+    "map_floor_world_tilt_deg": 3.3620663937771464,
+    "map_floor_angle_deg": 0.9984687095931741,
+    "floor_frozen_fraction": 0.6310732520175548,
+    "floor_rms": 0.0063753758119110306,
+    "floor_status": [
+      0,
+      0,
+      0,
+      0,
+      64,
+      4360,
+      0,
+      0,
+      2,
+      93,
+      0
+    ],
+    "floor_acceptance": 0.964815224607214
+  },
+  {
+    "start": 315,
+    "end": 320,
+    "samples": 5,
+    "floor_samples": 5,
+    "accepted": 3772.0,
+    "frozen_fraction": 0.6081903707802988,
+    "unique_planes": 1627.0,
+    "effective_forward_plane_count": 66.4588922811687,
+    "frozen_forward_information_fraction": 0.43412859448893326,
+    "top10_planes_forward_information_fraction": 0.28467692319945337,
+    "forward_information": 93392.34519553286,
+    "forward_after_rotation_marginalization": 78352.45310883029,
+    "selected_candidates_gate_flips": 10.0,
+    "matching_covariance_current_formula_max_abs": 1.249000902703301e-16,
+    "inverse_variance_quantiles": [
+      737.4599723746958,
+      903.1080382427444,
+      963.7317700371557
+    ],
+    "constant_variance_fraction_quantiles": [
+      0.7374599723746958,
+      0.9031080382427444,
+      0.9637317700371558
+    ],
+    "plane_variance_fraction_quantiles": [
+      0.0011026003066905152,
+      0.005851270319040975,
+      0.03896506276190551
+    ],
+    "frame_corrected_gate_ratio_quantiles": [
+      0.8627778474381528,
+      0.9797670662581535,
+      1.2900419683983857
+    ],
+    "floor_world_tilt_deg": 3.2075249569786455,
+    "map_floor_world_tilt_deg": 3.3997519918393753,
+    "map_floor_angle_deg": 0.7577595618408735,
+    "floor_frozen_fraction": 0.811088295687885,
+    "floor_rms": 0.005681418105845309,
+    "floor_status": [
+      0,
+      0,
+      0,
+      0,
+      43,
+      2304,
+      0,
+      0,
+      0,
+      32,
+      0
+    ],
+    "floor_acceptance": 0.9684741488020177
+  },
+  {
+    "start": 320,
+    "end": 323,
+    "samples": 30,
+    "floor_samples": 30,
+    "accepted": 3607.0,
+    "frozen_fraction": 0.5141402653778891,
+    "unique_planes": 1666.5,
+    "effective_forward_plane_count": 38.98972724894655,
+    "frozen_forward_information_fraction": 0.2085441696771798,
+    "top10_planes_forward_information_fraction": 0.42638804220017534,
+    "forward_information": 32260.360324648573,
+    "forward_after_rotation_marginalization": 30991.53891909311,
+    "selected_candidates_gate_flips": 8.0,
+    "matching_covariance_current_formula_max_abs": 7.28583859910259e-17,
+    "inverse_variance_quantiles": [
+      737.0295387209676,
+      903.6145916187706,
+      958.9589941671325
+    ],
+    "constant_variance_fraction_quantiles": [
+      0.7370295387209675,
+      0.9036145916187707,
+      0.9589589941671326
+    ],
+    "plane_variance_fraction_quantiles": [
+      0.0014821072103925594,
+      0.006624765546766888,
+      0.07751649044897424
+    ],
+    "frame_corrected_gate_ratio_quantiles": [
+      0.8574484225550653,
+      0.9769501014294946,
+      1.258386614509618
+    ],
+    "floor_world_tilt_deg": 3.257967670910905,
+    "map_floor_world_tilt_deg": 3.254686095448489,
+    "map_floor_angle_deg": 1.184717886816979,
+    "floor_frozen_fraction": 0.5774402633573412,
+    "floor_rms": 0.006200644606530406,
+    "floor_status": [
+      0,
+      0,
+      0,
+      0,
+      230,
+      13865,
+      0,
+      0,
+      0,
+      119,
+      0
+    ],
+    "floor_acceptance": 0.9754467426480934
+  },
+  {
+    "start": 323,
+    "end": 331,
+    "samples": 7,
+    "floor_samples": 7,
+    "accepted": 3504.0,
+    "frozen_fraction": 0.4805854241338112,
+    "unique_planes": 1136.0,
+    "effective_forward_plane_count": 36.29045288788843,
+    "frozen_forward_information_fraction": 0.24062043758307686,
+    "top10_planes_forward_information_fraction": 0.44027033304442925,
+    "forward_information": 30579.760068690473,
+    "forward_after_rotation_marginalization": 29450.111430457757,
+    "selected_candidates_gate_flips": 7.0,
+    "matching_covariance_current_formula_max_abs": 8.326672684688674e-17,
+    "inverse_variance_quantiles": [
+      696.2435957772158,
+      879.3986724524475,
+      956.2925862260292
+    ],
+    "constant_variance_fraction_quantiles": [
+      0.6962435957772157,
+      0.8793986724524476,
+      0.9562925862260293
+    ],
+    "plane_variance_fraction_quantiles": [
+      0.0017110944930343328,
+      0.018000095789799685,
+      0.18407522165110166
+    ],
+    "frame_corrected_gate_ratio_quantiles": [
+      0.8635128710647186,
+      0.9895675013606693,
+      1.2498029762997926
+    ],
+    "floor_world_tilt_deg": 3.355089990625315,
+    "map_floor_world_tilt_deg": 3.3849063737934326,
+    "map_floor_angle_deg": 0.7137333632000722,
+    "floor_frozen_fraction": 0.8122270742358079,
+    "floor_rms": 0.006539589755437697,
+    "floor_status": [
+      0,
+      0,
+      0,
+      0,
+      123,
+      2910,
+      0,
+      0,
+      5,
+      238,
+      0
+    ],
+    "floor_acceptance": 0.8882783882783882
+  }
+]

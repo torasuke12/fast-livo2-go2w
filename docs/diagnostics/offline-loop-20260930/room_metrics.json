@@ -1,0 +1,45 @@
+{
+  "before": {
+    "start_to_return": {
+      "points": 20839,
+      "overlap_15cm": 0.0,
+      "nearest_median_m": 6.187045286360984,
+      "nearest_p90_m": 7.859795750025618,
+      "inlier_plane_rmse_m": null
+    },
+    "return_to_start": {
+      "points": 16684,
+      "overlap_15cm": 0.0,
+      "nearest_median_m": 4.789978216614371,
+      "nearest_p90_m": 6.070756047181352,
+      "inlier_plane_rmse_m": null
+    }
+  },
+  "after": {
+    "start_to_return": {
+      "points": 18535,
+      "overlap_15cm": 0.2444564337739412,
+      "nearest_median_m": 0.7050469749629511,
+      "nearest_p90_m": 1.972919610663495,
+      "inlier_plane_rmse_m": 0.03500057398296511
+    },
+    "return_to_start": {
+      "points": 10524,
+      "overlap_15cm": 0.4171417711896617,
+      "nearest_median_m": 0.2702971460018412,
+      "nearest_p90_m": 1.3534445419407102,
+      "inlier_plane_rmse_m": 0.03141479573464463
+    }
+  },
+  "definition": "Held-out odd returns; no evaluation-time alignment. Nearest distances include visibility/occlusion differences. Inlier plane RMSE only uses correspondences within 15 cm, not absolute trajectory accuracy.",
+  "windows_seconds": [
+    [
+      4.0,
+      12.0
+    ],
+    [
+      632.0,
+      648.0
+    ]
+  ]
+}

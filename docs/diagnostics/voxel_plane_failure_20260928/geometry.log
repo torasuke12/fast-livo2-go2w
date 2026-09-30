@@ -1,0 +1,12 @@
+profiled 20 frames at 99.9991090297699
+profiled 40 frames at 175.99957990646362
+profiled 60 frames at 196.0000171661377
+profiled 80 frames at 215.99926376342773
+profiled 100 frames at 295.9994809627533
+profiled 120 frames at 315.9998559951782
+profiled 140 frames at 321.59984064102173
+profiled 160 frames at 328.99950981140137
+162 voxel-plane frames, 716888 queries; geometry checks FAIL
+diagnostic_captures/voxel-plane-analysis-20260928/sample: 162 scans, 629 iterations, 162 committed; checks PASS
+Results: diagnostic_captures/voxel-plane-analysis-20260928/geometry-analysis/filter-validation/summary.json
+Sample filter/covariance/residual/gain/Hessian PASS; geometry qualification saved

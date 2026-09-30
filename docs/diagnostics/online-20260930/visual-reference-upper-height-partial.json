@@ -1,0 +1,46 @@
+{
+  "confidence-sat100-lio": {
+    "interval_sec": [
+      110,
+      300
+    ],
+    "p10_z": 3.382191387773,
+    "p90_z": 3.593635771448,
+    "central_80_percent_width_m": 0.21144438367499996,
+    "all_samples_range_m": 0.28889111826,
+    "definition": "Variation of estimated body height on upper corridor; not ground-truth height accuracy."
+  },
+  "visual-visible-livo": {
+    "interval_sec": [
+      110,
+      300
+    ],
+    "p10_z": 3.559781117334,
+    "p90_z": 3.753827815602,
+    "central_80_percent_width_m": 0.19404669826800003,
+    "all_samples_range_m": 0.29727887039,
+    "definition": "Variation of estimated body height on upper corridor; not ground-truth height accuracy."
+  },
+  "visual-reference-weak-livo": {
+    "interval_sec": [
+      110,
+      300
+    ],
+    "p10_z": 3.343318955858,
+    "p90_z": 3.380709218816,
+    "central_80_percent_width_m": 0.037390262958000076,
+    "all_samples_range_m": 0.0851457829600002,
+    "definition": "Variation of estimated body height on upper corridor; not ground-truth height accuracy."
+  },
+  "visual-reference-all-livo": {
+    "interval_sec": [
+      110,
+      300
+    ],
+    "p10_z": 3.375571560362,
+    "p90_z": 3.427365250882,
+    "central_80_percent_width_m": 0.05179369052000027,
+    "all_samples_range_m": 0.10815957033999979,
+    "definition": "Variation of estimated body height on upper corridor; not ground-truth height accuracy."
+  }
+}

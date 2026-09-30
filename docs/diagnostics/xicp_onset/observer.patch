@@ -1,0 +1,23 @@
+--- src/voxel_map.cpp
++++ src/voxel_map.cpp
+@@ -11,6 +11,7 @@
+ */
+ 
+ #include "voxel_map.h"
++#include "observer.h"
+ 
+ #include <algorithm>
+ #include <cstdlib>
+@@ -751,6 +752,12 @@
+       // VD(DIM_STATE) P_diag = _state.cov.diagonal();
+       EKF_stop_flg = true;
+     }
++    observeLio(scan_time, iterCount, EKF_stop_flg, config_setting_.xicp_.enabled,
++               Hsub, R_inv, meas_vec, vec, solution, iteration_covariance, state_.cov,
++               xicp_update.gain,
++               xicp_detection.constraints.rows() ? xicp_detection.constraints *
++                 fast_livo2::xicp::localPoseJacobian(before_update.rot_end, extR_, extT_, DIM_STATE) : Eigen::MatrixXd(0, DIM_STATE),
++               xicp_detection.target_gain);
+     if (EKF_stop_flg) break;
+   }
+ 

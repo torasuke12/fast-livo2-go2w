@@ -1,0 +1,59 @@
+{
+  "stop_reason": "interrupt",
+  "exit_statuses": {
+    "node": {
+      "returncode": 0,
+      "node_exit_codes": [
+        -2
+      ]
+    },
+    "player": {
+      "returncode": 0,
+      "node_exit_codes": []
+    },
+    "rviz": {
+      "returncode": 0,
+      "node_exit_codes": []
+    },
+    "monitor": {
+      "returncode": 0
+    }
+  },
+  "imu": {
+    "count": 129619,
+    "first_stamp_ns": 1788781416423539328,
+    "last_stamp_ns": 1788782064491547968,
+    "max_forward_gap_ns": 10668352,
+    "nonincreasing": 0,
+    "gaps_over_20ms": 0,
+    "finished": true,
+    "topic": "/livox/imu",
+    "note": "Counts describe this subscriber; they do not prove estimator receipt or raw-bag completeness."
+  },
+  "last_lio_time_sec": 648.099640608,
+  "reached_360_sec": true,
+  "capture_integrity": "ok",
+  "problems": [],
+  "temporal_window": true,
+  "temporal_status_counts": {
+    "initialized": 1,
+    "updated": 6447
+  },
+  "temporal_initialization": {
+    "time": "3.40009045601",
+    "mode": "legacy_voxel",
+    "status": "ready",
+    "gate_applied": "1",
+    "scans": "3",
+    "points": "15791",
+    "planes": "625",
+    "normal_eigenvalue_0": "0.298269548387",
+    "normal_eigenvalue_1": "0.31324613665",
+    "normal_eigenvalue_2": "0.388484314963",
+    "duration_sec": "0.200793981552",
+    "resets": "0",
+    "reference_points": "15791",
+    "temporal_reference_planes": "245"
+  },
+  "diagnostic_runs": []
+}

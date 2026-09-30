@@ -1,0 +1,36 @@
+{
+  "stage": "R1a existing voxel-plane backend and compatible diagnostics",
+  "ctest": {
+    "passed": 6,
+    "failed": 0
+  },
+  "capture_tests": {
+    "passed": 14,
+    "failed": 0
+  },
+  "voxel_geometry_and_filter_checks": "PASS; deliberate corrupt weight and zero gate variance rejected",
+  "ikdtree_and_legacy_schema_checks": "PASS",
+  "startup": {
+    "startup_and_effective_parameters_passed": true,
+    "correspondence_mode": "voxel_plane",
+    "geometry_enabled": true,
+    "normal_gate_enabled": false,
+    "image_enabled": 0,
+    "exit_code": 0,
+    "binary_sha256": "0b6627da701e0655183e72150d70351e37e3d4bfcc75aa1afda38cb00c12c863",
+    "bag_replayed": false,
+    "sensor_messages_published": false
+  },
+  "raw_fixture_archive": "diagnostic_captures/voxel-plane-switch-validation-20260928",
+  "build_log": "diagnostic_captures/voxel-plane-switch-validation-20260928/build.log",
+  "bag_replayed": false,
+  "weighted_xicp_detection_implemented": false,
+  "temporal_window_implemented": false,
+  "unchanged_from_task_start": [
+    "IMU equations/settings",
+    "calibration",
+    "X-ICP detection and constrained update algebra",
+    "voxel initialization/map update rules",
+    "Hesai YAML"
+  ]
+}

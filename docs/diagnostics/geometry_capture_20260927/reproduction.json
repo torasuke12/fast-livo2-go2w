@@ -1,0 +1,6 @@
+{
+  "sustained_reverse_start_sec_20_scans": 321.099643469,
+  "final_time": 329.99957943,
+  "final_forward_mps": -6.01401465752,
+  "note": "Estimated velocity, not ground truth; a new replay with asynchronous ikd-tree rebuild."
+}

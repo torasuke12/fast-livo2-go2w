@@ -1,0 +1,690 @@
+{
+  "livo-final": {
+    "capture": "/work/livo-10hz/lio-reconstruction-20260929-092958-yjqkog4r",
+    "summary": {
+      "stop_reason": "estimator_duration_reached",
+      "exit_statuses": {
+        "node": {
+          "returncode": 0,
+          "node_exit_codes": []
+        },
+        "player": {
+          "returncode": 0,
+          "node_exit_codes": []
+        },
+        "rviz": {
+          "returncode": 0,
+          "note": "headless validation; RViz not started"
+        },
+        "monitor": {
+          "returncode": 0
+        }
+      },
+      "imu": {
+        "count": 12080,
+        "first_stamp_ns": 1788781416423539328,
+        "last_stamp_ns": 1788781476817071232,
+        "max_forward_gap_ns": 8346048,
+        "nonincreasing": 0,
+        "gaps_over_20ms": 0,
+        "finished": true,
+        "topic": "/livox/imu",
+        "note": "Counts describe this subscriber; they do not prove estimator receipt or raw-bag completeness."
+      },
+      "last_lio_time_sec": 60.3112111092,
+      "reached_360_sec": false,
+      "capture_integrity": "ok",
+      "problems": [],
+      "temporal_window": true,
+      "temporal_status_counts": {
+        "initialized": 1,
+        "updated": 570
+      },
+      "temporal_visual_status_counts": {
+        "no_constraints": 26,
+        "updated": 544
+      },
+      "last_visual_time_sec": 60.2111365795,
+      "temporal_initialization": {
+        "time": "3.2716422081",
+        "mode": "legacy_voxel",
+        "status": "ready",
+        "gate_applied": "1",
+        "scans": "2",
+        "points": "10439",
+        "planes": "415",
+        "normal_eigenvalue_0": "0.292627180417",
+        "normal_eigenvalue_1": "0.311124172261",
+        "normal_eigenvalue_2": "0.396248647322",
+        "duration_sec": "0.100212335587",
+        "resets": "0",
+        "reference_points": "10439",
+        "temporal_reference_planes": "215"
+      },
+      "diagnostic_runs": []
+    },
+    "window_rows": 571,
+    "state_rows": 13944,
+    "minimum_lidar_covariance_eigenvalue": 2.0999711636271046e-07,
+    "logs_sha256": {
+      "temporal_states.csv": "62f515ff54dcb7a24d4f6b2e16a5e5636460aceff9dee66250184b339c2fa7d4",
+      "temporal_visual.csv": "34026aed01187ff93e42d5f353f6f31e23cbb3b91abe9eb00f66f2d135124056",
+      "temporal_window.csv": "6ae05367f43872604ba7bcfef7be6622ee09fedaf72aeb2e756d9f639d753e1a",
+      "temporal_initialization.csv": "abb3dca2cfc7e34b403abfd0996b1ab22b6fec4ded4521c184063fc34dfd9c10"
+    },
+    "effective_parameters": {
+      "/laserMapping": {
+        "ros__parameters": {
+          "camera": {
+            "cam_cx": 313.942291,
+            "cam_cy": 253.383209,
+            "cam_d0": 0.0,
+            "cam_d1": 0.0,
+            "cam_d2": 0.0,
+            "cam_d3": 0.0,
+            "cam_d4": 0.0,
+            "cam_fx": 607.06781,
+            "cam_fy": 607.022583,
+            "cam_height": 480,
+            "cam_model": "RadTan",
+            "cam_width": 640,
+            "scale": 1.0
+          },
+          "common": {
+            "img_en": 1,
+            "img_topic": "/camera/camera/color/image_raw",
+            "imu_topic": "/livox/imu",
+            "lid_topic": "/livox/lidar",
+            "lidar_en": 1,
+            "reliable_sensor_qos": true,
+            "ros_driver_bug_fix": false
+          },
+          "debug": {
+            "frame_cnt": 6,
+            "log_dir": "/work/livo-10hz/lio-reconstruction-20260929-092958-yjqkog4r/logs",
+            "plot_time": -10.0
+          },
+          "evo": {
+            "pose_output_en": false,
+            "seq_name": "go2w"
+          },
+          "extrin_calib": {
+            "Pcl": [
+              0.0175,
+              -0.1138,
+              -0.112
+            ],
+            "Rcl": [
+              0.0,
+              -1.0,
+              0.0,
+              0.313627591,
+              0.0,
+              -0.949546068,
+              0.949546068,
+              0.0,
+              0.313627591
+            ],
+            "extrinsic_R": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "extrinsic_T": [
+              -0.011,
+              -0.02329,
+              0.04412
+            ]
+          },
+          "image_save": {
+            "img_save_en": false,
+            "interval": 1
+          },
+          "imu": {
+            "acc_cov": 0.1,
+            "ba_bg_est_en": true,
+            "gravity_est_en": false,
+            "gyr_cov": 0.1,
+            "imu_en": true,
+            "imu_init_duration_sec": 3.0,
+            "imu_int_frame": 10,
+            "initial_accel_bias_cov": 0.001,
+            "initial_gyro_bias_cov": 0.0001,
+            "initial_position_cov": 1.0,
+            "initial_rotation_cov": 1.0,
+            "initial_velocity_cov": 1.0,
+            "stationary_acc_std_ratio_threshold": 0.05,
+            "stationary_gyr_mean_threshold": 0.1,
+            "stationary_gyr_std_threshold": 0.02
+          },
+          "lio": {
+            "beam_err": 0.05,
+            "correspondence_mode": "voxel_plane",
+            "dept_err": 0.02,
+            "diagnostics": {
+              "detail": {
+                "enabled": true,
+                "end_sec": 360.0,
+                "final_only": true,
+                "start_sec": 0.0
+              },
+              "enabled": false,
+              "geometry": {
+                "enabled": true
+              },
+              "output_dir": "/work/livo-10hz/lio-reconstruction-20260929-092958-yjqkog4r/diagnostics"
+            },
+            "fastlio_cube_side_length": 1000.0,
+            "fastlio_detection_range": 100.0,
+            "fastlio_filter_size_map": 0.5,
+            "gravity_norm_constraint": true,
+            "layer_init_num": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "max_iterations": 3,
+            "max_layer": 2,
+            "max_points_num": 100,
+            "max_state_cov_for_matching": 0.01,
+            "min_eigen_value": 0.0001,
+            "neighbor_voxel_radius": 1,
+            "normal_consistency": {
+              "enabled": false,
+              "max_angle_deg": 30.0,
+              "max_neighbor_distance": 1.0,
+              "max_planarity_ratio": 0.1,
+              "min_spread_ratio": 0.1,
+              "neighbors": 20
+            },
+            "sigma_num": 3.0,
+            "temporal": {
+              "enabled": true,
+              "huber_delta": 2.5,
+              "image_interval_sec": 0.1,
+              "initialization_mode": "legacy_voxel",
+              "iterations": 3,
+              "keyframe_sec": 0.5,
+              "max_imu_gap": 0.02,
+              "max_nodes": 16,
+              "max_residual": 0.2,
+              "max_source_points": 1200,
+              "min_plane_points": 6,
+              "min_plane_spread": 0.01,
+              "plane_ratio": 0.05,
+              "point_sigma": 0.03,
+              "sample_size": 0.15,
+              "visual_fusion": true,
+              "voxel_size": 0.5,
+              "window_sec": 6.0
+            },
+            "voxel_init_max_duration_sec": 2.0,
+            "voxel_init_max_points": 100000,
+            "voxel_init_min_duration_sec": 0.1,
+            "voxel_init_min_normal_eigenvalue": 0.02,
+            "voxel_init_min_planes": 100,
+            "voxel_init_min_points": 5000,
+            "voxel_size": 0.5,
+            "xicp": {
+              "contribution_min": 0.17364817766693041,
+              "contribution_strong": 0.7071067811865476,
+              "diagnostics": false,
+              "enabled": false,
+              "enough_information": 250.0,
+              "insufficient_information": 180.0,
+              "minimal_information": 35.0,
+              "rank_relative_tolerance": 1e-06
+            }
+          },
+          "local_map": {
+            "half_map_size": 100,
+            "map_sliding_en": false,
+            "sliding_thresh": 8.0
+          },
+          "pcd_save": {
+            "colmap_output_en": false,
+            "filter_size_pcd": 0.15,
+            "interval": -1,
+            "pcd_save_en": false,
+            "type": 0
+          },
+          "preprocess": {
+            "blind": 0.5,
+            "feature_extract_enabled": false,
+            "filter_size_surf": 0.1,
+            "hilti_en": false,
+            "lidar_type": 8,
+            "point_filter_num": 1,
+            "scan_line": 4
+          },
+          "publish": {
+            "blind_rgb_points": 0.0,
+            "dense_map_en": true,
+            "map_en": true,
+            "map_publish_interval": 10,
+            "map_voxel_size": 0.5,
+            "pub_effect_point_en": false,
+            "pub_plane_en": false,
+            "pub_scan_num": 1
+          },
+          "qos_overrides": {
+            "/clock": {
+              "subscription": {
+                "depth": 1,
+                "durability": "volatile",
+                "history": "keep_last",
+                "reliability": "best_effort"
+              }
+            },
+            "/parameter_events": {
+              "publisher": {
+                "depth": 1000,
+                "durability": "volatile",
+                "history": "keep_last",
+                "reliability": "reliable"
+              }
+            },
+            "/tf": {
+              "publisher": {
+                "depth": 100,
+                "durability": "volatile",
+                "history": "keep_last",
+                "reliability": "reliable"
+              }
+            }
+          },
+          "time_offset": {
+            "exposure_time_init": 0.0,
+            "img_time_offset": 0.0,
+            "imu_time_offset": 0.0,
+            "lidar_time_offset": 0.0
+          },
+          "uav": {
+            "gravity_align_en": true,
+            "imu_rate_odom": false
+          },
+          "use_sim_time": true,
+          "vio": {
+            "exposure_estimate_en": true,
+            "grid_n_height": 17,
+            "grid_size": 5,
+            "img_point_cov": 1000.0,
+            "inv_expo_cov": 0.1,
+            "inverse_composition_en": false,
+            "max_iterations": 5,
+            "normal_en": true,
+            "outlier_threshold": 500.0,
+            "patch_pyrimid_level": 4,
+            "patch_size": 8,
+            "raycast_en": false
+          }
+        }
+      }
+    },
+    "visual_rows": 570,
+    "visual_status_counts": {
+      "no_constraints": 26,
+      "updated": 544
+    },
+    "maximum_speed": 1.8844533229485416,
+    "maximum_accel_bias_norm": 0.40206717018511356,
+    "minimum_visual_covariance_eigenvalue": 9.74339367530376e-09,
+    "maximum_position_update": 0.2511910443127069,
+    "maximum_velocity_update": 0.09387407324169345,
+    "maximum_gyro_bias_update": 0.0005518435381942628,
+    "maximum_accel_bias_update": 0.02300757220056428
+  },
+  "lio-final": {
+    "capture": "/work/lio-interval/lio-reconstruction-20260929-092957-seshc5ih",
+    "summary": {
+      "stop_reason": "estimator_duration_reached",
+      "exit_statuses": {
+        "node": {
+          "returncode": 0,
+          "node_exit_codes": []
+        },
+        "player": {
+          "returncode": 0,
+          "node_exit_codes": []
+        },
+        "rviz": {
+          "returncode": 0,
+          "note": "headless validation; RViz not started"
+        },
+        "monitor": {
+          "returncode": 0
+        }
+      },
+      "imu": {
+        "count": 2469,
+        "first_stamp_ns": 1788781416423539328,
+        "last_stamp_ns": 1788781428762904640,
+        "max_forward_gap_ns": 8346048,
+        "nonincreasing": 0,
+        "gaps_over_20ms": 0,
+        "finished": true,
+        "topic": "/livox/imu",
+        "note": "Counts describe this subscriber; they do not prove estimator receipt or raw-bag completeness."
+      },
+      "last_lio_time_sec": 12.3001484871,
+      "reached_360_sec": false,
+      "capture_integrity": "ok",
+      "problems": [],
+      "temporal_window": true,
+      "temporal_status_counts": {
+        "initialized": 1,
+        "updated": 89
+      },
+      "temporal_visual_status_counts": {},
+      "last_visual_time_sec": null,
+      "temporal_initialization": {
+        "time": "3.40009045601",
+        "mode": "legacy_voxel",
+        "status": "ready",
+        "gate_applied": "1",
+        "scans": "3",
+        "points": "15791",
+        "planes": "625",
+        "normal_eigenvalue_0": "0.298269548387",
+        "normal_eigenvalue_1": "0.31324613665",
+        "normal_eigenvalue_2": "0.388484314963",
+        "duration_sec": "0.200793981552",
+        "resets": "0",
+        "reference_points": "15791",
+        "temporal_reference_planes": "245"
+      },
+      "diagnostic_runs": []
+    },
+    "window_rows": 90,
+    "state_rows": 742,
+    "minimum_lidar_covariance_eigenvalue": 2.7371453606636514e-06,
+    "logs_sha256": {
+      "temporal_states.csv": "9c961334aa0c960ab1bf4c204382c6edd7b378fe3842acb5fd862471c8c6acff",
+      "temporal_window.csv": "b8b5d753b77f386eec5818421b0524654d9c6911bc13cf900400dccc59eb4858",
+      "temporal_initialization.csv": "dea85090631a9a9353d323de3e0f74b70e913215dc9414f5df8f573b97c2fc81"
+    },
+    "effective_parameters": {
+      "/laserMapping": {
+        "ros__parameters": {
+          "camera": {
+            "cam_cx": 313.942291,
+            "cam_cy": 253.383209,
+            "cam_d0": 0.0,
+            "cam_d1": 0.0,
+            "cam_d2": 0.0,
+            "cam_d3": 0.0,
+            "cam_d4": 0.0,
+            "cam_fx": 607.06781,
+            "cam_fy": 607.022583,
+            "cam_height": 480,
+            "cam_model": "RadTan",
+            "cam_width": 640,
+            "scale": 1.0
+          },
+          "common": {
+            "img_en": 0,
+            "img_topic": "/camera/camera/color/image_raw",
+            "imu_topic": "/livox/imu",
+            "lid_topic": "/livox/lidar",
+            "lidar_en": 1,
+            "reliable_sensor_qos": true,
+            "ros_driver_bug_fix": false
+          },
+          "debug": {
+            "frame_cnt": 6,
+            "log_dir": "/work/lio-interval/lio-reconstruction-20260929-092957-seshc5ih/logs",
+            "plot_time": -10.0
+          },
+          "evo": {
+            "pose_output_en": false,
+            "seq_name": "go2w"
+          },
+          "extrin_calib": {
+            "Pcl": [
+              0.0175,
+              -0.1138,
+              -0.112
+            ],
+            "Rcl": [
+              0.0,
+              -1.0,
+              0.0,
+              0.313627591,
+              0.0,
+              -0.949546068,
+              0.949546068,
+              0.0,
+              0.313627591
+            ],
+            "extrinsic_R": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "extrinsic_T": [
+              -0.011,
+              -0.02329,
+              0.04412
+            ]
+          },
+          "image_save": {
+            "img_save_en": false,
+            "interval": 1
+          },
+          "imu": {
+            "acc_cov": 0.1,
+            "ba_bg_est_en": true,
+            "gravity_est_en": false,
+            "gyr_cov": 0.1,
+            "imu_en": true,
+            "imu_init_duration_sec": 3.0,
+            "imu_int_frame": 10,
+            "initial_accel_bias_cov": 0.001,
+            "initial_gyro_bias_cov": 0.0001,
+            "initial_position_cov": 1.0,
+            "initial_rotation_cov": 1.0,
+            "initial_velocity_cov": 1.0,
+            "stationary_acc_std_ratio_threshold": 0.05,
+            "stationary_gyr_mean_threshold": 0.1,
+            "stationary_gyr_std_threshold": 0.02
+          },
+          "lio": {
+            "beam_err": 0.05,
+            "correspondence_mode": "voxel_plane",
+            "dept_err": 0.02,
+            "diagnostics": {
+              "detail": {
+                "enabled": true,
+                "end_sec": 360.0,
+                "final_only": true,
+                "start_sec": 0.0
+              },
+              "enabled": false,
+              "geometry": {
+                "enabled": true
+              },
+              "output_dir": "/work/lio-interval/lio-reconstruction-20260929-092957-seshc5ih/diagnostics"
+            },
+            "fastlio_cube_side_length": 1000.0,
+            "fastlio_detection_range": 100.0,
+            "fastlio_filter_size_map": 0.5,
+            "gravity_norm_constraint": true,
+            "layer_init_num": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "max_iterations": 3,
+            "max_layer": 2,
+            "max_points_num": 100,
+            "max_state_cov_for_matching": 0.01,
+            "min_eigen_value": 0.0001,
+            "neighbor_voxel_radius": 1,
+            "normal_consistency": {
+              "enabled": false,
+              "max_angle_deg": 30.0,
+              "max_neighbor_distance": 1.0,
+              "max_planarity_ratio": 0.1,
+              "min_spread_ratio": 0.1,
+              "neighbors": 20
+            },
+            "sigma_num": 3.0,
+            "temporal": {
+              "enabled": true,
+              "huber_delta": 2.5,
+              "image_interval_sec": 0.1,
+              "initialization_mode": "legacy_voxel",
+              "iterations": 3,
+              "keyframe_sec": 0.5,
+              "max_imu_gap": 0.02,
+              "max_nodes": 16,
+              "max_residual": 0.2,
+              "max_source_points": 1200,
+              "min_plane_points": 6,
+              "min_plane_spread": 0.01,
+              "plane_ratio": 0.05,
+              "point_sigma": 0.03,
+              "sample_size": 0.15,
+              "visual_fusion": false,
+              "voxel_size": 0.5,
+              "window_sec": 6.0
+            },
+            "voxel_init_max_duration_sec": 2.0,
+            "voxel_init_max_points": 100000,
+            "voxel_init_min_duration_sec": 0.1,
+            "voxel_init_min_normal_eigenvalue": 0.02,
+            "voxel_init_min_planes": 100,
+            "voxel_init_min_points": 5000,
+            "voxel_size": 0.5,
+            "xicp": {
+              "contribution_min": 0.17364817766693041,
+              "contribution_strong": 0.7071067811865476,
+              "diagnostics": false,
+              "enabled": false,
+              "enough_information": 250.0,
+              "insufficient_information": 180.0,
+              "minimal_information": 35.0,
+              "rank_relative_tolerance": 1e-06
+            }
+          },
+          "local_map": {
+            "half_map_size": 100,
+            "map_sliding_en": false,
+            "sliding_thresh": 8.0
+          },
+          "pcd_save": {
+            "colmap_output_en": false,
+            "filter_size_pcd": 0.15,
+            "interval": -1,
+            "pcd_save_en": false,
+            "type": 0
+          },
+          "preprocess": {
+            "blind": 0.5,
+            "feature_extract_enabled": false,
+            "filter_size_surf": 0.1,
+            "hilti_en": false,
+            "lidar_type": 8,
+            "point_filter_num": 1,
+            "scan_line": 4
+          },
+          "publish": {
+            "blind_rgb_points": 0.0,
+            "dense_map_en": true,
+            "map_en": true,
+            "map_publish_interval": 10,
+            "map_voxel_size": 0.5,
+            "pub_effect_point_en": false,
+            "pub_plane_en": false,
+            "pub_scan_num": 1
+          },
+          "qos_overrides": {
+            "/clock": {
+              "subscription": {
+                "depth": 1,
+                "durability": "volatile",
+                "history": "keep_last",
+                "reliability": "best_effort"
+              }
+            },
+            "/parameter_events": {
+              "publisher": {
+                "depth": 1000,
+                "durability": "volatile",
+                "history": "keep_last",
+                "reliability": "reliable"
+              }
+            },
+            "/tf": {
+              "publisher": {
+                "depth": 100,
+                "durability": "volatile",
+                "history": "keep_last",
+                "reliability": "reliable"
+              }
+            }
+          },
+          "time_offset": {
+            "exposure_time_init": 0.0,
+            "img_time_offset": 0.0,
+            "imu_time_offset": 0.0,
+            "lidar_time_offset": 0.0
+          },
+          "uav": {
+            "gravity_align_en": true,
+            "imu_rate_odom": false
+          },
+          "use_sim_time": true,
+          "vio": {
+            "exposure_estimate_en": true,
+            "grid_n_height": 17,
+            "grid_size": 5,
+            "img_point_cov": 1000.0,
+            "inv_expo_cov": 0.1,
+            "inverse_composition_en": false,
+            "max_iterations": 5,
+            "normal_en": true,
+            "outlier_threshold": 500.0,
+            "patch_pyrimid_level": 4,
+            "patch_size": 8,
+            "raycast_en": false
+          }
+        }
+      }
+    },
+    "previous_capture": "/previous/final-legacy/lio-reconstruction-20260929-074234-nr84bs49",
+    "numerical_parity": {
+      "temporal_window.csv": {
+        "identical_rows": 89,
+        "excluded_columns": [
+          "solve_ms"
+        ]
+      },
+      "temporal_states.csv": {
+        "identical_rows": 731,
+        "excluded_columns": []
+      },
+      "temporal_initialization.csv": {
+        "identical_rows": 3,
+        "excluded_columns": []
+      }
+    },
+    "identical_imu_prefix_rows": 1820
+  }
+}

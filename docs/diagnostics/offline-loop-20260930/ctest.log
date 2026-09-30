@@ -1,0 +1,24 @@
+Internal ctest changing into directory: /external/humble_ws/build/fast_livo2
+Test project /external/humble_ws/build/fast_livo2
+    Start 1: temporal_joint_estimation
+1/9 Test #1: temporal_joint_estimation ..............   Passed    4.85 sec
+    Start 2: temporal_visual_fusion
+2/9 Test #2: temporal_visual_fusion .................   Passed    0.03 sec
+    Start 3: temporal_visual_map_anchors
+3/9 Test #3: temporal_visual_map_anchors ............   Passed    0.05 sec
+    Start 4: voxel_plane_diagnostics
+4/9 Test #4: voxel_plane_diagnostics ................   Passed    0.27 sec
+    Start 5: source_map_normal_consistency
+5/9 Test #5: source_map_normal_consistency ..........   Passed    0.24 sec
+    Start 6: lio_diagnostics_recording
+6/9 Test #6: lio_diagnostics_recording ..............   Passed    0.03 sec
+    Start 7: xicp_geometry_and_constrained_filter
+7/9 Test #7: xicp_geometry_and_constrained_filter ...   Passed    0.01 sec
+    Start 8: imu_propagation_no_new_samples
+8/9 Test #8: imu_propagation_no_new_samples .........   Passed    0.01 sec
+    Start 9: voxel_map_initialization
+9/9 Test #9: voxel_map_initialization ...............   Passed    0.30 sec
+
+100% tests passed, 0 tests failed out of 9
+
+Total Test time (real) =   5.79 sec

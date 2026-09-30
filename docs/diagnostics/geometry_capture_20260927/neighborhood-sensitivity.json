@@ -1,0 +1,101 @@
+{
+  "note": "Sensitivity on the same 186 roughly 1 Hz samples, not full-run sums.",
+  "windows": [
+    {
+      "source_neighbors": 10,
+      "start": 180,
+      "end": 200,
+      "sampled_scans": 20,
+      "count_fraction": 0.11640829474531911,
+      "forward_information_fraction": 0.4646106926319305
+    },
+    {
+      "source_neighbors": 10,
+      "start": 200,
+      "end": 220,
+      "sampled_scans": 20,
+      "count_fraction": 0.14521258788081687,
+      "forward_information_fraction": 0.5635726493560674
+    },
+    {
+      "source_neighbors": 10,
+      "start": 280,
+      "end": 310,
+      "sampled_scans": 30,
+      "count_fraction": 0.07016494316725067,
+      "forward_information_fraction": 0.3237056523222555
+    },
+    {
+      "source_neighbors": 10,
+      "start": 320,
+      "end": 325,
+      "sampled_scans": 6,
+      "count_fraction": 0.12317766246602421,
+      "forward_information_fraction": 0.5574926632449
+    },
+    {
+      "source_neighbors": 20,
+      "start": 180,
+      "end": 200,
+      "sampled_scans": 20,
+      "count_fraction": 0.10283873565532514,
+      "forward_information_fraction": 0.4358959597719159
+    },
+    {
+      "source_neighbors": 20,
+      "start": 200,
+      "end": 220,
+      "sampled_scans": 20,
+      "count_fraction": 0.1309424171409441,
+      "forward_information_fraction": 0.5398698262477688
+    },
+    {
+      "source_neighbors": 20,
+      "start": 280,
+      "end": 310,
+      "sampled_scans": 30,
+      "count_fraction": 0.056713101444321,
+      "forward_information_fraction": 0.29963363169426777
+    },
+    {
+      "source_neighbors": 20,
+      "start": 320,
+      "end": 325,
+      "sampled_scans": 6,
+      "count_fraction": 0.1167531504818384,
+      "forward_information_fraction": 0.545231022181328
+    },
+    {
+      "source_neighbors": 30,
+      "start": 180,
+      "end": 200,
+      "sampled_scans": 20,
+      "count_fraction": 0.09873162874974833,
+      "forward_information_fraction": 0.4189588369393248
+    },
+    {
+      "source_neighbors": 30,
+      "start": 200,
+      "end": 220,
+      "sampled_scans": 20,
+      "count_fraction": 0.1247489119517911,
+      "forward_information_fraction": 0.5213407980305113
+    },
+    {
+      "source_neighbors": 30,
+      "start": 280,
+      "end": 310,
+      "sampled_scans": 30,
+      "count_fraction": 0.05334586787454064,
+      "forward_information_fraction": 0.2857978513042333
+    },
+    {
+      "source_neighbors": 30,
+      "start": 320,
+      "end": 325,
+      "sampled_scans": 6,
+      "count_fraction": 0.11403508771929824,
+      "forward_information_fraction": 0.5333251115017984
+    }
+  ]
+}

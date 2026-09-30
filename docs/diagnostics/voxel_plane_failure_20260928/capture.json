@@ -1,0 +1,34 @@
+{
+  "created_unix_sec": 1790588328.5434666,
+  "bag": "/external/bags/raw_20260907_114335",
+  "arguments": [
+    "--",
+    "bags/raw_20260907_114335",
+    "--lio-only",
+    "--rate",
+    "0.5",
+    "--correspondence-mode",
+    "voxel_plane",
+    "--normal-gate",
+    "off",
+    "--capture-diagnostics"
+  ],
+  "normal_gate_override": "off",
+  "correspondence_mode_override": "voxel_plane",
+  "correspondence_mode": "voxel_plane",
+  "binary": "/external/humble_ws/build/fast_livo2/fastlivo2_mapping",
+  "binary_sha256": "0b6627da701e0655183e72150d70351e37e3d4bfcc75aa1afda38cb00c12c863",
+  "detail_window_sec": [
+    0,
+    360
+  ],
+  "detail_window_origin": "first LiDAR in estimator",
+  "free_bytes_at_start": 192680071168,
+  "environment": {
+    "ROS_DOMAIN_ID": "42",
+    "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp",
+    "ROS_LOCALHOST_ONLY": "1",
+    "CYCLONEDDS_URI": null,
+    "FAST_LIVO2_DETERMINISTIC": "1"
+  }
+}

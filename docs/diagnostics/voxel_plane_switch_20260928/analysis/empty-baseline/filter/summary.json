@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "run": "/tmp/voxel-plane-switch/fixtures-final/empty-baseline/run-1790587131218620939-0",
+  "scans": 1,
+  "iterations": 0,
+  "committed_updates": 0,
+  "scan_status_counts": {
+    "no_matches": 1
+  },
+  "checks": {
+    "correction_identity_max_abs": 0.0,
+    "constraint_correction_max_abs": 0.0,
+    "covariance_asymmetry_max_abs": 0.0,
+    "covariance_min_eigenvalue": 0.123
+  },
+  "iteration_logging_ms": {
+    "mean_per_scan": 0.0,
+    "max_per_scan": 0.0
+  },
+  "csv_bytes": {
+    "iterations.csv": 8119,
+    "scans.csv": 11201,
+    "geometry.csv": 2429,
+    "geometry_states.csv": 2047,
+    "correspondences.csv": 159
+  },
+  "notes": [
+    "NIS is descriptive; map/correspondence independence is not guaranteed.",
+    "P_prior, P_iter and P_after refer to their respective tangent frames.",
+    "K0 is a same-state counterfactual, not a separately replayed trajectory."
+  ],
+  "windows": [],
+  "detail": {
+    "groups": 0,
+    "points": 0,
+    "max_scaled_errors": {
+      "hessian": 0.0,
+      "score": 0.0,
+      "innovation": 0.0,
+      "distance_sign": 0.0,
+      "gain_contribution": 0.0,
+      "gain_noise": 0.0,
+      "gain_norm": 0.0,
+      "KH": 0.0,
+      "residual_stats": 0.0
+    },
+    "passed": true
+  },
+  "passed": true
+}

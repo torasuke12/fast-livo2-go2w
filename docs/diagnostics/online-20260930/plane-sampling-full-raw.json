@@ -1,0 +1,469 @@
+{
+  "limitation": "Full original clouds before deskew, with normal IMU-LiDAR translation and recorded orientation. Surface availability proxy, not exact runtime correspondences. Directions approximated by world XYZ.",
+  "scans": [
+    {
+      "time": 30.199503898620605,
+      "all_planes": {
+        "total": 193,
+        "near_axes": [
+          0,
+          78,
+          96
+        ],
+        "quality_axes": [
+          0,
+          30,
+          37
+        ]
+      },
+      "selected_planes": {
+        "total": 193,
+        "near_axes": [
+          0,
+          78,
+          96
+        ],
+        "quality_axes": [
+          0,
+          30,
+          37
+        ]
+      }
+    },
+    {
+      "time": 39.79931616783142,
+      "all_planes": {
+        "total": 185,
+        "near_axes": [
+          0,
+          84,
+          86
+        ],
+        "quality_axes": [
+          0,
+          36,
+          42
+        ]
+      },
+      "selected_planes": {
+        "total": 185,
+        "near_axes": [
+          0,
+          84,
+          86
+        ],
+        "quality_axes": [
+          0,
+          36,
+          42
+        ]
+      }
+    },
+    {
+      "time": 49.79936194419861,
+      "all_planes": {
+        "total": 191,
+        "near_axes": [
+          0,
+          81,
+          103
+        ],
+        "quality_axes": [
+          0,
+          42,
+          45
+        ]
+      },
+      "selected_planes": {
+        "total": 191,
+        "near_axes": [
+          0,
+          81,
+          103
+        ],
+        "quality_axes": [
+          0,
+          42,
+          45
+        ]
+      }
+    },
+    {
+      "time": 149.99946355819702,
+      "all_planes": {
+        "total": 196,
+        "near_axes": [
+          0,
+          81,
+          99
+        ],
+        "quality_axes": [
+          0,
+          34,
+          35
+        ]
+      },
+      "selected_planes": {
+        "total": 196,
+        "near_axes": [
+          0,
+          81,
+          99
+        ],
+        "quality_axes": [
+          0,
+          34,
+          35
+        ]
+      }
+    },
+    {
+      "time": 199.8998339176178,
+      "all_planes": {
+        "total": 202,
+        "near_axes": [
+          1,
+          100,
+          82
+        ],
+        "quality_axes": [
+          0,
+          44,
+          41
+        ]
+      },
+      "selected_planes": {
+        "total": 200,
+        "near_axes": [
+          1,
+          100,
+          81
+        ],
+        "quality_axes": [
+          0,
+          44,
+          41
+        ]
+      }
+    },
+    {
+      "time": 250.00019216537476,
+      "all_planes": {
+        "total": 216,
+        "near_axes": [
+          0,
+          89,
+          115
+        ],
+        "quality_axes": [
+          0,
+          42,
+          47
+        ]
+      },
+      "selected_planes": {
+        "total": 200,
+        "near_axes": [
+          0,
+          82,
+          106
+        ],
+        "quality_axes": [
+          0,
+          40,
+          44
+        ]
+      }
+    },
+    {
+      "time": 299.7992055416107,
+      "all_planes": {
+        "total": 203,
+        "near_axes": [
+          0,
+          102,
+          88
+        ],
+        "quality_axes": [
+          0,
+          41,
+          28
+        ]
+      },
+      "selected_planes": {
+        "total": 200,
+        "near_axes": [
+          0,
+          101,
+          86
+        ],
+        "quality_axes": [
+          0,
+          41,
+          27
+        ]
+      }
+    },
+    {
+      "time": 350.09926080703735,
+      "all_planes": {
+        "total": 202,
+        "near_axes": [
+          0,
+          95,
+          93
+        ],
+        "quality_axes": [
+          0,
+          45,
+          40
+        ]
+      },
+      "selected_planes": {
+        "total": 200,
+        "near_axes": [
+          0,
+          94,
+          92
+        ],
+        "quality_axes": [
+          0,
+          45,
+          40
+        ]
+      }
+    },
+    {
+      "time": 449.9994411468506,
+      "all_planes": {
+        "total": 333,
+        "near_axes": [
+          21,
+          67,
+          213
+        ],
+        "quality_axes": [
+          1,
+          23,
+          80
+        ]
+      },
+      "selected_planes": {
+        "total": 200,
+        "near_axes": [
+          11,
+          41,
+          129
+        ],
+        "quality_axes": [
+          0,
+          16,
+          53
+        ]
+      }
+    },
+    {
+      "time": 479.79935479164124,
+      "all_planes": {
+        "total": 188,
+        "near_axes": [
+          3,
+          91,
+          82
+        ],
+        "quality_axes": [
+          0,
+          45,
+          36
+        ]
+      },
+      "selected_planes": {
+        "total": 188,
+        "near_axes": [
+          3,
+          91,
+          82
+        ],
+        "quality_axes": [
+          0,
+          45,
+          36
+        ]
+      }
+    },
+    {
+      "time": 499.7998561859131,
+      "all_planes": {
+        "total": 193,
+        "near_axes": [
+          1,
+          90,
+          92
+        ],
+        "quality_axes": [
+          0,
+          40,
+          28
+        ]
+      },
+      "selected_planes": {
+        "total": 193,
+        "near_axes": [
+          1,
+          90,
+          92
+        ],
+        "quality_axes": [
+          0,
+          40,
+          28
+        ]
+      }
+    },
+    {
+      "time": 509.99943947792053,
+      "all_planes": {
+        "total": 195,
+        "near_axes": [
+          0,
+          82,
+          93
+        ],
+        "quality_axes": [
+          0,
+          37,
+          37
+        ]
+      },
+      "selected_planes": {
+        "total": 195,
+        "near_axes": [
+          0,
+          82,
+          93
+        ],
+        "quality_axes": [
+          0,
+          37,
+          37
+        ]
+      }
+    },
+    {
+      "time": 512.0994141101837,
+      "all_planes": {
+        "total": 170,
+        "near_axes": [
+          0,
+          74,
+          76
+        ],
+        "quality_axes": [
+          0,
+          39,
+          41
+        ]
+      },
+      "selected_planes": {
+        "total": 170,
+        "near_axes": [
+          0,
+          74,
+          76
+        ],
+        "quality_axes": [
+          0,
+          39,
+          41
+        ]
+      }
+    },
+    {
+      "time": 515.0992348194122,
+      "all_planes": {
+        "total": 158,
+        "near_axes": [
+          1,
+          55,
+          80
+        ],
+        "quality_axes": [
+          0,
+          25,
+          33
+        ]
+      },
+      "selected_planes": {
+        "total": 158,
+        "near_axes": [
+          1,
+          55,
+          80
+        ],
+        "quality_axes": [
+          0,
+          25,
+          33
+        ]
+      }
+    },
+    {
+      "time": 560.1998822689056,
+      "all_planes": {
+        "total": 200,
+        "near_axes": [
+          1,
+          97,
+          73
+        ],
+        "quality_axes": [
+          0,
+          45,
+          29
+        ]
+      },
+      "selected_planes": {
+        "total": 200,
+        "near_axes": [
+          1,
+          97,
+          73
+        ],
+        "quality_axes": [
+          0,
+          45,
+          29
+        ]
+      }
+    },
+    {
+      "time": 579.7993021011353,
+      "all_planes": {
+        "total": 197,
+        "near_axes": [
+          0,
+          93,
+          93
+        ],
+        "quality_axes": [
+          0,
+          51,
+          41
+        ]
+      },
+      "selected_planes": {
+        "total": 197,
+        "near_axes": [
+          0,
+          93,
+          93
+        ],
+        "quality_axes": [
+          0,
+          51,
+          41
+        ]
+      }
+    }
+  ]
+}

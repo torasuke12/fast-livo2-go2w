@@ -3,8 +3,12 @@ humble_ws/install/
 humble_ws/log/
 humble_ws/src/livox_ros_driver2
 log/
+diagnostic_captures/
 bags/*
 !bags/.gitkeep
 .devcontainer/offline_fast_livo2/
 __pycache__/
 *.pyc
+.venv-reconstruction/
+.venv-reconstruction-rviz/
+reconstruction_results/

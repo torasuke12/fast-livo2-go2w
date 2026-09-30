@@ -1,0 +1,4 @@
+/work/lio-interval/lio-reconstruction-20260929-092957-seshc5ih
+lio-reconstruction-20260929-092957-seshc5ih: estimator t=10.10
+Capture: /work/lio-interval/lio-reconstruction-20260929-092957-seshc5ih
+Integrity: ok; last LIO time: 12.3001484871

@@ -1,0 +1,8 @@
+/work/livo-10hz/lio-reconstruction-20260929-092958-yjqkog4r
+lio-reconstruction-20260929-092958-yjqkog4r: estimator t=10.08
+lio-reconstruction-20260929-092958-yjqkog4r: estimator t=20.08
+lio-reconstruction-20260929-092958-yjqkog4r: estimator t=30.09
+lio-reconstruction-20260929-092958-yjqkog4r: estimator t=40.10
+lio-reconstruction-20260929-092958-yjqkog4r: estimator t=50.10
+Capture: /work/livo-10hz/lio-reconstruction-20260929-092958-yjqkog4r
+Integrity: ok; last LIO time: 60.3112111092

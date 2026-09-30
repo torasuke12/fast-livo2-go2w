@@ -1,0 +1,57 @@
+{
+  "plane-confidence-lio": {
+    "time_window": [
+      30,
+      60
+    ],
+    "max_velocity_update_mps": 0.27959618383424284,
+    "time_of_max_velocity_update": 40.0992598534,
+    "z_range_m": 0.06830259817180001,
+    "forward_vx_min_mps": 1.30839645524,
+    "forward_vx_max_mps": 1.72947403132
+  },
+  "plane-confidence-bias": {
+    "time_window": [
+      30,
+      60
+    ],
+    "max_velocity_update_mps": 0.29358597651880447,
+    "time_of_max_velocity_update": 40.0992598534,
+    "z_range_m": 0.05312436810396,
+    "forward_vx_min_mps": 1.30453390646,
+    "forward_vx_max_mps": 1.87502341393
+  },
+  "confidence-sat100-lio": {
+    "time_window": [
+      30,
+      60
+    ],
+    "max_velocity_update_mps": 0.1581587478614715,
+    "time_of_max_velocity_update": 40.6991686821,
+    "z_range_m": 0.0563478149898,
+    "forward_vx_min_mps": 1.35439400767,
+    "forward_vx_max_mps": 1.78582083569
+  },
+  "confidence-sat100-bias": {
+    "time_window": [
+      30,
+      60
+    ],
+    "max_velocity_update_mps": 0.17366595722452252,
+    "time_of_max_velocity_update": 40.2993376255,
+    "z_range_m": 0.0634249027234,
+    "forward_vx_min_mps": 1.37459044013,
+    "forward_vx_max_mps": 1.82171905321
+  },
+  "confidence-sat400-lio": {
+    "time_window": [
+      30,
+      60
+    ],
+    "max_velocity_update_mps": 0.17326699767643403,
+    "time_of_max_velocity_update": 40.0992598534,
+    "z_range_m": 0.04367348829201,
+    "forward_vx_min_mps": 1.3622612056,
+    "forward_vx_max_mps": 1.73082007022
+  }
+}

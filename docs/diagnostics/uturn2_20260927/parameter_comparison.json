@@ -1,0 +1,14 @@
+{
+  "lio.diagnostics.detail.end_sec": [
+    "220.000000",
+    "350.000000"
+  ],
+  "lio.diagnostics.detail.start_sec": [
+    "170.000000",
+    "300.000000"
+  ],
+  "lio.diagnostics.output_dir": [
+    "/validation/long-detail-diagnostics",
+    ""
+  ]
+}

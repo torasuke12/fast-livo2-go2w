@@ -1,0 +1,41 @@
+{
+  "stop_reason": "estimator_duration_reached",
+  "exit_statuses": {
+    "node": {
+      "returncode": 0,
+      "node_exit_codes": []
+    },
+    "player": {
+      "returncode": 0,
+      "node_exit_codes": []
+    },
+    "rviz": {
+      "returncode": 0,
+      "note": "headless validation; RViz not started"
+    },
+    "monitor": {
+      "returncode": 0
+    }
+  },
+  "imu": {
+    "count": 72059,
+    "first_stamp_ns": 1788781416423539328,
+    "last_stamp_ns": 1788781776701252000,
+    "max_forward_gap_ns": 8346048,
+    "nonincreasing": 0,
+    "gaps_over_20ms": 0,
+    "finished": true,
+    "topic": "/livox/imu",
+    "note": "Counts describe this subscriber; they do not prove estimator receipt or raw-bag completeness."
+  },
+  "last_lio_time_sec": 360.299318075,
+  "reached_360_sec": true,
+  "capture_integrity": "ok",
+  "problems": [],
+  "temporal_window": true,
+  "temporal_status_counts": {
+    "initialized": 1,
+    "updated": 3571
+  },
+  "diagnostic_runs": []
+}

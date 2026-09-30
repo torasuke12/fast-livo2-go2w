@@ -1,0 +1,31 @@
+{
+  "status": "not_adopted",
+  "reason": "Unrestricted relative image fusion did not prevent conditional-map longitudinal divergence in the first 60 seconds.",
+  "last_visual_state": {
+    "time": 59.7107653618,
+    "px": 179.452503129,
+    "py": 1.53010321707,
+    "pz": 0.347359264237,
+    "vx": 10.0086211471,
+    "vy": 0.136253414045,
+    "vz": 0.120375479803,
+    "bax": -0.139994549245,
+    "bay": 0.0327672757075,
+    "baz": -0.0583333450474
+  },
+  "summary": {
+    "complete": true,
+    "bag_exhausted": true,
+    "imu_messages": 12001,
+    "lidar_messages": 600,
+    "image_messages": 1798,
+    "updates": 282,
+    "keyframes": 94,
+    "last_time": 59.71076536178589
+  },
+  "full_route": false,
+  "visual_status_counts": {
+    "no_constraints": 57,
+    "updated": 225
+  }
+}

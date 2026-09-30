@@ -1,0 +1,82 @@
+{
+  "visual-source-legacy60": {
+    "window_sec": [
+      30,
+      60
+    ],
+    "frames": 149,
+    "pixels_median": 768.0,
+    "visual_rank_counts": {
+      "0": 22,
+      "1": 127,
+      "2": 0,
+      "3": 0
+    },
+    "position_at_59_71_sec": [
+      55.4650545958,
+      -1.07665727012,
+      -0.0721041756764
+    ],
+    "invalid_patch_evaluations": 0
+  },
+  "visual-bounds-legacy60": {
+    "window_sec": [
+      30,
+      60
+    ],
+    "frames": 149,
+    "pixels_median": 768.0,
+    "visual_rank_counts": {
+      "0": 18,
+      "1": 131,
+      "2": 0,
+      "3": 0
+    },
+    "position_at_59_71_sec": [
+      55.3209201158,
+      -1.08196291427,
+      -0.0382221109932
+    ],
+    "invalid_patch_evaluations": 78
+  },
+  "visual-voxel-legacy60": {
+    "window_sec": [
+      30,
+      60
+    ],
+    "frames": 149,
+    "pixels_median": 3584.0,
+    "visual_rank_counts": {
+      "0": 20,
+      "1": 129,
+      "2": 0,
+      "3": 0
+    },
+    "position_at_59_71_sec": [
+      51.493222351,
+      -1.13317344992,
+      -0.0428554966616
+    ],
+    "invalid_patch_evaluations": 624
+  },
+  "visual-voxel-full60": {
+    "window_sec": [
+      30,
+      60
+    ],
+    "frames": 149,
+    "pixels_median": 4160.0,
+    "visual_rank_counts": {
+      "0": 14,
+      "1": 135,
+      "2": 0,
+      "3": 0
+    },
+    "position_at_59_71_sec": [
+      51.5531029946,
+      -1.15705526275,
+      -0.0435050730221
+    ],
+    "invalid_patch_evaluations": 718
+  }
+}

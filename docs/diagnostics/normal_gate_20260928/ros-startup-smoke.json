@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "no_bag_playback": true,
+  "capture": "/test-output/captures/normal-gate-20260928-070955-e_gfast3",
+  "imu": {
+    "count": 5,
+    "first_stamp_ns": 10,
+    "last_stamp_ns": 30000010,
+    "max_forward_gap_ns": 30000000,
+    "nonincreasing": 2,
+    "gaps_over_20ms": 1,
+    "finished": true,
+    "topic": "/normal_gate_test/imu",
+    "note": "Counts describe this subscriber; they do not prove estimator receipt or raw-bag completeness."
+  }
+}

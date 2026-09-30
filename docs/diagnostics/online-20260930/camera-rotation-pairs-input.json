@@ -1,0 +1,6 @@
+{
+  "pairs": 139,
+  "imu_first_stamp_ns": 1788781416423539328,
+  "selection": "Bag receipt time selects examples only; all integration uses image/IMU header stamps.",
+  "estimator_poses_used": false
+}

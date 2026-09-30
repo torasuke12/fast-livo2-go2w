@@ -1,0 +1,65 @@
+{
+  "scans": 171,
+  "last_time": 20.1997661591,
+  "exact_numeric_except_runtime": false,
+  "max_abs": 0.0008870799999840528,
+  "capture_summary": {
+    "stop_reason": "estimator_duration_reached",
+    "exit_statuses": {
+      "node": {
+        "returncode": 0,
+        "node_exit_codes": []
+      },
+      "player": {
+        "returncode": 0,
+        "node_exit_codes": []
+      },
+      "rviz": {
+        "returncode": 0,
+        "note": "headless validation; RViz not started"
+      },
+      "monitor": {
+        "returncode": 0
+      }
+    },
+    "imu": {
+      "count": 4046,
+      "first_stamp_ns": 1788781416423539328,
+      "last_stamp_ns": 1788781436648393984,
+      "max_forward_gap_ns": 8346048,
+      "nonincreasing": 0,
+      "gaps_over_20ms": 0,
+      "finished": true,
+      "topic": "/livox/imu",
+      "note": "Counts describe this subscriber; they do not prove estimator receipt or raw-bag completeness."
+    },
+    "last_lio_time_sec": 20.1997661591,
+    "reached_360_sec": false,
+    "capture_integrity": "ok",
+    "problems": [],
+    "temporal_window": true,
+    "temporal_status_counts": {
+      "initialized": 1,
+      "updated": 170
+    },
+    "diagnostic_runs": []
+  },
+  "groups": {
+    "state": {
+      "max_abs": 4.489100000060198e-08,
+      "relative_frobenius": 6.593549215063e-09
+    },
+    "covariance": {
+      "max_abs": 6.106199998759387e-10,
+      "relative_frobenius": 1.278060119574758e-10
+    },
+    "information": {
+      "max_abs": 0.0008870799999840528,
+      "relative_frobenius": 6.101069427199153e-10
+    },
+    "correction": {
+      "max_abs": 7.376720000118464e-08,
+      "relative_frobenius": 1.562248779575538e-07
+    }
+  }
+}

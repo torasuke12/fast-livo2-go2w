@@ -1,0 +1,14 @@
+{
+  "outer": {
+    "same_tracked_diff_as_start": true,
+    "current_diff_sha256": "70310349357728795ce128bf9bb8949c53a3f7feed2515dccabe216ad14b6179",
+    "start_bytes": 10631,
+    "current_bytes": 10631
+  },
+  "fast-livo2": {
+    "same_tracked_diff_as_start": true,
+    "current_diff_sha256": "0ada1400fc941678895d03d2e8815eff5cfc16e2c375d61aac3a680a488bfaee",
+    "start_bytes": 86374,
+    "current_bytes": 86374
+  }
+}

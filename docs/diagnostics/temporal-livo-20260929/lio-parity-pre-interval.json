@@ -1,0 +1,22 @@
+{
+  "old": "/previous/final-legacy/lio-reconstruction-20260929-074234-nr84bs49",
+  "new": "/work/lio/lio-reconstruction-20260929-092055-mi9v68pi",
+  "files": {
+    "temporal_window.csv": {
+      "common_rows": 89,
+      "mismatch_rows": 0,
+      "first_mismatch": []
+    },
+    "temporal_states.csv": {
+      "common_rows": 731,
+      "mismatch_rows": 0,
+      "first_mismatch": []
+    },
+    "temporal_initialization.csv": {
+      "common_rows": 3,
+      "mismatch_rows": 0,
+      "first_mismatch": []
+    }
+  },
+  "imu_equal_prefix_rows": 1820
+}

@@ -1,0 +1,23 @@
+{
+  "runs": [
+    "confidence-sat100-lio",
+    "confidence-sat100-repeat"
+  ],
+  "updates_each": 6448,
+  "sensor_times_identical": true,
+  "parameters_identical": true,
+  "no_alignment": true,
+  "maximum_position_difference_m": 0.7830457294011085,
+  "time_of_maximum_position_difference": 604.600047827,
+  "final_position_difference_xyz_m": [
+    -0.7268566541799999,
+    -0.032511878374099995,
+    -0.0163904620085
+  ],
+  "final_position_difference_norm_m": 0.7277680023235484,
+  "maximum_rotation_difference_deg": 0.43566493445235777,
+  "maximum_velocity_difference_mps": 0.27658532848435935,
+  "parameters_sha256": "19535e27dc47c04ec3f5363e593794878ac9b6ca4e60a43488305eeb29e5c338",
+  "binary_sha256": "30f39e86c1912727a4983b7a2999819765591184142fa23d166b8f812d799fcd",
+  "interpretation": "Numerical repetition sensitivity, not ground-truth trajectory error; assess both unaligned room maps separately."
+}

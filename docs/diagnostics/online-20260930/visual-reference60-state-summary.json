@@ -1,0 +1,80 @@
+{
+  "visual-visible-full60": {
+    "statuses": {
+      "no_constraints": 107,
+      "updated": 175
+    },
+    "last_position": [
+      51.1718400847,
+      -1.15669467813,
+      -0.053800506375
+    ],
+    "last_accel_bias": [
+      -0.0374982281581,
+      0.0098420173184,
+      -0.00163380034579
+    ],
+    "reference_counts": {
+      "old_format": 149
+    }
+  },
+  "visual-reference-off60": {
+    "statuses": {
+      "no_constraints": 107,
+      "updated": 175
+    },
+    "last_position": [
+      51.2570111822,
+      -1.15932759578,
+      -0.0180552595579
+    ],
+    "last_accel_bias": [
+      -0.040803037083,
+      0.010304695748,
+      -0.00344387572233
+    ],
+    "reference_counts": {
+      "0": 149
+    }
+  },
+  "visual-reference-on60": {
+    "statuses": {
+      "no_constraints": 109,
+      "updated": 173
+    },
+    "last_position": [
+      54.4965291977,
+      -1.09138437973,
+      -0.0521592411759
+    ],
+    "last_accel_bias": [
+      -0.0397617378041,
+      0.00719309041824,
+      -0.00274530875597
+    ],
+    "reference_counts": {
+      "3": 147,
+      "2": 2
+    }
+  },
+  "visual-reference-all60": {
+    "statuses": {
+      "no_constraints": 3,
+      "updated": 279
+    },
+    "last_position": [
+      50.8744240858,
+      -1.43546534841,
+      -0.09435281775
+    ],
+    "last_accel_bias": [
+      -0.0658994877839,
+      0.0242889185572,
+      -0.0120132419799
+    ],
+    "reference_counts": {
+      "3": 147,
+      "2": 2
+    }
+  }
+}

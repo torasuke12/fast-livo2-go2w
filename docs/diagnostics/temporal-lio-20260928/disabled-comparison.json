@@ -1,0 +1,9 @@
+{
+  "scans": 216,
+  "start": 3.49912,
+  "end": 24.9997,
+  "state_rows_exact": true,
+  "state_max_abs": 0.0,
+  "imu_rows": 4380,
+  "imu_rows_exact": true
+}
