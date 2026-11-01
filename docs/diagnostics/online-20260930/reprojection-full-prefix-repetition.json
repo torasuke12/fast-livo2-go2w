@@ -1,0 +1,14 @@
+{
+  "temporal_window.csv": {
+    "rows_compared": 1111,
+    "last_time": 225.625775337,
+    "exact_numeric_except_solve_ms": true,
+    "status_equal": true
+  },
+  "temporal_visual.csv": {
+    "rows_compared": 1111,
+    "last_time": 225.625775337,
+    "exact_numeric_except_solve_ms": true,
+    "status_equal": true
+  }
+}

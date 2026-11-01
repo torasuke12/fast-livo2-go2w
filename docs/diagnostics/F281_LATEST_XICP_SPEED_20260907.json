@@ -1,0 +1,42 @@
+{
+  "bag": "raw_20260907_114335",
+  "method": "Consecutive saved pose displacement divided by estimator-time delta; default Go2W guard is two consecutive intervals over 5 m/s or one over 10 m/s. State velocity is reported separately.",
+  "runs": {
+    "f281e70": {
+      "poses_sha256": "c21c7d2540fe1383a048b717f82f020a25bf358399a80c4ae135802f37595668",
+      "poses": 1221,
+      "last_saved_time_s": 647.799234867096,
+      "max_saved_pose_speed_mps": 692.2151178810466,
+      "max_state_velocity_norm_mps": 693.926026673544,
+      "first_two_intervals_over_5_mps_s": 493.39991903305054,
+      "first_single_interval_over_10_mps_s": 499.7998561859131
+    },
+    "adopted": {
+      "poses_sha256": "eca65c5b73c08b7e04fde423d52a419436bd910fb5003cf081ed7a48756ab744",
+      "poses": 1215,
+      "last_saved_time_s": 647.799234867096,
+      "max_saved_pose_speed_mps": 1.7115010955261807,
+      "max_state_velocity_norm_mps": 1.721480237240332,
+      "first_two_intervals_over_5_mps_s": null,
+      "first_single_interval_over_10_mps_s": null
+    },
+    "xicp_on": {
+      "poses_sha256": "507d75676e353d7ad1d5450931ff86cc6b239532e8c4906e2e2939a584dcb3f4",
+      "poses": 690,
+      "last_saved_time_s": 368.8992784023285,
+      "max_saved_pose_speed_mps": 491.448899825157,
+      "max_state_velocity_norm_mps": 492.35742367342425,
+      "first_two_intervals_over_5_mps_s": 158.89927697181702,
+      "first_single_interval_over_10_mps_s": 167.3991813659668
+    },
+    "xicp_off": {
+      "poses_sha256": "2540cc50cda67c1c535517e6f1d4e32c265bb8f1f1b602210f40dc0a204b6632",
+      "poses": 775,
+      "last_saved_time_s": 414.49936604499817,
+      "max_saved_pose_speed_mps": 1980.0596182722606,
+      "max_state_velocity_norm_mps": 1983.6607828107697,
+      "first_two_intervals_over_5_mps_s": 158.39918756484985,
+      "first_single_interval_over_10_mps_s": 166.29934310913086
+    }
+  }
+}

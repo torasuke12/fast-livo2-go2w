@@ -1,0 +1,22 @@
+{
+  "source_capture": "diagnostic_captures/online-20260930/relative-plane-fast-lio",
+  "poses": 1215,
+  "source_pose_sha256": "eca65c5b73c08b7e04fde423d52a419436bd910fb5003cf081ed7a48756ab744",
+  "tum_max_difference_per_column": [
+    0.0,
+    5.115907697472721e-13,
+    4.991562718714704e-13,
+    4.996003610813204e-13,
+    4.996099020604383e-13,
+    4.997482462576475e-13,
+    4.996003610813204e-13,
+    4.99711383383783e-13
+  ],
+  "npz_positions_quaternions_exact": true,
+  "map_points": 589708,
+  "map_all_finite": true,
+  "loop_constraints": 0,
+  "alignment": false,
+  "trajectory_correction": false,
+  "definition": "Map points transformed using only the originally emitted pose. TUM differences are decimal formatting; NPZ state arrays are exactly preserved."
+}

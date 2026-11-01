@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "complete": true,
+    "bag_exhausted": true,
+    "imu_messages": 129619,
+    "lidar_messages": 6481,
+    "image_messages": 0,
+    "updates": 6448,
+    "keyframes": 1215,
+    "last_time": 648.0996406078339
+  },
+  "time_increasing": true,
+  "state_all_finite": true,
+  "marginal_covariance_min_eigenvalue": 4.650049734276241e-08,
+  "marginal_covariance_max_asymmetry": 0.0,
+  "solve_ms_quantiles": {
+    "p50": 314.84282,
+    "p90": 540.9660870000001,
+    "p99": 1027.7098005299995
+  },
+  "lidar_rms_quantiles": {
+    "p50": 0.0112932253633,
+    "p90": 0.016396222760620003,
+    "p99": 0.022014364089737996
+  },
+  "forward_motion_lidar_x_axis": {
+    "35-65": {
+      "forward_speed_median": 1.4616785787689142,
+      "fraction_forward_speed_below_minus_0_2": 0.0
+    },
+    "325-470": {
+      "forward_speed_median": 1.479593883609631,
+      "fraction_forward_speed_below_minus_0_2": 0.0
+    },
+    "500-520": {
+      "forward_speed_median": 1.4485983393049566,
+      "fraction_forward_speed_below_minus_0_2": 0.0
+    },
+    "558-593": {
+      "forward_speed_median": 1.4694196898961132,
+      "fraction_forward_speed_below_minus_0_2": 0.0
+    }
+  },
+  "scans_with_saturated_imu_intervals": 185
+}

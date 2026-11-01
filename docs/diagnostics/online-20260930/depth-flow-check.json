@@ -1,0 +1,1358 @@
+{
+  "summary": {
+    "definition": "Independent KLT/PnP diagnostic only. The measured depths have been deskewed using the saved online estimate. Not independent ground truth and never fed back to the estimator.",
+    "counts": {
+      "pnp_consensus_failed": 80,
+      "accepted": 6,
+      "too_few_bidirectional_tracks": 3
+    },
+    "windows": {
+      "(35, 55)": {
+        "accepted": 1,
+        "axial_velocity_difference_mps_quantiles": [
+          0.06195798862697366,
+          0.06195798862697366,
+          0.06195798862697366
+        ],
+        "rotation_difference_deg_median": 0.5883562931881435,
+        "reprojection_rmse_px_median": 0.7911741464097125
+      },
+      "(150, 170)": {
+        "accepted": 0
+      },
+      "(250, 260)": {
+        "accepted": 3,
+        "axial_velocity_difference_mps_quantiles": [
+          -0.2346973473974338,
+          -0.00849182622369904,
+          0.048359049239853305
+        ],
+        "rotation_difference_deg_median": 0.26261348459127376,
+        "reprojection_rmse_px_median": 0.7676454664067291
+      },
+      "(350, 370)": {
+        "accepted": 1,
+        "axial_velocity_difference_mps_quantiles": [
+          -0.19684173658379023,
+          -0.19684173658379023,
+          -0.19684173658379023
+        ],
+        "rotation_difference_deg_median": 0.04394134791942025,
+        "reprojection_rmse_px_median": 0.8301345726728231
+      },
+      "(490, 510)": {
+        "accepted": 0
+      },
+      "(560, 580)": {
+        "accepted": 1,
+        "axial_velocity_difference_mps_quantiles": [
+          0.05617208454381539,
+          0.05617208454381539,
+          0.05617208454381539
+        ],
+        "rotation_difference_deg_median": 0.38575377386589366,
+        "reprojection_rmse_px_median": 0.7408476061478247
+      }
+    }
+  },
+  "pairs": [
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 53,
+      "current": 54,
+      "time": 35.29383730888367,
+      "selected": 291,
+      "tracked": 99,
+      "inliers": 53,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 55,
+      "current": 56,
+      "time": 36.49470496177673,
+      "selected": 246,
+      "tracked": 101,
+      "inliers": 49,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 57,
+      "current": 58,
+      "time": 37.695595026016235,
+      "selected": 204,
+      "tracked": 64,
+      "inliers": 33,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 59,
+      "current": 60,
+      "time": 38.89648365974426,
+      "selected": 181,
+      "tracked": 80,
+      "inliers": 41,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 61,
+      "current": 62,
+      "time": 40.097347021102905,
+      "selected": 146,
+      "tracked": 85,
+      "inliers": 39,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 63,
+      "current": 64,
+      "time": 41.29821181297302,
+      "selected": 156,
+      "tracked": 60,
+      "inliers": 31,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 65,
+      "current": 66,
+      "time": 42.49900412559509,
+      "selected": 110,
+      "tracked": 58,
+      "inliers": 36,
+      "status": "accepted",
+      "dt": 0.6003944873809814,
+      "reprojection_rmse_px": 0.7911741464097125,
+      "rotation_difference_deg": 0.5883562931881435,
+      "tracked_translation_camera_m": [
+        0.019362358445322834,
+        -0.006107538669868115,
+        0.8917678724663142
+      ],
+      "online_translation_camera_m": [
+        -0.020902318195494297,
+        -0.023100811928324368,
+        0.8546158146903333
+      ],
+      "tracked_world_velocity_mps": [
+        1.4854624270022943,
+        -0.017693826908012904,
+        -0.018907758378059806
+      ],
+      "online_world_velocity_mps": [
+        1.4235044383753206,
+        0.04817650824675464,
+        0.011914267940922992
+      ],
+      "axial_velocity_difference_mps": 0.06195798862697366
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 67,
+      "current": 68,
+      "time": 43.699806690216064,
+      "selected": 82,
+      "tracked": 35,
+      "inliers": 15,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 69,
+      "current": 70,
+      "time": 44.90065240859985,
+      "selected": 151,
+      "tracked": 43,
+      "inliers": 27,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 71,
+      "current": 72,
+      "time": 46.10149025917053,
+      "selected": 205,
+      "tracked": 90,
+      "inliers": 45,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 73,
+      "current": 74,
+      "time": 47.30233907699585,
+      "selected": 224,
+      "tracked": 89,
+      "inliers": 30,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 75,
+      "current": 76,
+      "time": 48.50313901901245,
+      "selected": 243,
+      "tracked": 75,
+      "inliers": 30,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 77,
+      "current": 78,
+      "time": 49.70390844345093,
+      "selected": 205,
+      "tracked": 65,
+      "inliers": 24,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 79,
+      "current": 80,
+      "time": 50.904717683792114,
+      "selected": 220,
+      "tracked": 76,
+      "inliers": 38,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 81,
+      "current": 82,
+      "time": 52.10555553436279,
+      "selected": 170,
+      "tracked": 70,
+      "inliers": 28,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 83,
+      "current": 84,
+      "time": 53.30640959739685,
+      "selected": 136,
+      "tracked": 35,
+      "inliers": 20,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 245,
+      "current": 246,
+      "time": 150.57368969917297,
+      "selected": 166,
+      "tracked": 60,
+      "inliers": 29,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 247,
+      "current": 248,
+      "time": 151.7745382785797,
+      "selected": 156,
+      "tracked": 51,
+      "inliers": 24,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 249,
+      "current": 250,
+      "time": 152.97541499137878,
+      "selected": 193,
+      "tracked": 77,
+      "inliers": 42,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 251,
+      "current": 252,
+      "time": 154.17629957199097,
+      "selected": 159,
+      "tracked": 42,
+      "inliers": 20,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 253,
+      "current": 254,
+      "time": 155.37714862823486,
+      "selected": 114,
+      "tracked": 64,
+      "inliers": 29,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 255,
+      "current": 256,
+      "time": 156.57795476913452,
+      "selected": 149,
+      "tracked": 74,
+      "inliers": 36,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 257,
+      "current": 258,
+      "time": 157.77873873710632,
+      "selected": 195,
+      "tracked": 93,
+      "inliers": 44,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 259,
+      "current": 260,
+      "time": 158.97957968711853,
+      "selected": 167,
+      "tracked": 82,
+      "inliers": 41,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 261,
+      "current": 262,
+      "time": 160.18041110038757,
+      "selected": 153,
+      "tracked": 73,
+      "inliers": 33,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 263,
+      "current": 264,
+      "time": 161.38124179840088,
+      "selected": 170,
+      "tracked": 99,
+      "inliers": 47,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 265,
+      "current": 266,
+      "time": 162.58208680152893,
+      "selected": 184,
+      "tracked": 92,
+      "inliers": 43,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 267,
+      "current": 268,
+      "time": 163.78292870521545,
+      "selected": 153,
+      "tracked": 73,
+      "inliers": 43,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 269,
+      "current": 270,
+      "time": 164.98367428779602,
+      "selected": 156,
+      "tracked": 79,
+      "inliers": 36,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 271,
+      "current": 272,
+      "time": 166.18444180488586,
+      "selected": 174,
+      "tracked": 93,
+      "inliers": 44,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 273,
+      "current": 274,
+      "time": 167.38529539108276,
+      "selected": 143,
+      "tracked": 56,
+      "inliers": 27,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 275,
+      "current": 276,
+      "time": 168.58613872528076,
+      "selected": 219,
+      "tracked": 59,
+      "inliers": 20,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 411,
+      "current": 412,
+      "time": 250.24261593818665,
+      "selected": 94,
+      "tracked": 47,
+      "inliers": 36,
+      "status": "accepted",
+      "dt": 0.6003804206848145,
+      "reprojection_rmse_px": 0.8731953565099883,
+      "rotation_difference_deg": 0.26261348459127376,
+      "tracked_translation_camera_m": [
+        -0.00922701212832133,
+        0.02125643153148767,
+        0.8685092520853144
+      ],
+      "online_translation_camera_m": [
+        -0.023212679927823922,
+        0.005583278432434532,
+        0.8638999384519876
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4449714584071887,
+        -0.06956625717816409,
+        -0.036798867686967086
+      ],
+      "online_world_velocity_mps": [
+        -1.4364796321834896,
+        -0.09216370228442311,
+        -0.010335346223489097
+      ],
+      "axial_velocity_difference_mps": -0.00849182622369904
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 413,
+      "current": 414,
+      "time": 251.44343161582947,
+      "selected": 91,
+      "tracked": 45,
+      "inliers": 24,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 415,
+      "current": 416,
+      "time": 252.6442995071411,
+      "selected": 105,
+      "tracked": 45,
+      "inliers": 30,
+      "status": "accepted",
+      "dt": 0.6004340648651123,
+      "reprojection_rmse_px": 0.7676454664067291,
+      "rotation_difference_deg": 0.3002449204454871,
+      "tracked_translation_camera_m": [
+        0.02782991655691377,
+        -0.011233407783209637,
+        0.8281131052895603
+      ],
+      "online_translation_camera_m": [
+        -0.0032259468119023964,
+        -0.012335295934364571,
+        0.866250536319
+      ],
+      "tracked_world_velocity_mps": [
+        -1.3799367587402533,
+        0.02088851920359734,
+        -0.0019068057326008577
+      ],
+      "online_world_velocity_mps": [
+        -1.4425085268459947,
+        -0.03199214553971326,
+        -0.000759586267918735
+      ],
+      "axial_velocity_difference_mps": 0.06257176810574139
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 417,
+      "current": 418,
+      "time": 253.84517002105713,
+      "selected": 96,
+      "tracked": 45,
+      "inliers": 30,
+      "status": "accepted",
+      "dt": 0.6004295349121094,
+      "reprojection_rmse_px": 0.6421625091001358,
+      "rotation_difference_deg": 0.07864645551335443,
+      "tracked_translation_camera_m": [
+        -0.01602542074835108,
+        0.009428720540850078,
+        1.0429550018649734
+      ],
+      "online_translation_camera_m": [
+        -0.024067639171437193,
+        -0.00536946656839555,
+        0.8675978351686003
+      ],
+      "tracked_world_velocity_mps": [
+        -1.736750551990263,
+        0.017338691514762243,
+        -0.03970304271609601
+      ],
+      "online_world_velocity_mps": [
+        -1.4455018242993956,
+        -0.0031468923722402726,
+        -0.010785491986862988
+      ],
+      "axial_velocity_difference_mps": -0.2912487276908675
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 419,
+      "current": 420,
+      "time": 255.04602718353271,
+      "selected": 121,
+      "tracked": 39,
+      "inliers": 25,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 421,
+      "current": 422,
+      "time": 256.2468271255493,
+      "selected": 250,
+      "tracked": 108,
+      "inliers": 41,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 423,
+      "current": 424,
+      "time": 257.4476099014282,
+      "selected": 477,
+      "tracked": 192,
+      "inliers": 56,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 425,
+      "current": 426,
+      "time": 258.6484634876251,
+      "selected": 240,
+      "tracked": 88,
+      "inliers": 44,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 578,
+      "current": 579,
+      "time": 350.5120105743408,
+      "selected": 147,
+      "tracked": 78,
+      "inliers": 45,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 580,
+      "current": 581,
+      "time": 351.71286511421204,
+      "selected": 139,
+      "tracked": 61,
+      "inliers": 29,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 582,
+      "current": 583,
+      "time": 352.913702249527,
+      "selected": 105,
+      "tracked": 67,
+      "inliers": 37,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 584,
+      "current": 585,
+      "time": 354.1145420074463,
+      "selected": 115,
+      "tracked": 46,
+      "inliers": 18,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 586,
+      "current": 587,
+      "time": 355.31539726257324,
+      "selected": 86,
+      "tracked": 61,
+      "inliers": 33,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 588,
+      "current": 589,
+      "time": 356.5162434577942,
+      "selected": 68,
+      "tracked": 44,
+      "inliers": 23,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 590,
+      "current": 591,
+      "time": 357.71707367897034,
+      "selected": 74,
+      "tracked": 39,
+      "inliers": 16,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 592,
+      "current": 593,
+      "time": 358.91792845726013,
+      "selected": 86,
+      "tracked": 47,
+      "inliers": 21,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 594,
+      "current": 595,
+      "time": 360.11877250671387,
+      "selected": 101,
+      "tracked": 44,
+      "inliers": 27,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 596,
+      "current": 597,
+      "time": 361.31960368156433,
+      "selected": 125,
+      "tracked": 63,
+      "inliers": 35,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 598,
+      "current": 599,
+      "time": 362.52035570144653,
+      "selected": 180,
+      "tracked": 63,
+      "inliers": 33,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 600,
+      "current": 601,
+      "time": 363.72115659713745,
+      "selected": 146,
+      "tracked": 73,
+      "inliers": 35,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 602,
+      "current": 603,
+      "time": 364.92198753356934,
+      "selected": 187,
+      "tracked": 54,
+      "inliers": 26,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 604,
+      "current": 605,
+      "time": 366.1228303909302,
+      "selected": 141,
+      "tracked": 54,
+      "inliers": 34,
+      "status": "accepted",
+      "dt": 0.6004483699798584,
+      "reprojection_rmse_px": 0.8301345726728231,
+      "rotation_difference_deg": 0.04394134791942025,
+      "tracked_translation_camera_m": [
+        0.012965343901485165,
+        0.0068928913598364575,
+        0.7509484588604273
+      ],
+      "online_translation_camera_m": [
+        -0.009307054329977277,
+        -0.007061474340002282,
+        0.8711092317181724
+      ],
+      "tracked_world_velocity_mps": [
+        1.2486418195359879,
+        0.07314576904151676,
+        -0.01603730016763466
+      ],
+      "online_world_velocity_mps": [
+        1.445483556119778,
+        0.12500279444300968,
+        0.006930870708557024
+      ],
+      "axial_velocity_difference_mps": -0.19684173658379023
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 606,
+      "current": 607,
+      "time": 367.3237280845642,
+      "selected": 105,
+      "tracked": 58,
+      "inliers": 32,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 608,
+      "current": 609,
+      "time": 368.52460741996765,
+      "selected": 118,
+      "tracked": 48,
+      "inliers": 26,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 811,
+      "current": 812,
+      "time": 490.40882539749146,
+      "selected": 216,
+      "tracked": 81,
+      "inliers": 39,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 813,
+      "current": 814,
+      "time": 491.60966086387634,
+      "selected": 194,
+      "tracked": 69,
+      "inliers": 30,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 815,
+      "current": 816,
+      "time": 492.8104999065399,
+      "selected": 161,
+      "tracked": 72,
+      "inliers": 36,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 817,
+      "current": 818,
+      "time": 494.0113351345062,
+      "selected": 206,
+      "tracked": 80,
+      "inliers": 33,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 819,
+      "current": 820,
+      "time": 495.2121751308441,
+      "selected": 223,
+      "tracked": 99,
+      "inliers": 38,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 821,
+      "current": 822,
+      "time": 496.41301703453064,
+      "selected": 196,
+      "tracked": 61,
+      "inliers": 32,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 823,
+      "current": 824,
+      "time": 497.6138608455658,
+      "selected": 160,
+      "tracked": 73,
+      "inliers": 31,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 825,
+      "current": 826,
+      "time": 498.81470012664795,
+      "selected": 214,
+      "tracked": 91,
+      "inliers": 38,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 827,
+      "current": 828,
+      "time": 500.01554322242737,
+      "selected": 184,
+      "tracked": 60,
+      "inliers": 31,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 829,
+      "current": 830,
+      "time": 501.2163333892822,
+      "selected": 142,
+      "tracked": 62,
+      "inliers": 28,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 831,
+      "current": 832,
+      "time": 502.417133808136,
+      "selected": 111,
+      "tracked": 53,
+      "inliers": 24,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 833,
+      "current": 834,
+      "time": 503.61797285079956,
+      "selected": 145,
+      "tracked": 80,
+      "inliers": 45,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 835,
+      "current": 836,
+      "time": 504.8188235759735,
+      "selected": 102,
+      "tracked": 44,
+      "inliers": 11,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 837,
+      "current": 838,
+      "time": 506.0196704864502,
+      "selected": 171,
+      "tracked": 68,
+      "inliers": 36,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 839,
+      "current": 840,
+      "time": 507.2204794883728,
+      "selected": 166,
+      "tracked": 87,
+      "inliers": 38,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 841,
+      "current": 842,
+      "time": 508.4212293624878,
+      "selected": 156,
+      "tracked": 77,
+      "inliers": 40,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 927,
+      "current": 928,
+      "time": 560.0570693016052,
+      "selected": 65,
+      "tracked": 35,
+      "inliers": 20,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 929,
+      "current": 930,
+      "time": 561.2578775882721,
+      "selected": 127,
+      "tracked": 26,
+      "status": "too_few_bidirectional_tracks"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 931,
+      "current": 932,
+      "time": 562.4586689472198,
+      "selected": 216,
+      "tracked": 110,
+      "inliers": 48,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 933,
+      "current": 934,
+      "time": 563.6595044136047,
+      "selected": 254,
+      "tracked": 86,
+      "inliers": 28,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 935,
+      "current": 936,
+      "time": 564.8603386878967,
+      "selected": 255,
+      "tracked": 103,
+      "inliers": 53,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 937,
+      "current": 938,
+      "time": 566.0611939430237,
+      "selected": 411,
+      "tracked": 68,
+      "inliers": 26,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 939,
+      "current": 940,
+      "time": 567.2620098590851,
+      "selected": 98,
+      "tracked": 17,
+      "status": "too_few_bidirectional_tracks"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 941,
+      "current": 942,
+      "time": 568.462798833847,
+      "selected": 197,
+      "tracked": 87,
+      "inliers": 43,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 943,
+      "current": 944,
+      "time": 569.6636142730713,
+      "selected": 216,
+      "tracked": 108,
+      "inliers": 44,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 945,
+      "current": 946,
+      "time": 570.8644289970398,
+      "selected": 217,
+      "tracked": 63,
+      "inliers": 30,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 947,
+      "current": 948,
+      "time": 572.0652582645416,
+      "selected": 160,
+      "tracked": 64,
+      "inliers": 30,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 949,
+      "current": 950,
+      "time": 573.2661020755768,
+      "selected": 143,
+      "tracked": 64,
+      "inliers": 40,
+      "status": "accepted",
+      "dt": 0.6004171371459961,
+      "reprojection_rmse_px": 0.7408476061478247,
+      "rotation_difference_deg": 0.38575377386589366,
+      "tracked_translation_camera_m": [
+        0.04156260509273923,
+        0.0036120116901500986,
+        0.8212104493294673
+      ],
+      "online_translation_camera_m": [
+        0.0028639017758488455,
+        0.008758488247209264,
+        0.8569532364780713
+      ],
+      "tracked_world_velocity_mps": [
+        -1.3694964613418383,
+        -0.0012387124890731974,
+        2.3223246667787817e-05
+      ],
+      "online_world_velocity_mps": [
+        -1.4256685458856537,
+        -0.06879974841296783,
+        -0.007165570676740819
+      ],
+      "axial_velocity_difference_mps": 0.05617208454381539
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 951,
+      "current": 952,
+      "time": 574.4669282436371,
+      "selected": 127,
+      "tracked": 34,
+      "inliers": 19,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 953,
+      "current": 954,
+      "time": 575.6677193641663,
+      "selected": 228,
+      "tracked": 77,
+      "inliers": 37,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 955,
+      "current": 956,
+      "time": 576.8685629367828,
+      "selected": 275,
+      "tracked": 107,
+      "inliers": 39,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 957,
+      "current": 958,
+      "time": 578.0694382190704,
+      "selected": 262,
+      "tracked": 81,
+      "inliers": 41,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 959,
+      "current": 960,
+      "time": 579.2703077793121,
+      "selected": 117,
+      "tracked": 7,
+      "status": "too_few_bidirectional_tracks"
+    }
+  ]
+}

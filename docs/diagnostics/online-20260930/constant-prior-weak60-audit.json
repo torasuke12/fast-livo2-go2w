@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "complete": true,
+    "bag_exhausted": true,
+    "imu_messages": 12001,
+    "lidar_messages": 600,
+    "image_messages": 1798,
+    "updates": 282,
+    "keyframes": 94,
+    "last_time": 59.71076536178589
+  },
+  "logs": {
+    "temporal_window.csv": {
+      "rows": 283,
+      "all_finite": true,
+      "covariance_min_eigenvalue": 4.6978161762180086e-08,
+      "last_state": {
+        "time": 59.9109134674,
+        "px": 55.6463609531,
+        "py": -1.04835033419,
+        "pz": 0.0187239422894,
+        "vx": 1.40851372638,
+        "vy": -0.00396525684468,
+        "vz": 0.026973799134
+      },
+      "interval_30_60": {
+        "vx_median_mps": 1.443433167765,
+        "z_min_max_m": [
+          -0.0187060756253,
+          0.0241383768441
+        ]
+      }
+    },
+    "temporal_visual.csv": {
+      "rows": 282,
+      "all_finite": true,
+      "covariance_min_eigenvalue": 4.697816176218408e-08,
+      "last_state": {
+        "time": 59.7107653618,
+        "px": 55.3610953227,
+        "py": -1.04814271215,
+        "pz": 0.00766034007112,
+        "vx": 1.38999698237,
+        "vy": -0.0124157982163,
+        "vz": 0.0203676350698
+      },
+      "interval_30_60": {
+        "vx_median_mps": 1.44451169055,
+        "z_min_max_m": [
+          -0.0187059227933,
+          0.0241384030881
+        ]
+      }
+    }
+  }
+}

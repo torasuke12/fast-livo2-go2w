@@ -1,0 +1,8 @@
+{
+  "purpose": "Same LIVO image cadence, tracking, frontend, and graph trim, but an empty image factor is submitted to the temporal window.",
+  "base_binary_sha256": "a618fa6ad3e380a2169af6e7620683ffc4d05fc1ee5c4326188f5ac569007de1",
+  "source_sha256": "ad78f4e56be56d5a9a65de5c816f77d57159fade102ed4b3a03d5cd5c5ace979",
+  "modified_source_sha256": "db7e2540e5f3789a807493a56e129801b0b661408984abf321854a26b3bb252a",
+  "ablation_binary_sha256": "b66ac1a1a2b49f170c05be7d63ee05f547d6f1697a687888cb685193ac172bef",
+  "changed_call_count": 1
+}

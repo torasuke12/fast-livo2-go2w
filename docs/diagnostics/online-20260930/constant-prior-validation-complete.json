@@ -1,0 +1,55 @@
+{
+  "source_matches_snapshot": true,
+  "binary_unchanged": true,
+  "integrity_audits_complete": true,
+  "no_alignment": true,
+  "regions": {
+    "constant-prior-lio": {
+      "evaluation": {
+        "points": 9622,
+        "overlap_15cm": 0.14539596757430887,
+        "nearest_median_m": 0.40607682009666524,
+        "nearest_p90_m": 1.3671407419664043,
+        "inlier_plane_rmse_m": 0.06264888348496492
+      },
+      "stairs": {
+        "points": 49661,
+        "overlap_15cm": 0.5426793661021727,
+        "nearest_median_m": 0.11875999641287015,
+        "nearest_p90_m": 1.5737517140474129,
+        "inlier_plane_rmse_m": 0.06312216784440759
+      },
+      "upper-corridor": {
+        "points": 410979,
+        "overlap_15cm": 0.9435177953131425,
+        "nearest_median_m": 0.051194647531974814,
+        "nearest_p90_m": 0.11139786909432468,
+        "inlier_plane_rmse_m": 0.04133759384824474
+      }
+    },
+    "constant-prior-lio-repeat": {
+      "evaluation": {
+        "points": 9480,
+        "overlap_15cm": 0.14440928270042194,
+        "nearest_median_m": 0.5431881754107151,
+        "nearest_p90_m": 1.3457736828575655,
+        "inlier_plane_rmse_m": 0.060779685252253315
+      },
+      "stairs": {
+        "points": 49361,
+        "overlap_15cm": 0.30451165900204613,
+        "nearest_median_m": 0.3844362554501297,
+        "nearest_p90_m": 1.5716554764430668,
+        "inlier_plane_rmse_m": 0.06343512122363214
+      },
+      "upper-corridor": {
+        "points": 410849,
+        "overlap_15cm": 0.8870972060294658,
+        "nearest_median_m": 0.047183117910064666,
+        "nearest_p90_m": 0.16319486772510258,
+        "inlier_plane_rmse_m": 0.03739417713011857
+      }
+    }
+  },
+  "interpretation": "Integrity and repetition checked. Same-wall identity and practical room overlap still require reviewing the unaligned clouds; this marker alone is not an accuracy acceptance."
+}

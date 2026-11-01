@@ -1,0 +1,96 @@
+{
+  "run": "relative-plane-fast-lio-repeat",
+  "definition": "Same visible room walls identified from unaligned XY/XZ plot, fitted independently in original world coordinates. Not absolute trajectory error. No fitted result is used by the estimator.",
+  "surfaces": {
+    "negative_x_wall": {
+      "departure": {
+        "roi": [
+          [
+            -4.5,
+            -0.65,
+            0.2
+          ],
+          [
+            -3.5,
+            0.6,
+            2.3
+          ]
+        ],
+        "support": 230,
+        "x_from_y_z_one": [
+          -0.017789903947122557,
+          0.017130086139224066,
+          -4.017244845141821
+        ],
+        "rmse_m": 0.007873263146167967
+      },
+      "return": {
+        "roi": [
+          [
+            -4.0,
+            -0.65,
+            0.2
+          ],
+          [
+            -3.4,
+            0.6,
+            2.3
+          ]
+        ],
+        "support": 393,
+        "x_from_y_z_one": [
+          -0.012285717454241443,
+          0.0023178576983768906,
+          -3.7346939870892575
+        ],
+        "rmse_m": 0.004939713290302458
+      },
+      "signed_x_separation_at_y0_z1_m": 0.26773862961171657
+    },
+    "positive_x_wall": {
+      "departure": {
+        "roi": [
+          [
+            3.1,
+            -0.65,
+            0.2
+          ],
+          [
+            3.6,
+            0.6,
+            2.3
+          ]
+        ],
+        "support": 337,
+        "x_from_y_z_one": [
+          -0.010544301773873227,
+          -0.007703417876775642,
+          3.385690570576798
+        ],
+        "rmse_m": 0.004962202677846084
+      },
+      "return": {
+        "roi": [
+          [
+            3.4,
+            -0.65,
+            0.2
+          ],
+          [
+            4.0,
+            0.6,
+            2.3
+          ]
+        ],
+        "support": 143,
+        "x_from_y_z_one": [
+          -0.015130095764112592,
+          0.009397710199935627,
+          3.624145930588263
+        ],
+        "rmse_m": 0.004486092476645895
+      },
+      "signed_x_separation_at_y0_z1_m": 0.255556488088176
+    }
+  }
+}

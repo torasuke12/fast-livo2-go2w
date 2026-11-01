@@ -1,0 +1,16 @@
+{
+  "deferred-image-weak-livo": {
+    "binary": "deferred-image-binary",
+    "binary_sha256": "5d96d892bd98a33b22de0b89c399d8d37f032b4ae75be3d7404829460664f1ec",
+    "params_sha256": "d333f9320793274e69aa84e562e42329d1c638a25396abe239ce45babbc64c0c",
+    "input": "raw_20260907_114335",
+    "domain": 182
+  },
+  "deferred-image-all-livo": {
+    "binary": "deferred-image-binary",
+    "binary_sha256": "5d96d892bd98a33b22de0b89c399d8d37f032b4ae75be3d7404829460664f1ec",
+    "params_sha256": "d8526438c782bfb48b7c0d8965add44645636c64a1e20eb4e02cf708c45a72d8",
+    "input": "raw_20260907_114335",
+    "domain": 183
+  }
+}

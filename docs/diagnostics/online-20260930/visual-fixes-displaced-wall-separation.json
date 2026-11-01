@@ -1,0 +1,278 @@
+{
+  "visual-bounds-livo": {
+    "definition": "Negative-X room wall selected independently in departure and return clouds in their original world coordinates. No point or pose alignment. Wall identity selected visually, not ground truth.",
+    "departure": {
+      "roi": [
+        [
+          -4.5,
+          -0.7,
+          0.2
+        ],
+        [
+          -3.3,
+          1.5,
+          2.3
+        ]
+      ],
+      "support": 355,
+      "x_from_y_z_one": [
+        -0.023841026120562686,
+        0.0139040339931924,
+        -4.0116322207285
+      ],
+      "rmse_m": 0.005555251960756003
+    },
+    "return": {
+      "roi": [
+        [
+          0.9,
+          -0.7,
+          0.2
+        ],
+        [
+          1.6,
+          1.5,
+          2.3
+        ]
+      ],
+      "support": 959,
+      "x_from_y_z_one": [
+        -0.020314601145468913,
+        0.006381644898420524,
+        1.197651903817315
+      ],
+      "rmse_m": 0.007918964049919042
+    },
+    "signed_x_separation_at_y0_z1_m": 5.201761735451043
+  },
+  "visual-voxel-livo": {
+    "definition": "Negative-X room wall selected independently in departure and return clouds in their original world coordinates. No point or pose alignment. Wall identity selected visually, not ground truth.",
+    "departure": {
+      "roi": [
+        [
+          -4.5,
+          -0.7,
+          0.2
+        ],
+        [
+          -3.3,
+          1.5,
+          2.3
+        ]
+      ],
+      "support": 355,
+      "x_from_y_z_one": [
+        -0.023841026120676907,
+        0.013904033993298093,
+        -4.011632220728638
+      ],
+      "rmse_m": 0.005555251960869823
+    },
+    "return": {
+      "roi": [
+        [
+          -8.0,
+          -0.7,
+          0.2
+        ],
+        [
+          -7.4,
+          1.5,
+          2.3
+        ]
+      ],
+      "support": 829,
+      "x_from_y_z_one": [
+        -0.01920736953344949,
+        0.005958238317890441,
+        -7.734732119887342
+      ],
+      "rmse_m": 0.006134502939146692
+    },
+    "signed_x_separation_at_y0_z1_m": -3.731045694834112
+  },
+  "visual-voxel-full-livo": {
+    "definition": "Negative-X room wall selected independently in departure and return clouds in their original world coordinates. No point or pose alignment. Wall identity selected visually, not ground truth.",
+    "departure": {
+      "roi": [
+        [
+          -4.5,
+          -0.7,
+          0.2
+        ],
+        [
+          -3.3,
+          1.5,
+          2.3
+        ]
+      ],
+      "support": 355,
+      "x_from_y_z_one": [
+        -0.023841026120562686,
+        0.0139040339931924,
+        -4.0116322207285
+      ],
+      "rmse_m": 0.005555251960756003
+    },
+    "return": {
+      "roi": [
+        [
+          -8.4,
+          -0.7,
+          0.2
+        ],
+        [
+          -7.8,
+          1.5,
+          2.3
+        ]
+      ],
+      "support": 848,
+      "x_from_y_z_one": [
+        -0.019403311662259726,
+        0.006334752152627132,
+        -8.138372784683785
+      ],
+      "rmse_m": 0.006113060147760736
+    },
+    "signed_x_separation_at_y0_z1_m": -4.13430984579585
+  },
+  "visual-visible-livo": {
+    "definition": "Negative-X room wall selected independently in departure and return clouds in their original world coordinates. No point or pose alignment. Wall identity selected visually, not ground truth.",
+    "departure": {
+      "roi": [
+        [
+          -4.5,
+          -0.7,
+          0.2
+        ],
+        [
+          -3.3,
+          1.5,
+          2.3
+        ]
+      ],
+      "support": 355,
+      "x_from_y_z_one": [
+        -0.023841026120562686,
+        0.0139040339931924,
+        -4.0116322207285
+      ],
+      "rmse_m": 0.005555251960756003
+    },
+    "return": {
+      "roi": [
+        [
+          -7.2,
+          -0.7,
+          0.2
+        ],
+        [
+          -6.5,
+          1.5,
+          2.3
+        ]
+      ],
+      "support": 763,
+      "x_from_y_z_one": [
+        -0.02085233222584914,
+        0.0038297362735257856,
+        -6.920159263997551
+      ],
+      "rmse_m": 0.006840247118589615
+    },
+    "signed_x_separation_at_y0_z1_m": -2.9186013409887175
+  },
+  "visual-reference-weak-livo": {
+    "definition": "Negative-X room wall selected independently in departure and return clouds in their original world coordinates. No point or pose alignment. Wall identity selected visually, not ground truth.",
+    "departure": {
+      "roi": [
+        [
+          -4.5,
+          -0.7,
+          0.2
+        ],
+        [
+          -3.3,
+          1.5,
+          2.3
+        ]
+      ],
+      "support": 355,
+      "x_from_y_z_one": [
+        -0.023841026120676907,
+        0.013904033993298093,
+        -4.011632220728638
+      ],
+      "rmse_m": 0.005555251960869823
+    },
+    "return": {
+      "roi": [
+        [
+          -6.25,
+          -0.7,
+          0.2
+        ],
+        [
+          -5.6,
+          1.5,
+          2.3
+        ]
+      ],
+      "support": 844,
+      "x_from_y_z_one": [
+        -0.02165097746239756,
+        0.0071511276094460285,
+        -5.920500877583861
+      ],
+      "rmse_m": 0.006507229035136876
+    },
+    "signed_x_separation_at_y0_z1_m": -1.9156215632390756
+  },
+  "visual-reference-all-livo": {
+    "definition": "Negative-X room wall selected independently in departure and return clouds in their original world coordinates. No point or pose alignment. Wall identity selected visually, not ground truth.",
+    "departure": {
+      "roi": [
+        [
+          -4.5,
+          -0.7,
+          0.2
+        ],
+        [
+          -3.3,
+          1.5,
+          2.3
+        ]
+      ],
+      "support": 352,
+      "x_from_y_z_one": [
+        -0.024189870709992723,
+        0.013581225740309844,
+        -4.0084232727170175
+      ],
+      "rmse_m": 0.005663429800471821
+    },
+    "return": {
+      "roi": [
+        [
+          -10.9,
+          -0.7,
+          0.2
+        ],
+        [
+          -10.1,
+          1.5,
+          2.3
+        ]
+      ],
+      "support": 857,
+      "x_from_y_z_one": [
+        -0.01972563552836702,
+        0.006529816569653235,
+        -10.511153214335028
+      ],
+      "rmse_m": 0.006182058347249958
+    },
+    "signed_x_separation_at_y0_z1_m": -6.509781350788668
+  }
+}

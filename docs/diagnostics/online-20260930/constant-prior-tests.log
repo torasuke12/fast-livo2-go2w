@@ -1,0 +1,14 @@
+clipped impulses: position RMS nominal=0.0269572 guarded=0.00316801
+joint: gyro bias error=1.97519e-05 accel bias error=0.000315337 velocity error=0.000274253 matches=450 ms=59.7285
+temporal LIO tests passed
+temporal_lio PASS
+Raw-return LiDAR objective gradient relative error: 4.0201e-10
+Raw-return LiDAR objective gradient relative error: 6.82785e-10
+Raw-return LiDAR objective gradient relative error: 2.92283e-10
+temporal_deskew PASS
+Joint plane gradient error 1.29164e-07; static scene and marginal prior correlations OK
+temporal_landmarks PASS
+temporal visual likelihood, covariance, persistence, deferred references and rejection tests passed
+temporal_visual PASS
+Map covariance, causal insertion, single-use scan factors and static replay OK
+temporal_map PASS

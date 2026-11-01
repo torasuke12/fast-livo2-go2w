@@ -1,0 +1,30 @@
+{
+  "experiment": "Same sequential plane/IMU observations; add I m^2 only to initial global position covariance. No trajectory alignment.",
+  "duration_sec": 6.0,
+  "before": {
+    "mean_difference": 0.00668254572319702,
+    "position_mean_difference": 0.00668254571294395,
+    "velocity_mean_difference": 3.1868287140617e-07,
+    "accel_bias_mean_difference": 1.68877299960917e-07,
+    "shifted_mean_error": 2.94387592135981e-07,
+    "shifted_covariance_difference": 1.81820880157002e-08,
+    "position_variance_difference": [
+      0.996723184507623,
+      0.997694188337538,
+      0.999484273664315
+    ]
+  },
+  "after": {
+    "mean_difference": 2.94653953160821e-13,
+    "position_mean_difference": 2.94085369788557e-13,
+    "velocity_mean_difference": 9.67093305313581e-15,
+    "accel_bias_mean_difference": 1.47006848573424e-14,
+    "shifted_mean_error": 4.18952922667542e-15,
+    "shifted_covariance_difference": 8.48850153986006e-15,
+    "position_variance_difference": [
+      1.0000000000058,
+      1.00000000002141,
+      1.00000000003948
+    ]
+  }
+}

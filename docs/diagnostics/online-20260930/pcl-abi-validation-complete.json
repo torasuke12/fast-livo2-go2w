@@ -1,0 +1,58 @@
+{
+  "runs": [
+    "pcl-abi-sat100-lio",
+    "pcl-abi-sat100-repeat"
+  ],
+  "source_still_matches_snapshot": false,
+  "fixed_replay_binary_unchanged": true,
+  "audits_completed": true,
+  "no_alignment": true,
+  "regions": {
+    "pcl-abi-sat100-lio": {
+      "evaluation": {
+        "points": 9980,
+        "overlap_15cm": 0.21452905811623246,
+        "nearest_median_m": 0.5462297474450218,
+        "nearest_p90_m": 1.2651780131569739,
+        "inlier_plane_rmse_m": 0.05949723812148428
+      },
+      "stairs": {
+        "points": 50698,
+        "overlap_15cm": 0.23279024813602114,
+        "nearest_median_m": 0.4504999981059395,
+        "nearest_p90_m": 1.611155413622199,
+        "inlier_plane_rmse_m": 0.06493574397042802
+      },
+      "upper-corridor": {
+        "points": 417678,
+        "overlap_15cm": 0.8070858412461274,
+        "nearest_median_m": 0.07302953408002741,
+        "nearest_p90_m": 0.26662155929386505,
+        "inlier_plane_rmse_m": 0.05927764965194631
+      }
+    },
+    "pcl-abi-sat100-repeat": {
+      "evaluation": {
+        "points": 9980,
+        "overlap_15cm": 0.21452905811623246,
+        "nearest_median_m": 0.5462297474450218,
+        "nearest_p90_m": 1.2651780131569739,
+        "inlier_plane_rmse_m": 0.05949723812148428
+      },
+      "stairs": {
+        "points": 50698,
+        "overlap_15cm": 0.23279024813602114,
+        "nearest_median_m": 0.4504999981059395,
+        "nearest_p90_m": 1.611155413622199,
+        "inlier_plane_rmse_m": 0.06493574397042802
+      },
+      "upper-corridor": {
+        "points": 417678,
+        "overlap_15cm": 0.8070858412461274,
+        "nearest_median_m": 0.07302953408002741,
+        "nearest_p90_m": 0.26662155929386505,
+        "inlier_plane_rmse_m": 0.05927764965194631
+      }
+    }
+  }
+}

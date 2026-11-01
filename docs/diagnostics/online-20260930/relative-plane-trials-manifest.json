@@ -1,0 +1,16 @@
+{
+  "relative-plane-lio60": {
+    "binary": "relative-plane-binary",
+    "binary_sha256": "1a0b6ef2de218c0d909aee3fa89c7a3f83aa7e9ef4d223060e879855c7eb58b9",
+    "params_sha256": "19535e27dc47c04ec3f5363e593794878ac9b6ca4e60a43488305eeb29e5c338",
+    "input": "dds-input-rgb-60",
+    "domain": 190
+  },
+  "relative-plane-weak60": {
+    "binary": "relative-plane-binary",
+    "binary_sha256": "1a0b6ef2de218c0d909aee3fa89c7a3f83aa7e9ef4d223060e879855c7eb58b9",
+    "params_sha256": "d333f9320793274e69aa84e562e42329d1c638a25396abe239ce45babbc64c0c",
+    "input": "dds-input-rgb-60",
+    "domain": 191
+  }
+}

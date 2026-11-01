@@ -1,0 +1,20 @@
+{
+  "definition": "Ongoing prefix only; not a full-route accuracy acceptance. Covariance eigenspectrum checked on every completed row through 320 s.",
+  "end_sec": 320.0,
+  "runs": {
+    "constant-prior-lio": {
+      "updates": 3167,
+      "last_time": 319.999890804,
+      "state_covariance_all_finite": true,
+      "minimum_covariance_eigenvalue": 4.665474000604401e-08
+    },
+    "constant-prior-lio-repeat": {
+      "updates": 3167,
+      "last_time": 319.999890804,
+      "state_covariance_all_finite": true,
+      "minimum_covariance_eigenvalue": 4.6500497342754406e-08
+    }
+  },
+  "pair_max_position_difference_m": 0.4357324264914223,
+  "pair_last_position_difference_m": 0.38514796849734834
+}

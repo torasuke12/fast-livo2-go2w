@@ -1,0 +1,192 @@
+{
+  "relative-plane-fast-weak-livo": {
+    "definition": "Same negative/positive X room walls identified in the unaligned XY/XZ plots. Independent fits in original world coordinates; no fitted transform or estimator feedback. Reference coordinate y=0,z=1.",
+    "surfaces": {
+      "negative_x_wall": {
+        "departure": {
+          "roi": [
+            [
+              -4.5,
+              -0.65,
+              0.2
+            ],
+            [
+              -3.5,
+              0.6,
+              1.9
+            ]
+          ],
+          "support": 224,
+          "x_from_y_z_one": [
+            -0.022282368707240652,
+            0.009924883391183581,
+            -4.004886529549373
+          ],
+          "rmse_m": 0.004327809125925948
+        },
+        "return": {
+          "roi": [
+            [
+              -3.1,
+              -0.65,
+              0.2
+            ],
+            [
+              -2.4,
+              0.6,
+              1.9
+            ]
+          ],
+          "support": 574,
+          "x_from_y_z_one": [
+            -0.016066823682939924,
+            0.0022484158460469583,
+            -2.758336564454549
+          ],
+          "rmse_m": 0.005427603169533742
+        },
+        "signed_x_separation_at_y0_z1_m": 1.2388734975496878
+      },
+      "positive_x_wall": {
+        "departure": {
+          "roi": [
+            [
+              3.1,
+              -0.65,
+              0.2
+            ],
+            [
+              3.6,
+              0.6,
+              1.9
+            ]
+          ],
+          "support": 288,
+          "x_from_y_z_one": [
+            -0.014206131583448888,
+            -0.0027638709973087927,
+            3.3831151290188686
+          ],
+          "rmse_m": 0.004615986693753558
+        },
+        "return": {
+          "roi": [
+            [
+              4.35,
+              -0.65,
+              0.2
+            ],
+            [
+              4.95,
+              0.6,
+              1.9
+            ]
+          ],
+          "support": 134,
+          "x_from_y_z_one": [
+            -0.024391342074044742,
+            0.00856526677304048,
+            4.603295281605074
+          ],
+          "rmse_m": 0.005626662135425174
+        },
+        "signed_x_separation_at_y0_z1_m": 1.2315092903565543
+      }
+    }
+  },
+  "relative-plane-fast-weak-repeat": {
+    "definition": "Same negative/positive X room walls identified in the unaligned XY/XZ plots. Independent fits in original world coordinates; no fitted transform or estimator feedback. Reference coordinate y=0,z=1.",
+    "surfaces": {
+      "negative_x_wall": {
+        "departure": {
+          "roi": [
+            [
+              -4.5,
+              -0.65,
+              0.2
+            ],
+            [
+              -3.5,
+              0.6,
+              1.9
+            ]
+          ],
+          "support": 224,
+          "x_from_y_z_one": [
+            -0.022282368707242192,
+            0.009924883391182249,
+            -4.004886529549392
+          ],
+          "rmse_m": 0.004327809125926893
+        },
+        "return": {
+          "roi": [
+            [
+              -2.4,
+              -0.65,
+              0.2
+            ],
+            [
+              -1.7,
+              0.6,
+              1.9
+            ]
+          ],
+          "support": 586,
+          "x_from_y_z_one": [
+            -0.016407163161956992,
+            0.0012838998763142762,
+            -2.0362062000630803
+          ],
+          "rmse_m": 0.006022902013273749
+        },
+        "signed_x_separation_at_y0_z1_m": 1.9600393459714436
+      },
+      "positive_x_wall": {
+        "departure": {
+          "roi": [
+            [
+              3.1,
+              -0.65,
+              0.2
+            ],
+            [
+              3.6,
+              0.6,
+              1.9
+            ]
+          ],
+          "support": 288,
+          "x_from_y_z_one": [
+            -0.014206131583444848,
+            -0.0027638709973016873,
+            3.383115129018838
+          ],
+          "rmse_m": 0.004615986693752304
+        },
+        "return": {
+          "roi": [
+            [
+              5.0,
+              -0.65,
+              0.2
+            ],
+            [
+              5.65,
+              0.6,
+              1.9
+            ]
+          ],
+          "support": 133,
+          "x_from_y_z_one": [
+            -0.027343554060290015,
+            0.010689744221272335,
+            5.3223861775174495
+          ],
+          "rmse_m": 0.004657822181378399
+        },
+        "signed_x_separation_at_y0_z1_m": 1.9527246637171856
+      }
+    }
+  }
+}

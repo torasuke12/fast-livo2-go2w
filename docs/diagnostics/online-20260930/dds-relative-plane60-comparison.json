@@ -1,0 +1,26 @@
+{
+  "comparable_same_update_times": false,
+  "exit": "0",
+  "mapping_binary_sha256": "743f052b532323d39dd13b09c103376ba6e9f45adcd2b8276025517d3606b8ed",
+  "interpretation": "Same configured estimator, but accepted image times differ by one camera frame. Do not label this an exact numerical replay comparison. The smoke player lacked a startup delay; a delayed replay is being tested. No estimator change or alignment is used.",
+  "temporal_window.csv": {
+    "rows": 283,
+    "first_direct_sec": 3.4718298912,
+    "first_ros_sec": 3.50518631935,
+    "time_delta_min_median_max_sec": [
+      0.03335237499999977,
+      0.03335690489999621,
+      0.03335857399999753
+    ]
+  },
+  "temporal_visual.csv": {
+    "rows": 282,
+    "first_direct_sec": 3.4718298912,
+    "first_ros_sec": 3.50518631935,
+    "time_delta_min_median_max_sec": [
+      0.03335237499999977,
+      0.0333567857499979,
+      0.03335857399999753
+    ]
+  }
+}

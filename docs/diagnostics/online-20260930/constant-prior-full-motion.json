@@ -1,0 +1,433 @@
+{
+  "definition": "Raw emitted LiDAR states, no alignment or trajectory correction. Height ranges and update sizes are diagnostics, not ground-truth errors.",
+  "runs": {
+    "relative-plane-fast-lio": {
+      "updates": 6448,
+      "last_sec": 648.099640608,
+      "solve_ms_percentiles": [
+        384.318541,
+        974.2188585499995,
+        1504.3600065399987
+      ],
+      "windows": {
+        "upper_outbound": {
+          "time_range_sec": [
+            145,
+            300
+          ],
+          "height_min_max_m": [
+            3.46344225892,
+            3.57333691036
+          ],
+          "height_span_m": 0.10989465144000032,
+          "median_height_m": 3.53497881407,
+          "median_accel_z_bias_mps2": -0.020865099401200002,
+          "max_abs_z_update_m": 0.0115759117758,
+          "z_update_abs_95_m": 0.003568065478420499,
+          "median_z_std_m": 0.01413885799307989
+        },
+        "upper_return": {
+          "time_range_sec": [
+            325,
+            470
+          ],
+          "height_min_max_m": [
+            3.49232617569,
+            3.57114404376
+          ],
+          "height_span_m": 0.0788178680699998,
+          "median_height_m": 3.53069728531,
+          "median_accel_z_bias_mps2": -0.0230642264115,
+          "max_abs_z_update_m": 0.0166475878267,
+          "z_update_abs_95_m": 0.0026605500474629995,
+          "median_z_std_m": 0.013709757099165956
+        },
+        "upper_u_turn": {
+          "time_range_sec": [
+            475,
+            489
+          ],
+          "height_min_max_m": [
+            3.52335962318,
+            3.55873457
+          ],
+          "height_span_m": 0.03537494681999975,
+          "median_height_m": 3.53120362537,
+          "median_accel_z_bias_mps2": -0.02231223679745,
+          "max_abs_z_update_m": 0.00513832030785,
+          "z_update_abs_95_m": 0.0024812229364554973,
+          "median_z_std_m": 0.012891400773049948
+        },
+        "stairs_down": {
+          "time_range_sec": [
+            529,
+            553
+          ],
+          "height_min_max_m": [
+            -0.208468906239,
+            3.52380620969
+          ],
+          "height_span_m": 3.732275115929,
+          "median_height_m": 1.61740804042,
+          "median_accel_z_bias_mps2": -0.0228960977311,
+          "max_abs_z_update_m": 0.0664664520227,
+          "z_update_abs_95_m": 0.02547409150046497,
+          "median_z_std_m": 0.012556320591369737
+        },
+        "after_stairs": {
+          "time_range_sec": [
+            558,
+            593
+          ],
+          "height_min_max_m": [
+            -0.11323815938,
+            -0.021372604296
+          ],
+          "height_span_m": 0.09186555508399999,
+          "median_height_m": -0.061658174492,
+          "median_accel_z_bias_mps2": -0.024241494479850002,
+          "max_abs_z_update_m": 0.0386080711385,
+          "z_update_abs_95_m": 0.004324653837658001,
+          "median_z_std_m": 0.01288409786144503
+        },
+        "room_return": {
+          "time_range_sec": [
+            632,
+            648
+          ],
+          "height_min_max_m": [
+            -0.0510859837747,
+            -0.0478805095774
+          ],
+          "height_span_m": 0.0032054741973000025,
+          "median_height_m": -0.0494243179104,
+          "median_accel_z_bias_mps2": -0.02564027647205,
+          "max_abs_z_update_m": 0.00130947248718,
+          "z_update_abs_95_m": 0.0008871483308873498,
+          "median_z_std_m": 0.014039245328450332
+        }
+      }
+    },
+    "relative-plane-fast-lio-repeat": {
+      "updates": 6448,
+      "last_sec": 648.099640608,
+      "solve_ms_percentiles": [
+        402.8870695,
+        1068.2325622999992,
+        1655.1200829099957
+      ],
+      "windows": {
+        "upper_outbound": {
+          "time_range_sec": [
+            145,
+            300
+          ],
+          "height_min_max_m": [
+            3.47140327829,
+            3.58402557077
+          ],
+          "height_span_m": 0.11262229248000022,
+          "median_height_m": 3.54568192883,
+          "median_accel_z_bias_mps2": -0.0209916215088,
+          "max_abs_z_update_m": 0.0117900096506,
+          "z_update_abs_95_m": 0.003931019500314497,
+          "median_z_std_m": 0.014262049860191695
+        },
+        "upper_return": {
+          "time_range_sec": [
+            325,
+            470
+          ],
+          "height_min_max_m": [
+            3.50165757127,
+            3.58657830593
+          ],
+          "height_span_m": 0.08492073465999983,
+          "median_height_m": 3.543775152815,
+          "median_accel_z_bias_mps2": -0.02298573673845,
+          "max_abs_z_update_m": 0.0147453220604,
+          "z_update_abs_95_m": 0.0027243767285559995,
+          "median_z_std_m": 0.013842166457251222
+        },
+        "upper_u_turn": {
+          "time_range_sec": [
+            475,
+            489
+          ],
+          "height_min_max_m": [
+            3.52826040057,
+            3.56128212154
+          ],
+          "height_span_m": 0.033021720970000334,
+          "median_height_m": 3.53574790766,
+          "median_accel_z_bias_mps2": -0.02223589440655,
+          "max_abs_z_update_m": 0.00454743478004,
+          "z_update_abs_95_m": 0.0023320734827709986,
+          "median_z_std_m": 0.013010929721666637
+        },
+        "stairs_down": {
+          "time_range_sec": [
+            529,
+            553
+          ],
+          "height_min_max_m": [
+            -0.184488171498,
+            3.5321471916
+          ],
+          "height_span_m": 3.716635363098,
+          "median_height_m": 1.6254607544850002,
+          "median_accel_z_bias_mps2": -0.02279243907425,
+          "max_abs_z_update_m": 0.0563532685795,
+          "z_update_abs_95_m": 0.024433546120244974,
+          "median_z_std_m": 0.012698446658935346
+        },
+        "after_stairs": {
+          "time_range_sec": [
+            558,
+            593
+          ],
+          "height_min_max_m": [
+            -0.0872270084666,
+            0.00421399171243
+          ],
+          "height_span_m": 0.09144100017903001,
+          "median_height_m": -0.03671135064985,
+          "median_accel_z_bias_mps2": -0.024192796139,
+          "max_abs_z_update_m": 0.0317107302576,
+          "z_update_abs_95_m": 0.0043153607501675,
+          "median_z_std_m": 0.013039932764577662
+        },
+        "room_return": {
+          "time_range_sec": [
+            632,
+            648
+          ],
+          "height_min_max_m": [
+            -0.0306857490745,
+            -0.0274902311553
+          ],
+          "height_span_m": 0.0031955179192000027,
+          "median_height_m": -0.0292423351542,
+          "median_accel_z_bias_mps2": -0.025634728740299997,
+          "max_abs_z_update_m": 0.00164382694836,
+          "z_update_abs_95_m": 0.0010552838676254987,
+          "median_z_std_m": 0.014205012311632865
+        }
+      }
+    },
+    "constant-prior-lio": {
+      "updates": 6448,
+      "last_sec": 648.099640608,
+      "solve_ms_percentiles": [
+        312.02340549999997,
+        710.1641424999995,
+        1027.0426645899988
+      ],
+      "windows": {
+        "upper_outbound": {
+          "time_range_sec": [
+            145,
+            300
+          ],
+          "height_min_max_m": [
+            3.33421801101,
+            3.47982134853
+          ],
+          "height_span_m": 0.14560333751999988,
+          "median_height_m": 3.39174514372,
+          "median_accel_z_bias_mps2": -0.019924808925249997,
+          "max_abs_z_update_m": 0.0129985788877,
+          "z_update_abs_95_m": 0.0035161383906039986,
+          "median_z_std_m": 0.01413740386296088
+        },
+        "upper_return": {
+          "time_range_sec": [
+            325,
+            470
+          ],
+          "height_min_max_m": [
+            3.33980200582,
+            3.4639401186
+          ],
+          "height_span_m": 0.12413811277999987,
+          "median_height_m": 3.39733984978,
+          "median_accel_z_bias_mps2": -0.022815657877,
+          "max_abs_z_update_m": 0.0172098375747,
+          "z_update_abs_95_m": 0.002757718073478998,
+          "median_z_std_m": 0.013728733269229503
+        },
+        "upper_u_turn": {
+          "time_range_sec": [
+            475,
+            489
+          ],
+          "height_min_max_m": [
+            3.35495742585,
+            3.38541171802
+          ],
+          "height_span_m": 0.030454292169999952,
+          "median_height_m": 3.3627284449449997,
+          "median_accel_z_bias_mps2": -0.02185536926515,
+          "max_abs_z_update_m": 0.00495116415483,
+          "z_update_abs_95_m": 0.0021964372891294945,
+          "median_z_std_m": 0.012910439141441726
+        },
+        "stairs_down": {
+          "time_range_sec": [
+            529,
+            553
+          ],
+          "height_min_max_m": [
+            -0.372782929689,
+            3.37198085778
+          ],
+          "height_span_m": 3.744763787469,
+          "median_height_m": 1.459935656545,
+          "median_accel_z_bias_mps2": -0.022632828405900002,
+          "max_abs_z_update_m": 0.059818007116,
+          "z_update_abs_95_m": 0.02781982479623499,
+          "median_z_std_m": 0.01260495384483555
+        },
+        "after_stairs": {
+          "time_range_sec": [
+            558,
+            593
+          ],
+          "height_min_max_m": [
+            -0.272512245185,
+            -0.183053007128
+          ],
+          "height_span_m": 0.08945923805700001,
+          "median_height_m": -0.22336574456199998,
+          "median_accel_z_bias_mps2": -0.0239326556633,
+          "max_abs_z_update_m": 0.0380975945765,
+          "z_update_abs_95_m": 0.004266064700570501,
+          "median_z_std_m": 0.01294313453113117
+        },
+        "room_return": {
+          "time_range_sec": [
+            632,
+            648
+          ],
+          "height_min_max_m": [
+            -0.21353764858,
+            -0.209735867371
+          ],
+          "height_span_m": 0.003801781208999988,
+          "median_height_m": -0.211888995533,
+          "median_accel_z_bias_mps2": -0.02520636702825,
+          "max_abs_z_update_m": 0.00133792494517,
+          "z_update_abs_95_m": 0.0009183761914066993,
+          "median_z_std_m": 0.014066844996574257
+        }
+      }
+    },
+    "constant-prior-lio-repeat": {
+      "updates": 6448,
+      "last_sec": 648.099640608,
+      "solve_ms_percentiles": [
+        314.84282,
+        712.1345546999995,
+        1027.7098005299995
+      ],
+      "windows": {
+        "upper_outbound": {
+          "time_range_sec": [
+            145,
+            300
+          ],
+          "height_min_max_m": [
+            3.30150601203,
+            3.46854510448
+          ],
+          "height_span_m": 0.16703909245000004,
+          "median_height_m": 3.38518212101,
+          "median_accel_z_bias_mps2": -0.01942412151825,
+          "max_abs_z_update_m": 0.0109090581057,
+          "z_update_abs_95_m": 0.003456614837555499,
+          "median_z_std_m": 0.014151654681766962
+        },
+        "upper_return": {
+          "time_range_sec": [
+            325,
+            470
+          ],
+          "height_min_max_m": [
+            3.32992993898,
+            3.45738913971
+          ],
+          "height_span_m": 0.12745920073000017,
+          "median_height_m": 3.3879877398,
+          "median_accel_z_bias_mps2": -0.0224624008502,
+          "max_abs_z_update_m": 0.0173790963664,
+          "z_update_abs_95_m": 0.0026753110207094997,
+          "median_z_std_m": 0.013728118647295402
+        },
+        "upper_u_turn": {
+          "time_range_sec": [
+            475,
+            489
+          ],
+          "height_min_max_m": [
+            3.34401104863,
+            3.37745751164
+          ],
+          "height_span_m": 0.03344646300999976,
+          "median_height_m": 3.351925763505,
+          "median_accel_z_bias_mps2": -0.02166164031605,
+          "max_abs_z_update_m": 0.00590208162905,
+          "z_update_abs_95_m": 0.002161784614772998,
+          "median_z_std_m": 0.012929206786656305
+        },
+        "stairs_down": {
+          "time_range_sec": [
+            529,
+            553
+          ],
+          "height_min_max_m": [
+            -0.372797637183,
+            3.3594402377
+          ],
+          "height_span_m": 3.732237874883,
+          "median_height_m": 1.462396320825,
+          "median_accel_z_bias_mps2": -0.0223552836516,
+          "max_abs_z_update_m": 0.0813004817514,
+          "z_update_abs_95_m": 0.02716919876999498,
+          "median_z_std_m": 0.012582063423341176
+        },
+        "after_stairs": {
+          "time_range_sec": [
+            558,
+            593
+          ],
+          "height_min_max_m": [
+            -0.274853217368,
+            -0.1777276845
+          ],
+          "height_span_m": 0.09712553286799999,
+          "median_height_m": -0.2213217854985,
+          "median_accel_z_bias_mps2": -0.02382730635515,
+          "max_abs_z_update_m": 0.0381222566014,
+          "z_update_abs_95_m": 0.0042049040140490004,
+          "median_z_std_m": 0.012936841289321722
+        },
+        "room_return": {
+          "time_range_sec": [
+            632,
+            648
+          ],
+          "height_min_max_m": [
+            -0.215016551358,
+            -0.21102765972
+          ],
+          "height_span_m": 0.003988891637999981,
+          "median_height_m": -0.2129457889225,
+          "median_accel_z_bias_mps2": -0.0253942570846,
+          "max_abs_z_update_m": 0.0017820188464,
+          "z_update_abs_95_m": 0.0011112621969725,
+          "median_z_std_m": 0.014067114354359117
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "binary": "reprojection-binary",
+  "binary_sha256": "aba867e97913dc420d87238a25698b6d81d1c9967f3b1027ec93a43be7df85b3",
+  "params_sha256": "dada2d8d4b1486a0b113b0d1b62ab1473c8c783edbaec6a163b147f61073b134",
+  "difference": "visual_degenerate_translation=false only"
+}

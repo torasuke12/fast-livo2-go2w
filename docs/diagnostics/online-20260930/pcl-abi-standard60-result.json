@@ -1,0 +1,23 @@
+{
+  "exit": 0,
+  "summary": {
+    "complete": true,
+    "bag_exhausted": true,
+    "imu_messages": 12001,
+    "lidar_messages": 600,
+    "image_messages": 1798,
+    "updates": 282,
+    "keyframes": 94,
+    "last_time": 59.71076536178589
+  },
+  "last_pose": {
+    "time": 59.31047201156616,
+    "px": 54.518611768606895,
+    "py": -2.734871055134894,
+    "pz": -1.0593897565452755,
+    "bax": 0.0858931433427383,
+    "bay": -0.043632450970556944,
+    "baz": 0.046689348228124296
+  },
+  "conclusion": "The former point-cloud destruction crash is absent after the ABI build fix. Ordinary LIVO still has about one metre of height drift by 60s; do not adopt for full-route accuracy."
+}

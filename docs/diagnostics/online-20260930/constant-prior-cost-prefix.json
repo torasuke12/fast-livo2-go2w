@@ -1,0 +1,34 @@
+{
+  "definition": "Read-only comparison on common completed prefix <= 180 s; updates are last optimizer iteration. Cost scales change by removing an irrelevant constant; different costs are not accuracy metrics.",
+  "limit_sec": 180.0,
+  "runs": {
+    "relative-plane-fast-lio": {
+      "last_time": 179.999402523,
+      "updates": 1767,
+      "largest_active_cost": 95675.6297538,
+      "cost_increases_gt_1e_minus_9": 46,
+      "largest_cost_increase": 0.0007025999948382378
+    },
+    "relative-plane-fast-lio-repeat": {
+      "last_time": 179.999402523,
+      "updates": 1767,
+      "largest_active_cost": 96823.7987289,
+      "cost_increases_gt_1e_minus_9": 43,
+      "largest_cost_increase": 0.0007412999984808266
+    },
+    "constant-prior-lio": {
+      "last_time": 179.999402523,
+      "updates": 1767,
+      "largest_active_cost": 1200.52822419,
+      "cost_increases_gt_1e_minus_9": 1,
+      "largest_cost_increase": 1.2280000021291926e-06
+    },
+    "constant-prior-lio-repeat": {
+      "last_time": 179.999402523,
+      "updates": 1767,
+      "largest_active_cost": 1169.1568038,
+      "cost_increases_gt_1e_minus_9": 2,
+      "largest_cost_increase": 1.677999989624368e-06
+    }
+  }
+}

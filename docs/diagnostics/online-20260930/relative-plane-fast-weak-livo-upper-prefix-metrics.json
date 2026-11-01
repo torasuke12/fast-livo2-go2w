@@ -1,0 +1,31 @@
+{
+  "full_replay_complete": false,
+  "prefix_last_time_sec": 481.40257573127747,
+  "windows_seconds": [
+    [
+      145,
+      300
+    ],
+    [
+      325,
+      480
+    ]
+  ],
+  "poses_prefix_sha256": "2b00646e2712f16ec897fc64134349547374097e5ac02096b1932cce2f81e590",
+  "loop_constraints": 0,
+  "definition": "Read-only comparison of completed upper-corridor windows from an ongoing replay. No registration or pose changes. Planar nearest distances may hide axial drift; not full-route or absolute accuracy.",
+  "start_to_return": {
+    "points": 538315,
+    "overlap_15cm": 0.8838059500478345,
+    "nearest_median_m": 0.037669487564482775,
+    "nearest_p90_m": 0.1745758492085399,
+    "inlier_plane_rmse_m": 0.03478948556843969
+  },
+  "return_to_start": {
+    "points": 512341,
+    "overlap_15cm": 0.889358844988006,
+    "nearest_median_m": 0.03718992148764001,
+    "nearest_p90_m": 0.1631597515508712,
+    "inlier_plane_rmse_m": 0.035202342828609935
+  }
+}

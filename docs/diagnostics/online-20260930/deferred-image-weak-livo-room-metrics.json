@@ -1,0 +1,43 @@
+{
+  "start_to_return": {
+    "points": 20503,
+    "overlap_15cm": 0.07793981368580208,
+    "nearest_median_m": 0.8991977861585448,
+    "nearest_p90_m": 1.6425596592648828,
+    "inlier_plane_rmse_m": 0.07115072627244717
+  },
+  "return_to_start": {
+    "points": 13616,
+    "overlap_15cm": 0.16113396004700353,
+    "nearest_median_m": 0.4930170336373318,
+    "nearest_p90_m": 1.688139218549344,
+    "inlier_plane_rmse_m": 0.07131753328959065
+  },
+  "windows_seconds": [
+    [
+      4.0,
+      12.0
+    ],
+    [
+      632.0,
+      648.0
+    ]
+  ],
+  "definition": "Unmodified online poses; no evaluation-time alignment. Visibility and occlusion affect nearest distances. Plane RMSE describes only pairs within 15 cm, not absolute trajectory accuracy.",
+  "trajectory": {
+    "last_time": 647.7176213264465,
+    "max_speed": 1.9893428852504493,
+    "max_accel_bias_norm": 0.05686985027121459,
+    "end_position": [
+      -2.0696143314403783,
+      0.2167232652375571,
+      -0.2907785212786465
+    ],
+    "z_range": [
+      -0.4028371794264233,
+      3.521330558862038
+    ]
+  },
+  "trajectory_sha256": "159f63c7cb9b10e5627b87194b2e6467f8a7252b59a952b773a6c5ce17ec5112",
+  "loop_constraints": 0
+}

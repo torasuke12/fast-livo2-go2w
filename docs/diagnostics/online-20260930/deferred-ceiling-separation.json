@@ -1,0 +1,146 @@
+{
+  "deferred-image-lio-control": {
+    "definition": "Independent same-ceiling fits after visually identifying the high ceiling layer in the unaligned room plot. Different ROIs select the corresponding patch; they never transform points. Separation is evaluated at world x=-1,y=0.",
+    "surfaces": {
+      "departure": {
+        "roi": [
+          [
+            -1.3,
+            -0.5,
+            2.5
+          ],
+          [
+            0,
+            1.1,
+            2.85
+          ]
+        ],
+        "support": 260,
+        "z_from_x_y_one": [
+          0.006473672642222406,
+          -0.004793557938788329,
+          2.7175452572731005
+        ],
+        "rmse_m": 0.007195033150222058
+      },
+      "return": {
+        "roi": [
+          [
+            -0.5,
+            -0.5,
+            2.5
+          ],
+          [
+            0.8,
+            1.1,
+            2.9
+          ]
+        ],
+        "support": 113,
+        "z_from_x_y_one": [
+          -0.019983784984705263,
+          -0.011458729158053682,
+          2.7740221656133888
+        ],
+        "rmse_m": 0.007204572329521629
+      }
+    },
+    "signed_z_separation_at_xminus1_y0_m": 0.08293436596721596
+  },
+  "deferred-image-weak-livo": {
+    "definition": "Independent same-ceiling fits after visually identifying the high ceiling layer in the unaligned room plot. Different ROIs select the corresponding patch; they never transform points. Separation is evaluated at world x=-1,y=0.",
+    "surfaces": {
+      "departure": {
+        "roi": [
+          [
+            -1.3,
+            -0.5,
+            2.5
+          ],
+          [
+            0,
+            1.1,
+            2.85
+          ]
+        ],
+        "support": 299,
+        "z_from_x_y_one": [
+          0.001457298111751272,
+          -0.0012758066509142019,
+          2.704394931484107
+        ],
+        "rmse_m": 0.006609180839558436
+      },
+      "return": {
+        "roi": [
+          [
+            -2.3,
+            -0.25,
+            2.2
+          ],
+          [
+            -0.9,
+            1.35,
+            2.6
+          ]
+        ],
+        "support": 172,
+        "z_from_x_y_one": [
+          -0.012279719868399104,
+          -0.008693099297593987,
+          2.3981311535246297
+        ],
+        "rmse_m": 0.012065377069328915
+      }
+    },
+    "signed_z_separation_at_xminus1_y0_m": -0.29252675997932687
+  },
+  "deferred-image-all-livo": {
+    "definition": "Independent same-ceiling fits after visually identifying the high ceiling layer in the unaligned room plot. Different ROIs select the corresponding patch; they never transform points. Separation is evaluated at world x=-1,y=0.",
+    "surfaces": {
+      "departure": {
+        "roi": [
+          [
+            -1.3,
+            -0.5,
+            2.5
+          ],
+          [
+            0,
+            1.1,
+            2.85
+          ]
+        ],
+        "support": 288,
+        "z_from_x_y_one": [
+          -0.016122989996859082,
+          -0.0029774946787166634,
+          2.6814313219479384
+        ],
+        "rmse_m": 0.007568870941961175
+      },
+      "return": {
+        "roi": [
+          [
+            -3.5,
+            -1.8,
+            2.2
+          ],
+          [
+            -2.1,
+            -0.1,
+            2.55
+          ]
+        ],
+        "support": 106,
+        "z_from_x_y_one": [
+          -0.012185316429754147,
+          -0.013771832913020532,
+          2.3047674778729115
+        ],
+        "rmse_m": 0.006243349518188741
+      }
+    },
+    "signed_z_separation_at_xminus1_y0_m": -0.3806015176421319
+  }
+}

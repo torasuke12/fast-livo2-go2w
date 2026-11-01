@@ -1,0 +1,213 @@
+In file included from /usr/include/eigen3/Eigen/Core:341,
+                 from /external/humble_ws/src/fast-livo2/include/temporal_lio.h:5,
+                 from /work/constant-prior-temporal_factors.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h: In function ‘static void Eigen::internal::trmv_selector<Mode, 1>::run(const Lhs&, const Rhs&, Dest&, const typename Dest::Scalar&) [with Lhs = Eigen::Transpose<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, -1, false> >; Rhs = Eigen::Transpose<const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<const Eigen::Block<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, 1, true>, -1, 1, false> > > >; Dest = Eigen::Transpose<Eigen::Block<Eigen::Block<Eigen::Matrix<double, -1, -1, 1, -1, -1>, 1, -1, true>, 1, -1, false> >; int Mode = 6]’:
+/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:332:12: warning: ‘result’ may be used uninitialized [-Wmaybe-uninitialized]
+  327 |     internal::triangular_matrix_vector_product
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  328 |       <Index,Mode,
+      |       ~~~~~~~~~~~~
+  329 |        LhsScalar, LhsBlasTraits::NeedToConjugate,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  330 |        RhsScalar, RhsBlasTraits::NeedToConjugate,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  331 |        RowMajor>
+      |        ~~~~~~~~~
+  332 |       ::run(actualLhs.rows(),actualLhs.cols(),
+      |       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  333 |             actualLhs.data(),actualLhs.outerStride(),
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  334 |             actualRhsPtr,1,
+      |             ~~~~~~~~~~~~~~~
+  335 |             dest.data(),dest.innerStride(),
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  336 |             actualAlpha);
+      |             ~~~~~~~~~~~~
+/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:105:24: note: by argument 5 of type ‘const double*’ to ‘static void Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::run(Index, Index, const LhsScalar*, Index, const RhsScalar*, Index, Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::ResScalar*, Index, const ResScalar&) [with Index = long int; int Mode = 6; LhsScalar = double; bool ConjLhs = false; RhsScalar = double; bool ConjRhs = false; int Version = 0]’ declared here
+  105 | EIGEN_DONT_INLINE void triangular_matrix_vector_product<Index,Mode,LhsScalar,ConjLhs,RhsScalar,ConjRhs,RowMajor,Version>
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Causal tracked reprojection derivatives, motion, gauge and missing-reference tests passed
+temporal_tracked_reprojection PASS
+Eigen alignment 16, malloc already aligned 1
+pcl_binary_allocation_compatibility PASS
+visual patch footprint and frontend omission tests passed
+visual_patch_footprint PASS
+Point covariance: finite differences, cross terms, PSD and world-frame equivariance OK
+point_covariance_frames PASS
+Raw-return LiDAR objective gradient relative error: 4.0201e-10
+Raw-return LiDAR objective gradient relative error: 6.82785e-10
+Raw-return LiDAR objective gradient relative error: 2.92283e-10
+temporal_raw_return_derivatives PASS
+after marginalization: cost difference=0 Hessian difference=2.02418813668068e-10 gradient difference=1.16425982567664e-14 covariance difference=2.56866743564442e-19 prior rows/columns=45/45
+Joint plane gradient error 1.29163739063457e-07; static scene and marginal prior correlations OK
+temporal_joint_planes PASS
+Map covariance, causal insertion, single-use scan factors and static replay OK
+temporal_causal_map PASS
+clipped impulses: position RMS nominal=0.0269572 guarded=0.00316801
+joint: gyro bias error=1.97519e-05 accel bias error=0.000315337 velocity error=0.000274253 matches=450 ms=55.0214
+temporal LIO tests passed
+temporal_joint_estimation PASS
+temporal visual likelihood, covariance, persistence, deferred references and rejection tests passed
+temporal_visual_fusion PASS
+intrinsic: 600.000000, 600.000000, 320.000000, 240.000000
+width: 640, height: 480, scale: 1.000000
+intrinsic: 600.000000, 600.000000, 320.000000, 240.000000
+width: 640, height: 480, scale: 1.000000
+[ VIO ] Append 0 new visual map points
+[ VIO ] Append 1 new visual map points
+intrinsic: 600.000000, 600.000000, 320.000000, 240.000000
+width: 640, height: 480, scale: 1.000000
+[ VIO ] Retrieve 1 points from visual sparse map
+[ VIO ] Update 0 points in visual submap
+intrinsic: 600.000000, 600.000000, 320.000000, 240.000000
+width: 640, height: 480, scale: 1.000000
+[ VIO ] Retrieve 1 points from visual sparse map
+[ VIO ] Update 0 points in visual submap
+intrinsic: 600.000000, 600.000000, 320.000000, 240.000000
+width: 640, height: 480, scale: 1.000000
+[ VIO ] Retrieve 1 points from visual sparse map
+[ VIO ] Update 0 points in visual submap
+intrinsic: 600.000000, 600.000000, 320.000000, 240.000000
+width: 640, height: 480, scale: 1.000000
+[ VIO ] Retrieve 1 points from visual sparse map
+[ VIO ] Update 0 points in visual submap
+intrinsic: 600.000000, 600.000000, 320.000000, 240.000000
+width: 640, height: 480, scale: 1.000000
+[ VIO ] Retrieve 1 points from visual sparse map
+[ VIO ] Update 0 points in visual submap
+temporal visual map anchor tests passed
+temporal_visual_map_anchors PASS
+1790791521.964971 [201] voxel_diag: selected interface "lo" is not multicast-capable: disabling multicast
+[INFO] [1790791521.969799708] [voxel_diagnostic_config_test]: Source/map normal gate: disabled (30.0 deg, 20 source neighbors)
+[INFO] [1790791521.970030948] [voxel_diagnostic_config_test]: X-ICP constrained LIO update: disabled (diagnostics disabled)
+[INFO] [1790791521.970246070] [voxel_diagnostic_config_test]: LIO correspondence mode: voxel_plane
+[INFO] [1790791521.970461885] [voxel_diagnostic_config_test]: LIO diagnostics enabled (detail enabled, [170.000, 220.000) s)
+Multi thread started 
+Rebuild thread terminated normally
+Multi thread started 
+[ LIO ] Raw feature num: 0, downsampled feature num:80 effective feature num: 75 average residual: 0.00799999
+[ LIO ] Raw feature num: 0, downsampled feature num:80 effective feature num: 75 average residual: 0.00171252
+[ LIO ] Raw feature num: 0, downsampled feature num:80 effective feature num: 75 average residual: 0.0017157
+Rebuild thread terminated normally
+Multi thread started 
+[ LIO ] Raw feature num: 0, downsampled feature num:80 effective feature num: 75 average residual: 0.00799999
+[ LIO ] Raw feature num: 0, downsampled feature num:80 effective feature num: 75 average residual: 0.00171252
+[ LIO ] Raw feature num: 0, downsampled feature num:80 effective feature num: 75 average residual: 0.0017157
+Rebuild thread terminated normally
+Multi thread started 
+[ LIO ] Raw feature num: 0, downsampled feature num:1 effective feature num: 0 average residual: 0
+Rebuild thread terminated normally
+Multi thread started 
+[ LIO ] Raw feature num: 0, downsampled feature num:80 effective feature num: 75 average residual: 0.00799999
+[ LIO ] Raw feature num: 0, downsampled feature num:80 effective feature num: 75 average residual: 0.00172434
+[ LIO ] Raw feature num: 0, downsampled feature num:80 effective feature num: 75 average residual: 0.00172744
+Rebuild thread terminated normally
+Multi thread started 
+[ LIO ] Raw feature num: 0, downsampled feature num:80 effective feature num: 75 average residual: 0.00799999
+[ LIO ] Raw feature num: 0, downsampled feature num:80 effective feature num: 75 average residual: 0.00172434
+[ LIO ] Raw feature num: 0, downsampled feature num:80 effective feature num: 75 average residual: 0.00172744
+Rebuild thread terminated normally
+Multi thread started 
+[ LIO ] Raw feature num: 0, downsampled feature num:1 effective feature num: 0 average residual: 0
+Rebuild thread terminated normally
+Voxel-plane diagnostics tests passed
+voxel_plane_diagnostics PASS
+Multi thread started 
+Recorded mismatch: 78.5598 deg; OFF accepted, ON rejected
+Rebuild thread terminated normally
+Multi thread started 
+[ LIO ] Raw feature num: 0, downsampled feature num:20 effective feature num: 0 average residual: 0
+Rebuild thread terminated normally
+Multi thread started 
+[ LIO ] Raw feature num: 0, downsampled feature num:20 effective feature num: 0 average residual: 0
+Rebuild thread terminated normally
+Multi thread started 
+[ LIO ] Raw feature num: 0, downsampled feature num:40 effective feature num: 40 average residual: 0.02
+[ LIO ] Raw feature num: 0, downsampled feature num:40 effective feature num: 40 average residual: 0.02
+Rebuild thread terminated normally
+Multi thread started 
+[ LIO ] Raw feature num: 0, downsampled feature num:40 effective feature num: 40 average residual: 0.02
+[ LIO ] Raw feature num: 0, downsampled feature num:40 effective feature num: 40 average residual: 0.02
+Rebuild thread terminated normally
+Multi thread started 
+[ LIO ] Raw feature num: 0, downsampled feature num:40 effective feature num: 20 average residual: 4.44089e-16
+[ LIO ] Raw feature num: 0, downsampled feature num:40 effective feature num: 20 average residual: 4.44089e-16
+Rebuild thread terminated normally
+Multi thread started 
+[ LIO ] Raw feature num: 0, downsampled feature num:40 effective feature num: 20 average residual: 4.44089e-16
+[ LIO ] Raw feature num: 0, downsampled feature num:40 effective feature num: 20 average residual: 4.44089e-16
+1790791523.020194 [201] normal_con: selected interface "lo" is not multicast-capable: disabling multicast
+Rebuild thread terminated normally
+Normal consistency tests passed
+source_map_normal_consistency PASS
+LIO diagnostics: round trips, constrained/unconstrained gains, covariance stages, boundaries, statuses, disabled and I/O failure passed
+lio_diagnostics_recording PASS
+X-ICP: 9 test groups passed
+xicp_geometry_and_constrained_filter PASS
+[WARN] [1790791523.658126851] [fast_livo2]: Reset ImuProcess
+[INFO] [1790791523.658243008] [fast_livo2]: IMU Initializing: 100.0 % (601 samples, 3.000 / 3.000 s)
+[INFO] [1790791523.658267057] [fast_livo2]: IMU Initials: Gravity: -0.0000 -0.0000 -9.8100 1.0000; acc covarience: 0.10000000 0.10000000 0.10000000; gry covarience: 0.10000000 0.10000000 0.10000000 
+
+[INFO] [1790791523.658279736] [fast_livo2]: IMU Initials: ba covarience: 0.10000000 0.10000000 0.10000000; bg covarience: 0.10000000 0.10000000 0.10000000
+[INFO] [1790791523.658288308] [fast_livo2]: IMU stationary initialization accepted: gyro bias 0.00000000 0.00000000 0.01000000
+[INFO] [1790791523.658295310] [fast_livo2]: IMU initialization window: 3.000 s, 601 samples
+IMU empty-sample and same-time propagation regression passed
+imu_propagation_no_new_samples PASS
+[INFO] [1790791524.611435459] [voxel_map_init]: [ Voxel Init ] WAITING: points=361/2500 planes=0/10 normal_eigenvalues=[0.00000 0.00000 0.00000] min_required=0.02000 duration=0.000/0.100 s scans=1 resets=0
+[INFO] [1790791524.615326202] [voxel_map_init]: [ Voxel Init ] READY: points=2523/2500 planes=75/10 normal_eigenvalues=[0.33333 0.33333 0.33333] min_required=0.02000 duration=0.240/0.100 s scans=7 resets=0
+[INFO] [1790791524.654602645] [voxel_map_init]: [ Voxel Init ] WAITING: points=961/500 planes=0/10 normal_eigenvalues=[0.00000 0.00000 0.00000] min_required=0.02000 duration=0.000/0.100 s scans=1 resets=0
+[INFO] [1790791524.659880347] [voxel_map_init]: [ Voxel Init ] READY: points=3844/500 planes=100/10 normal_eigenvalues=[0.25000 0.25000 0.50000] min_required=0.02000 duration=0.600/0.100 s scans=4 resets=0
+[INFO] [1790791524.696931192] [voxel_map_init]: [ Voxel Init ] WAITING: points=2883/500 planes=0/10 normal_eigenvalues=[0.00000 0.00000 0.00000] min_required=0.02000 duration=0.000/0.500 s scans=1 resets=0
+[INFO] [1790791524.704384541] [voxel_map_init]: [ Voxel Init ] READY: points=8649/500 planes=75/10 normal_eigenvalues=[0.33333 0.33333 0.33333] min_required=0.02000 duration=0.600/0.500 s scans=3 resets=0
+[INFO] [1790791524.739754833] [voxel_map_init]: [ Voxel Init ] WAITING: points=2883/500 planes=0/10000 normal_eigenvalues=[0.00000 0.00000 0.00000] min_required=0.02000 duration=0.000/0.100 s scans=1 resets=0
+[INFO] [1790791524.788260601] [voxel_map_init]: [ Voxel Init ] WAITING: points=961/500 planes=0/10 normal_eigenvalues=[0.00000 0.00000 0.00000] min_required=0.02000 duration=0.000/0.100 s scans=1 resets=0
+[WARN] [1790791524.789282042] [voxel_map_init]: [ Voxel Init ] Restarting accumulation after timeout/time reversal; points=1922 planes=25 min_normal_eigenvalue=0.00000. No forced initialization; keep stationary with surfaces in multiple directions.
+[INFO] [1790791524.789573288] [voxel_map_init]: [ Voxel Init ] WAITING: points=961/500 planes=0/10 normal_eigenvalues=[0.00000 0.00000 0.00000] min_required=0.02000 duration=0.000/0.100 s scans=1 resets=1
+[WARN] [1790791524.789612226] [voxel_map_init]: [ Voxel Init ] Restarting accumulation after timeout/time reversal; points=961 planes=0 min_normal_eigenvalue=0.00000. No forced initialization; keep stationary with surfaces in multiple directions.
+[INFO] [1790791524.789883002] [voxel_map_init]: [ Voxel Init ] WAITING: points=961/500 planes=0/10 normal_eigenvalues=[0.00000 0.00000 0.00000] min_required=0.02000 duration=0.000/0.100 s scans=1 resets=2
+[INFO] [1790791524.823882680] [voxel_map_init]: [ Voxel Init ] WAITING: points=961/500 planes=0/10 normal_eigenvalues=[0.00000 0.00000 0.00000] min_required=0.02000 duration=0.000/0.100 s scans=1 resets=0
+[WARN] [1790791524.824151180] [voxel_map_init]: [ Voxel Init ] Accumulation point limit reached (1500); restarting without forcing readiness.
+[INFO] [1790791524.824191020] [voxel_map_init]: [ Voxel Init ] WAITING: points=961/500 planes=0/10 normal_eigenvalues=[0.00000 0.00000 0.00000] min_required=0.02000 duration=0.000/0.100 s scans=1 resets=1
+[WARN] [1790791524.825036060] [voxel_map_init]: [ Voxel Init ] Accumulation point limit reached (1500); restarting without forcing readiness.
+[INFO] [1790791524.825135531] [voxel_map_init]: [ Voxel Init ] WAITING: points=1500/500 planes=0/10 normal_eigenvalues=[0.00000 0.00000 0.00000] min_required=0.02000 duration=0.000/0.100 s scans=1 resets=2
+[INFO] [1790791524.891604485] [voxel_map_init]: [ Voxel Init ] WAITING: points=20/6 planes=0/3 normal_eigenvalues=[0.00000 0.00000 0.00000] min_required=0.02000 duration=0.000/0.000 s scans=1 resets=0
+[INFO] [1790791524.924899462] [voxel_map_init]: [ Voxel Init ] WAITING: points=20/6 planes=0/3 normal_eigenvalues=[0.00000 0.00000 0.00000] min_required=0.02000 duration=0.000/0.000 s scans=1 resets=0
+Multi thread started 
+Rebuild thread terminated normally
+Multi thread started 
+Multi thread started 
+Multi thread started 
+Rebuild thread terminated normally
+Rebuild thread terminated normally
+Rebuild thread terminated normally
+Multi thread started 
+Multi thread started 
+Multi thread started 
+Multi thread started 
+Multi thread started 
+Rebuild thread terminated normally
+Rebuild thread terminated normally
+Rebuild thread terminated normally
+Rebuild thread terminated normally
+Rebuild thread terminated normally
+Multi thread started 
+[ LIO ] Initialized FAST-LIO ikd-tree with 961 points
+1790791524.979837 [201] voxel_init: selected interface "lo" is not multicast-capable: disabling multicast
+[INFO] [1790791524.983984774] [voxel_init_invalid_config_test]: Source/map normal gate: disabled (30.0 deg, 20 source neighbors)
+[INFO] [1790791524.984176059] [voxel_init_invalid_config_test]: X-ICP constrained LIO update: disabled (diagnostics disabled)
+[INFO] [1790791524.986229696] [ikd_unused_voxel_config_test]: Source/map normal gate: disabled (30.0 deg, 20 source neighbors)
+[INFO] [1790791524.986372787] [ikd_unused_voxel_config_test]: X-ICP constrained LIO update: disabled (diagnostics disabled)
+[INFO] [1790791524.986553714] [ikd_unused_voxel_config_test]: LIO correspondence mode: fastlio_ikdtree
+Rebuild thread terminated normally
+voxel initialization regression tests passed
+voxel_map_initialization PASS
+{
+  "definition": "Frozen relative-plane-fast build with only temporal_factors marginal QR residual-only row removal; regression test added. Production source/install remain unchanged.",
+  "base_binary_sha256": "a618fa6ad3e380a2169af6e7620683ffc4d05fc1ee5c4326188f5ac569007de1",
+  "base_temporal_library_sha256": "19b421f6103a37ab934986b5da497b52351f8609e8a60295b2d787809a24de6f",
+  "changed_source_sha256": "6c02a6a8ebd141f3d4a78fa3966cf6d6d61689a46151086b08a9d3776d4f4ce5",
+  "changed_test_sha256": "6bac23bbca5f4b8f301e75a5eda4bf1716f5f8a01873997c4640119ee7697f4a",
+  "binary_sha256": "4342c49146894b2317dabba6bb36667b399fbe2d05e3156cacd7b23b37fa2d03",
+  "mapping_sha256": "bc2923a805f8be7bc77395b251ee9dc6a2e68f628965e6ac50ffe8b8a7fe8f76",
+  "tests_passed": 16
+}

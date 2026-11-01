@@ -1,0 +1,30 @@
+{
+  "relative-plane-fast-weak-livo": {
+    "binary": "relative-plane-fast-binary",
+    "binary_sha256": "a618fa6ad3e380a2169af6e7620683ffc4d05fc1ee5c4326188f5ac569007de1",
+    "params_sha256": "d333f9320793274e69aa84e562e42329d1c638a25396abe239ce45babbc64c0c",
+    "input": "raw_20260907_114335",
+    "domain": 196
+  },
+  "relative-plane-fast-weak-repeat": {
+    "binary": "relative-plane-fast-binary",
+    "binary_sha256": "a618fa6ad3e380a2169af6e7620683ffc4d05fc1ee5c4326188f5ac569007de1",
+    "params_sha256": "d333f9320793274e69aa84e562e42329d1c638a25396abe239ce45babbc64c0c",
+    "input": "raw_20260907_114335",
+    "domain": 197
+  },
+  "relative-plane-fast-lio": {
+    "binary": "relative-plane-fast-binary",
+    "binary_sha256": "a618fa6ad3e380a2169af6e7620683ffc4d05fc1ee5c4326188f5ac569007de1",
+    "params_sha256": "19535e27dc47c04ec3f5363e593794878ac9b6ca4e60a43488305eeb29e5c338",
+    "input": "raw_20260907_114335",
+    "domain": 198
+  },
+  "relative-plane-fast-lio-repeat": {
+    "binary": "relative-plane-fast-binary",
+    "binary_sha256": "a618fa6ad3e380a2169af6e7620683ffc4d05fc1ee5c4326188f5ac569007de1",
+    "params_sha256": "19535e27dc47c04ec3f5363e593794878ac9b6ca4e60a43488305eeb29e5c338",
+    "input": "raw_20260907_114335",
+    "domain": 199
+  }
+}

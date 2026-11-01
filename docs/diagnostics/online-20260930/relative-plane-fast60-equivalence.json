@@ -1,0 +1,15 @@
+{
+  "temporal_window.csv": {
+    "rows": 283,
+    "columns": 500,
+    "max_numeric_difference": 0.0,
+    "status_equal": true
+  },
+  "temporal_visual.csv": {
+    "rows": 282,
+    "columns": 263,
+    "max_numeric_difference": 0.0,
+    "status_equal": true
+  },
+  "poses_csv_bytes_equal": true
+}

@@ -1,0 +1,31 @@
+{
+  "deferred-image-lio-control": {
+    "complete_plot_end_sec": 300.0,
+    "height_min_max_m": [
+      3.58104779034,
+      3.96768767834
+    ]
+  },
+  "relative-plane-fast-lio": {
+    "complete_plot_end_sec": 282.799356699,
+    "height_min_max_m": [
+      3.46344225892,
+      3.56562782467
+    ]
+  },
+  "relative-plane-fast-lio-repeat": {
+    "complete_plot_end_sec": 251.69999814,
+    "height_min_max_m": [
+      3.47140327829,
+      3.5731941545
+    ]
+  },
+  "relative-plane-fast-weak-livo": {
+    "complete_plot_end_sec": 300.0,
+    "height_min_max_m": [
+      3.44124011368,
+      3.5030429282
+    ]
+  },
+  "definition": "Read-only prefix comparison. Different height estimates are not independently measured absolute errors. The new full-route runs are still ongoing."
+}

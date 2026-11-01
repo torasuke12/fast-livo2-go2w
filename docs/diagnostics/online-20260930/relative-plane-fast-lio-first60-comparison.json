@@ -1,0 +1,27 @@
+{
+  "relative-plane-lio60": {
+    "rows": 567,
+    "numeric_columns": 500,
+    "all_numeric_equal": true,
+    "max_position_difference_m": 0.0,
+    "max_numeric_difference": 0.0,
+    "status_differences": 0
+  },
+  "relative-plane-fast-lio": {
+    "rows": 567,
+    "numeric_columns": 500,
+    "all_numeric_equal": true,
+    "max_position_difference_m": 0.0,
+    "max_numeric_difference": 0.0,
+    "status_differences": 0
+  },
+  "relative-plane-fast-lio-repeat": {
+    "rows": 567,
+    "numeric_columns": 500,
+    "all_numeric_equal": false,
+    "max_position_difference_m": 0.11114675633336475,
+    "max_numeric_difference": 1859309.4788899994,
+    "status_differences": 0
+  },
+  "interpretation": "Direct 60 second LIO as reference; no alignment. Full route trials are still running."
+}

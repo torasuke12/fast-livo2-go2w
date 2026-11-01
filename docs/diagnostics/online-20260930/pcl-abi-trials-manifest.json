@@ -1,0 +1,23 @@
+{
+  "pcl-abi-standard60": {
+    "binary": "pcl-abi-binary",
+    "binary_sha256": "6fcddf8a4108bc909625d3107573b4870b734aba5642fd8ea679eee29474b7bb",
+    "params_sha256": "42e7ecae0749b91e81e059b9dd97d2c1211c38c9f51bf03bd023981d5dce5026",
+    "bag": "/work/dds-input-rgb-60",
+    "domain": 168
+  },
+  "pcl-abi-sat100-lio": {
+    "binary": "pcl-abi-binary",
+    "binary_sha256": "6fcddf8a4108bc909625d3107573b4870b734aba5642fd8ea679eee29474b7bb",
+    "params_sha256": "19535e27dc47c04ec3f5363e593794878ac9b6ca4e60a43488305eeb29e5c338",
+    "bag": "/external/bags/raw_20260907_114335",
+    "domain": 169
+  },
+  "pcl-abi-sat100-repeat": {
+    "binary": "pcl-abi-binary",
+    "binary_sha256": "6fcddf8a4108bc909625d3107573b4870b734aba5642fd8ea679eee29474b7bb",
+    "params_sha256": "19535e27dc47c04ec3f5363e593794878ac9b6ca4e60a43488305eeb29e5c338",
+    "bag": "/external/bags/raw_20260907_114335",
+    "domain": 170
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "lio": {
+    "last_time": 382.699795485,
+    "max_position_difference_m": 0.18958834251883083,
+    "last_position_difference_m": 0.036708777973433304,
+    "first_positions_differ": {
+      "1e-06": 9.89993047714,
+      "0.001": 12.1001245975,
+      "0.01": 18.6994965076,
+      "0.1": 29.5995528698
+    }
+  },
+  "weak": {
+    "last_time": 562.858946085,
+    "max_position_difference_m": 0.570302167190175,
+    "last_position_difference_m": 0.5582307605150524,
+    "first_positions_differ": {
+      "1e-06": 200.808478594,
+      "0.001": 436.37146163,
+      "0.01": 436.37146163,
+      "0.1": 442.976081848
+    }
+  },
+  "interpretation": "Ongoing-run prefix comparison only, not full-route stability or ground-truth accuracy."
+}

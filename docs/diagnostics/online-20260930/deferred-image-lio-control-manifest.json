@@ -1,0 +1,6 @@
+{
+  "binary": "deferred-image-binary",
+  "binary_sha256": "5d96d892bd98a33b22de0b89c399d8d37f032b4ae75be3d7404829460664f1ec",
+  "params_sha256": "19535e27dc47c04ec3f5363e593794878ac9b6ca4e60a43488305eeb29e5c338",
+  "purpose": "LIO control of the same current source/build; distinguish image benefit from build sensitivity"
+}

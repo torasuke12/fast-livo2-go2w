@@ -1,0 +1,97 @@
+Internal ctest changing into directory: /external/humble_ws/build/fast_livo2
+Test project /external/humble_ws/build/fast_livo2
+      Start  1: temporal_tracked_reprojection
+ 1/16 Test  #1: temporal_tracked_reprojection ..........   Passed    0.02 sec
+      Start  2: pcl_binary_allocation_compatibility
+ 2/16 Test  #2: pcl_binary_allocation_compatibility ....   Passed    0.03 sec
+      Start  3: visual_patch_footprint
+ 3/16 Test  #3: visual_patch_footprint .................   Passed    0.08 sec
+      Start  4: point_covariance_frames
+ 4/16 Test  #4: point_covariance_frames ................   Passed    0.00 sec
+      Start  5: temporal_raw_return_derivatives
+ 5/16 Test  #5: temporal_raw_return_derivatives ........   Passed    0.05 sec
+      Start  6: temporal_joint_planes
+ 6/16 Test  #6: temporal_joint_planes ..................   Passed    1.75 sec
+      Start  7: temporal_causal_map
+ 7/16 Test  #7: temporal_causal_map ....................   Passed    1.34 sec
+      Start  8: temporal_joint_estimation
+ 8/16 Test  #8: temporal_joint_estimation ..............   Passed    7.30 sec
+      Start  9: temporal_visual_fusion
+ 9/16 Test  #9: temporal_visual_fusion .................   Passed    0.35 sec
+      Start 10: temporal_visual_map_anchors
+10/16 Test #10: temporal_visual_map_anchors ............   Passed    0.09 sec
+      Start 11: voxel_plane_diagnostics
+11/16 Test #11: voxel_plane_diagnostics ................   Passed    0.35 sec
+      Start 12: source_map_normal_consistency
+12/16 Test #12: source_map_normal_consistency ..........   Passed    0.29 sec
+      Start 13: lio_diagnostics_recording
+13/16 Test #13: lio_diagnostics_recording ..............   Passed    0.02 sec
+      Start 14: xicp_geometry_and_constrained_filter
+14/16 Test #14: xicp_geometry_and_constrained_filter ...   Passed    0.00 sec
+      Start 15: imu_propagation_no_new_samples
+15/16 Test #15: imu_propagation_no_new_samples .........   Passed    0.02 sec
+      Start 16: voxel_map_initialization
+16/16 Test #16: voxel_map_initialization ...............   Passed    0.43 sec
+
+100% tests passed, 0 tests failed out of 16
+
+Total Test time (real) =  12.14 sec
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_reprojection.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_temporal.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_normals.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_diagnostics.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_xicp.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_vio.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_lio.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_preprocess.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_imu_proc.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_mapper.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/fastlivo2_mapping
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/fastlivo2_offline
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/HILTI22.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/MARS_LVIG.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/MID360_config.json
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/NTU_VIRAL.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/avia.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/camera_MARS_LVIG.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/camera_NTU_VIRAL.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/camera_fisheye_HILTI22.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/camera_pinhole.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/go2w_fast_livo2.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/go2w_hesai_fast_livo2.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/go2w_fast_livo2.launch.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/go2w_livox_mid360.launch.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/go2w_sensors.launch.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/mapping_avia.launch
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/mapping_avia_marslvig.launch
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/mapping_hesaixt32_hilti22.launch
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/mapping_ouster_ntu.launch
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/rviz_cfg/M300.rviz
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/rviz_cfg/fast_livo2.rviz
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/rviz_cfg/hilti.rviz
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/rviz_cfg/ntu_viral.rviz
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/__pycache__/analyze_lio_diagnostics.cpython-310.pyc
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/__pycache__/analyze_temporal_lio.cpython-310.pyc
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/analyze_lio_diagnostics.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/analyze_lio_geometry.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/analyze_temporal_lio.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/analyze_voxel_geometry.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/colmap_output.sh
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/mesh.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/ament_index/resource_index/package_run_dependencies/fast_livo2
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/ament_index/resource_index/parent_prefix_path/fast_livo2
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/environment/path.sh
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/environment/path.dsv
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/local_setup.bash
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/local_setup.sh
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/local_setup.zsh
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/local_setup.dsv
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/package.dsv
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/ament_index/resource_index/packages/fast_livo2
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/cmake/fast_livo2Config.cmake
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/cmake/fast_livo2Config-version.cmake
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/package.xml

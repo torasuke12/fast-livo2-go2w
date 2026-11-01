@@ -1,0 +1,16 @@
+{
+  "reprojection-weak-livo": {
+    "binary": "reprojection-binary",
+    "binary_sha256": "aba867e97913dc420d87238a25698b6d81d1c9967f3b1027ec93a43be7df85b3",
+    "params_sha256": "40c3fc02cdbccde1f6ad1c9b2eeb359b7a78e0b927f06084685dd0b2e7c18313",
+    "bag": "raw_20260907_114335",
+    "domain": 174
+  },
+  "reprojection-weak-repeat": {
+    "binary": "reprojection-binary",
+    "binary_sha256": "aba867e97913dc420d87238a25698b6d81d1c9967f3b1027ec93a43be7df85b3",
+    "params_sha256": "40c3fc02cdbccde1f6ad1c9b2eeb359b7a78e0b927f06084685dd0b2e7c18313",
+    "bag": "raw_20260907_114335",
+    "domain": 175
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "temporal_window.csv": {
+    "rows": 1346,
+    "last_time": 272.658224583,
+    "max_position_difference_m": 2.2093227644523247e-06,
+    "last_position_difference_m": 1.8673240132149864e-06,
+    "maximum_numeric_difference": 0.07533000037074089
+  },
+  "temporal_visual.csv": {
+    "rows": 1346,
+    "last_time": 272.658224583,
+    "max_position_difference_m": 2.2153332606657083e-06,
+    "last_position_difference_m": 1.8673240132149864e-06,
+    "maximum_numeric_difference": 2.2613522800002395e-06
+  },
+  "interpretation": "Partial full-run repetition comparison only; both ongoing."
+}

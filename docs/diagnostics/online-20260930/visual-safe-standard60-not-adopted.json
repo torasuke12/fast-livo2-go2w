@@ -1,0 +1,25 @@
+{
+  "status": "not_adopted",
+  "summary_written": {
+    "complete": true,
+    "bag_exhausted": true,
+    "imu_messages": 12001,
+    "lidar_messages": 600,
+    "image_messages": 1798,
+    "updates": 282,
+    "keyframes": 94,
+    "last_time": 59.71076536178589
+  },
+  "process_exit_code": 139,
+  "complete_success": false,
+  "reason": "Height drift of about -1.07 m by 60 seconds and abnormal process teardown; summary complete alone does not establish a successful run.",
+  "last_saved_state": {
+    "time": 59.31047201156616,
+    "px": 54.55063134135794,
+    "py": -2.6637408140937477,
+    "pz": -1.0719204899021988,
+    "bax": 0.0873663138578684,
+    "bay": -0.03393269727378287,
+    "baz": 0.04702181754263778
+  }
+}

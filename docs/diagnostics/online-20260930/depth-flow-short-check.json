@@ -1,0 +1,3054 @@
+{
+  "summary": {
+    "definition": "Independent KLT/PnP diagnostic only. The measured depths have been deskewed using the saved online estimate. Not independent ground truth and never fed back to the estimator.",
+    "counts": {
+      "accepted": 76,
+      "pnp_consensus_failed": 12,
+      "too_few_bidirectional_tracks": 1
+    },
+    "windows": {
+      "(35, 55)": {
+        "accepted": 15,
+        "axial_velocity_difference_mps_quantiles": [
+          -0.23877803513665413,
+          -0.010897925471144099,
+          0.049569083815213806
+        ],
+        "rotation_difference_deg_median": 0.1549389027304886,
+        "reprojection_rmse_px_median": 0.714666541793334
+      },
+      "(150, 170)": {
+        "accepted": 14,
+        "axial_velocity_difference_mps_quantiles": [
+          -0.07069320343280983,
+          0.025946606466118793,
+          0.3094850852361032
+        ],
+        "rotation_difference_deg_median": 0.22229499438919414,
+        "reprojection_rmse_px_median": 0.7274851413026214
+      },
+      "(250, 260)": {
+        "accepted": 7,
+        "axial_velocity_difference_mps_quantiles": [
+          -0.08167574102623809,
+          0.028867996301140453,
+          0.12247893142716008
+        ],
+        "rotation_difference_deg_median": 0.13231408016160248,
+        "reprojection_rmse_px_median": 0.765667035715054
+      },
+      "(350, 370)": {
+        "accepted": 15,
+        "axial_velocity_difference_mps_quantiles": [
+          -0.27069587372273163,
+          -0.03423930954208676,
+          0.07226269833582721
+        ],
+        "rotation_difference_deg_median": 0.17076673941264506,
+        "reprojection_rmse_px_median": 0.6954645258761535
+      },
+      "(490, 510)": {
+        "accepted": 10,
+        "axial_velocity_difference_mps_quantiles": [
+          -0.11227409233506461,
+          0.060862012138089616,
+          0.22413243668869934
+        ],
+        "rotation_difference_deg_median": 0.14716020266997745,
+        "reprojection_rmse_px_median": 0.6878900262291419
+      },
+      "(560, 580)": {
+        "accepted": 15,
+        "axial_velocity_difference_mps_quantiles": [
+          -0.0959599299881737,
+          0.03969058059959041,
+          0.13467762794676766
+        ],
+        "rotation_difference_deg_median": 0.11142016868496686,
+        "reprojection_rmse_px_median": 0.7114769861849328
+      }
+    }
+  },
+  "pairs": [
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 53,
+      "current": 100160,
+      "time": 35.29383730888367,
+      "selected": 291,
+      "tracked": 196,
+      "inliers": 129,
+      "status": "accepted",
+      "dt": 0.20013880729675293,
+      "reprojection_rmse_px": 0.7331840525162865,
+      "rotation_difference_deg": 0.3093047000605509,
+      "tracked_translation_camera_m": [
+        0.010373717541341348,
+        0.00887307449392022,
+        0.29371778639738094
+      ],
+      "online_translation_camera_m": [
+        -0.006472882919644237,
+        -0.005998874718909857,
+        0.2952335622820954
+      ],
+      "tracked_world_velocity_mps": [
+        1.4648960160619477,
+        -0.07956207787704273,
+        -0.07851465373994793
+      ],
+      "online_world_velocity_mps": [
+        1.4757939415330918,
+        0.0036930532047681473,
+        -0.00358640122233146
+      ],
+      "axial_velocity_difference_mps": -0.010897925471144099
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 55,
+      "current": 100166,
+      "time": 36.49470496177673,
+      "selected": 246,
+      "tracked": 166,
+      "inliers": 111,
+      "status": "accepted",
+      "dt": 0.20014715194702148,
+      "reprojection_rmse_px": 0.6514064500475947,
+      "rotation_difference_deg": 0.1549389027304886,
+      "tracked_translation_camera_m": [
+        -0.006368742527097628,
+        0.004793945649663148,
+        0.2810944573412965
+      ],
+      "online_translation_camera_m": [
+        -0.013143044261272552,
+        -0.003952627738950737,
+        0.2884000991772648
+      ],
+      "tracked_world_velocity_mps": [
+        1.4044191116429134,
+        0.007444456986125583,
+        -0.03983164667446467
+      ],
+      "online_world_velocity_mps": [
+        1.4420090178718887,
+        0.04007668514306792,
+        0.0038699595491034663
+      ],
+      "axial_velocity_difference_mps": -0.03758990622897529
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 57,
+      "current": 100172,
+      "time": 37.695595026016235,
+      "selected": 204,
+      "tracked": 144,
+      "inliers": 91,
+      "status": "accepted",
+      "dt": 0.2001509666442871,
+      "reprojection_rmse_px": 0.7754791215232675,
+      "rotation_difference_deg": 0.13248160209221044,
+      "tracked_translation_camera_m": [
+        0.004189047847765889,
+        0.00549423802478517,
+        0.2837075585872139
+      ],
+      "online_translation_camera_m": [
+        -0.0007435007697551396,
+        -0.004598008619797051,
+        0.2856389574864462
+      ],
+      "tracked_world_velocity_mps": [
+        1.4174021373878503,
+        -0.006613572407311808,
+        -0.036525253863434026
+      ],
+      "online_world_velocity_mps": [
+        1.4271307359014187,
+        0.01739546447374792,
+        0.014188327859469468
+      ],
+      "axial_velocity_difference_mps": -0.009728598513568443
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 59,
+      "current": 100178,
+      "time": 38.89648365974426,
+      "selected": 181,
+      "tracked": 120,
+      "inliers": 80,
+      "status": "accepted",
+      "dt": 0.20014381408691406,
+      "reprojection_rmse_px": 0.6572578023619648,
+      "rotation_difference_deg": 0.07312425003375206,
+      "tracked_translation_camera_m": [
+        0.008752963833475451,
+        0.0030183148292595914,
+        0.29692916807099123
+      ],
+      "online_translation_camera_m": [
+        -0.0015047784366162796,
+        -0.003649167529755071,
+        0.2932219984180465
+      ],
+      "tracked_world_velocity_mps": [
+        1.4837374195610349,
+        -0.013005336130057681,
+        -0.03874203250980828
+      ],
+      "online_world_velocity_mps": [
+        1.4647031384018816,
+        0.03746569218602028,
+        -0.004536843920822099
+      ],
+      "axial_velocity_difference_mps": 0.019034281159153288
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 61,
+      "current": 100184,
+      "time": 40.097347021102905,
+      "selected": 146,
+      "tracked": 124,
+      "inliers": 79,
+      "status": "accepted",
+      "dt": 0.20014452934265137,
+      "reprojection_rmse_px": 0.6946223826066096,
+      "rotation_difference_deg": 0.3074313111066352,
+      "tracked_translation_camera_m": [
+        0.01289743851658003,
+        0.012375484118339514,
+        0.3216399530983793
+      ],
+      "online_translation_camera_m": [
+        -0.005810552148506171,
+        -0.0054014463246126925,
+        0.29539784450379813
+      ],
+      "tracked_world_velocity_mps": [
+        1.607553185667809,
+        -0.03785995258093663,
+        -0.06991298525509336
+      ],
+      "online_world_velocity_mps": [
+        1.475376745455759,
+        0.05256425348469453,
+        0.020477108306999454
+      ],
+      "axial_velocity_difference_mps": 0.13217644021205
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 63,
+      "current": 100190,
+      "time": 41.29821181297302,
+      "selected": 156,
+      "tracked": 130,
+      "inliers": 84,
+      "status": "accepted",
+      "dt": 0.20013856887817383,
+      "reprojection_rmse_px": 0.6375808192958856,
+      "rotation_difference_deg": 0.3063327269078148,
+      "tracked_translation_camera_m": [
+        0.0022393424583870046,
+        0.008167273362385806,
+        0.27152571961045446
+      ],
+      "online_translation_camera_m": [
+        -0.007637943903704604,
+        -0.0024800022703490234,
+        0.28965705552126086
+      ],
+      "tracked_world_velocity_mps": [
+        1.356081476461081,
+        0.011164357005103698,
+        -0.057557831686484706
+      ],
+      "online_world_velocity_mps": [
+        1.446551124189236,
+        0.06088055489401575,
+        -0.0044858860781960075
+      ],
+      "axial_velocity_difference_mps": -0.09046964772815502
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 65,
+      "current": 100196,
+      "time": 42.49900412559509,
+      "selected": 110,
+      "tracked": 90,
+      "inliers": 63,
+      "status": "accepted",
+      "dt": 0.20013189315795898,
+      "reprojection_rmse_px": 0.5556200624745313,
+      "rotation_difference_deg": 0.07631616510036952,
+      "tracked_translation_camera_m": [
+        0.003036779319533835,
+        0.003211086682719979,
+        0.28455514985779623
+      ],
+      "online_translation_camera_m": [
+        -0.008513879997524839,
+        -0.008109235070519789,
+        0.2900249497777949
+      ],
+      "tracked_world_velocity_mps": [
+        1.4213421241727195,
+        -0.000731887561330212,
+        -0.04355786063846967
+      ],
+      "online_world_velocity_mps": [
+        1.4492094479939985,
+        0.0561167037664751,
+        0.01361906865263182
+      ],
+      "axial_velocity_difference_mps": -0.02786732382127899
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 67,
+      "current": 100202,
+      "time": 43.699806690216064,
+      "selected": 82,
+      "tracked": 58,
+      "inliers": 35,
+      "status": "accepted",
+      "dt": 0.20014190673828125,
+      "reprojection_rmse_px": 0.819863788147403,
+      "rotation_difference_deg": 0.7732093574375009,
+      "tracked_translation_camera_m": [
+        0.023303131314326576,
+        -0.003091159271892994,
+        0.28768587546611074
+      ],
+      "online_translation_camera_m": [
+        0.018291050100612053,
+        0.0001452226074207114,
+        0.33888739312102395
+      ],
+      "tracked_world_velocity_mps": [
+        1.4380406794980363,
+        -0.10938388478017824,
+        0.0039244960772621094
+      ],
+      "online_world_velocity_mps": [
+        1.6936177812051507,
+        -0.08287606732712659,
+        -0.013775084320587636
+      ],
+      "axial_velocity_difference_mps": -0.25557710170711445
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 69,
+      "current": 100208,
+      "time": 44.90065240859985,
+      "selected": 151,
+      "tracked": 92,
+      "inliers": 50,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 71,
+      "current": 100214,
+      "time": 46.10149025917053,
+      "selected": 205,
+      "tracked": 157,
+      "inliers": 96,
+      "status": "accepted",
+      "dt": 0.20013999938964844,
+      "reprojection_rmse_px": 0.7117209142550778,
+      "rotation_difference_deg": 0.3285693709901415,
+      "tracked_translation_camera_m": [
+        -0.00573871848162297,
+        0.01043648721843973,
+        0.21463638966781834
+      ],
+      "online_translation_camera_m": [
+        0.0057514980317083814,
+        0.004244365821603121,
+        0.27683925507433227
+      ],
+      "tracked_world_velocity_mps": [
+        1.070917339777437,
+        0.04962327885313813,
+        -0.06575513273602204
+      ],
+      "online_world_velocity_mps": [
+        1.3831140023631632,
+        -0.0024166532189138002,
+        -0.03981384524696497
+      ],
+      "axial_velocity_difference_mps": -0.3121966625857262
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 73,
+      "current": 100220,
+      "time": 47.30233907699585,
+      "selected": 224,
+      "tracked": 192,
+      "inliers": 131,
+      "status": "accepted",
+      "dt": 0.20013785362243652,
+      "reprojection_rmse_px": 0.7290959014284983,
+      "rotation_difference_deg": 0.1633741827473531,
+      "tracked_translation_camera_m": [
+        -0.004698320962845769,
+        0.012213979045666916,
+        0.2729545377131252
+      ],
+      "online_translation_camera_m": [
+        -0.007228111820886043,
+        0.0013264979217043323,
+        0.268844230647313
+      ],
+      "tracked_world_velocity_mps": [
+        1.3624552105208032,
+        0.04953082613521443,
+        -0.07468243595147736
+      ],
+      "online_world_velocity_mps": [
+        1.3422681211794492,
+        0.06092304353865315,
+        -0.019877247363786505
+      ],
+      "axial_velocity_difference_mps": 0.020187089341354048
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 75,
+      "current": 100226,
+      "time": 48.50313901901245,
+      "selected": 243,
+      "tracked": 174,
+      "inliers": 114,
+      "status": "accepted",
+      "dt": 0.20012640953063965,
+      "reprojection_rmse_px": 0.7215980004510796,
+      "rotation_difference_deg": 0.13280012656363133,
+      "tracked_translation_camera_m": [
+        0.00721203505768571,
+        0.0045054891952672725,
+        0.2972334910204354
+      ],
+      "online_translation_camera_m": [
+        -0.0032071493423800343,
+        0.0010750470326029015,
+        0.2863506838282999
+      ],
+      "tracked_world_velocity_mps": [
+        1.484865877181574,
+        -0.03329384362386914,
+        -0.04212764152160195
+      ],
+      "online_world_velocity_mps": [
+        1.430637647065267,
+        0.018410812535766676,
+        -0.02348735796541421
+      ],
+      "axial_velocity_difference_mps": 0.05422823011630684
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 77,
+      "current": 100232,
+      "time": 49.70390844345093,
+      "selected": 205,
+      "tracked": 153,
+      "inliers": 94,
+      "status": "accepted",
+      "dt": 0.2001357078552246,
+      "reprojection_rmse_px": 0.7683724548240267,
+      "rotation_difference_deg": 0.0642486978198512,
+      "tracked_translation_camera_m": [
+        0.005487777770557867,
+        0.008034041582991782,
+        0.28501425187228874
+      ],
+      "online_translation_camera_m": [
+        -0.003148309001984941,
+        0.0007250122706173299,
+        0.27649614905400993
+      ],
+      "tracked_world_velocity_mps": [
+        1.4240418538350545,
+        -0.021887196490510005,
+        -0.045431099804311176
+      ],
+      "online_world_velocity_mps": [
+        1.3814614894714803,
+        0.020527661650025435,
+        -0.008079467065020988
+      ],
+      "axial_velocity_difference_mps": 0.04258036436357426
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 79,
+      "current": 100238,
+      "time": 50.904717683792114,
+      "selected": 220,
+      "tracked": 163,
+      "inliers": 106,
+      "status": "accepted",
+      "dt": 0.20013427734375,
+      "reprojection_rmse_px": 0.714666541793334,
+      "rotation_difference_deg": 0.3891723168976134,
+      "tracked_translation_camera_m": [
+        -0.005508326696465685,
+        0.0015107930703732815,
+        0.263147414517984
+      ],
+      "online_translation_camera_m": [
+        -0.01153465597595751,
+        -0.0045879558671634655,
+        0.2609741734408144
+      ],
+      "tracked_world_velocity_mps": [
+        1.3142111567824921,
+        0.05005086155414955,
+        -0.0005295735641883589
+      ],
+      "online_world_velocity_mps": [
+        1.3027027486807168,
+        0.0792567971752412,
+        0.030579995126899632
+      ],
+      "axial_velocity_difference_mps": 0.011508408101775336
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 81,
+      "current": 100244,
+      "time": 52.10555553436279,
+      "selected": 170,
+      "tracked": 146,
+      "inliers": 101,
+      "status": "accepted",
+      "dt": 0.20014405250549316,
+      "reprojection_rmse_px": 0.6556720093864598,
+      "rotation_difference_deg": 0.15175794157969996,
+      "tracked_translation_camera_m": [
+        0.006930094973175893,
+        0.004871354542510351,
+        0.29450272794976406
+      ],
+      "online_translation_camera_m": [
+        -0.00643044891355536,
+        -0.007007732333293926,
+        0.303292329748839
+      ],
+      "tracked_world_velocity_mps": [
+        1.470797726731,
+        -0.012431049351041671,
+        -0.0597256235370308
+      ],
+      "online_world_velocity_mps": [
+        1.5151460723978474,
+        0.05419493189819727,
+        -0.000549835291218679
+      ],
+      "axial_velocity_difference_mps": -0.04434834566684742
+    },
+    {
+      "window": [
+        35,
+        55
+      ],
+      "reference": 83,
+      "current": 100250,
+      "time": 53.30640959739685,
+      "selected": 136,
+      "tracked": 118,
+      "inliers": 75,
+      "status": "accepted",
+      "dt": 0.20014119148254395,
+      "reprojection_rmse_px": 0.8034350355012018,
+      "rotation_difference_deg": 0.12647568748286173,
+      "tracked_translation_camera_m": [
+        -0.006508123184167003,
+        0.005656475324849635,
+        0.24858888803416865
+      ],
+      "online_translation_camera_m": [
+        -0.0058562954688531395,
+        -0.0012711057523276557,
+        0.2913010813389604
+      ],
+      "tracked_world_velocity_mps": [
+        1.2416215359445903,
+        0.043323909229456586,
+        -0.03297076485667439
+      ],
+      "online_world_velocity_mps": [
+        1.455200971225554,
+        0.04125681089967661,
+        0.000677565360228863
+      ],
+      "axial_velocity_difference_mps": -0.21357943528096368
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 245,
+      "current": 100736,
+      "time": 150.57368969917297,
+      "selected": 166,
+      "tracked": 114,
+      "inliers": 71,
+      "status": "accepted",
+      "dt": 0.20014524459838867,
+      "reprojection_rmse_px": 0.724424330750874,
+      "rotation_difference_deg": 0.26620164782895406,
+      "tracked_translation_camera_m": [
+        0.009209469639346895,
+        -0.0027401214188052343,
+        0.27606042964566224
+      ],
+      "online_translation_camera_m": [
+        -0.004747736742701458,
+        -0.006170354547284729,
+        0.29961985138311986
+      ],
+      "tracked_world_velocity_mps": [
+        -1.3769167374865858,
+        -0.09412203050935167,
+        -0.003980218989357167
+      ],
+      "online_world_velocity_mps": [
+        -1.4871606455160433,
+        -0.17541843437269036,
+        0.011829953881713647
+      ],
+      "axial_velocity_difference_mps": 0.1102439080294575
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 247,
+      "current": 100742,
+      "time": 151.7745382785797,
+      "selected": 156,
+      "tracked": 110,
+      "inliers": 73,
+      "status": "accepted",
+      "dt": 0.20014381408691406,
+      "reprojection_rmse_px": 0.7203617457307171,
+      "rotation_difference_deg": 0.04716485168632251,
+      "tracked_translation_camera_m": [
+        0.006255795227388682,
+        0.0042535753147753125,
+        0.28899751219336123
+      ],
+      "online_translation_camera_m": [
+        -0.003988446390791153,
+        -0.003928400499174777,
+        0.29838838085989755
+      ],
+      "tracked_world_velocity_mps": [
+        -1.440051430235599,
+        -0.10846924473243855,
+        -0.030073407060547654
+      ],
+      "online_world_velocity_mps": [
+        -1.482085274697076,
+        -0.16364292342151304,
+        0.010934165905414187
+      ],
+      "axial_velocity_difference_mps": 0.04203384446147718
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 249,
+      "current": 100748,
+      "time": 152.97541499137878,
+      "selected": 193,
+      "tracked": 151,
+      "inliers": 95,
+      "status": "accepted",
+      "dt": 0.20015168190002441,
+      "reprojection_rmse_px": 0.743189563785239,
+      "rotation_difference_deg": 0.2696423294902852,
+      "tracked_translation_camera_m": [
+        -0.002304174577294589,
+        -0.008218777464699617,
+        0.28630624463775106
+      ],
+      "online_translation_camera_m": [
+        4.6377425673720454e-05,
+        0.001305018821438842,
+        0.3279802592336629
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4286753934133762,
+        -0.07622990238364707,
+        0.032727497822032665
+      ],
+      "online_world_velocity_mps": [
+        -1.6368695120249923,
+        -0.07506877817907276,
+        -0.016346066885798118
+      ],
+      "axial_velocity_difference_mps": 0.20819411861161607
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 251,
+      "current": 100754,
+      "time": 154.17629957199097,
+      "selected": 159,
+      "tracked": 107,
+      "inliers": 75,
+      "status": "accepted",
+      "dt": 0.20014166831970215,
+      "reprojection_rmse_px": 0.7828483733595923,
+      "rotation_difference_deg": 0.18048545491357282,
+      "tracked_translation_camera_m": [
+        0.002225806615427262,
+        0.006335327420777108,
+        0.27564823685268164
+      ],
+      "online_translation_camera_m": [
+        -0.009384102896855243,
+        -0.009865305887100896,
+        0.30508354166471485
+      ],
+      "tracked_world_velocity_mps": [
+        -1.376629428304948,
+        -0.015876128767966288,
+        -0.05124057899631599
+      ],
+      "online_world_velocity_mps": [
+        -1.523721924708276,
+        -0.07544552072554458,
+        0.028526382546509403
+      ],
+      "axial_velocity_difference_mps": 0.147092496403328
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 253,
+      "current": 100760,
+      "time": 155.37714862823486,
+      "selected": 114,
+      "tracked": 94,
+      "inliers": 58,
+      "status": "accepted",
+      "dt": 0.20014142990112305,
+      "reprojection_rmse_px": 0.8133986867685339,
+      "rotation_difference_deg": 0.09577118353128554,
+      "tracked_translation_camera_m": [
+        -0.0004922347901270346,
+        -0.027211332988556974,
+        0.29093684282401494
+      ],
+      "online_translation_camera_m": [
+        -0.006138331147980756,
+        0.0017887361146534358,
+        0.29325774830572937
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4548877326911775,
+        -0.01387107147649223,
+        0.12131413947312193
+      ],
+      "online_world_velocity_mps": [
+        -1.464747101161938,
+        -0.044273828049819074,
+        -0.023268605418984675
+      ],
+      "axial_velocity_difference_mps": 0.00985936847076041
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 255,
+      "current": 100766,
+      "time": 156.57795476913452,
+      "selected": 149,
+      "tracked": 103,
+      "inliers": 71,
+      "status": "accepted",
+      "dt": 0.20013093948364258,
+      "reprojection_rmse_px": 0.6429200041810478,
+      "rotation_difference_deg": 0.3941649744566596,
+      "tracked_translation_camera_m": [
+        -0.01188329119953707,
+        0.013191317023804284,
+        0.2889907985367949
+      ],
+      "online_translation_camera_m": [
+        -0.006742718458132175,
+        0.00044448638170665274,
+        0.2758690632153686
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4433955660139564,
+        -0.0697203561733563,
+        -0.06913349608161294
+      ],
+      "online_world_velocity_mps": [
+        -1.378180270710396,
+        -0.042809766379166524,
+        -0.005587016919196657
+      ],
+      "axial_velocity_difference_mps": -0.0652152953035603
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 257,
+      "current": 100772,
+      "time": 157.77873873710632,
+      "selected": 195,
+      "tracked": 154,
+      "inliers": 85,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 259,
+      "current": 100778,
+      "time": 158.97957968711853,
+      "selected": 167,
+      "tracked": 133,
+      "inliers": 90,
+      "status": "accepted",
+      "dt": 0.20014119148254395,
+      "reprojection_rmse_px": 0.5891792169143403,
+      "rotation_difference_deg": 0.2465449375859522,
+      "tracked_translation_camera_m": [
+        0.010361985244837618,
+        0.015403199057763446,
+        0.3047703883009643
+      ],
+      "online_translation_camera_m": [
+        -0.007461214686338568,
+        0.0014152840962310064,
+        0.2899219657264274
+      ],
+      "tracked_world_velocity_mps": [
+        -1.521898415012484,
+        0.06607899255951269,
+        -0.08313801612538405
+      ],
+      "online_world_velocity_mps": [
+        -1.4488575366671386,
+        -0.0227554937523769,
+        -0.011774952078938779
+      ],
+      "axial_velocity_difference_mps": -0.07304087834534534
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 261,
+      "current": 100784,
+      "time": 160.18041110038757,
+      "selected": 153,
+      "tracked": 114,
+      "inliers": 73,
+      "status": "accepted",
+      "dt": 0.2001347541809082,
+      "reprojection_rmse_px": 0.7619482158952122,
+      "rotation_difference_deg": 0.1980450511924361,
+      "tracked_translation_camera_m": [
+        0.005825508990739542,
+        0.018435525282096722,
+        0.3078968492670937
+      ],
+      "online_translation_camera_m": [
+        -0.0027040718389681035,
+        -0.0003446003201149353,
+        0.30278236139650205
+      ],
+      "tracked_world_velocity_mps": [
+        -1.537841789020052,
+        0.045588206771371875,
+        -0.09548915129189275
+      ],
+      "online_world_velocity_mps": [
+        -1.512947707269974,
+        0.0041817649747047094,
+        -0.0009338016749675466
+      ],
+      "axial_velocity_difference_mps": -0.024894081750078012
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 263,
+      "current": 100790,
+      "time": 161.38124179840088,
+      "selected": 170,
+      "tracked": 145,
+      "inliers": 100,
+      "status": "accepted",
+      "dt": 0.20014119148254395,
+      "reprojection_rmse_px": 0.6670927962960842,
+      "rotation_difference_deg": 0.2531910866542676,
+      "tracked_translation_camera_m": [
+        0.011492870555782766,
+        0.00714254958618028,
+        0.3090661248685626
+      ],
+      "online_translation_camera_m": [
+        -0.0049187703989702295,
+        -0.0034324375297401016,
+        0.28191969925751537
+      ],
+      "tracked_world_velocity_mps": [
+        -1.543364162666577,
+        0.07069148753637673,
+        -0.04774369625634718
+      ],
+      "online_world_velocity_mps": [
+        -1.4088553130844874,
+        -0.011485719924574658,
+        0.0076401456451227305
+      ],
+      "axial_velocity_difference_mps": -0.13450884958208964
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 265,
+      "current": 100796,
+      "time": 162.58208680152893,
+      "selected": 184,
+      "tracked": 132,
+      "inliers": 77,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 267,
+      "current": 100802,
+      "time": 163.78292870521545,
+      "selected": 153,
+      "tracked": 112,
+      "inliers": 83,
+      "status": "accepted",
+      "dt": 0.20012855529785156,
+      "reprojection_rmse_px": 0.7177481650535016,
+      "rotation_difference_deg": 0.11963511573722195,
+      "tracked_translation_camera_m": [
+        -0.018088585996195998,
+        0.006207418143783176,
+        0.2545087730428117
+      ],
+      "online_translation_camera_m": [
+        -0.026698886330431285,
+        -0.0050907695581545115,
+        0.32491723876834494
+      ],
+      "tracked_world_velocity_mps": [
+        -1.2726280205341642,
+        -0.07200465061150797,
+        -0.04065521317454706
+      ],
+      "online_world_velocity_mps": [
+        -1.6255235200379046,
+        -0.10875702635182555,
+        0.013445048931387402
+      ],
+      "axial_velocity_difference_mps": 0.35289549950374033
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 269,
+      "current": 100808,
+      "time": 164.98367428779602,
+      "selected": 156,
+      "tracked": 100,
+      "inliers": 62,
+      "status": "accepted",
+      "dt": 0.20011544227600098,
+      "reprojection_rmse_px": 0.6974250419903694,
+      "rotation_difference_deg": 0.10994153914218735,
+      "tracked_translation_camera_m": [
+        0.0002687531613473394,
+        -0.0006082570314384869,
+        0.28512350760394994
+      ],
+      "online_translation_camera_m": [
+        -0.01002375271113059,
+        -0.003488588345230372,
+        0.279251788237118
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4240018103696108,
+        -0.044935707960688215,
+        -0.015869260594277953
+      ],
+      "online_world_velocity_mps": [
+        -1.393211629637289,
+        -0.09520738593780081,
+        -0.00043676284633067394
+      ],
+      "axial_velocity_difference_mps": -0.03079018073232187
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 271,
+      "current": 100814,
+      "time": 166.18444180488586,
+      "selected": 174,
+      "tracked": 141,
+      "inliers": 88,
+      "status": "accepted",
+      "dt": 0.20014548301696777,
+      "reprojection_rmse_px": 0.7305459518543689,
+      "rotation_difference_deg": 0.11421872055489128,
+      "tracked_translation_camera_m": [
+        0.003871065038096466,
+        -0.0023307508511219393,
+        0.27100178235214306
+      ],
+      "online_translation_camera_m": [
+        -0.003242098390080817,
+        -0.005000533334487134,
+        0.2678164319025254
+      ],
+      "tracked_world_velocity_mps": [
+        -1.3534244616617441,
+        -0.046042410897295424,
+        0.003597881825740866
+      ],
+      "online_world_velocity_mps": [
+        -1.3358962774715957,
+        -0.08061118388908607,
+        0.01745714402375661
+      ],
+      "axial_velocity_difference_mps": -0.017528184190148455
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 273,
+      "current": 100820,
+      "time": 167.38529539108276,
+      "selected": 143,
+      "tracked": 105,
+      "inliers": 74,
+      "status": "accepted",
+      "dt": 0.20013999938964844,
+      "reprojection_rmse_px": 0.7313016974022243,
+      "rotation_difference_deg": 0.416521214657005,
+      "tracked_translation_camera_m": [
+        0.006736429948651406,
+        -0.004302673914928021,
+        0.2863344710883355
+      ],
+      "online_translation_camera_m": [
+        0.019963473974465993,
+        -0.012333771412536235,
+        0.3909428204265114
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4308235102233502,
+        -0.031159967000190747,
+        0.013689985518404573
+      ],
+      "online_world_velocity_mps": [
+        -1.9561944156718996,
+        0.01190985256238938,
+        0.049723711231183666
+      ],
+      "axial_velocity_difference_mps": 0.5253709054485494
+    },
+    {
+      "window": [
+        150,
+        170
+      ],
+      "reference": 275,
+      "current": 100826,
+      "time": 168.58613872528076,
+      "selected": 219,
+      "tracked": 165,
+      "inliers": 100,
+      "status": "accepted",
+      "dt": 0.20014452934265137,
+      "reprojection_rmse_px": 0.7470743347056811,
+      "rotation_difference_deg": 0.2522060314855168,
+      "tracked_translation_camera_m": [
+        -0.0033975989975474296,
+        0.012037676853181556,
+        0.2670194526750586
+      ],
+      "online_translation_camera_m": [
+        -0.007535067612202111,
+        -0.008655940306588087,
+        0.2987514947079444
+      ],
+      "tracked_world_velocity_mps": [
+        -1.3328576641429113,
+        0.005881905461006659,
+        -0.08528023325047805
+      ],
+      "online_world_velocity_mps": [
+        -1.493667078352726,
+        -0.009893261033470163,
+        0.01544579217230934
+      ],
+      "axial_velocity_difference_mps": 0.16080941420981465
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 411,
+      "current": 101234,
+      "time": 250.24261593818665,
+      "selected": 94,
+      "tracked": 73,
+      "inliers": 53,
+      "status": "accepted",
+      "dt": 0.20012712478637695,
+      "reprojection_rmse_px": 0.765667035715054,
+      "rotation_difference_deg": 0.31132000131961834,
+      "tracked_translation_camera_m": [
+        0.009942761933570096,
+        0.021395581887080673,
+        0.24113002860503885
+      ],
+      "online_translation_camera_m": [
+        -0.00971471876490695,
+        0.00327417429995831,
+        0.28924065767946217
+      ],
+      "tracked_world_velocity_mps": [
+        -1.2057157723904477,
+        0.003322882716098888,
+        -0.1090075703253005
+      ],
+      "online_world_velocity_mps": [
+        -1.4424606871562755,
+        -0.10237783324009632,
+        -0.017253111495275412
+      ],
+      "axial_velocity_difference_mps": 0.23674491476582782
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 413,
+      "current": 101240,
+      "time": 251.44343161582947,
+      "selected": 91,
+      "tracked": 63,
+      "inliers": 39,
+      "status": "accepted",
+      "dt": 0.20014572143554688,
+      "reprojection_rmse_px": 0.8752830061478566,
+      "rotation_difference_deg": 0.7176907930191191,
+      "tracked_translation_camera_m": [
+        0.00714449075975819,
+        0.002033146754591723,
+        0.2998866960039988
+      ],
+      "online_translation_camera_m": [
+        -0.02047635474764204,
+        0.0068516935203465764,
+        0.2934422070679014
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4984896990292795,
+        -0.03027462119737469,
+        -0.004193043487246798
+      ],
+      "online_world_velocity_mps": [
+        -1.4603446004549612,
+        -0.16682617056300866,
+        -0.02785800256474461
+      ],
+      "axial_velocity_difference_mps": -0.03814509857431836
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 415,
+      "current": 101246,
+      "time": 252.6442995071411,
+      "selected": 105,
+      "tracked": 74,
+      "inliers": 49,
+      "status": "accepted",
+      "dt": 0.20014452934265137,
+      "reprojection_rmse_px": 0.5435277715187211,
+      "rotation_difference_deg": 0.08441006252606749,
+      "tracked_translation_camera_m": [
+        0.006578937406179195,
+        0.007740119492989229,
+        0.277439516850082
+      ],
+      "online_translation_camera_m": [
+        -0.006535742749704112,
+        -0.0015369202579284954,
+        0.28332291731727016
+      ],
+      "tracked_world_velocity_mps": [
+        -1.3858379975347144,
+        0.007019529969682166,
+        -0.05931940422880415
+      ],
+      "online_world_velocity_mps": [
+        -1.4147059938358548,
+        -0.05882647123449511,
+        -0.013089577169144079
+      ],
+      "axial_velocity_difference_mps": 0.028867996301140453
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 417,
+      "current": 101252,
+      "time": 253.84517002105713,
+      "selected": 96,
+      "tracked": 75,
+      "inliers": 51,
+      "status": "accepted",
+      "dt": 0.20014286041259766,
+      "reprojection_rmse_px": 0.6338615566122411,
+      "rotation_difference_deg": 0.1045097194667719,
+      "tracked_translation_camera_m": [
+        0.012327384031717903,
+        0.009241365554462642,
+        0.2892999376934859
+      ],
+      "online_translation_camera_m": [
+        -0.0069486112911745215,
+        -0.0028839378293889256,
+        0.2898815307938801
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4426445707715638,
+        0.0977394322141004,
+        -0.06726628284194125
+      ],
+      "online_world_velocity_mps": [
+        -1.448848614495078,
+        0.0023789643957052523,
+        -0.005439847622253476
+      ],
+      "axial_velocity_difference_mps": 0.006204043723514241
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 419,
+      "current": 101258,
+      "time": 255.04602718353271,
+      "selected": 121,
+      "tracked": 75,
+      "inliers": 55,
+      "status": "accepted",
+      "dt": 0.20014023780822754,
+      "reprojection_rmse_px": 0.712886201814422,
+      "rotation_difference_deg": 0.13231408016160248,
+      "tracked_translation_camera_m": [
+        0.011728218109015889,
+        0.014790795510010231,
+        0.3092849337534314
+      ],
+      "online_translation_camera_m": [
+        -0.00653287168650693,
+        -0.003737895551861444,
+        0.2791242159735843
+      ],
+      "tracked_world_velocity_mps": [
+        -1.5418959992408838,
+        0.11495214208157074,
+        -0.07948154821208255
+      ],
+      "online_world_velocity_mps": [
+        -1.3949242945367661,
+        0.019930247617598047,
+        0.01525922311160495
+      ],
+      "axial_velocity_difference_mps": -0.1469717047041177
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 421,
+      "current": 101264,
+      "time": 256.2468271255493,
+      "selected": 250,
+      "tracked": 188,
+      "inliers": 123,
+      "status": "accepted",
+      "dt": 0.2001175880432129,
+      "reprojection_rmse_px": 0.7854080054529335,
+      "rotation_difference_deg": 0.11123731876175522,
+      "tracked_translation_camera_m": [
+        0.0008556014402630822,
+        0.005209112430295515,
+        0.293062844341543
+      ],
+      "online_translation_camera_m": [
+        -0.012459828344640605,
+        0.0007004491783723877,
+        0.2992206837847692
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4627944321096278,
+        0.06446795650455174,
+        -0.0373549865598301
+      ],
+      "online_world_velocity_mps": [
+        -1.496460544775546,
+        -0.0002887610725649682,
+        -0.013797938279078287
+      ],
+      "axial_velocity_difference_mps": 0.033666112665918124
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 423,
+      "current": 101270,
+      "time": 257.4476099014282,
+      "selected": 477,
+      "tracked": 318,
+      "inliers": 194,
+      "status": "accepted",
+      "dt": 0.20014476776123047,
+      "reprojection_rmse_px": 0.7909435442412506,
+      "rotation_difference_deg": 0.21550701758002336,
+      "tracked_translation_camera_m": [
+        0.002092651925378145,
+        0.010853831471930836,
+        0.2793104088565495
+      ],
+      "online_translation_camera_m": [
+        -0.007271390656494253,
+        -0.0006689924332945225,
+        0.28820631117105755
+      ],
+      "tracked_world_velocity_mps": [
+        -1.393901961749431,
+        0.06982597581634896,
+        -0.05243134750850688
+      ],
+      "online_world_velocity_mps": [
+        -1.4402035709508125,
+        0.026028268058173206,
+        0.006024075130751095
+      ],
+      "axial_velocity_difference_mps": 0.04630160920138149
+    },
+    {
+      "window": [
+        250,
+        260
+      ],
+      "reference": 425,
+      "current": 101276,
+      "time": 258.6484634876251,
+      "selected": 240,
+      "tracked": 173,
+      "inliers": 102,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 578,
+      "current": 101735,
+      "time": 350.5120105743408,
+      "selected": 147,
+      "tracked": 124,
+      "inliers": 88,
+      "status": "accepted",
+      "dt": 0.20014190673828125,
+      "reprojection_rmse_px": 0.6954645258761535,
+      "rotation_difference_deg": 0.0667859410684413,
+      "tracked_translation_camera_m": [
+        0.0014579234344132004,
+        0.009926323215372805,
+        0.2984141197893948
+      ],
+      "online_translation_camera_m": [
+        -0.010023642191075242,
+        -0.003420437864269732,
+        0.31426618622566005
+      ],
+      "tracked_world_velocity_mps": [
+        1.4899885515150377,
+        -0.05682052440288034,
+        -0.048344731787428805
+      ],
+      "online_world_velocity_mps": [
+        1.570983758949302,
+        -0.003425961309354554,
+        0.0194797946161347
+      ],
+      "axial_velocity_difference_mps": -0.08099520743426436
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 580,
+      "current": 101741,
+      "time": 351.71286511421204,
+      "selected": 139,
+      "tracked": 113,
+      "inliers": 71,
+      "status": "accepted",
+      "dt": 0.20014333724975586,
+      "reprojection_rmse_px": 0.7347444684755983,
+      "rotation_difference_deg": 0.17076673941264506,
+      "tracked_translation_camera_m": [
+        0.00403017618114054,
+        0.006308188702387711,
+        0.28287590499882137
+      ],
+      "online_translation_camera_m": [
+        -0.006627664235807481,
+        0.0010223951494548649,
+        0.2893682409403753
+      ],
+      "tracked_world_velocity_mps": [
+        1.4118505884790842,
+        -0.06841994120425654,
+        -0.031632505051102995
+      ],
+      "online_world_velocity_mps": [
+        1.446089898021171,
+        -0.01670021580697591,
+        -0.004463503062240203
+      ],
+      "axial_velocity_difference_mps": -0.03423930954208676
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 582,
+      "current": 101747,
+      "time": 352.913702249527,
+      "selected": 105,
+      "tracked": 85,
+      "inliers": 60,
+      "status": "accepted",
+      "dt": 0.20013833045959473,
+      "reprojection_rmse_px": 0.6283531815081129,
+      "rotation_difference_deg": 0.417437856961992,
+      "tracked_translation_camera_m": [
+        -0.0035546865413108994,
+        -0.004172461560569855,
+        0.31726740860212743
+      ],
+      "online_translation_camera_m": [
+        -0.007957929013601935,
+        -0.012986106279337661,
+        0.3029747413583814
+      ],
+      "tracked_world_velocity_mps": [
+        1.5834744185963412,
+        0.07911393616971865,
+        0.009361123504206013
+      ],
+      "online_world_velocity_mps": [
+        1.511610609950442,
+        0.0977612671774664,
+        0.05420741665838989
+      ],
+      "axial_velocity_difference_mps": 0.07186380864589914
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 584,
+      "current": 101753,
+      "time": 354.1145420074463,
+      "selected": 115,
+      "tracked": 83,
+      "inliers": 51,
+      "status": "accepted",
+      "dt": 0.20014119148254395,
+      "reprojection_rmse_px": 0.7120015072183411,
+      "rotation_difference_deg": 0.08899343205140303,
+      "tracked_translation_camera_m": [
+        0.007829625532232347,
+        0.004784007070385468,
+        0.301304033198478
+      ],
+      "online_translation_camera_m": [
+        -0.006001764688732689,
+        -0.007763139737081237,
+        0.2890353898726728
+      ],
+      "tracked_world_velocity_mps": [
+        1.5056143196782101,
+        -0.014633530076976271,
+        -0.03761745104952833
+      ],
+      "online_world_velocity_mps": [
+        1.4437853031216483,
+        0.05271071033708966,
+        0.02645882016805088
+      ],
+      "axial_velocity_difference_mps": 0.06182901655656181
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 586,
+      "current": 101759,
+      "time": 355.31539726257324,
+      "selected": 86,
+      "tracked": 80,
+      "inliers": 68,
+      "status": "accepted",
+      "dt": 0.20014619827270508,
+      "reprojection_rmse_px": 0.5571224189796198,
+      "rotation_difference_deg": 0.13108620228348195,
+      "tracked_translation_camera_m": [
+        0.0015920955942381784,
+        0.014159510347339359,
+        0.2820069731410644
+      ],
+      "online_translation_camera_m": [
+        -0.0033375694939213807,
+        0.0013062772635174474,
+        0.2862288328429328
+      ],
+      "tracked_world_velocity_mps": [
+        1.409056150350602,
+        0.012907964849449675,
+        -0.06897243565192245
+      ],
+      "online_world_velocity_mps": [
+        1.4297287920113395,
+        0.036874044327425866,
+        -0.0043660757396209735
+      ],
+      "axial_velocity_difference_mps": -0.020672641660737456
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 588,
+      "current": 101765,
+      "time": 356.5162434577942,
+      "selected": 68,
+      "tracked": 55,
+      "inliers": 39,
+      "status": "accepted",
+      "dt": 0.20013165473937988,
+      "reprojection_rmse_px": 0.5752851615243211,
+      "rotation_difference_deg": 0.22680186570897068,
+      "tracked_translation_camera_m": [
+        -0.006974798962851137,
+        0.00220549863441335,
+        0.211301501140925
+      ],
+      "online_translation_camera_m": [
+        -0.0071325338502845025,
+        0.0033670228249482233,
+        0.28852337834524594
+      ],
+      "tracked_world_velocity_mps": [
+        1.0551776105455997,
+        0.05097461644793575,
+        -0.008823830031891172
+      ],
+      "online_world_velocity_mps": [
+        1.440984130899948,
+        0.05768668293058904,
+        -0.014016263909504247
+      ],
+      "axial_velocity_difference_mps": -0.38580652035434837
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 590,
+      "current": 101771,
+      "time": 357.71707367897034,
+      "selected": 74,
+      "tracked": 60,
+      "inliers": 42,
+      "status": "accepted",
+      "dt": 0.20014452934265137,
+      "reprojection_rmse_px": 0.8727707623620122,
+      "rotation_difference_deg": 0.4112876537655576,
+      "tracked_translation_camera_m": [
+        0.00838130324598417,
+        0.028649089806747505,
+        0.2883597060568426
+      ],
+      "online_translation_camera_m": [
+        0.00987049373896279,
+        0.018422858989414932,
+        0.29977311160087045
+      ],
+      "tracked_world_velocity_mps": [
+        1.441412524189417,
+        -0.019167538011405385,
+        -0.1413775163533362
+      ],
+      "online_world_velocity_mps": [
+        1.498470619049301,
+        -0.026349958255254574,
+        -0.09028237931370112
+      ],
+      "axial_velocity_difference_mps": -0.057058094859884
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 592,
+      "current": 101777,
+      "time": 358.91792845726013,
+      "selected": 86,
+      "tracked": 77,
+      "inliers": 60,
+      "status": "accepted",
+      "dt": 0.20014119148254395,
+      "reprojection_rmse_px": 0.6876971305652522,
+      "rotation_difference_deg": 0.09510061899976775,
+      "tracked_translation_camera_m": [
+        0.0026427644710925163,
+        0.004116394147862409,
+        0.2902767083138368
+      ],
+      "online_translation_camera_m": [
+        -0.006439418503318722,
+        -0.0037679020929623328,
+        0.2903031017475251
+      ],
+      "tracked_world_velocity_mps": [
+        1.4501016059957992,
+        -0.006859804778733577,
+        -0.036038440763124825
+      ],
+      "online_world_velocity_mps": [
+        1.4504673805460173,
+        0.03800146634666403,
+        0.003942228957441824
+      ],
+      "axial_velocity_difference_mps": -0.0003657745502181342
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 594,
+      "current": 101783,
+      "time": 360.11877250671387,
+      "selected": 101,
+      "tracked": 85,
+      "inliers": 66,
+      "status": "accepted",
+      "dt": 0.20014095306396484,
+      "reprojection_rmse_px": 0.6544324650530994,
+      "rotation_difference_deg": 0.2403853131220194,
+      "tracked_translation_camera_m": [
+        0.002952296426285644,
+        0.005959992957168263,
+        0.23626999775334798
+      ],
+      "online_translation_camera_m": [
+        -0.0053610058100779625,
+        -0.002078605741166508,
+        0.29290282627346764
+      ],
+      "tracked_world_velocity_mps": [
+        1.1802360438344408,
+        0.016367089901123188,
+        -0.038757354905407285
+      ],
+      "online_world_velocity_mps": [
+        1.4623302697196274,
+        0.0647855532335712,
+        -0.0002077039916640947
+      ],
+      "axial_velocity_difference_mps": -0.2820942258851866
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 596,
+      "current": 101789,
+      "time": 361.31960368156433,
+      "selected": 125,
+      "tracked": 97,
+      "inliers": 73,
+      "status": "accepted",
+      "dt": 0.20012807846069336,
+      "reprojection_rmse_px": 0.7221959722379289,
+      "rotation_difference_deg": 0.08520522782336085,
+      "tracked_translation_camera_m": [
+        0.0029974878592128372,
+        0.004884651485056341,
+        0.2903063742721042
+      ],
+      "online_translation_camera_m": [
+        -0.0047905482906501155,
+        -0.0033162044760046768,
+        0.28928699201426133
+      ],
+      "tracked_world_velocity_mps": [
+        1.4498847514464885,
+        0.04138184531959974,
+        -0.03450568052446514
+      ],
+      "online_world_velocity_mps": [
+        1.443595358553779,
+        0.07954848428399185,
+        0.007006889944429641
+      ],
+      "axial_velocity_difference_mps": 0.006289392892709467
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 598,
+      "current": 101795,
+      "time": 362.52035570144653,
+      "selected": 180,
+      "tracked": 138,
+      "inliers": 79,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 600,
+      "current": 101801,
+      "time": 363.72115659713745,
+      "selected": 146,
+      "tracked": 110,
+      "inliers": 68,
+      "status": "accepted",
+      "dt": 0.20014429092407227,
+      "reprojection_rmse_px": 0.8154632866856689,
+      "rotation_difference_deg": 0.4659779240186106,
+      "tracked_translation_camera_m": [
+        0.0013322813618300662,
+        0.02371762949295878,
+        0.22293056478275022
+      ],
+      "online_translation_camera_m": [
+        0.004295290897744816,
+        -0.00586194507422983,
+        0.2732939578225727
+      ],
+      "tracked_world_velocity_mps": [
+        1.1114404210474287,
+        0.05185252649604823,
+        -0.12945581747193233
+      ],
+      "online_world_velocity_mps": [
+        1.3650387665264778,
+        0.04786628853879009,
+        0.01564344565513735
+      ],
+      "axial_velocity_difference_mps": -0.25359834547904914
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 602,
+      "current": 101807,
+      "time": 364.92198753356934,
+      "selected": 187,
+      "tracked": 140,
+      "inliers": 91,
+      "status": "accepted",
+      "dt": 0.20013666152954102,
+      "reprojection_rmse_px": 0.7624823821591896,
+      "rotation_difference_deg": 0.08473565167655449,
+      "tracked_translation_camera_m": [
+        0.0008218539749235611,
+        0.00814289942793462,
+        0.2976510049876507
+      ],
+      "online_translation_camera_m": [
+        -0.010375964645589325,
+        -0.0018991934235481232,
+        0.283611698836053
+      ],
+      "tracked_world_velocity_mps": [
+        1.4848728781906917,
+        0.07600319420272811,
+        -0.05410657360173023
+      ],
+      "online_world_velocity_mps": [
+        1.4123442533949124,
+        0.12728191487427784,
+        -0.0023468869948193756
+      ],
+      "axial_velocity_difference_mps": 0.07252862479577926
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 604,
+      "current": 101813,
+      "time": 366.1228303909302,
+      "selected": 141,
+      "tracked": 107,
+      "inliers": 73,
+      "status": "accepted",
+      "dt": 0.2001490592956543,
+      "reprojection_rmse_px": 0.6280696773470895,
+      "rotation_difference_deg": 0.3123353366638204,
+      "tracked_translation_camera_m": [
+        0.003722458449118766,
+        0.0045509047212175776,
+        0.2696400720234812
+      ],
+      "online_translation_camera_m": [
+        -0.0013733866839880995,
+        -0.0024841964747050627,
+        0.2889325502359581
+      ],
+      "tracked_world_velocity_mps": [
+        1.344640458653748,
+        0.08355476467192223,
+        -0.027593632729611083
+      ],
+      "online_world_velocity_mps": [
+        1.4389818861428747,
+        0.11583986384540264,
+        0.007509128535344086
+      ],
+      "axial_velocity_difference_mps": -0.09434142748912677
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 606,
+      "current": 101819,
+      "time": 367.3237280845642,
+      "selected": 105,
+      "tracked": 73,
+      "inliers": 55,
+      "status": "accepted",
+      "dt": 0.2001492977142334,
+      "reprojection_rmse_px": 0.7161987008842068,
+      "rotation_difference_deg": 0.23839088976228778,
+      "tracked_translation_camera_m": [
+        0.008421422288173464,
+        0.005565482684482898,
+        0.2752242052350313
+      ],
+      "online_translation_camera_m": [
+        -0.0024777409982598498,
+        0.0009262038175915962,
+        0.2966543475050867
+      ],
+      "tracked_world_velocity_mps": [
+        1.3743541719594579,
+        -0.051545098480182606,
+        -0.043843662075514205
+      ],
+      "online_world_velocity_mps": [
+        1.482078854132142,
+        0.0016186809511247085,
+        -0.02069645223960586
+      ],
+      "axial_velocity_difference_mps": -0.10772468217268405
+    },
+    {
+      "window": [
+        350,
+        370
+      ],
+      "reference": 608,
+      "current": 101825,
+      "time": 368.52460741996765,
+      "selected": 118,
+      "tracked": 100,
+      "inliers": 75,
+      "status": "accepted",
+      "dt": 0.20014119148254395,
+      "reprojection_rmse_px": 0.6350331464829421,
+      "rotation_difference_deg": 0.13364187998157975,
+      "tracked_translation_camera_m": [
+        0.014791232545691743,
+        0.010012324155790762,
+        0.3031088425937906
+      ],
+      "online_translation_camera_m": [
+        -0.003183247161288258,
+        -0.004561960534007403,
+        0.2630401005181286
+      ],
+      "tracked_world_velocity_mps": [
+        1.513528248375123,
+        -0.0894653623869153,
+        -0.05317259776928894
+      ],
+      "online_world_velocity_mps": [
+        1.3143864111185826,
+        0.0009785486186084022,
+        0.02173955249358948
+      ],
+      "axial_velocity_difference_mps": 0.19914183725654033
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 811,
+      "current": 102434,
+      "time": 490.40882539749146,
+      "selected": 216,
+      "tracked": 44,
+      "inliers": 15,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 813,
+      "current": 102440,
+      "time": 491.60966086387634,
+      "selected": 194,
+      "tracked": 140,
+      "inliers": 79,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 815,
+      "current": 102446,
+      "time": 492.8104999065399,
+      "selected": 161,
+      "tracked": 112,
+      "inliers": 78,
+      "status": "accepted",
+      "dt": 0.20013833045959473,
+      "reprojection_rmse_px": 0.6769709873762505,
+      "rotation_difference_deg": 0.12475993445367438,
+      "tracked_translation_camera_m": [
+        -0.010194846422964896,
+        0.013387187952646745,
+        0.28349065927759104
+      ],
+      "online_translation_camera_m": [
+        -0.0043376705671444755,
+        -0.00584986554109207,
+        0.3274961590630035
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4161800244026008,
+        -0.01766268379875399,
+        -0.08711262539414047
+      ],
+      "online_world_velocity_mps": [
+        -1.6366401683726521,
+        0.018540934027023892,
+        0.005229791551303923
+      ],
+      "axial_velocity_difference_mps": 0.22046014397005131
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 817,
+      "current": 102452,
+      "time": 494.0113351345062,
+      "selected": 206,
+      "tracked": 148,
+      "inliers": 89,
+      "status": "accepted",
+      "dt": 0.20013976097106934,
+      "reprojection_rmse_px": 0.8713919583563481,
+      "rotation_difference_deg": 0.2738643701561551,
+      "tracked_translation_camera_m": [
+        0.02259764594468594,
+        0.01423282683019329,
+        0.32265430893070696
+      ],
+      "online_translation_camera_m": [
+        -0.0003824416630078351,
+        -0.0007411962843454691,
+        0.30066415927407286
+      ],
+      "tracked_world_velocity_mps": [
+        -1.6074907052839171,
+        0.15715463654505266,
+        -0.08996243293649811
+      ],
+      "online_world_velocity_mps": [
+        -1.5016809736990886,
+        0.04052492978418372,
+        -0.012145416585662152
+      ],
+      "axial_velocity_difference_mps": -0.10580973158482854
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 819,
+      "current": 102458,
+      "time": 495.2121751308441,
+      "selected": 223,
+      "tracked": 163,
+      "inliers": 105,
+      "status": "accepted",
+      "dt": 0.20014047622680664,
+      "reprojection_rmse_px": 0.7524403989997092,
+      "rotation_difference_deg": 0.11708759867944427,
+      "tracked_translation_camera_m": [
+        -0.0006248660092792958,
+        -0.0039667682242022165,
+        0.28363326967800473
+      ],
+      "online_translation_camera_m": [
+        -0.0065131307190321956,
+        -0.0062423230282212545,
+        0.3314236730625356
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4163455467551105,
+        0.05234242363115624,
+        -0.0012867008431259987
+      ],
+      "online_world_velocity_mps": [
+        -1.656236630986904,
+        0.03242235956387658,
+        0.006974462581889076
+      ],
+      "axial_velocity_difference_mps": 0.23989108423179362
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 821,
+      "current": 102464,
+      "time": 496.41301703453064,
+      "selected": 196,
+      "tracked": 155,
+      "inliers": 100,
+      "status": "accepted",
+      "dt": 0.20014071464538574,
+      "reprojection_rmse_px": 0.718292680905996,
+      "rotation_difference_deg": 0.07339758169603659,
+      "tracked_translation_camera_m": [
+        -0.004126108512856695,
+        0.0023802268542101545,
+        0.2814829637681101
+      ],
+      "online_translation_camera_m": [
+        -0.004534974752673632,
+        0.0007473779070830233,
+        0.28843742315583837
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4057440402905352,
+        0.04600269600031701,
+        -0.01913160949384689
+      ],
+      "online_world_velocity_mps": [
+        -1.4405866344199063,
+        0.04575753555090978,
+        -0.011126544483352404
+      ],
+      "axial_velocity_difference_mps": 0.034842594129371074
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 823,
+      "current": 102470,
+      "time": 497.6138608455658,
+      "selected": 160,
+      "tracked": 123,
+      "inliers": 71,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 825,
+      "current": 102476,
+      "time": 498.81470012664795,
+      "selected": 214,
+      "tracked": 153,
+      "inliers": 86,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 827,
+      "current": 102482,
+      "time": 500.01554322242737,
+      "selected": 184,
+      "tracked": 133,
+      "inliers": 92,
+      "status": "accepted",
+      "dt": 0.20014286041259766,
+      "reprojection_rmse_px": 0.6813306857238498,
+      "rotation_difference_deg": 0.3261519920058353,
+      "tracked_translation_camera_m": [
+        0.00208269090755779,
+        -0.008231758718059517,
+        0.2883704812522543
+      ],
+      "online_translation_camera_m": [
+        -0.0001831119191532185,
+        -0.00507712865402807,
+        0.3306302972625115
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4413285759632244,
+        -0.00723948880856014,
+        0.017058807366297956
+      ],
+      "online_world_velocity_mps": [
+        -1.65202545569597,
+        -0.021492884649115123,
+        -0.002016089258006939
+      ],
+      "axial_velocity_difference_mps": 0.21069687973274553
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 829,
+      "current": 102488,
+      "time": 501.2163333892822,
+      "selected": 142,
+      "tracked": 98,
+      "inliers": 64,
+      "status": "accepted",
+      "dt": 0.20012903213500977,
+      "reprojection_rmse_px": 0.6944493667344338,
+      "rotation_difference_deg": 0.07044582575089742,
+      "tracked_translation_camera_m": [
+        -0.0041524520148033955,
+        0.006502282215438883,
+        0.2574249152483876
+      ],
+      "online_translation_camera_m": [
+        -0.00525291121900742,
+        -0.002119504865276685,
+        0.3018823660124166
+      ],
+      "tracked_world_velocity_mps": [
+        -1.2862387774043778,
+        -0.01210964840666014,
+        -0.03851480788203893
+      ],
+      "online_world_velocity_mps": [
+        -1.5086202532549555,
+        -0.015511449578278047,
+        0.0035453301784992013
+      ],
+      "axial_velocity_difference_mps": 0.22238147585057777
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 831,
+      "current": 102494,
+      "time": 502.417133808136,
+      "selected": 111,
+      "tracked": 73,
+      "inliers": 47,
+      "status": "accepted",
+      "dt": 0.20013999938964844,
+      "reprojection_rmse_px": 0.6065480877113826,
+      "rotation_difference_deg": 0.1695604708862805,
+      "tracked_translation_camera_m": [
+        0.007632498187854267,
+        -0.022508034010413812,
+        0.29570677955644714
+      ],
+      "online_translation_camera_m": [
+        -0.002213954277248658,
+        0.0029855936897026495,
+        0.2805706308769273
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4769093138226872,
+        0.06352813549270249,
+        0.10867472780069708
+      ],
+      "online_world_velocity_mps": [
+        -1.401828452843219,
+        0.011864560660782167,
+        -0.0180499074038488
+      ],
+      "axial_velocity_difference_mps": -0.0750808609794682
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 833,
+      "current": 102500,
+      "time": 503.61797285079956,
+      "selected": 145,
+      "tracked": 113,
+      "inliers": 84,
+      "status": "accepted",
+      "dt": 0.20013880729675293,
+      "reprojection_rmse_px": 0.6326403008443495,
+      "rotation_difference_deg": 0.21812875529236947,
+      "tracked_translation_camera_m": [
+        0.009543503601077929,
+        0.014314071955705039,
+        0.3050848804626899
+      ],
+      "online_translation_camera_m": [
+        -0.0029564778034574316,
+        0.004325599495026388,
+        0.3221379228894861
+      ],
+      "tracked_world_velocity_mps": [
+        -1.5223809784658389,
+        0.09881379809358333,
+        -0.0606138805754768
+      ],
+      "online_world_velocity_mps": [
+        -1.609262408612647,
+        0.03998335077080893,
+        -0.0092108309922295
+      ],
+      "axial_velocity_difference_mps": 0.08688143014680816
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 835,
+      "current": 102506,
+      "time": 504.8188235759735,
+      "selected": 102,
+      "tracked": 76,
+      "inliers": 32,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 837,
+      "current": 102512,
+      "time": 506.0196704864502,
+      "selected": 171,
+      "tracked": 144,
+      "inliers": 99,
+      "status": "accepted",
+      "dt": 0.20013642311096191,
+      "reprojection_rmse_px": 0.7237813816965586,
+      "rotation_difference_deg": 0.06770171846345259,
+      "tracked_translation_camera_m": [
+        0.003413599311806598,
+        0.02193921413902914,
+        0.31887435873873227
+      ],
+      "online_translation_camera_m": [
+        -0.006521853839861311,
+        -0.0026625313255398083,
+        0.291811906258041
+      ],
+      "tracked_world_velocity_mps": [
+        -1.5910233997172325,
+        0.03014898659105988,
+        -0.13638323909578967
+      ],
+      "online_world_velocity_mps": [
+        -1.4583103689038113,
+        -0.020064462558740663,
+        -0.01098263994693086
+      ],
+      "axial_velocity_difference_mps": -0.13271303081342123
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 839,
+      "current": 102518,
+      "time": 507.2204794883728,
+      "selected": 166,
+      "tracked": 113,
+      "inliers": 79,
+      "status": "accepted",
+      "dt": 0.20013189315795898,
+      "reprojection_rmse_px": 0.6371823979611426,
+      "rotation_difference_deg": 0.1774760911789929,
+      "tracked_translation_camera_m": [
+        -0.00356944252398374,
+        0.005319679442978477,
+        0.29276909881608276
+      ],
+      "online_translation_camera_m": [
+        -0.0056197294105699205,
+        0.00028501310516127214,
+        0.2706871421991952
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4625084755692828,
+        -0.014155454728357929,
+        -0.0437423120025645
+      ],
+      "online_world_velocity_mps": [
+        -1.35250537639848,
+        -0.02447068357698789,
+        -0.017190710412076364
+      ],
+      "axial_velocity_difference_mps": -0.11000309917080275
+    },
+    {
+      "window": [
+        490,
+        510
+      ],
+      "reference": 841,
+      "current": 102524,
+      "time": 508.4212293624878,
+      "selected": 156,
+      "tracked": 123,
+      "inliers": 70,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 927,
+      "current": 102782,
+      "time": 560.0570693016052,
+      "selected": 65,
+      "tracked": 54,
+      "inliers": 46,
+      "status": "accepted",
+      "dt": 0.20012354850769043,
+      "reprojection_rmse_px": 0.6435905288073004,
+      "rotation_difference_deg": 0.31180862180792496,
+      "tracked_translation_camera_m": [
+        0.003870992495365029,
+        0.009193429222249493,
+        0.28410879688771035
+      ],
+      "online_translation_camera_m": [
+        -0.013802316204712839,
+        -0.003892094133774814,
+        0.2944822657631558
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4183093336624997,
+        -0.010540386671666957,
+        -0.07890778071829543
+      ],
+      "online_world_velocity_mps": [
+        -1.4698774449027447,
+        -0.09870387887005194,
+        -0.013110168860106552
+      ],
+      "axial_velocity_difference_mps": 0.051568111240245074
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 929,
+      "current": 102788,
+      "time": 561.2578775882721,
+      "selected": 127,
+      "tracked": 85,
+      "inliers": 66,
+      "status": "accepted",
+      "dt": 0.20014142990112305,
+      "reprojection_rmse_px": 0.731581353659186,
+      "rotation_difference_deg": 0.08853690059505823,
+      "tracked_translation_camera_m": [
+        0.01307805686506347,
+        0.0008701200706323399,
+        0.2784083290437091
+      ],
+      "online_translation_camera_m": [
+        0.0034064044823051876,
+        -0.001675383872295301,
+        0.3025521604515299
+      ],
+      "tracked_world_velocity_mps": [
+        -1.3907645827325343,
+        0.06734693817181048,
+        -0.023859228503844553
+      ],
+      "online_world_velocity_mps": [
+        -1.5116368893532535,
+        0.019314181496013192,
+        -0.012359493602150034
+      ],
+      "axial_velocity_difference_mps": 0.12087230662071913
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 931,
+      "current": 102794,
+      "time": 562.4586689472198,
+      "selected": 216,
+      "tracked": 166,
+      "inliers": 109,
+      "status": "accepted",
+      "dt": 0.20013785362243652,
+      "reprojection_rmse_px": 0.6438185379726833,
+      "rotation_difference_deg": 0.04040255141308558,
+      "tracked_translation_camera_m": [
+        0.0026950757755099175,
+        0.0010812461966976273,
+        0.28863198625036596
+      ],
+      "online_translation_camera_m": [
+        -0.005382952811431146,
+        -0.006104394417485994,
+        0.296413606177975
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4417392209450353,
+        0.035472859983606046,
+        -0.013515953607455354
+      ],
+      "online_world_velocity_mps": [
+        -1.4814298015446257,
+        -0.004038564410192088,
+        0.02244841409368337
+      ],
+      "axial_velocity_difference_mps": 0.03969058059959041
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 933,
+      "current": 102800,
+      "time": 563.6595044136047,
+      "selected": 254,
+      "tracked": 192,
+      "inliers": 125,
+      "status": "accepted",
+      "dt": 0.20013880729675293,
+      "reprojection_rmse_px": 0.6899506739946346,
+      "rotation_difference_deg": 0.27898646019158446,
+      "tracked_translation_camera_m": [
+        0.004009162319635267,
+        0.010235727088936102,
+        0.3046092946744178
+      ],
+      "online_translation_camera_m": [
+        -0.009525390023849667,
+        -0.00034048302168012047,
+        0.29962414781080826
+      ],
+      "tracked_world_velocity_mps": [
+        -1.5201585526254673,
+        0.06431910319646027,
+        -0.06672305111898187
+      ],
+      "online_world_velocity_mps": [
+        -1.497781492880566,
+        -0.0032707730309624035,
+        -0.012712986868575598
+      ],
+      "axial_velocity_difference_mps": -0.02237705974490134
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 935,
+      "current": 102806,
+      "time": 564.8603386878967,
+      "selected": 255,
+      "tracked": 188,
+      "inliers": 139,
+      "status": "accepted",
+      "dt": 0.20013952255249023,
+      "reprojection_rmse_px": 0.6659903798063476,
+      "rotation_difference_deg": 0.1691821394113158,
+      "tracked_translation_camera_m": [
+        -0.013053148891878476,
+        0.002856540958192563,
+        0.285914026093986
+      ],
+      "online_translation_camera_m": [
+        -0.028780078247888436,
+        -0.006823212901396205,
+        0.27545585402275696
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4294733627211276,
+        -0.012651022129301734,
+        -0.04154044112865818
+      ],
+      "online_world_velocity_mps": [
+        -1.3810989881717188,
+        -0.09267730862262431,
+        0.008461579497543198
+      ],
+      "axial_velocity_difference_mps": -0.04837437454940874
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 937,
+      "current": 102812,
+      "time": 566.0611939430237,
+      "selected": 411,
+      "tracked": 206,
+      "inliers": 101,
+      "status": "pnp_consensus_failed"
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 939,
+      "current": 102818,
+      "time": 567.2620098590851,
+      "selected": 98,
+      "tracked": 57,
+      "inliers": 37,
+      "status": "accepted",
+      "dt": 0.20012879371643066,
+      "reprojection_rmse_px": 0.7726655291264383,
+      "rotation_difference_deg": 0.3881865227804582,
+      "tracked_translation_camera_m": [
+        -0.010489152631112678,
+        -0.001282657214412718,
+        0.2707364481821167
+      ],
+      "online_translation_camera_m": [
+        -0.026675760854692216,
+        0.0008909364169846768,
+        0.32497738423086925
+      ],
+      "tracked_world_velocity_mps": [
+        -1.3507541480805487,
+        -0.08693869573716043,
+        -0.028121030176303328
+      ],
+      "online_world_velocity_mps": [
+        -1.619287732901961,
+        -0.17504333998405017,
+        -0.043751581789148945
+      ],
+      "axial_velocity_difference_mps": 0.2685335848214123
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 941,
+      "current": 102824,
+      "time": 568.462798833847,
+      "selected": 197,
+      "tracked": 139,
+      "inliers": 91,
+      "status": "accepted",
+      "dt": 0.2001357078552246,
+      "reprojection_rmse_px": 0.7127890705013984,
+      "rotation_difference_deg": 0.10150535075546399,
+      "tracked_translation_camera_m": [
+        -0.002824862440414002,
+        0.006761559307134384,
+        0.2824889974173923
+      ],
+      "online_translation_camera_m": [
+        -0.006400067121500434,
+        0.001069869551992093,
+        0.2930402168518311
+      ],
+      "tracked_world_velocity_mps": [
+        -1.409986056772141,
+        -0.05323919650963095,
+        -0.05236196094764124
+      ],
+      "online_world_velocity_mps": [
+        -1.462575248353218,
+        -0.07231655604329432,
+        -0.02447346754780638
+      ],
+      "axial_velocity_difference_mps": 0.052589191581077
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 943,
+      "current": 102830,
+      "time": 569.6636142730713,
+      "selected": 216,
+      "tracked": 182,
+      "inliers": 122,
+      "status": "accepted",
+      "dt": 0.2001347541809082,
+      "reprojection_rmse_px": 0.7418143700338251,
+      "rotation_difference_deg": 0.08799118924171864,
+      "tracked_translation_camera_m": [
+        0.005306239252855982,
+        0.004023363617624393,
+        0.3163403492894984
+      ],
+      "online_translation_camera_m": [
+        -0.005064455049105663,
+        -0.004412357734207051,
+        0.2910759626393199
+      ],
+      "tracked_world_velocity_mps": [
+        -1.5805279589790031,
+        -0.02631756011426508,
+        -0.027539483507142932
+      ],
+      "online_world_velocity_mps": [
+        -1.452844325364986,
+        -0.07350500868239015,
+        0.015678420237751678
+      ],
+      "axial_velocity_difference_mps": -0.12768363361401702
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 945,
+      "current": 102836,
+      "time": 570.8644289970398,
+      "selected": 217,
+      "tracked": 155,
+      "inliers": 96,
+      "status": "accepted",
+      "dt": 0.20013880729675293,
+      "reprojection_rmse_px": 0.8235420819620046,
+      "rotation_difference_deg": 0.08706450506433239,
+      "tracked_translation_camera_m": [
+        -0.0035254854450447967,
+        0.007245756536351231,
+        0.29165842761968735
+      ],
+      "online_translation_camera_m": [
+        -0.004101549474492809,
+        -0.0031264996900900047,
+        0.29276772376049526
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4536061894471848,
+        -0.09861508252111269,
+        -0.05091410428781616
+      ],
+      "online_world_velocity_mps": [
+        -1.4595332232081628,
+        -0.10138157464975804,
+        0.0008747489504438077
+      ],
+      "axial_velocity_difference_mps": 0.005927033760978029
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 947,
+      "current": 102842,
+      "time": 572.0652582645416,
+      "selected": 160,
+      "tracked": 113,
+      "inliers": 86,
+      "status": "accepted",
+      "dt": 0.20013737678527832,
+      "reprojection_rmse_px": 0.7114769861849328,
+      "rotation_difference_deg": 0.48592269115341186,
+      "tracked_translation_camera_m": [
+        0.011056643982199044,
+        -0.004239041584333595,
+        0.29174198099615295
+      ],
+      "online_translation_camera_m": [
+        0.0004952239728596621,
+        0.000588938481133113,
+        0.2942292782755078
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4587637249705787,
+        -0.013938208715006346,
+        0.015140311801364966
+      ],
+      "online_world_velocity_mps": [
+        -1.468568736352243,
+        -0.06744482594468658,
+        -0.008567398246237815
+      ],
+      "axial_velocity_difference_mps": 0.009805011381664341
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 949,
+      "current": 102848,
+      "time": 573.2661020755768,
+      "selected": 143,
+      "tracked": 90,
+      "inliers": 69,
+      "status": "accepted",
+      "dt": 0.20014309883117676,
+      "reprojection_rmse_px": 0.5867282977650982,
+      "rotation_difference_deg": 0.18868325571686576,
+      "tracked_translation_camera_m": [
+        0.0030742823691235427,
+        0.007762658261288843,
+        0.2857614238979933
+      ],
+      "online_translation_camera_m": [
+        -0.01159596278297895,
+        -0.002650083202848702,
+        0.2895392840191104
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4268414974558838,
+        -0.05865871968662982,
+        -0.03153296173465502
+      ],
+      "online_world_velocity_mps": [
+        -1.4416922807161807,
+        -0.13194443913455994,
+        0.021800136118666172
+      ],
+      "axial_velocity_difference_mps": 0.014850783260296874
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 951,
+      "current": 102854,
+      "time": 574.4669282436371,
+      "selected": 127,
+      "tracked": 95,
+      "inliers": 71,
+      "status": "accepted",
+      "dt": 0.20013141632080078,
+      "reprojection_rmse_px": 0.7615729743602893,
+      "rotation_difference_deg": 0.01988282341385804,
+      "tracked_translation_camera_m": [
+        0.005087774643987573,
+        0.0002452226567428303,
+        0.29703855143257935
+      ],
+      "online_translation_camera_m": [
+        -0.001467469739038305,
+        -0.006745250007721561,
+        0.27113072889894785
+      ],
+      "tracked_world_velocity_mps": [
+        -1.4839717124263792,
+        0.02909019883173248,
+        -0.023045825527649062
+      ],
+      "online_world_velocity_mps": [
+        -1.355124604031975,
+        -0.0036676561436271163,
+        0.014057158277848973
+      ],
+      "axial_velocity_difference_mps": -0.12884710839440405
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 953,
+      "current": 102860,
+      "time": 575.6677193641663,
+      "selected": 228,
+      "tracked": 141,
+      "inliers": 94,
+      "status": "accepted",
+      "dt": 0.20014119148254395,
+      "reprojection_rmse_px": 0.7103335354617741,
+      "rotation_difference_deg": 0.11142016868496686,
+      "tracked_translation_camera_m": [
+        0.004293239273733172,
+        0.003042405490528037,
+        0.2734336724575769
+      ],
+      "online_translation_camera_m": [
+        -0.005264960343004375,
+        -0.002886897941743377,
+        0.3021765891463139
+      ],
+      "tracked_world_velocity_mps": [
+        -1.3660592031430279,
+        0.025991248564742605,
+        -0.020272661104155168
+      ],
+      "online_world_velocity_mps": [
+        -1.5099403786404946,
+        -0.02105296830119347,
+        0.009193146768924326
+      ],
+      "axial_velocity_difference_mps": 0.1438811754974667
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 955,
+      "current": 102866,
+      "time": 576.8685629367828,
+      "selected": 275,
+      "tracked": 180,
+      "inliers": 118,
+      "status": "accepted",
+      "dt": 0.20014071464538574,
+      "reprojection_rmse_px": 0.7524650242027707,
+      "rotation_difference_deg": 0.061501997217584425,
+      "tracked_translation_camera_m": [
+        0.008529696000495454,
+        0.008245462825482032,
+        0.2934310046648315
+      ],
+      "online_translation_camera_m": [
+        -0.0010600549080618318,
+        0.0026368803638003938,
+        0.3019598529058274
+      ],
+      "tracked_world_velocity_mps": [
+        -1.465673060985818,
+        0.06131498787972209,
+        -0.03278266118714532
+      ],
+      "online_world_velocity_mps": [
+        -1.5087315320893506,
+        0.01433213188843269,
+        -0.003874097128964513
+      ],
+      "axial_velocity_difference_mps": 0.04305847110353267
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 957,
+      "current": 102872,
+      "time": 578.0694382190704,
+      "selected": 262,
+      "tracked": 195,
+      "inliers": 120,
+      "status": "accepted",
+      "dt": 0.20015287399291992,
+      "reprojection_rmse_px": 0.6775064538146495,
+      "rotation_difference_deg": 0.17452950897247813,
+      "tracked_translation_camera_m": [
+        0.0021056659408611794,
+        0.005921251667178859,
+        0.279606624521918
+      ],
+      "online_translation_camera_m": [
+        -0.00524239155566747,
+        -0.0014233786170852335,
+        0.2932247798689915
+      ],
+      "tracked_world_velocity_mps": [
+        -1.3963501825031364,
+        0.04127509864753105,
+        -0.03163102836337151
+      ],
+      "online_world_velocity_mps": [
+        -1.4652292850933868,
+        0.006734663476410126,
+        0.005600942538432681
+      ],
+      "axial_velocity_difference_mps": 0.06887910259025043
+    },
+    {
+      "window": [
+        560,
+        580
+      ],
+      "reference": 959,
+      "current": 102878,
+      "time": 579.2703077793121,
+      "selected": 117,
+      "tracked": 1,
+      "status": "too_few_bidirectional_tracks"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "selected_estimator": "relative-plane-fast LIO",
+  "selected_run": "relative-plane-fast-lio",
+  "repetition": "relative-plane-fast-lio-repeat",
+  "production_source_matches_snapshot": true,
+  "offline_binary_sha256": "a618fa6ad3e380a2169af6e7620683ffc4d05fc1ee5c4326188f5ac569007de1",
+  "mapping_binary_sha256": "4b2a152784f0d0dd0ca78f7b03f1b59901a9997fa49ed1ea675d572c5b68e1f1",
+  "full_route_tests": 2,
+  "duration_sec": 648.099640608,
+  "cpp_tests_passed": 16,
+  "ros_first60_matches_direct": true,
+  "loop_closure": false,
+  "trajectory_correction": false,
+  "evaluation_alignment": false,
+  "departure_return_x_wall_separation_m": [
+    [
+      0.05419822030207566,
+      0.04216911733567286
+    ],
+    [
+      0.26773862961,
+      0.25555648809
+    ]
+  ],
+  "departure_return_ceiling_separation_m": [
+    -0.06577851796,
+    -0.04545016971
+  ],
+  "repeat_max_position_difference_m": 0.24925645,
+  "repeat_end_position_difference_m": 0.23007723,
+  "remaining_limitation": "Up to 0.268 m common-wall separation remains in the repeated full run; exact room coincidence and bitwise repeatability are not established. No independent ground-truth trajectory.",
+  "not_adopted": {
+    "relative-plane-fast-weak-livo": "Full-run X walls ~1.23 m / 1.95 m; worse room overlap.",
+    "constant-prior": "Full-run X walls ~0.41 m / 0.90 m and ceiling ~0.24 m; worse than selected estimator. Isolated prototype, never applied to production source/install."
+  },
+  "export": "reconstruction_results/raw_20260907_114335-online-20261001-relative-lio",
+  "ros_display": "Existing map publication remains enabled in user preset; headless capture disables it. Diagnostics/output-only differences do not change estimator parameter values.",
+  "installed_binaries_match_selected_snapshots": true
+}

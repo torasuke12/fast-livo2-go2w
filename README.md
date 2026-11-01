@@ -36,6 +36,20 @@ fast-livo2-go2w/
 
 `config/sensor/go2w_mid360_calibration.yaml` is the shared Livox MID360 calibration reference. FAST-LIVO2 still consumes its native parameter file at `humble_ws/src/fast-livo2/config/go2w_fast_livo2.yaml`. The previous Hesai/GO2-W IMU parameter file is preserved as `humble_ws/src/fast-livo2/config/go2w_hesai_fast_livo2.yaml`.
 
+X-ICP degeneracy mitigation for the LiDAR update (configuration, IEKF adaptation,
+diagnostics, and limitations): [docs/XICP.md](docs/XICP.md).
+
+Optional LIO residual/gain/covariance and coupled-Hessian logging, including
+time-windowed per-correspondence diagnostics: [docs/LIO_DIAGNOSTICS.md](docs/LIO_DIAGNOSTICS.md).
+
+Joint pose, velocity, and IMU bias estimation over a fixed time window:
+[docs/TEMPORAL_LIO.md](docs/TEMPORAL_LIO.md).
+Enable for LIVO replay with `--temporal-window on --capture-diagnostics --rate 0.25`;
+add `--lio-only` to exclude the camera. Image fusion and its diagnostics:
+[docs/TEMPORAL_LIVO.md](docs/TEMPORAL_LIVO.md).
+Initialization-only comparison (`single_scan` / `legacy_voxel`) and 0–60 s replay:
+[docs/TEMPORAL_INITIALIZATION_ABLATION.md](docs/TEMPORAL_INITIALIZATION_ABLATION.md).
+
 ## Package Sources
 
 | Package | Repository | Purpose |
@@ -316,6 +330,45 @@ first, copy the whole bag directory, then replay it locally with RViz.
    The helper plays the bag with `/clock`, isolates playback on a local ROS
    domain, and opens RViz with `use_sim_time:=true`.
 
+   For **online estimation only**, including `raw_20260907_114335`, use the
+   validated indoor LIO configuration (up to 0.27 m room-wall drift remained in the full repeat). This processes inputs chronologically
+   and exports the emitted poses without loop closure or trajectory correction:
+
+   ```bash
+   bash scripts/fast_livo2/reconstruct_online.sh \
+     bags/raw_20260907_114335 reconstruction_results/new_online_run \
+     --params config/fast_livo2/go2w_mid360_online.yaml --lio-only
+   ```
+
+   Add `--capture-diagnostics` to save `original_params.yaml`, `capture.json`,
+   and `capture_summary.json` alongside the usual frontend poses, logs, and
+   provenance, without starting RViz. For the temporal estimator, the option
+   checks the saved temporal CSV logs; for the legacy estimator, it also
+   enables detailed LIO geometry diagnostics. This offline capture does not
+   include the ROS bag-player and IMU-topic monitor records produced by
+   `reconstruct_raw.sh --capture-diagnostics`. On bags other than September 7,
+   set `--start-room` and `--return-room` to valid evaluation intervals.
+
+   Output is `export/map.ply` and `export/trajectory.tum`. The configuration
+   jointly estimates motion, IMU biases and local planes, with indoor structural
+   directions and acceleration saturation handling. It assumes approximately
+   horizontal floors and orthogonal walls. See the
+   [measured room overlap, remaining errors and ROS replay command](docs/ONLINE_RECONSTRUCTION.md).
+
+   If geometric loop correction is desired instead, the separate full-trajectory
+   reconstruction workflow remains available:
+
+   ```bash
+   bash scripts/fast_livo2/reconstruct_offline.sh \
+     bags/raw_20260907_114335 reconstruction_results/new_run --return-to-start
+   ```
+
+   This uses the existing ROS Docker image and `.venv-reconstruction` for point
+   cloud processing. It saves `optimized/map.ply` and `optimized/trajectory.tum`.
+   `--return-to-start` enables verified registration against the initial room;
+   it does not force the final robot pose to equal its initial pose.
+   See [setup, measured results, and RViz display](docs/OFFLINE_LOOP_RECONSTRUCTION.md).
+
    If you copied a raw sensor bag and want to re-run FAST-LIVO2 from the
    recorded LiDAR, IMU, and camera topics, use the reconstruction helper:
 
@@ -360,6 +413,21 @@ first, copy the whole bag directory, then replay it locally with RViz.
    and single-threaded OpenMP/OpenCV/Eigen processing to keep the input stream
    and floating-point reduction order repeatable. Override the playback rate
    with `FAST_LIVO2_BAG_PLAY_RATE` or `--rate` when needed.
+
+   In `voxel_plane` mode, map initialization now accumulates deskewed scans
+   after the three-second stationary IMU initialization. Keep the robot still
+   until `[ Voxel Init ] READY` appears. The Go2W defaults require 5,000
+   accumulated points (after per-scan downsampling), 100 usable plane patches,
+   at least 0.1 seconds of data, and a minimum eigenvalue of 0.02 for the mean
+   unit-normal outer-product matrix. Opposite walls count as the same normal
+   direction: a floor and parallel corridor walls alone may be insufficient.
+   This is a normal-coverage check, not a guarantee of full pose observability.
+   `[ Voxel Init ] WAITING` reports the points, planes, and normal eigenvalues;
+   LIO/VIO updates and their usual output topics wait for readiness. A failed
+   window is restarted after 2 seconds or 100,000 points, without forcing an
+   unreliable initialization. Configure these limits using `lio.voxel_init_*`
+   in `humble_ws/src/fast-livo2/config/go2w_fast_livo2.yaml`. These settings do
+   not gate the single-scan initialization of `fastlio_ikdtree`.
 
 4. Check replayed topics from another terminal if RViz does not show an output:
 
@@ -564,7 +632,7 @@ catmux_create_session /external/catmux/online_fast_livo2_hesai.yaml
 - `camera.cam_d0` through `camera.cam_d4`
 - `extrin_calib.extrinsic_T` currently `[-0.011, -0.02329, 0.04412]`
 - `extrin_calib.extrinsic_R`
-- `extrin_calib.Pcl` currently `[0.0, -0.1508, -0.089]`
+- `extrin_calib.Pcl` currently `[0.017500000, -0.113800000, -0.112000000]`
 - `extrin_calib.Rcl`
 - `time_offset.imu_time_offset`
 - `time_offset.img_time_offset`
@@ -576,9 +644,9 @@ Interpretation:
 - `Pcl` and `Rcl`: LiDAR to RealSense color camera transform used by visual projection.
 
 The current `Pcl`/`Rcl` values are provisional. They are derived from a
-forward-facing standard optical frame at the temporary
+level forward-facing optical frame at the temporary
 `base_link -> camera_color_optical_frame` pose
-`[0.30, 0.0, 0.05, -pi/2, 0.0, -pi/2]` and the MID360 mount reference in
+`[0.323, 0.0175, 0.087, -pi/2, 0.0, -pi/2]` and the MID360 mount reference in
 `config/sensor/go2w_mid360_calibration.yaml`.
 
 Do not use unverified camera intrinsics or camera extrinsics in the default config for evaluation or field operation.

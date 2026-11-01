@@ -1,0 +1,76 @@
+{
+  "deferred-image-weak60": {
+    "summary": {
+      "complete": true,
+      "bag_exhausted": true,
+      "imu_messages": 12001,
+      "lidar_messages": 600,
+      "image_messages": 1798,
+      "updates": 282,
+      "keyframes": 94,
+      "last_time": 59.71076536178589
+    },
+    "temporal_window.csv": {
+      "rows": 283,
+      "all_finite": true,
+      "covariance_min_eigenvalue": 4.704973408967012e-08
+    },
+    "temporal_visual.csv": {
+      "rows": 282,
+      "all_finite": true,
+      "covariance_min_eigenvalue": 4.704973408967267e-08
+    },
+    "interval_30_60": {
+      "candidate_points": {
+        "p10": 18775.4,
+        "p50": 22148.0,
+        "p90": 26702.0
+      },
+      "pixels": {
+        "p10": 0.0,
+        "p50": 268.0,
+        "p90": 467.2000000000001
+      },
+      "velocity_correction_p95_mps": 0.006145295382858816,
+      "invalid_patch_evaluations_total": 0,
+      "frames_with_invalid_patch_evaluations": 0
+    }
+  },
+  "deferred-image-all60": {
+    "summary": {
+      "complete": true,
+      "bag_exhausted": true,
+      "imu_messages": 12001,
+      "lidar_messages": 600,
+      "image_messages": 1798,
+      "updates": 282,
+      "keyframes": 94,
+      "last_time": 59.71076536178589
+    },
+    "temporal_window.csv": {
+      "rows": 283,
+      "all_finite": true,
+      "covariance_min_eigenvalue": 4.777446886292126e-08
+    },
+    "temporal_visual.csv": {
+      "rows": 282,
+      "all_finite": true,
+      "covariance_min_eigenvalue": 4.761673903254638e-08
+    },
+    "interval_30_60": {
+      "candidate_points": {
+        "p10": 18653.6,
+        "p50": 22225.0,
+        "p90": 26641.2
+      },
+      "pixels": {
+        "p10": 0.0,
+        "p50": 268.0,
+        "p90": 462.0
+      },
+      "velocity_correction_p95_mps": 0.12100193258296973,
+      "invalid_patch_evaluations_total": 0,
+      "frames_with_invalid_patch_evaluations": 0
+    }
+  }
+}

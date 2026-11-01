@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "complete": true,
+    "bag_exhausted": true,
+    "imu_messages": 12001,
+    "lidar_messages": 600,
+    "image_messages": 0,
+    "updates": 567,
+    "keyframes": 107,
+    "last_time": 59.999332427978516
+  },
+  "logs": {
+    "temporal_window.csv": {
+      "rows": 567,
+      "all_finite": true,
+      "covariance_min_eigenvalue": 4.7488957754334885e-08,
+      "last_state": {
+        "time": 59.999332428,
+        "px": 56.7106042086,
+        "py": -1.40361558321,
+        "pz": -0.0244681244458,
+        "vx": 1.44915087041,
+        "vy": -0.0218881631339,
+        "vz": 0.0157190801173
+      },
+      "interval_30_60": {
+        "vx_median_mps": 1.4674356719600001,
+        "z_min_max_m": [
+          -0.0413050041051,
+          0.0295160772313
+        ]
+      }
+    }
+  }
+}

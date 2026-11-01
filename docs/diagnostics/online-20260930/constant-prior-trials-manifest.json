@@ -1,0 +1,16 @@
+{
+  "constant-prior-lio60": {
+    "binary": "constant-prior-binary",
+    "binary_sha256": "4342c49146894b2317dabba6bb36667b399fbe2d05e3156cacd7b23b37fa2d03",
+    "params_sha256": "19535e27dc47c04ec3f5363e593794878ac9b6ca4e60a43488305eeb29e5c338",
+    "input": "dds-input-rgb-60",
+    "domain": 202
+  },
+  "constant-prior-weak60": {
+    "binary": "constant-prior-binary",
+    "binary_sha256": "4342c49146894b2317dabba6bb36667b399fbe2d05e3156cacd7b23b37fa2d03",
+    "params_sha256": "d333f9320793274e69aa84e562e42329d1c638a25396abe239ce45babbc64c0c",
+    "input": "dds-input-rgb-60",
+    "domain": 203
+  }
+}

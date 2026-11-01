@@ -1,0 +1,1024 @@
+Consolidate compiler generated dependencies of target fast_livo2_temporal
+[  1%] Building CXX object CMakeFiles/fast_livo2_temporal.dir/src/temporal_imu.cpp.o
+[  5%] Built target fast_livo2_xicp
+[  8%] Built target fast_livo2_normals
+[ 10%] Built target fast_livo2_diagnostics
+[ 13%] Built target fast_livo2_preprocess
+[ 16%] Built target fast_livo2_imu_proc
+[ 19%] Built target pcl_binary_compatibility_test
+[ 21%] Built target point_uncertainty_test
+[ 24%] Built target lio_diagnostics_test
+[ 27%] Built target xicp_test
+[ 31%] Built target imu_propagation_test
+[ 38%] Built target fast_livo2_lio
+[ 39%] Building CXX object CMakeFiles/fast_livo2_temporal.dir/src/temporal_planes.cpp.o
+[ 41%] Building CXX object CMakeFiles/fast_livo2_temporal.dir/src/temporal_factors.cpp.o
+[ 42%] Building CXX object CMakeFiles/fast_livo2_temporal.dir/src/temporal_window.cpp.o
+In file included from /usr/include/eigen3/Eigen/Core:341,
+                 from /external/humble_ws/src/fast-livo2/include/temporal_lio.h:5,
+                 from /external/humble_ws/src/fast-livo2/src/temporal_factors.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h: In function 'static void Eigen::internal::trmv_selector<Mode, 1>::run(const Lhs&, const Rhs&, Dest&, const typename Dest::Scalar&) [with Lhs = Eigen::Transpose<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, -1, false> >; Rhs = Eigen::Transpose<const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<const Eigen::Block<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, 1, true>, -1, 1, false> > > >; Dest = Eigen::Transpose<Eigen::Block<Eigen::Block<Eigen::Matrix<double, -1, -1, 1, -1, -1>, 1, -1, true>, 1, -1, false> >; int Mode = 6]':
+/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:332:12: warning: 'result' may be used uninitialized [-Wmaybe-uninitialized]
+  327 |     internal::triangular_matrix_vector_product
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  328 |       <Index,Mode,
+      |       ~~~~~~~~~~~~
+  329 |        LhsScalar, LhsBlasTraits::NeedToConjugate,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  330 |        RhsScalar, RhsBlasTraits::NeedToConjugate,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  331 |        RowMajor>
+      |        ~~~~~~~~~
+  332 |       ::run(actualLhs.rows(),actualLhs.cols(),
+      |       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  333 |             actualLhs.data(),actualLhs.outerStride(),
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  334 |             actualRhsPtr,1,
+      |             ~~~~~~~~~~~~~~~
+  335 |             dest.data(),dest.innerStride(),
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  336 |             actualAlpha);
+      |             ~~~~~~~~~~~~
+/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:105:24: note: by argument 5 of type 'const double*' to 'static void Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::run(Index, Index, const LhsScalar*, Index, const RhsScalar*, Index, Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::ResScalar*, Index, const ResScalar&) [with Index = long int; int Mode = 6; LhsScalar = double; bool ConjLhs = false; RhsScalar = double; bool ConjRhs = false; int Version = 0]' declared here
+  105 | EIGEN_DONT_INLINE void triangular_matrix_vector_product<Index,Mode,LhsScalar,ConjLhs,RhsScalar,ConjRhs,RowMajor,Version>
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 43%] Building CXX object CMakeFiles/fast_livo2_temporal.dir/src/temporal_visual.cpp.o
+In file included from /usr/include/eigen3/Eigen/Core:341,
+                 from /external/humble_ws/src/fast-livo2/include/temporal_lio.h:5,
+                 from /external/humble_ws/src/fast-livo2/src/temporal_window.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h: In function 'static void Eigen::internal::trmv_selector<Mode, 1>::run(const Lhs&, const Rhs&, Dest&, const typename Dest::Scalar&) [with Lhs = Eigen::Transpose<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, -1, false> >; Rhs = Eigen::Transpose<const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<const Eigen::Block<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, 1, true>, -1, 1, false> > > >; Dest = Eigen::Transpose<Eigen::Block<Eigen::Block<Eigen::Matrix<double, -1, -1, 1, -1, -1>, 1, -1, true>, 1, -1, false> >; int Mode = 6]':
+/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:332:12: warning: 'result' may be used uninitialized [-Wmaybe-uninitialized]
+  327 |     internal::triangular_matrix_vector_product
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  328 |       <Index,Mode,
+      |       ~~~~~~~~~~~~
+  329 |        LhsScalar, LhsBlasTraits::NeedToConjugate,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  330 |        RhsScalar, RhsBlasTraits::NeedToConjugate,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  331 |        RowMajor>
+      |        ~~~~~~~~~
+  332 |       ::run(actualLhs.rows(),actualLhs.cols(),
+      |       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  333 |             actualLhs.data(),actualLhs.outerStride(),
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  334 |             actualRhsPtr,1,
+      |             ~~~~~~~~~~~~~~~
+  335 |             dest.data(),dest.innerStride(),
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  336 |             actualAlpha);
+      |             ~~~~~~~~~~~~
+/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:105:24: note: by argument 5 of type 'const double*' to 'static void Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::run(Index, Index, const LhsScalar*, Index, const RhsScalar*, Index, Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::ResScalar*, Index, const ResScalar&) [with Index = long int; int Mode = 6; LhsScalar = double; bool ConjLhs = false; RhsScalar = double; bool ConjRhs = false; int Version = 0]' declared here
+  105 | EIGEN_DONT_INLINE void triangular_matrix_vector_product<Index,Mode,LhsScalar,ConjLhs,RhsScalar,ConjRhs,RowMajor,Version>
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 46%] Built target voxel_diagnostics_test
+[ 49%] Built target normal_consistency_test
+[ 52%] Built target voxel_initialization_test
+[ 53%] Building CXX object CMakeFiles/fast_livo2_temporal.dir/src/temporal_structure.cpp.o
+[ 54%] Building CXX object CMakeFiles/fast_livo2_temporal.dir/src/temporal_map.cpp.o
+[ 56%] Building CXX object CMakeFiles/fast_livo2_temporal.dir/src/temporal_landmarks.cpp.o
+In file included from /usr/include/eigen3/Eigen/Core:341,
+                 from /external/humble_ws/src/fast-livo2/include/temporal_lio.h:5,
+                 from /external/humble_ws/src/fast-livo2/src/temporal_visual.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h: In function 'static void Eigen::internal::trmv_selector<Mode, 1>::run(const Lhs&, const Rhs&, Dest&, const typename Dest::Scalar&) [with Lhs = Eigen::Transpose<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, -1, false> >; Rhs = Eigen::Transpose<const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, 1, -1> >, const Eigen::Transpose<const Eigen::Block<const Eigen::Block<const Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>, -1, 1, true>, -1, 1, false> > > >; Dest = Eigen::Transpose<Eigen::Block<Eigen::Block<Eigen::Matrix<double, -1, -1, 1, -1, -1>, 1, -1, true>, 1, -1, false> >; int Mode = 6]':
+/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:332:12: warning: 'result' may be used uninitialized [-Wmaybe-uninitialized]
+  327 |     internal::triangular_matrix_vector_product
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  328 |       <Index,Mode,
+      |       ~~~~~~~~~~~~
+  329 |        LhsScalar, LhsBlasTraits::NeedToConjugate,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  330 |        RhsScalar, RhsBlasTraits::NeedToConjugate,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  331 |        RowMajor>
+      |        ~~~~~~~~~
+  332 |       ::run(actualLhs.rows(),actualLhs.cols(),
+      |       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  333 |             actualLhs.data(),actualLhs.outerStride(),
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  334 |             actualRhsPtr,1,
+      |             ~~~~~~~~~~~~~~~
+  335 |             dest.data(),dest.innerStride(),
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  336 |             actualAlpha);
+      |             ~~~~~~~~~~~~
+/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:105:24: note: by argument 5 of type 'const double*' to 'static void Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::run(Index, Index, const LhsScalar*, Index, const RhsScalar*, Index, Eigen::internal::triangular_matrix_vector_product<Index, Mode, LhsScalar, ConjLhs, RhsScalar, ConjRhs, 1, Version>::ResScalar*, Index, const ResScalar&) [with Index = long int; int Mode = 6; LhsScalar = double; bool ConjLhs = false; RhsScalar = double; bool ConjRhs = false; int Version = 0]' declared here
+  105 | EIGEN_DONT_INLINE void triangular_matrix_vector_product<Index,Mode,LhsScalar,ConjLhs,RhsScalar,ConjRhs,RowMajor,Version>
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 57%] Linking CXX static library libfast_livo2_temporal.a
+[ 57%] Built target fast_livo2_temporal
+Consolidate compiler generated dependencies of target fast_livo2_reprojection
+[ 58%] Building CXX object CMakeFiles/fast_livo2_reprojection.dir/src/temporal_reprojection.cpp.o
+Consolidate compiler generated dependencies of target fast_livo2_vio
+[ 60%] Building CXX object CMakeFiles/fast_livo2_vio.dir/src/vio.cpp.o
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/src/vio.cpp:13:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: In constructor 'VoxelOctoTree::VoxelOctoTree(int, int, int, int, float)':
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:185:7: warning: 'VoxelOctoTree::max_layer_' will be initialized after [-Wreorder]
+  185 |   int max_layer_;
+      |       ^~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:175:7: warning:   'int VoxelOctoTree::layer_' [-Wreorder]
+  175 |   int layer_;
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:184:7: warning: 'VoxelOctoTree::max_points_num_' will be initialized after [-Wreorder]
+  184 |   int max_points_num_;
+      |       ^~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:181:9: warning:   'float VoxelOctoTree::planer_threshold_' [-Wreorder]
+  181 |   float planer_threshold_;
+      |         ^~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/vio.cpp:13:
+/external/humble_ws/src/fast-livo2/include/feature.h: In constructor 'Feature::Feature(VisualPoint*, float*, const Vector2d&, const Vector3d&, const SE3&, int)':
+/external/humble_ws/src/fast-livo2/include/feature.h:40:9: warning: 'Feature::mean_' will be initialized after [-Wreorder]
+   40 |   float mean_;           //!< Mean intensity of the image patch feature, used for normalization.
+      |         ^~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning:   'float Feature::score_' [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning: 'Feature::score_' will be initialized after [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:34:7: warning:   'int Feature::level_' [-Wreorder]
+   34 |   int level_;            //!< Image pyramid level where patch feature was extracted.
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:38:10: warning: 'Feature::patch_' will be initialized after [-Wreorder]
+   38 |   float *patch_;         //!< Pointer to the image patch data.
+      |          ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:35:16: warning:   'VisualPoint* Feature::point_' [-Wreorder]
+   35 |   VisualPoint *point_;   //!< Pointer to 3D point which corresponds to the patch feature.
+      |                ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/src/vio.cpp:13:
+/external/humble_ws/src/fast-livo2/include/vio.h: In constructor 'Warp::Warp(int, Eigen::Matrix2d)':
+/external/humble_ws/src/fast-livo2/include/vio.h:65:7: warning: 'Warp::search_level' will be initialized after [-Wreorder]
+   65 |   int search_level;
+      |       ^~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:64:12: warning:   'Eigen::Matrix2d Warp::A_cur_ref' [-Wreorder]
+   64 |   Matrix2d A_cur_ref;
+      |            ^~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:66:3: warning:   when initialized here [-Wreorder]
+   66 |   Warp(int level, Matrix2d warp_matrix) : search_level(level), A_cur_ref(warp_matrix) {}
+      |   ^~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp: In member function 'void VIOManager::warpAffine(const Matrix2d&, const cv::Mat&, const Vector2d&, int, int, int, int, float*)':
+/external/humble_ws/src/fast-livo2/src/vio.cpp:442:114: warning: unused parameter 'level_ref' [-Wunused-parameter]
+  442 | void VIOManager::warpAffine(const Matrix2d &A_cur_ref, const cv::Mat &img_ref, const Vector2d &px_ref, const int level_ref, const int search_level,
+      |                                                                                                        ~~~~~~~~~~^~~~~~~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp: In member function 'void VIOManager::retrieveFromVisualSparseMap(cv::Mat, std::vector<pointWithVar>&, const std::unordered_map<VOXEL_LOCATION, VoxelOctoTree*>&)':
+/external/humble_ws/src/fast-livo2/src/vio.cpp:532:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<pointWithVar>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  532 |   for (int i = 0; i < pg.size(); i++)
+      |                   ~~^~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp:510:10: warning: unused variable 'ts0' [-Wunused-variable]
+  510 |   double ts0 = omp_get_wtime();
+      |          ^~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp: In member function 'void VIOManager::generateVisualMapPoints(cv::Mat, std::vector<pointWithVar>&)':
+/external/humble_ws/src/fast-livo2/src/vio.cpp:970:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<pointWithVar>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  970 |   for (int i = 0; i < pg.size(); i++)
+      |                   ~~^~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp:994:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<pointWithVar>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  994 |   for (int j = 0; j < visual_submap->add_from_voxel_map.size(); j++)
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp: In member function 'void VIOManager::updateReferencePatch(const std::unordered_map<VOXEL_LOCATION, VoxelOctoTree*>&)':
+/external/humble_ws/src/fast-livo2/src/vio.cpp:1142:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<VisualPoint*>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+ 1142 |   for (int i = 0; i < visual_submap->voxel_points.size(); i++)
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp: In member function 'void VIOManager::projectPatchFromRefToCur(const std::unordered_map<VOXEL_LOCATION, VoxelOctoTree*>&)':
+/external/humble_ws/src/fast-livo2/src/vio.cpp:1290:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<VisualPoint*>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+ 1290 |   for (int i = 0; i < visual_submap->voxel_points.size(); i++)
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp:1395:25: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::vector<VIOManager::projectPatchFromRefToCur(const std::unordered_map<VOXEL_LOCATION, VoxelOctoTree*>&)::pixel_member> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+ 1395 |       for (int i = 0; i < pixel_warp_matrix.size(); i++)
+      |                       ~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp:1398:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<VIOManager::projectPatchFromRefToCur(const std::unordered_map<VOXEL_LOCATION, VoxelOctoTree*>&)::pixel_member>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+ 1398 |         for (int j = 0; j < pixel_warp_row.size(); j++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp:1430:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<VisualPoint*>::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+ 1430 |   for (int i = 0; i < visual_submap->voxel_points.size(); i++)
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp:1281:10: warning: unused variable 'it_dense' [-Wunused-variable]
+ 1281 |   uchar *it_dense = (uchar *)result_dense.data;
+      |          ^~~~~~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp:1265:97: warning: unused parameter 'plane_map' [-Wunused-parameter]
+ 1265 | void VIOManager::projectPatchFromRefToCur(const unordered_map<VOXEL_LOCATION, VoxelOctoTree *> &plane_map)
+      |                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+[ 61%] Linking CXX static library libfast_livo2_reprojection.a
+[ 61%] Built target fast_livo2_reprojection
+Consolidate compiler generated dependencies of target temporal_deskew_test
+[ 63%] Building CXX object CMakeFiles/temporal_deskew_test.dir/tests/temporal_deskew_test.cpp.o
+/external/humble_ws/src/fast-livo2/src/vio.cpp: In member function 'void VIOManager::precomputeReferencePatches(int)':
+/external/humble_ws/src/fast-livo2/src/vio.cpp:1492:10: warning: unused variable 't1' [-Wunused-variable]
+ 1492 |   double t1 = omp_get_wtime();
+      |          ^~
+/external/humble_ws/src/fast-livo2/src/vio.cpp: In member function 'bool VIOManager::updateStateInverse(cv::Mat, int)':
+/external/humble_ws/src/fast-livo2/src/vio.cpp:1598:12: warning: unused variable 'count_outlier' [-Wunused-variable]
+ 1598 |     double count_outlier = 0;
+      |            ^~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp:1583:8: warning: unused variable 'z_init' [-Wunused-variable]
+ 1583 |   bool z_init = true;
+      |        ^~~~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp: In member function 'bool VIOManager::updateState(cv::Mat, int)':
+/external/humble_ws/src/fast-livo2/src/vio.cpp:1904:14: warning: unused variable 'expo_add' [-Wunused-variable]
+ 1904 |       auto &&expo_add = solution.block<1, 1>(6, 0);
+      |              ^~~~~~~~
+/external/humble_ws/src/fast-livo2/src/vio.cpp: In member function 'bool VIOManager::processFrame(cv::Mat&, std::vector<pointWithVar>&, const std::unordered_map<VOXEL_LOCATION, VoxelOctoTree*>&, double)':
+/external/humble_ws/src/fast-livo2/src/vio.cpp:2018:142: warning: unused parameter 'img_time' [-Wunused-parameter]
+ 2018 | bool VIOManager::processFrame(cv::Mat &img, vector<pointWithVar> &pg, const unordered_map<VOXEL_LOCATION, VoxelOctoTree *> &feat_map, double img_time)
+      |                                                                                                                                       ~~~~~~~^~~~~~~~
+/external/humble_ws/src/fast-livo2/tests/temporal_deskew_test.cpp: In lambda function:
+/external/humble_ws/src/fast-livo2/tests/temporal_deskew_test.cpp:45:37: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   45 |     auto cost=[&]() {double total=0;for(const auto& o:w.nodes_[0].structure)
+      |                                     ^~~
+/external/humble_ws/src/fast-livo2/tests/temporal_deskew_test.cpp:46:93: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   46 |       total+=o.weight*o.axis.cross(w.nodes_[0].state.rotation*o.plane.normal).squaredNorm();return total;};
+      |                                                                                             ^~~~~~
+[ 64%] Linking CXX executable temporal_deskew_test
+[ 64%] Built target temporal_deskew_test
+Consolidate compiler generated dependencies of target temporal_landmarks_test
+[ 65%] Building CXX object CMakeFiles/temporal_landmarks_test.dir/tests/temporal_landmarks_test.cpp.o
+[ 67%] Linking CXX executable temporal_landmarks_test
+[ 67%] Built target temporal_landmarks_test
+Consolidate compiler generated dependencies of target temporal_map_test
+[ 68%] Building CXX object CMakeFiles/temporal_map_test.dir/tests/temporal_map_test.cpp.o
+[ 69%] Linking CXX executable temporal_map_test
+[ 69%] Built target temporal_map_test
+[ 71%] Building CXX object CMakeFiles/fast_livo2_vio.dir/src/vio_temporal.cpp.o
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/src/vio.cpp:13:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: At global scope:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:36:12: warning: 'voxel_plane_id' defined but not used [-Wunused-variable]
+   36 | static int voxel_plane_id = 0;
+      |            ^~~~~~~~~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/src/vio_temporal.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: In constructor 'VoxelOctoTree::VoxelOctoTree(int, int, int, int, float)':
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:185:7: warning: 'VoxelOctoTree::max_layer_' will be initialized after [-Wreorder]
+  185 |   int max_layer_;
+      |       ^~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:175:7: warning:   'int VoxelOctoTree::layer_' [-Wreorder]
+  175 |   int layer_;
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:184:7: warning: 'VoxelOctoTree::max_points_num_' will be initialized after [-Wreorder]
+  184 |   int max_points_num_;
+      |       ^~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:181:9: warning:   'float VoxelOctoTree::planer_threshold_' [-Wreorder]
+  181 |   float planer_threshold_;
+      |         ^~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/vio_temporal.cpp:1:
+/external/humble_ws/src/fast-livo2/include/feature.h: In constructor 'Feature::Feature(VisualPoint*, float*, const Vector2d&, const Vector3d&, const SE3&, int)':
+/external/humble_ws/src/fast-livo2/include/feature.h:40:9: warning: 'Feature::mean_' will be initialized after [-Wreorder]
+   40 |   float mean_;           //!< Mean intensity of the image patch feature, used for normalization.
+      |         ^~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning:   'float Feature::score_' [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning: 'Feature::score_' will be initialized after [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:34:7: warning:   'int Feature::level_' [-Wreorder]
+   34 |   int level_;            //!< Image pyramid level where patch feature was extracted.
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:38:10: warning: 'Feature::patch_' will be initialized after [-Wreorder]
+   38 |   float *patch_;         //!< Pointer to the image patch data.
+      |          ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:35:16: warning:   'VisualPoint* Feature::point_' [-Wreorder]
+   35 |   VisualPoint *point_;   //!< Pointer to 3D point which corresponds to the patch feature.
+      |                ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/src/vio_temporal.cpp:1:
+/external/humble_ws/src/fast-livo2/include/vio.h: In constructor 'Warp::Warp(int, Eigen::Matrix2d)':
+/external/humble_ws/src/fast-livo2/include/vio.h:65:7: warning: 'Warp::search_level' will be initialized after [-Wreorder]
+   65 |   int search_level;
+      |       ^~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:64:12: warning:   'Eigen::Matrix2d Warp::A_cur_ref' [-Wreorder]
+   64 |   Matrix2d A_cur_ref;
+      |            ^~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:66:3: warning:   when initialized here [-Wreorder]
+   66 |   Warp(int level, Matrix2d warp_matrix) : search_level(level), A_cur_ref(warp_matrix) {}
+      |   ^~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/src/vio_temporal.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: At global scope:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:36:12: warning: 'voxel_plane_id' defined but not used [-Wunused-variable]
+   36 | static int voxel_plane_id = 0;
+      |            ^~~~~~~~~~~~~~
+Consolidate compiler generated dependencies of target temporal_lio_test
+[ 72%] Building CXX object CMakeFiles/temporal_lio_test.dir/tests/temporal_lio_test.cpp.o
+[ 73%] Linking CXX static library libfast_livo2_vio.a
+[ 76%] Built target fast_livo2_vio
+Consolidate compiler generated dependencies of target temporal_visual_test
+[ 78%] Building CXX object CMakeFiles/temporal_visual_test.dir/tests/temporal_visual_test.cpp.o
+In file included from /usr/include/eigen3/Eigen/Core:337,
+                 from /external/humble_ws/src/fast-livo2/include/temporal_lio.h:5,
+                 from /external/humble_ws/src/fast-livo2/tests/temporal_lio_test.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h: In function 'static void Eigen::internal::selfadjoint_product_impl<Lhs, LhsMode, false, Rhs, 0, true>::run(Dest&, const Lhs&, const Rhs&, const Scalar&) [with Dest = Eigen::Block<Eigen::Matrix<double, 14, 1, 0, 14, 1>, -1, 1, false>; Lhs = Eigen::Block<Eigen::Matrix<double, 15, 15>, -1, -1, false>; int LhsMode = 17; Rhs = Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<double, double>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>, const Eigen::Matrix<double, -1, 1, 0, 15, 1> >, const Eigen::Block<Eigen::Block<Eigen::Matrix<double, 15, 15>, 15, 1, true>, -1, 1, false> >]':
+/usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h:229:7: warning: 'result' may be used uninitialized [-Wmaybe-uninitialized]
+  227 |     internal::selfadjoint_matrix_vector_product<Scalar, Index, (internal::traits<ActualLhsTypeCleaned>::Flags&RowMajorBit) ? RowMajor : ColMajor,
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  228 |                                                 int(LhsUpLo), bool(LhsBlasTraits::NeedToConjugate), bool(RhsBlasTraits::NeedToConjugate)>::run
+      |                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  229 |       (
+      |       ^
+  230 |         lhs.rows(),                             // size
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  231 |         &lhs.coeffRef(0,0),  lhs.outerStride(), // lhs info
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  232 |         actualRhsPtr,                           // rhs info
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  233 |         actualDestPtr,                          // result info
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  234 |         actualAlpha                             // scale factor
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  235 |       );
+      |       ~
+/usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h:41:6: note: by argument 3 of type 'const double*' to 'static void Eigen::internal::selfadjoint_matrix_vector_product<Scalar, Index, StorageOrder, UpLo, ConjugateLhs, ConjugateRhs, Version>::run(Index, const Scalar*, Index, const Scalar*, Scalar*, Scalar) [with Scalar = double; Index = long int; int StorageOrder = 0; int UpLo = 1; bool ConjugateLhs = false; bool ConjugateRhs = false; int Version = 0]' declared here
+   41 | void selfadjoint_matrix_vector_product<Scalar,Index,StorageOrder,UpLo,ConjugateLhs,ConjugateRhs,Version>::run(
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 79%] Linking CXX executable temporal_lio_test
+[ 79%] Built target temporal_lio_test
+Consolidate compiler generated dependencies of target temporal_visual_map_test
+[ 80%] Building CXX object CMakeFiles/temporal_visual_map_test.dir/tests/temporal_visual_map_test.cpp.o
+[ 82%] Linking CXX executable temporal_visual_test
+[ 82%] Built target temporal_visual_test
+Consolidate compiler generated dependencies of target fast_livo2_mapper
+[ 83%] Building CXX object CMakeFiles/fast_livo2_mapper.dir/src/LIVMapper.cpp.o
+/external/humble_ws/src/fast-livo2/src/LIVMapper.cpp:1360:3: warning: "/*" within comment [-Wcomment]
+ 1360 |   /* 2. noted that pcd save will influence the real-time performences **/
+      |    
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/LIVMapper.cpp:13:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: In constructor 'VoxelOctoTree::VoxelOctoTree(int, int, int, int, float)':
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:185:7: warning: 'VoxelOctoTree::max_layer_' will be initialized after [-Wreorder]
+  185 |   int max_layer_;
+      |       ^~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:175:7: warning:   'int VoxelOctoTree::layer_' [-Wreorder]
+  175 |   int layer_;
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:184:7: warning: 'VoxelOctoTree::max_points_num_' will be initialized after [-Wreorder]
+  184 |   int max_points_num_;
+      |       ^~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:181:9: warning:   'float VoxelOctoTree::planer_threshold_' [-Wreorder]
+  181 |   float planer_threshold_;
+      |         ^~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:17,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/LIVMapper.cpp:13:
+/external/humble_ws/src/fast-livo2/include/feature.h: In constructor 'Feature::Feature(VisualPoint*, float*, const Vector2d&, const Vector3d&, const SE3&, int)':
+/external/humble_ws/src/fast-livo2/include/feature.h:40:9: warning: 'Feature::mean_' will be initialized after [-Wreorder]
+   40 |   float mean_;           //!< Mean intensity of the image patch feature, used for normalization.
+      |         ^~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning:   'float Feature::score_' [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning: 'Feature::score_' will be initialized after [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:34:7: warning:   'int Feature::level_' [-Wreorder]
+   34 |   int level_;            //!< Image pyramid level where patch feature was extracted.
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:38:10: warning: 'Feature::patch_' will be initialized after [-Wreorder]
+   38 |   float *patch_;         //!< Pointer to the image patch data.
+      |          ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:35:16: warning:   'VisualPoint* Feature::point_' [-Wreorder]
+   35 |   VisualPoint *point_;   //!< Pointer to 3D point which corresponds to the patch feature.
+      |                ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/tests/temporal_visual_map_test.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: In constructor 'VoxelOctoTree::VoxelOctoTree(int, int, int, int, float)':
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:185:7: warning: 'VoxelOctoTree::max_layer_' will be initialized after [-Wreorder]
+  185 |   int max_layer_;
+      |       ^~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:175:7: warning:   'int VoxelOctoTree::layer_' [-Wreorder]
+  175 |   int layer_;
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:184:7: warning: 'VoxelOctoTree::max_points_num_' will be initialized after [-Wreorder]
+  184 |   int max_points_num_;
+      |       ^~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:181:9: warning:   'float VoxelOctoTree::planer_threshold_' [-Wreorder]
+  181 |   float planer_threshold_;
+      |         ^~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:17,
+                 from /external/humble_ws/src/fast-livo2/tests/temporal_visual_map_test.cpp:1:
+/external/humble_ws/src/fast-livo2/include/feature.h: In constructor 'Feature::Feature(VisualPoint*, float*, const Vector2d&, const Vector3d&, const SE3&, int)':
+/external/humble_ws/src/fast-livo2/include/feature.h:40:9: warning: 'Feature::mean_' will be initialized after [-Wreorder]
+   40 |   float mean_;           //!< Mean intensity of the image patch feature, used for normalization.
+      |         ^~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning:   'float Feature::score_' [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning: 'Feature::score_' will be initialized after [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:34:7: warning:   'int Feature::level_' [-Wreorder]
+   34 |   int level_;            //!< Image pyramid level where patch feature was extracted.
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:38:10: warning: 'Feature::patch_' will be initialized after [-Wreorder]
+   38 |   float *patch_;         //!< Pointer to the image patch data.
+      |          ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:35:16: warning:   'VisualPoint* Feature::point_' [-Wreorder]
+   35 |   VisualPoint *point_;   //!< Pointer to 3D point which corresponds to the patch feature.
+      |                ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/LIVMapper.cpp:13:
+/external/humble_ws/src/fast-livo2/include/vio.h: In constructor 'Warp::Warp(int, Eigen::Matrix2d)':
+/external/humble_ws/src/fast-livo2/include/vio.h:65:7: warning: 'Warp::search_level' will be initialized after [-Wreorder]
+   65 |   int search_level;
+      |       ^~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:64:12: warning:   'Eigen::Matrix2d Warp::A_cur_ref' [-Wreorder]
+   64 |   Matrix2d A_cur_ref;
+      |            ^~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:66:3: warning:   when initialized here [-Wreorder]
+   66 |   Warp(int level, Matrix2d warp_matrix) : search_level(level), A_cur_ref(warp_matrix) {}
+      |   ^~~~
+In file included from /external/humble_ws/src/fast-livo2/tests/temporal_visual_map_test.cpp:1:
+/external/humble_ws/src/fast-livo2/include/vio.h: In constructor 'Warp::Warp(int, Eigen::Matrix2d)':
+/external/humble_ws/src/fast-livo2/include/vio.h:65:7: warning: 'Warp::search_level' will be initialized after [-Wreorder]
+   65 |   int search_level;
+      |       ^~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:64:12: warning:   'Eigen::Matrix2d Warp::A_cur_ref' [-Wreorder]
+   64 |   Matrix2d A_cur_ref;
+      |            ^~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:66:3: warning:   when initialized here [-Wreorder]
+   66 |   Warp(int level, Matrix2d warp_matrix) : search_level(level), A_cur_ref(warp_matrix) {}
+      |   ^~~~
+/external/humble_ws/src/fast-livo2/src/LIVMapper.cpp: In member function 'void LIVMapper::stateEstimationAndMapping()':
+/external/humble_ws/src/fast-livo2/src/LIVMapper.cpp:363:10: warning: enumeration value 'WAIT' not handled in switch [-Wswitch]
+  363 |   switch (LidarMeasures.lio_vio_flg)
+      |          ^
+/external/humble_ws/src/fast-livo2/src/LIVMapper.cpp: In member function 'void LIVMapper::handleLIO()':
+/external/humble_ws/src/fast-livo2/src/LIVMapper.cpp:498:16: warning: unused variable 'ocount' [-Wunused-variable]
+  498 |     static int ocount = 0;
+      |                ^~~~~~
+/external/humble_ws/src/fast-livo2/src/LIVMapper.cpp: In member function 'void LIVMapper::imu_prop_callback()':
+/external/humble_ws/src/fast-livo2/src/LIVMapper.cpp:715:25: warning: comparison of integer expressions of different signedness: 'int' and 'std::deque<sensor_msgs::msg::Imu_<std::allocator<void> > >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+  715 |       for (int i = 0; i < prop_imu_buffer.size(); i++)
+      |                       ~~^~~~~~~~~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/src/LIVMapper.cpp: In member function 'bool LIVMapper::sync_packages(LidarMeasureGroup&)':
+/external/humble_ws/src/fast-livo2/src/LIVMapper.cpp:1149:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<pcl::PointXYZINormal, Eigen::aligned_allocator<pcl::PointXYZINormal> >::size_type' {aka 'long unsigned int'} [-Wsign-compare]
+ 1149 |         for (int i = 0; i < pcl.size(); i++)
+      |                         ~~^~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/src/LIVMapper.cpp:1183:14: warning: unused variable 'imu_time' [-Wunused-variable]
+ 1183 |       double imu_time = fast_livo2::stampToSec(imu_buffer.front()->header.stamp);
+      |              ^~~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/tests/temporal_visual_map_test.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: At global scope:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:36:12: warning: 'voxel_plane_id' defined but not used [-Wunused-variable]
+   36 | static int voxel_plane_id = 0;
+      |            ^~~~~~~~~~~~~~
+[ 84%] Linking CXX executable temporal_visual_map_test
+[ 84%] Built target temporal_visual_map_test
+Consolidate compiler generated dependencies of target temporal_reprojection_test
+[ 86%] Building CXX object CMakeFiles/temporal_reprojection_test.dir/tests/temporal_reprojection_test.cpp.o
+/external/humble_ws/src/fast-livo2/src/LIVMapper.cpp: At global scope:
+/external/humble_ws/src/fast-livo2/src/LIVMapper.cpp:498:16: warning: 'ocount' defined but not used [-Wunused-variable]
+  498 |     static int ocount = 0;
+      |                ^~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/LIVMapper.cpp:13:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:36:12: warning: 'voxel_plane_id' defined but not used [-Wunused-variable]
+   36 | static int voxel_plane_id = 0;
+      |            ^~~~~~~~~~~~~~
+[ 87%] Linking CXX executable temporal_reprojection_test
+[ 87%] Built target temporal_reprojection_test
+Consolidate compiler generated dependencies of target visual_patch_bounds_test
+[ 89%] Building CXX object CMakeFiles/visual_patch_bounds_test.dir/tests/visual_patch_bounds_test.cpp.o
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/tests/visual_patch_bounds_test.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: In constructor 'VoxelOctoTree::VoxelOctoTree(int, int, int, int, float)':
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:185:7: warning: 'VoxelOctoTree::max_layer_' will be initialized after [-Wreorder]
+  185 |   int max_layer_;
+      |       ^~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:175:7: warning:   'int VoxelOctoTree::layer_' [-Wreorder]
+  175 |   int layer_;
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:184:7: warning: 'VoxelOctoTree::max_points_num_' will be initialized after [-Wreorder]
+  184 |   int max_points_num_;
+      |       ^~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:181:9: warning:   'float VoxelOctoTree::planer_threshold_' [-Wreorder]
+  181 |   float planer_threshold_;
+      |         ^~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:17,
+                 from /external/humble_ws/src/fast-livo2/tests/visual_patch_bounds_test.cpp:1:
+/external/humble_ws/src/fast-livo2/include/feature.h: In constructor 'Feature::Feature(VisualPoint*, float*, const Vector2d&, const Vector3d&, const SE3&, int)':
+/external/humble_ws/src/fast-livo2/include/feature.h:40:9: warning: 'Feature::mean_' will be initialized after [-Wreorder]
+   40 |   float mean_;           //!< Mean intensity of the image patch feature, used for normalization.
+      |         ^~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning:   'float Feature::score_' [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning: 'Feature::score_' will be initialized after [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:34:7: warning:   'int Feature::level_' [-Wreorder]
+   34 |   int level_;            //!< Image pyramid level where patch feature was extracted.
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:38:10: warning: 'Feature::patch_' will be initialized after [-Wreorder]
+   38 |   float *patch_;         //!< Pointer to the image patch data.
+      |          ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:35:16: warning:   'VisualPoint* Feature::point_' [-Wreorder]
+   35 |   VisualPoint *point_;   //!< Pointer to 3D point which corresponds to the patch feature.
+      |                ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/tests/visual_patch_bounds_test.cpp:1:
+/external/humble_ws/src/fast-livo2/include/vio.h: In constructor 'Warp::Warp(int, Eigen::Matrix2d)':
+/external/humble_ws/src/fast-livo2/include/vio.h:65:7: warning: 'Warp::search_level' will be initialized after [-Wreorder]
+   65 |   int search_level;
+      |       ^~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:64:12: warning:   'Eigen::Matrix2d Warp::A_cur_ref' [-Wreorder]
+   64 |   Matrix2d A_cur_ref;
+      |            ^~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:66:3: warning:   when initialized here [-Wreorder]
+   66 |   Warp(int level, Matrix2d warp_matrix) : search_level(level), A_cur_ref(warp_matrix) {}
+      |   ^~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/tests/visual_patch_bounds_test.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: At global scope:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:36:12: warning: 'voxel_plane_id' defined but not used [-Wunused-variable]
+   36 | static int voxel_plane_id = 0;
+      |            ^~~~~~~~~~~~~~
+[ 90%] Linking CXX executable visual_patch_bounds_test
+[ 90%] Built target visual_patch_bounds_test
+[ 91%] Building CXX object CMakeFiles/fast_livo2_mapper.dir/src/LIVMapper_temporal.cpp.o
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/LIVMapper_temporal.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: In constructor 'VoxelOctoTree::VoxelOctoTree(int, int, int, int, float)':
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:185:7: warning: 'VoxelOctoTree::max_layer_' will be initialized after [-Wreorder]
+  185 |   int max_layer_;
+      |       ^~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:175:7: warning:   'int VoxelOctoTree::layer_' [-Wreorder]
+  175 |   int layer_;
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:184:7: warning: 'VoxelOctoTree::max_points_num_' will be initialized after [-Wreorder]
+  184 |   int max_points_num_;
+      |       ^~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:181:9: warning:   'float VoxelOctoTree::planer_threshold_' [-Wreorder]
+  181 |   float planer_threshold_;
+      |         ^~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:17,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/LIVMapper_temporal.cpp:1:
+/external/humble_ws/src/fast-livo2/include/feature.h: In constructor 'Feature::Feature(VisualPoint*, float*, const Vector2d&, const Vector3d&, const SE3&, int)':
+/external/humble_ws/src/fast-livo2/include/feature.h:40:9: warning: 'Feature::mean_' will be initialized after [-Wreorder]
+   40 |   float mean_;           //!< Mean intensity of the image patch feature, used for normalization.
+      |         ^~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning:   'float Feature::score_' [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning: 'Feature::score_' will be initialized after [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:34:7: warning:   'int Feature::level_' [-Wreorder]
+   34 |   int level_;            //!< Image pyramid level where patch feature was extracted.
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:38:10: warning: 'Feature::patch_' will be initialized after [-Wreorder]
+   38 |   float *patch_;         //!< Pointer to the image patch data.
+      |          ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:35:16: warning:   'VisualPoint* Feature::point_' [-Wreorder]
+   35 |   VisualPoint *point_;   //!< Pointer to 3D point which corresponds to the patch feature.
+      |                ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/LIVMapper_temporal.cpp:1:
+/external/humble_ws/src/fast-livo2/include/vio.h: In constructor 'Warp::Warp(int, Eigen::Matrix2d)':
+/external/humble_ws/src/fast-livo2/include/vio.h:65:7: warning: 'Warp::search_level' will be initialized after [-Wreorder]
+   65 |   int search_level;
+      |       ^~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:64:12: warning:   'Eigen::Matrix2d Warp::A_cur_ref' [-Wreorder]
+   64 |   Matrix2d A_cur_ref;
+      |            ^~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:66:3: warning:   when initialized here [-Wreorder]
+   66 |   Warp(int level, Matrix2d warp_matrix) : search_level(level), A_cur_ref(warp_matrix) {}
+      |   ^~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/LIVMapper_temporal.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: At global scope:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:36:12: warning: 'voxel_plane_id' defined but not used [-Wunused-variable]
+   36 | static int voxel_plane_id = 0;
+      |            ^~~~~~~~~~~~~~
+[ 93%] Building CXX object CMakeFiles/fast_livo2_mapper.dir/src/LIVMapper_temporal_visual.cpp.o
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/LIVMapper_temporal_visual.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: In constructor 'VoxelOctoTree::VoxelOctoTree(int, int, int, int, float)':
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:185:7: warning: 'VoxelOctoTree::max_layer_' will be initialized after [-Wreorder]
+  185 |   int max_layer_;
+      |       ^~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:175:7: warning:   'int VoxelOctoTree::layer_' [-Wreorder]
+  175 |   int layer_;
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:184:7: warning: 'VoxelOctoTree::max_points_num_' will be initialized after [-Wreorder]
+  184 |   int max_points_num_;
+      |       ^~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:181:9: warning:   'float VoxelOctoTree::planer_threshold_' [-Wreorder]
+  181 |   float planer_threshold_;
+      |         ^~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:17,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/LIVMapper_temporal_visual.cpp:1:
+/external/humble_ws/src/fast-livo2/include/feature.h: In constructor 'Feature::Feature(VisualPoint*, float*, const Vector2d&, const Vector3d&, const SE3&, int)':
+/external/humble_ws/src/fast-livo2/include/feature.h:40:9: warning: 'Feature::mean_' will be initialized after [-Wreorder]
+   40 |   float mean_;           //!< Mean intensity of the image patch feature, used for normalization.
+      |         ^~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning:   'float Feature::score_' [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning: 'Feature::score_' will be initialized after [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:34:7: warning:   'int Feature::level_' [-Wreorder]
+   34 |   int level_;            //!< Image pyramid level where patch feature was extracted.
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:38:10: warning: 'Feature::patch_' will be initialized after [-Wreorder]
+   38 |   float *patch_;         //!< Pointer to the image patch data.
+      |          ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:35:16: warning:   'VisualPoint* Feature::point_' [-Wreorder]
+   35 |   VisualPoint *point_;   //!< Pointer to 3D point which corresponds to the patch feature.
+      |                ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/LIVMapper_temporal_visual.cpp:1:
+/external/humble_ws/src/fast-livo2/include/vio.h: In constructor 'Warp::Warp(int, Eigen::Matrix2d)':
+/external/humble_ws/src/fast-livo2/include/vio.h:65:7: warning: 'Warp::search_level' will be initialized after [-Wreorder]
+   65 |   int search_level;
+      |       ^~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:64:12: warning:   'Eigen::Matrix2d Warp::A_cur_ref' [-Wreorder]
+   64 |   Matrix2d A_cur_ref;
+      |            ^~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:66:3: warning:   when initialized here [-Wreorder]
+   66 |   Warp(int level, Matrix2d warp_matrix) : search_level(level), A_cur_ref(warp_matrix) {}
+      |   ^~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/LIVMapper_temporal_visual.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: At global scope:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:36:12: warning: 'voxel_plane_id' defined but not used [-Wunused-variable]
+   36 | static int voxel_plane_id = 0;
+      |            ^~~~~~~~~~~~~~
+[ 94%] Linking CXX static library libfast_livo2_mapper.a
+[ 94%] Built target fast_livo2_mapper
+Consolidate compiler generated dependencies of target fastlivo2_offline
+Consolidate compiler generated dependencies of target fastlivo2_mapping
+[ 97%] Building CXX object CMakeFiles/fastlivo2_mapping.dir/src/main.cpp.o
+[ 97%] Building CXX object CMakeFiles/fastlivo2_offline.dir/src/offline.cpp.o
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/offline.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: In constructor 'VoxelOctoTree::VoxelOctoTree(int, int, int, int, float)':
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:185:7: warning: 'VoxelOctoTree::max_layer_' will be initialized after [-Wreorder]
+  185 |   int max_layer_;
+      |       ^~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:175:7: warning:   'int VoxelOctoTree::layer_' [-Wreorder]
+  175 |   int layer_;
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:184:7: warning: 'VoxelOctoTree::max_points_num_' will be initialized after [-Wreorder]
+  184 |   int max_points_num_;
+      |       ^~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:181:9: warning:   'float VoxelOctoTree::planer_threshold_' [-Wreorder]
+  181 |   float planer_threshold_;
+      |         ^~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:17,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/offline.cpp:1:
+/external/humble_ws/src/fast-livo2/include/feature.h: In constructor 'Feature::Feature(VisualPoint*, float*, const Vector2d&, const Vector3d&, const SE3&, int)':
+/external/humble_ws/src/fast-livo2/include/feature.h:40:9: warning: 'Feature::mean_' will be initialized after [-Wreorder]
+   40 |   float mean_;           //!< Mean intensity of the image patch feature, used for normalization.
+      |         ^~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning:   'float Feature::score_' [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning: 'Feature::score_' will be initialized after [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:34:7: warning:   'int Feature::level_' [-Wreorder]
+   34 |   int level_;            //!< Image pyramid level where patch feature was extracted.
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:38:10: warning: 'Feature::patch_' will be initialized after [-Wreorder]
+   38 |   float *patch_;         //!< Pointer to the image patch data.
+      |          ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:35:16: warning:   'VisualPoint* Feature::point_' [-Wreorder]
+   35 |   VisualPoint *point_;   //!< Pointer to 3D point which corresponds to the patch feature.
+      |                ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/offline.cpp:1:
+/external/humble_ws/src/fast-livo2/include/vio.h: In constructor 'Warp::Warp(int, Eigen::Matrix2d)':
+/external/humble_ws/src/fast-livo2/include/vio.h:65:7: warning: 'Warp::search_level' will be initialized after [-Wreorder]
+   65 |   int search_level;
+      |       ^~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:64:12: warning:   'Eigen::Matrix2d Warp::A_cur_ref' [-Wreorder]
+   64 |   Matrix2d A_cur_ref;
+      |            ^~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:66:3: warning:   when initialized here [-Wreorder]
+   66 |   Warp(int level, Matrix2d warp_matrix) : search_level(level), A_cur_ref(warp_matrix) {}
+      |   ^~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/main.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: In constructor 'VoxelOctoTree::VoxelOctoTree(int, int, int, int, float)':
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:185:7: warning: 'VoxelOctoTree::max_layer_' will be initialized after [-Wreorder]
+  185 |   int max_layer_;
+      |       ^~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:175:7: warning:   'int VoxelOctoTree::layer_' [-Wreorder]
+  175 |   int layer_;
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:184:7: warning: 'VoxelOctoTree::max_points_num_' will be initialized after [-Wreorder]
+  184 |   int max_points_num_;
+      |       ^~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:181:9: warning:   'float VoxelOctoTree::planer_threshold_' [-Wreorder]
+  181 |   float planer_threshold_;
+      |         ^~~~~~~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:190:3: warning:   when initialized here [-Wreorder]
+  190 |   VoxelOctoTree(int max_layer, int layer, int points_size_threshold, int max_points_num, float planer_threshold)
+      |   ^~~~~~~~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:17,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/main.cpp:1:
+/external/humble_ws/src/fast-livo2/include/feature.h: In constructor 'Feature::Feature(VisualPoint*, float*, const Vector2d&, const Vector3d&, const SE3&, int)':
+/external/humble_ws/src/fast-livo2/include/feature.h:40:9: warning: 'Feature::mean_' will be initialized after [-Wreorder]
+   40 |   float mean_;           //!< Mean intensity of the image patch feature, used for normalization.
+      |         ^~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning:   'float Feature::score_' [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:39:9: warning: 'Feature::score_' will be initialized after [-Wreorder]
+   39 |   float score_;          //!< Score of the patch feature.
+      |         ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:34:7: warning:   'int Feature::level_' [-Wreorder]
+   34 |   int level_;            //!< Image pyramid level where patch feature was extracted.
+      |       ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:38:10: warning: 'Feature::patch_' will be initialized after [-Wreorder]
+   38 |   float *patch_;         //!< Pointer to the image patch data.
+      |          ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:35:16: warning:   'VisualPoint* Feature::point_' [-Wreorder]
+   35 |   VisualPoint *point_;   //!< Pointer to 3D point which corresponds to the patch feature.
+      |                ^~~~~~
+/external/humble_ws/src/fast-livo2/include/feature.h:43:3: warning:   when initialized here [-Wreorder]
+   43 |   Feature(VisualPoint *_point, float *_patch, const Vector2d &_px, const Vector3d &_f, const SE3 &_T_f_w, int _level)
+      |   ^~~~~~~
+In file included from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/main.cpp:1:
+/external/humble_ws/src/fast-livo2/include/vio.h: In constructor 'Warp::Warp(int, Eigen::Matrix2d)':
+/external/humble_ws/src/fast-livo2/include/vio.h:65:7: warning: 'Warp::search_level' will be initialized after [-Wreorder]
+   65 |   int search_level;
+      |       ^~~~~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:64:12: warning:   'Eigen::Matrix2d Warp::A_cur_ref' [-Wreorder]
+   64 |   Matrix2d A_cur_ref;
+      |            ^~~~~~~~~
+/external/humble_ws/src/fast-livo2/include/vio.h:66:3: warning:   when initialized here [-Wreorder]
+   66 |   Warp(int level, Matrix2d warp_matrix) : search_level(level), A_cur_ref(warp_matrix) {}
+      |   ^~~~
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/main.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: At global scope:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:36:12: warning: 'voxel_plane_id' defined but not used [-Wunused-variable]
+   36 | static int voxel_plane_id = 0;
+      |            ^~~~~~~~~~~~~~
+[ 98%] Linking CXX executable fastlivo2_mapping
+In file included from /external/humble_ws/src/fast-livo2/include/vio.h:16,
+                 from /external/humble_ws/src/fast-livo2/include/LIVMapper.h:17,
+                 from /external/humble_ws/src/fast-livo2/src/offline.cpp:1:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h: At global scope:
+/external/humble_ws/src/fast-livo2/include/voxel_map.h:36:12: warning: 'voxel_plane_id' defined but not used [-Wunused-variable]
+   36 | static int voxel_plane_id = 0;
+      |            ^~~~~~~~~~~~~~
+[ 98%] Built target fastlivo2_mapping
+[100%] Linking CXX executable fastlivo2_offline
+[100%] Built target fastlivo2_offline
+Internal ctest changing into directory: /external/humble_ws/build/fast_livo2
+Test project /external/humble_ws/build/fast_livo2
+      Start  1: temporal_tracked_reprojection
+ 1/16 Test  #1: temporal_tracked_reprojection ..........   Passed    0.03 sec
+      Start  2: pcl_binary_allocation_compatibility
+ 2/16 Test  #2: pcl_binary_allocation_compatibility ....   Passed    0.03 sec
+      Start  3: visual_patch_footprint
+ 3/16 Test  #3: visual_patch_footprint .................   Passed    0.11 sec
+      Start  4: point_covariance_frames
+ 4/16 Test  #4: point_covariance_frames ................   Passed    0.00 sec
+      Start  5: temporal_raw_return_derivatives
+ 5/16 Test  #5: temporal_raw_return_derivatives ........   Passed    0.05 sec
+      Start  6: temporal_joint_planes
+ 6/16 Test  #6: temporal_joint_planes ..................   Passed    2.04 sec
+      Start  7: temporal_causal_map
+ 7/16 Test  #7: temporal_causal_map ....................   Passed    1.47 sec
+      Start  8: temporal_joint_estimation
+ 8/16 Test  #8: temporal_joint_estimation ..............   Passed   13.27 sec
+      Start  9: temporal_visual_fusion
+ 9/16 Test  #9: temporal_visual_fusion .................   Passed    0.34 sec
+      Start 10: temporal_visual_map_anchors
+10/16 Test #10: temporal_visual_map_anchors ............   Passed    0.09 sec
+      Start 11: voxel_plane_diagnostics
+11/16 Test #11: voxel_plane_diagnostics ................   Passed    0.43 sec
+      Start 12: source_map_normal_consistency
+12/16 Test #12: source_map_normal_consistency ..........   Passed    0.41 sec
+      Start 13: lio_diagnostics_recording
+13/16 Test #13: lio_diagnostics_recording ..............   Passed    0.03 sec
+      Start 14: xicp_geometry_and_constrained_filter
+14/16 Test #14: xicp_geometry_and_constrained_filter ...   Passed    0.01 sec
+      Start 15: imu_propagation_no_new_samples
+15/16 Test #15: imu_propagation_no_new_samples .........   Passed    0.01 sec
+      Start 16: voxel_map_initialization
+16/16 Test #16: voxel_map_initialization ...............   Passed    0.59 sec
+
+100% tests passed, 0 tests failed out of 16
+
+Total Test time (real) =  18.93 sec
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_reprojection.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_temporal.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_normals.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_diagnostics.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_xicp.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_vio.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_lio.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_preprocess.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_imu_proc.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/libfast_livo2_mapper.a
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/fastlivo2_mapping
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/lib/fast_livo2/fastlivo2_offline
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/HILTI22.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/MARS_LVIG.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/MID360_config.json
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/NTU_VIRAL.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/avia.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/camera_MARS_LVIG.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/camera_NTU_VIRAL.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/camera_fisheye_HILTI22.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/camera_pinhole.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/go2w_fast_livo2.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/config/go2w_hesai_fast_livo2.yaml
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/go2w_fast_livo2.launch.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/go2w_livox_mid360.launch.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/go2w_sensors.launch.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/mapping_avia.launch
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/mapping_avia_marslvig.launch
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/mapping_hesaixt32_hilti22.launch
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/launch/mapping_ouster_ntu.launch
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/rviz_cfg/M300.rviz
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/rviz_cfg/fast_livo2.rviz
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/rviz_cfg/hilti.rviz
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/rviz_cfg/ntu_viral.rviz
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/__pycache__/analyze_lio_diagnostics.cpython-310.pyc
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/__pycache__/analyze_temporal_lio.cpython-310.pyc
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/analyze_lio_diagnostics.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/analyze_lio_geometry.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/analyze_temporal_lio.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/analyze_voxel_geometry.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/colmap_output.sh
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/scripts/mesh.py
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/ament_index/resource_index/package_run_dependencies/fast_livo2
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/ament_index/resource_index/parent_prefix_path/fast_livo2
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/environment/path.sh
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/environment/path.dsv
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/local_setup.bash
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/local_setup.sh
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/local_setup.zsh
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/local_setup.dsv
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/package.dsv
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/ament_index/resource_index/packages/fast_livo2
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/cmake/fast_livo2Config.cmake
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/cmake/fast_livo2Config-version.cmake
+-- Up-to-date symlink: /external/humble_ws/install/fast_livo2/share/fast_livo2/package.xml
+0.1 mean_difference 2.3800495426789e-15 position_variance_difference  1.00000000000001 0.999999999999983  0.99999999999999 expected 1 1 1 shifted_mean_error 0 shifted_covariance_difference 1.76652349207582e-17
+0.6 mean_difference 0.00110540272940574 position_variance_difference 0.999540858883419 0.998175884078945 0.999626869409431 expected 1 1 1 shifted_mean_error 1.30186481038377e-07 shifted_covariance_difference 5.34346609512462e-08
+1.1 mean_difference 0.00496168551365132 position_variance_difference 0.999660743914455 0.998232133949585 0.999590260549088 expected 1 1 1 shifted_mean_error 2.03357429393775e-07 shifted_covariance_difference 5.96016884374891e-09
+1.6 mean_difference 0.00431003837134997 position_variance_difference 0.999649172244059 0.998185047780006 0.999578755361162 expected 1 1 1 shifted_mean_error 2.49138129815023e-07 shifted_covariance_difference 1.05714330080349e-08
+2.1 mean_difference 0.00410964946557891 position_variance_difference 0.999499050574567  0.99814110769669 0.999565802491513 expected 1 1 1 shifted_mean_error 2.49081274710388e-07 shifted_covariance_difference 7.25322971943261e-09
+2.6 mean_difference 0.0042559009391145 position_variance_difference  0.99956178578712 0.997798221854305 0.999451232409537 expected 1 1 1 shifted_mean_error 1.87718148103267e-07 shifted_covariance_difference 1.73553917828367e-08
+3.1 mean_difference 0.00419508361960592 position_variance_difference 0.998798593115557  0.99787657228444 0.999480864867453 expected 1 1 1 shifted_mean_error 1.35799017472294e-07 shifted_covariance_difference 1.83642110745976e-07
+3.6 mean_difference 0.00443563240220566 position_variance_difference 0.998909794181885 0.997817495458708 0.999465383422752 expected 1 1 1 shifted_mean_error 1.90122397671251e-07 shifted_covariance_difference 2.53146671292088e-07
+4.1 mean_difference 0.00511661896991393 position_variance_difference 0.998534981682183 0.997800248949058 0.999488569593503 expected 1 1 1 shifted_mean_error 1.72791674860541e-07 shifted_covariance_difference 1.77318861284328e-08
+4.6 mean_difference 0.00536143854724292 position_variance_difference 0.998281684244422 0.997777920307457 0.999480521381903 expected 1 1 1 shifted_mean_error 2.25581154625049e-07 shifted_covariance_difference 1.89990219187671e-08
+5.1 mean_difference 0.00778694692396899 position_variance_difference 0.997673038801552  0.99776544512582  0.99948605799692 expected 1 1 1 shifted_mean_error 3.0362735665244e-07 shifted_covariance_difference 1.90786961569541e-08
+5.6 mean_difference 0.00816457476456257 position_variance_difference 0.997016509000799 0.997701991028386 0.999467460785268 expected 1 1 1 shifted_mean_error 3.23516837183396e-07 shifted_covariance_difference 2.27195656796733e-08
+6 mean_difference 0.00668254572319702 position_variance_difference 0.996723184507623 0.997694188337538 0.999484273664315 expected 1 1 1 shifted_mean_error 2.94387592135981e-07 shifted_covariance_difference 1.81820880157002e-08

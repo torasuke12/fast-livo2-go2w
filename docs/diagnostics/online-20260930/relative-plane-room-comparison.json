@@ -1,0 +1,33 @@
+{
+  "runs": [
+    [
+      "deferred-image-lio-control",
+      "Previous LIO (X wall ~79 cm)"
+    ],
+    [
+      "relative-plane-fast-lio",
+      "Relative plane LIO (X wall ~5 cm)"
+    ],
+    [
+      "relative-plane-fast-lio-repeat",
+      "Same build repeat (X wall ~26 cm)"
+    ]
+  ],
+  "source_cloud": "rooms.ply",
+  "alignment": false,
+  "trajectory_correction": false,
+  "common_limits": {
+    "x": [
+      -5,
+      5
+    ],
+    "y": [
+      -1.5,
+      6.1
+    ],
+    "z": [
+      -0.9,
+      3.1
+    ]
+  }
+}

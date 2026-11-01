@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "complete": true,
+    "bag_exhausted": true,
+    "imu_messages": 12001,
+    "lidar_messages": 600,
+    "image_messages": 0,
+    "updates": 567,
+    "keyframes": 107,
+    "last_time": 59.999332427978516
+  },
+  "rows": 567,
+  "all_finite": true,
+  "covariance_min_eigenvalue": 4.763158901640247e-08,
+  "final_lidar": {
+    "time": 59.999332428,
+    "px": 56.4875637475,
+    "py": -1.39444573149,
+    "pz": 0.0293073454419,
+    "vx": 1.42455764831,
+    "vy": -0.0211251827411,
+    "vz": -0.000883782093664
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "runs": [
+    "pcl-abi-sat100-lio",
+    "deferred-image-lio-control"
+  ],
+  "rows": 6448,
+  "columns": 500,
+  "max_position_difference_m": 0.0,
+  "end_position_difference_m": 0.0,
+  "max_numeric_difference": 0.0,
+  "all_numeric_equal": true,
+  "definition": "Same LIO configuration, different frozen builds. No alignment; does not overwrite same-binary repetition proof."
+}

@@ -1,0 +1,139 @@
+{
+  "definition": "Independent plane fits inside fixed common world ROIs; no cloud alignment. Not absolute ground-truth error.",
+  "surfaces": {
+    "negative_x_wall": {
+      "roi": [
+        [
+          -5.4,
+          -1.0,
+          0.2
+        ],
+        [
+          -3.3,
+          2.0,
+          2.5
+        ]
+      ],
+      "departure": {
+        "points": 373,
+        "normal": [
+          0.9997448987874303,
+          0.019109763190924927,
+          -0.012039696810858461
+        ],
+        "distance": -4.005696165498939,
+        "rmse_m": 0.005893032119695845,
+        "valid": true
+      },
+      "return": {
+        "points": 0,
+        "valid": false
+      }
+    },
+    "positive_x_wall": {
+      "roi": [
+        [
+          2.0,
+          -0.9,
+          0.2
+        ],
+        [
+          3.9,
+          0.7,
+          2.5
+        ]
+      ],
+      "departure": {
+        "points": 366,
+        "normal": [
+          0.9999093501265183,
+          0.010915329966854431,
+          0.007883343280514748
+        ],
+        "distance": 3.38954744798576,
+        "rmse_m": 0.004911197041082279,
+        "valid": true
+      },
+      "return": {
+        "points": 4,
+        "valid": false
+      }
+    },
+    "negative_y_wall": {
+      "roi": [
+        [
+          -0.9,
+          -1.3,
+          0.2
+        ],
+        [
+          2.5,
+          -0.6,
+          2.5
+        ]
+      ],
+      "departure": {
+        "points": 506,
+        "normal": [
+          -0.009479451528798569,
+          0.9999295718070406,
+          0.007140827998326003
+        ],
+        "distance": -1.0017450919596973,
+        "rmse_m": 0.01356753456790935,
+        "valid": true
+      },
+      "return": {
+        "points": 554,
+        "normal": [
+          -0.012836686606393553,
+          0.9999126327149002,
+          -0.0031537936086784182
+        ],
+        "distance": -0.9866902778216745,
+        "rmse_m": 0.014834777731997087,
+        "valid": true
+      },
+      "signed_axis_separation_at_roi_center_m": 0.03162409959505563,
+      "normal_angle_deg": 0.6204148656974496
+    },
+    "ceiling": {
+      "roi": [
+        [
+          -3.9,
+          -0.8,
+          2.45
+        ],
+        [
+          3.1,
+          2.0,
+          2.85
+        ]
+      ],
+      "departure": {
+        "points": 1052,
+        "normal": [
+          -0.009235906748879863,
+          0.005150714590891332,
+          0.9999440825194822
+        ],
+        "distance": 2.7176842285822556,
+        "rmse_m": 0.009720820233342356,
+        "valid": true
+      },
+      "return": {
+        "points": 568,
+        "normal": [
+          -0.0015003885886604891,
+          0.0007880137021864682,
+          0.9999985639332128
+        ],
+        "distance": 2.7604867960388817,
+        "rmse_m": 0.00982299885201672,
+        "valid": true
+      },
+      "signed_axis_separation_at_roi_center_m": 0.04836676281890422,
+      "normal_angle_deg": 0.5088526108917094
+    }
+  }
+}

@@ -1,0 +1,66 @@
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /probe/online-relative-plane/build
+[  4%] Building CXX object CMakeFiles/temporal.dir/src/temporal_imu.cpp.o
+[  9%] Building CXX object CMakeFiles/temporal.dir/src/temporal_planes.cpp.o
+[ 14%] Building CXX object CMakeFiles/temporal.dir/src/temporal_factors.cpp.o
+[ 19%] Building CXX object CMakeFiles/temporal.dir/src/temporal_window.cpp.o
+[ 23%] Building CXX object CMakeFiles/temporal.dir/src/temporal_visual.cpp.o
+[ 28%] Building CXX object CMakeFiles/temporal.dir/src/temporal_structure.cpp.o
+[ 33%] Building CXX object CMakeFiles/temporal.dir/src/temporal_map.cpp.o
+[ 38%] Building CXX object CMakeFiles/temporal.dir/src/temporal_landmarks.cpp.o
+[ 42%] Linking CXX static library libtemporal.a
+[ 42%] Built target temporal
+[ 52%] Building CXX object CMakeFiles/temporal_lio_test.dir/tests/temporal_lio_test.cpp.o
+[ 52%] Building CXX object CMakeFiles/temporal_deskew_test.dir/tests/temporal_deskew_test.cpp.o
+[ 57%] Linking CXX executable temporal_deskew_test
+[ 57%] Built target temporal_deskew_test
+[ 61%] Building CXX object CMakeFiles/temporal_landmarks_test.dir/tests/temporal_landmarks_test.cpp.o
+[ 66%] Linking CXX executable temporal_landmarks_test
+[ 66%] Built target temporal_landmarks_test
+[ 71%] Building CXX object CMakeFiles/temporal_visual_test.dir/tests/temporal_visual_test.cpp.o
+[ 76%] Linking CXX executable temporal_lio_test
+[ 76%] Built target temporal_lio_test
+[ 80%] Building CXX object CMakeFiles/temporal_map_test.dir/tests/temporal_map_test.cpp.o
+[ 85%] Linking CXX executable temporal_map_test
+[ 85%] Built target temporal_map_test
+[ 90%] Building CXX object CMakeFiles/gauge_moving.dir/probe/plane_gauge_moving.cpp.o
+[ 95%] Linking CXX executable gauge_moving
+[ 95%] Built target gauge_moving
+[100%] Linking CXX executable temporal_visual_test
+[100%] Built target temporal_visual_test
+Internal ctest changing into directory: /probe/online-relative-plane/build
+Test project /probe/online-relative-plane/build
+    Start 1: temporal_lio
+1/5 Test #1: temporal_lio .....................   Passed   10.78 sec
+    Start 2: temporal_deskew
+2/5 Test #2: temporal_deskew ..................   Passed    0.05 sec
+    Start 3: temporal_landmarks
+3/5 Test #3: temporal_landmarks ...............   Passed    1.30 sec
+    Start 4: temporal_visual
+4/5 Test #4: temporal_visual ..................   Passed    0.35 sec
+    Start 5: temporal_map
+5/5 Test #5: temporal_map .....................   Passed    0.98 sec
+
+100% tests passed, 0 tests failed out of 5
+
+Total Test time (real) =  13.46 sec
+0.1 mean_difference 0 position_variance_difference 1 1 1 expected 1 1 1 shifted_mean_error 0 shifted_covariance_difference 0
+0.6 mean_difference 1.06322541813733e-13 position_variance_difference 1.00000000000157 1.00000000000039 1.00000000000427 expected 1 1 1 shifted_mean_error 8.88178419700125e-16 shifted_covariance_difference 2.84948992523075e-15
+1.1 mean_difference 1.9462885562737e-13 position_variance_difference 0.999999999995344  1.00000000000239  1.00000000001338 expected 1 1 1 shifted_mean_error 0 shifted_covariance_difference 3.92275368525354e-15
+1.6 mean_difference 2.08155725024404e-13 position_variance_difference 0.999999999994283  1.00000000001063  1.00000000001114 expected 1 1 1 shifted_mean_error 3.66205343881779e-15 shifted_covariance_difference 6.13032059855314e-15
+2.1 mean_difference 1.62182587472865e-13 position_variance_difference 0.999999999999804   1.0000000000115  1.00000000002052 expected 1 1 1 shifted_mean_error 1.55431223447522e-15 shifted_covariance_difference 4.77435872174937e-15
+2.6 mean_difference 1.53752978171027e-13 position_variance_difference 1.00000000000323 1.00000000001174 1.00000000002492 expected 1 1 1 shifted_mean_error 1.33226762955019e-15 shifted_covariance_difference 6.72865372598583e-15
+3.1 mean_difference 4.56910183433286e-14 position_variance_difference 0.999999999998983  1.00000000001139  1.00000000002694 expected 1 1 1 shifted_mean_error 2.66453525910038e-15 shifted_covariance_difference 2.94181294061232e-15
+3.6 mean_difference 1.47273311869509e-13 position_variance_difference 0.999999999996925  1.00000000001559  1.00000000003707 expected 1 1 1 shifted_mean_error 1.33226762955019e-15 shifted_covariance_difference 7.98977750057909e-15
+4.1 mean_difference 2.64743978829171e-13 position_variance_difference 0.999999999997089  1.00000000002183  1.00000000003868 expected 1 1 1 shifted_mean_error 1.33226762955019e-15 shifted_covariance_difference 6.29127177277146e-15
+4.6 mean_difference 3.51471101435459e-13 position_variance_difference 1.00000000000176 1.00000000002378 1.00000000003325 expected 1 1 1 shifted_mean_error 4.44089209850063e-16 shifted_covariance_difference 3.81413990913798e-15
+5.1 mean_difference 3.80899271862673e-13 position_variance_difference 1.00000000000814 1.00000000002473 1.00000000003031 expected 1 1 1 shifted_mean_error 4.44089209850063e-16 shifted_covariance_difference 4.48982741623518e-15
+5.6 mean_difference 3.40202294680125e-13 position_variance_difference 1.00000000000682 1.00000000002633 1.00000000004429 expected 1 1 1 shifted_mean_error 3.66205343881779e-15 shifted_covariance_difference 3.26462900174545e-15
+6 mean_difference 2.94653953160821e-13 position_variance_difference  1.0000000000058 1.00000000002141 1.00000000003948 expected 1 1 1 shifted_mean_error 4.18952922667542e-15 shifted_covariance_difference 8.48850153986006e-15

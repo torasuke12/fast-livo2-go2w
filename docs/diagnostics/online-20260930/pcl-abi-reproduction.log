@@ -1,0 +1,26 @@
+/usr/lib/x86_64-linux-gnu/libpcl_common.so
+/usr/lib/x86_64-linux-gnu/libpcl_common.so.1.12
+/usr/lib/x86_64-linux-gnu/libpcl_common.so.1.12.1
+/usr/lib/x86_64-linux-gnu/libpcl_filters.so
+/usr/lib/x86_64-linux-gnu/libpcl_filters.so.1.12
+/usr/lib/x86_64-linux-gnu/libpcl_filters.so.1.12.1
+Eigen alignment 32 malloc already aligned 0
+1 output 884
+bash: line 1:    13 Segmentation fault      (core dumped) /tmp/native
+Eigen alignment 16 malloc already aligned 1
+1 output 884
+2 output 1826
+3 output 2710
+4 output 3652
+5 output 4565
+6 output 5478
+7 output 6420
+8 output 7350
+9 output 8246
+10 output 9129
+11 output 9268
+12 output 9428
+13 output 9570
+14 output 9754
+15 output 9898
+16 output 10069

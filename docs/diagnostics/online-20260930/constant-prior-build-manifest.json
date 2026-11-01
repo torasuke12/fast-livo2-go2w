@@ -1,0 +1,10 @@
+{
+  "definition": "Frozen relative-plane-fast build with only temporal_factors marginal QR residual-only row removal; regression test added. Production source/install remain unchanged.",
+  "base_binary_sha256": "a618fa6ad3e380a2169af6e7620683ffc4d05fc1ee5c4326188f5ac569007de1",
+  "base_temporal_library_sha256": "19b421f6103a37ab934986b5da497b52351f8609e8a60295b2d787809a24de6f",
+  "changed_source_sha256": "6c02a6a8ebd141f3d4a78fa3966cf6d6d61689a46151086b08a9d3776d4f4ce5",
+  "changed_test_sha256": "6bac23bbca5f4b8f301e75a5eda4bf1716f5f8a01873997c4640119ee7697f4a",
+  "binary_sha256": "4342c49146894b2317dabba6bb36667b399fbe2d05e3156cacd7b23b37fa2d03",
+  "mapping_sha256": "bc2923a805f8be7bc77395b251ee9dc6a2e68f628965e6ac50ffe8b8a7fe8f76",
+  "tests_passed": 16
+}

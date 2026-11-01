@@ -1,0 +1,8 @@
+{
+  "rows": 1354,
+  "last_time": 138.699786425,
+  "first_numeric_time": 3.40009045601,
+  "max_position_m": 0.14910046938002747,
+  "last_position_m": 0.034923671615534745,
+  "interpretation": "Partial repetition comparison, not full completion. Different numerical trajectories despite same input and parameters."
+}

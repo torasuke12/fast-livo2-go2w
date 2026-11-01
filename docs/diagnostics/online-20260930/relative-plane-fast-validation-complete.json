@@ -1,0 +1,101 @@
+{
+  "source_matches_snapshot": true,
+  "binary_unchanged": true,
+  "integrity_audits_complete": true,
+  "no_alignment": true,
+  "regions": {
+    "relative-plane-fast-lio": {
+      "evaluation": {
+        "points": 9568,
+        "overlap_15cm": 0.39255852842809363,
+        "nearest_median_m": 0.26067525893960064,
+        "nearest_p90_m": 1.2655005640392907,
+        "inlier_plane_rmse_m": 0.06594188066850892
+      },
+      "stairs": {
+        "points": 49767,
+        "overlap_15cm": 0.5466875640484659,
+        "nearest_median_m": 0.11989664982642159,
+        "nearest_p90_m": 1.570515951969631,
+        "inlier_plane_rmse_m": 0.06238737419645988
+      },
+      "upper-corridor": {
+        "points": 413880,
+        "overlap_15cm": 0.9176113849424954,
+        "nearest_median_m": 0.04572108238396268,
+        "nearest_p90_m": 0.1322525433335362,
+        "inlier_plane_rmse_m": 0.043018254193898264
+      }
+    },
+    "relative-plane-fast-lio-repeat": {
+      "evaluation": {
+        "points": 9534,
+        "overlap_15cm": 0.2842458569330816,
+        "nearest_median_m": 0.3025122706947968,
+        "nearest_p90_m": 1.283729803669945,
+        "inlier_plane_rmse_m": 0.053935985522447626
+      },
+      "stairs": {
+        "points": 49781,
+        "overlap_15cm": 0.49719772604005547,
+        "nearest_median_m": 0.1505963165855783,
+        "nearest_p90_m": 1.5636946103629032,
+        "inlier_plane_rmse_m": 0.08538684141835402
+      },
+      "upper-corridor": {
+        "points": 418766,
+        "overlap_15cm": 0.9300683436573169,
+        "nearest_median_m": 0.0507975733884378,
+        "nearest_p90_m": 0.12359131102205018,
+        "inlier_plane_rmse_m": 0.04378465511502057
+      }
+    },
+    "relative-plane-fast-weak-livo": {
+      "evaluation": {
+        "points": 11438,
+        "overlap_15cm": 0.2062423500611995,
+        "nearest_median_m": 0.5379701030274147,
+        "nearest_p90_m": 1.2362896611813843,
+        "inlier_plane_rmse_m": 0.07716059025062172
+      },
+      "stairs": {
+        "points": 66025,
+        "overlap_15cm": 0.25290420295342675,
+        "nearest_median_m": 0.5212512566704953,
+        "nearest_p90_m": 1.830193315067553,
+        "inlier_plane_rmse_m": 0.06723522831932126
+      },
+      "upper-corridor": {
+        "points": 512341,
+        "overlap_15cm": 0.889358844988006,
+        "nearest_median_m": 0.03718992148764001,
+        "nearest_p90_m": 0.1631597515508712,
+        "inlier_plane_rmse_m": 0.035202342828609935
+      }
+    },
+    "relative-plane-fast-weak-repeat": {
+      "evaluation": {
+        "points": 11255,
+        "overlap_15cm": 0.1804531319413594,
+        "nearest_median_m": 0.5185915140412027,
+        "nearest_p90_m": 1.3869926958824552,
+        "inlier_plane_rmse_m": 0.06994973745742811
+      },
+      "stairs": {
+        "points": 66210,
+        "overlap_15cm": 0.15330010572421085,
+        "nearest_median_m": 0.6299620745515606,
+        "nearest_p90_m": 2.0803050106923022,
+        "inlier_plane_rmse_m": 0.06790488135331242
+      },
+      "upper-corridor": {
+        "points": 511252,
+        "overlap_15cm": 0.8898703574753741,
+        "nearest_median_m": 0.03752901328485031,
+        "nearest_p90_m": 0.1612785747696057,
+        "inlier_plane_rmse_m": 0.03560297644682691
+      }
+    }
+  },
+  "interpretation": "Integrity and repetition checked. Same-wall identity and practical room overlap still require reviewing the unaligned clouds; this marker alone is not an accuracy acceptance."
+}

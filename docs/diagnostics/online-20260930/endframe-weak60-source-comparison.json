@@ -1,0 +1,39 @@
+{
+  "endframe-weak60": {
+    "summary": {
+      "complete": true,
+      "bag_exhausted": true,
+      "imu_messages": 12001,
+      "lidar_messages": 600,
+      "image_messages": 1798,
+      "updates": 282,
+      "keyframes": 94,
+      "last_time": 59.71076536178589
+    },
+    "temporal_window.csv": {
+      "rows": 283,
+      "all_finite": true,
+      "covariance_min_eigenvalue": 4.692809749254469e-08
+    },
+    "temporal_visual.csv": {
+      "rows": 282,
+      "all_finite": true,
+      "covariance_min_eigenvalue": 4.692809749254365e-08
+    },
+    "interval_30_60": {
+      "candidate_points": {
+        "p10": 18692.4,
+        "p50": 22222.0,
+        "p90": 26714.6
+      },
+      "pixels": {
+        "p10": 0.0,
+        "p50": 280.0,
+        "p90": 463.2000000000001
+      },
+      "velocity_correction_p95_mps": 0.006585798180453582,
+      "invalid_patch_evaluations_total": 0,
+      "frames_with_invalid_patch_evaluations": 0
+    }
+  }
+}

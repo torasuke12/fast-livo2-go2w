@@ -1,0 +1,13 @@
+[ 69%] Built target fast_livo2_temporal
+[ 84%] Built target fast_livo2_reprojection
+[ 92%] Building CXX object CMakeFiles/temporal_reprojection_test.dir/tests/temporal_reprojection_test.cpp.o
+[100%] Linking CXX executable temporal_reprojection_test
+[100%] Built target temporal_reprojection_test
+Internal ctest changing into directory: /external/humble_ws/build/fast_livo2
+Test project /external/humble_ws/build/fast_livo2
+    Start 1: temporal_tracked_reprojection
+1/1 Test #1: temporal_tracked_reprojection ....   Passed    0.02 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.02 sec
