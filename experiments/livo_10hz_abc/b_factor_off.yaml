@@ -1,0 +1,211 @@
+laserMapping:
+  ros__parameters:
+    common:
+      lid_topic: /livox/lidar
+      imu_topic: /livox/imu
+      img_topic: /camera/camera/color/image_raw
+      img_en: 1
+      lidar_en: 1
+      ros_driver_bug_fix: false
+    camera:
+      cam_model: RadTan
+      cam_width: 640
+      cam_height: 480
+      scale: 1.0
+      cam_fx: 607.06781
+      cam_fy: 607.022583
+      cam_cx: 313.942291
+      cam_cy: 253.383209
+      cam_d0: 0.0
+      cam_d1: 0.0
+      cam_d2: 0.0
+      cam_d3: 0.0
+      cam_d4: 0.0
+    extrin_calib:
+      extrinsic_T:
+      - -0.011
+      - -0.02329
+      - 0.04412
+      extrinsic_R:
+      - 1.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 1.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 1.0
+      Pcl:
+      - 0.0175
+      - -0.1138
+      - -0.112
+      Rcl:
+      - 0.0
+      - -1.0
+      - 0.0
+      - 0.313627591
+      - 0.0
+      - -0.949546068
+      - 0.949546068
+      - 0.0
+      - 0.313627591
+    time_offset:
+      imu_time_offset: 0.0
+      img_time_offset: 0.0
+      lidar_time_offset: 0.0
+      exposure_time_init: 0.0
+    preprocess:
+      hilti_en: false
+      point_filter_num: 1
+      filter_size_surf: 0.1
+      lidar_type: 8
+      scan_line: 4
+      blind: 0.5
+      feature_extract_enabled: false
+    vio:
+      max_iterations: 5
+      outlier_threshold: 500.0
+      img_point_cov: 1000.0
+      patch_size: 8
+      patch_pyrimid_level: 4
+      grid_size: 5
+      grid_n_height: 17
+      normal_en: true
+      raycast_en: false
+      inverse_composition_en: false
+      exposure_estimate_en: true
+      inv_expo_cov: 0.1
+      image_interval_sec: 0.1
+    imu:
+      imu_en: true
+      imu_int_frame: 10
+      imu_init_duration_sec: 3.0
+      acc_cov: 0.1
+      gyr_cov: 0.0001
+      gravity_est_en: false
+      ba_bg_est_en: true
+      stationary_gyr_mean_threshold: 0.1
+      stationary_gyr_std_threshold: 0.02
+      stationary_acc_std_ratio_threshold: 0.05
+      initial_rotation_cov: 0.0001
+      initial_position_cov: 0.0001
+      initial_velocity_cov: 0.001
+      initial_gyro_bias_cov: 1.0e-06
+      initial_accel_bias_cov: 0.001
+      gyro_bias_cov: 1.0e-06
+      accel_bias_cov: 1.0e-06
+    lio:
+      temporal:
+        enabled: true
+        initialization_mode: legacy_voxel
+        window_sec: 2.0
+        keyframe_sec: 0.5
+        max_nodes: 6
+        iterations: 3
+        max_source_points: 1200
+        voxel_size: 0.5
+        sample_size: 0.15
+        min_plane_points: 6
+        plane_ratio: 0.05
+        min_plane_spread: 0.01
+        max_residual: 0.2
+        point_sigma: 0.03
+        huber_delta: 2.5
+        max_imu_gap: 0.02
+        consistent_deskew: true
+        structure:
+          enabled: true
+          sigma_deg: 0.01
+          max_angle_deg: 8.0
+          min_planes: 8
+        structural_landmarks: true
+        max_landmarks: 256
+        persistent_map: false
+        plane_uncertainty: true
+        accel_saturation: 38.259
+        accel_saturation_variance: 100.0
+        visual_factor_enabled: false
+      normal_consistency:
+        enabled: false
+        neighbors: 20
+        max_neighbor_distance: 1.0
+        max_planarity_ratio: 0.1
+        min_spread_ratio: 0.1
+        max_angle_deg: 30.0
+      max_iterations: 3
+      dept_err: 0.02
+      beam_err: 0.05
+      min_eigen_value: 0.0001
+      voxel_size: 0.5
+      neighbor_voxel_radius: 1
+      correspondence_mode: voxel_plane
+      diagnostics:
+        enabled: false
+        output_dir: ''
+        detail:
+          enabled: false
+          start_sec: 140.0
+          end_sec: 325.0
+          final_only: true
+        geometry:
+          enabled: false
+      xicp:
+        enabled: false
+        diagnostics: false
+        contribution_min: 0.17364817766693041
+        contribution_strong: 0.7071067811865476
+        enough_information: 250.0
+        insufficient_information: 180.0
+        minimal_information: 35.0
+        rank_relative_tolerance: 1.0e-06
+      voxel_init_min_points: 5000
+      voxel_init_min_planes: 100
+      voxel_init_min_normal_eigenvalue: 0.02
+      voxel_init_min_duration_sec: 0.1
+      voxel_init_max_duration_sec: 2.0
+      voxel_init_max_points: 100000
+      fastlio_filter_size_map: 0.5
+      fastlio_cube_side_length: 1000.0
+      fastlio_detection_range: 100.0
+      gravity_norm_constraint: true
+      max_state_cov_for_matching: 0.01
+      max_layer: 2
+      max_points_num: 100
+      layer_init_num:
+      - 5
+      - 5
+      - 5
+      - 5
+      - 5
+    local_map:
+      map_sliding_en: false
+      half_map_size: 100
+      sliding_thresh: 8.0
+    uav:
+      imu_rate_odom: false
+      gravity_align_en: true
+    publish:
+      dense_map_en: true
+      map_en: true
+      map_publish_interval: 10
+      map_voxel_size: 0.5
+      pub_effect_point_en: false
+      pub_plane_en: false
+      pub_scan_num: 1
+      blind_rgb_points: 0.0
+    evo:
+      seq_name: go2w
+      pose_output_en: false
+    pcd_save:
+      pcd_save_en: false
+      type: 0
+      colmap_output_en: false
+      filter_size_pcd: 0.15
+      interval: -1
+    image_save:
+      img_save_en: false
+      interval: 1
+    debug:
+      plot_time: -10.0
+      frame_cnt: 6

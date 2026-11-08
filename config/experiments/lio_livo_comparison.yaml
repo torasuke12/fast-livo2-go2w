@@ -1,0 +1,20 @@
+schema: 1
+baseline_commit: f281e70ce50a7126b4a8d6bb38df9d95a98bc0df
+current_params: config/fast_livo2/go2w_mid360_online.yaml
+bags:
+  sep07: bags/raw_20260907_114335
+  oct20: bags/raw_20261020_043530
+variants: [baseline, current]
+modes: [A, B, C]
+rate: 0.1
+prefix_seconds: 45
+image_interval_seconds: 0.1
+image_tolerance_seconds: 0.0001
+keyframe_seconds: 0.5
+resources:
+  cpus: 6
+  memory_gib: 10
+  rss_stop_gib: 9
+  host_available_stop_gib: 3
+  threads: 1
+  poll_seconds: 1

@@ -1,0 +1,199 @@
+{
+  "bag": "raw_20260907_114335",
+  "sample_interval_s": 0.5,
+  "common_time_s": [
+    3.5,
+    647.5
+  ],
+  "runs": {
+    "A": {
+      "path": "/home/srg-f-rei/fast_livo2_go2w/src/fast-livo2-go2w/diagnostic_captures/online-20260930/relative-plane-fast-lio",
+      "summary": {
+        "complete": true,
+        "bag_exhausted": true,
+        "imu_messages": 129619,
+        "lidar_messages": 6481,
+        "image_messages": 0,
+        "updates": 6448,
+        "keyframes": 1215,
+        "last_time": 648.0996406078339
+      },
+      "lidar_updates": {
+        "count": 6448,
+        "interval_s": {
+          "median": 0.09998798399999487,
+          "p95": 0.10076746920001937,
+          "max": 0.10232996899992486
+        },
+        "matches_per_update": {
+          "median": 1182.0,
+          "p95": 1200.0,
+          "max": 1200.0
+        }
+      },
+      "end_position_m": [
+        -1.1048482743043453,
+        -0.11191632854899411,
+        -0.0499494482943252
+      ]
+    },
+    "B": {
+      "path": "/home/srg-f-rei/fast_livo2_go2w/src/fast-livo2-go2w/experiments/livo_10hz_abc/b_full/frontend",
+      "summary": {
+        "complete": true,
+        "bag_exhausted": true,
+        "imu_messages": 129619,
+        "lidar_messages": 6481,
+        "image_messages": 19428,
+        "updates": 6443,
+        "keyframes": 1289,
+        "last_time": 647.9177587032318
+      },
+      "lidar_updates": {
+        "count": 6444,
+        "interval_s": {
+          "median": 0.10006999999995969,
+          "p95": 0.10007381499997337,
+          "max": 0.10011792183000034
+        },
+        "matches_per_update": {
+          "median": 1182.0,
+          "p95": 1200.0,
+          "max": 1200.0
+        }
+      },
+      "end_position_m": [
+        0.9259879951666038,
+        0.04674073448371728,
+        -0.10304386643711988
+      ],
+      "image_updates": {
+        "count": 6443,
+        "status": {
+          "no_constraints": 6,
+          "factor_disabled": 6437
+        },
+        "pixels": {
+          "median": 6080.0,
+          "p95": 9600.0,
+          "max": 11648.0
+        }
+      }
+    },
+    "C": {
+      "path": "/home/srg-f-rei/fast_livo2_go2w/src/fast-livo2-go2w/diagnostic_captures/adopted_online_20260907_20261028/livo/frontend",
+      "summary": {
+        "complete": true,
+        "bag_exhausted": true,
+        "imu_messages": 129619,
+        "lidar_messages": 6481,
+        "image_messages": 19428,
+        "updates": 6443,
+        "keyframes": 1289,
+        "last_time": 647.9177587032318
+      },
+      "lidar_updates": {
+        "count": 6444,
+        "interval_s": {
+          "median": 0.10006999999995969,
+          "p95": 0.10007381499997337,
+          "max": 0.10011792183000034
+        },
+        "matches_per_update": {
+          "median": 1182.0,
+          "p95": 1200.0,
+          "max": 1200.0
+        }
+      },
+      "end_position_m": [
+        2.2274277253682806,
+        5.021578048048616,
+        -1.00069780451317
+      ],
+      "image_updates": {
+        "count": 6443,
+        "status": {
+          "no_constraints": 7,
+          "updated": 6436
+        },
+        "pixels": {
+          "median": 5696.0,
+          "p95": 10944.0,
+          "max": 14272.0
+        }
+      }
+    }
+  },
+  "pairs": {
+    "AB": {
+      "position_separation_m": {
+        "median": 0.5962160781201191,
+        "p95": 2.0376002747009494,
+        "max": 2.1724941535961007
+      },
+      "rotation_separation_deg": {
+        "median": 0.29853389258230917,
+        "p95": 2.3205226460682415,
+        "max": 8.30132793812404
+      },
+      "at_s": {
+        "10": 0.0019199632822995587,
+        "20": 0.034409988407710645,
+        "30": 0.058347599666375954,
+        "60": 0.22600558629697445,
+        "120": 0.25279257509815833,
+        "240": 0.48877157308798824,
+        "320": 0.5732512662232172,
+        "480": 1.022107559532227,
+        "640": 2.040019764927069
+      }
+    },
+    "BC": {
+      "position_separation_m": {
+        "median": 13.767605315163827,
+        "p95": 49.563834153791746,
+        "max": 57.02690806991968
+      },
+      "rotation_separation_deg": {
+        "median": 22.825872662576053,
+        "p95": 28.73747893328835,
+        "max": 28.955936783646038
+      },
+      "at_s": {
+        "10": 0.00544599275391664,
+        "20": 0.04854112356142548,
+        "30": 1.0224628920322727,
+        "60": 5.559497651086767,
+        "120": 10.879845844008157,
+        "240": 21.413295167466334,
+        "320": 54.040706438659285,
+        "480": 45.95267065692243,
+        "640": 5.217278250357754
+      }
+    },
+    "AC": {
+      "position_separation_m": {
+        "median": 13.603054717056752,
+        "p95": 49.60228355363764,
+        "max": 57.03316400321629
+      },
+      "rotation_separation_deg": {
+        "median": 22.704279975442002,
+        "p95": 28.802089585251558,
+        "max": 35.012242725227225
+      },
+      "at_s": {
+        "10": 0.006971393675531498,
+        "20": 0.055323460108977325,
+        "30": 0.9663694542839832,
+        "60": 5.357290450514149,
+        "120": 10.668585983293042,
+        "240": 21.48346122074984,
+        "320": 54.03392074090304,
+        "480": 45.40613011448811,
+        "640": 6.193091277349751
+      }
+    }
+  },
+  "limitations": "No ground truth; pairwise trajectory separation is not absolute error."
+}
