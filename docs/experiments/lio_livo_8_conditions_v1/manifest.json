@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "spec_id": "lio_livo_8_conditions_v1",
+  "frozen_on": "2026-11-08",
+  "purpose": "environment-dependent behavior and image contribution; no estimator tuning",
+  "evaluation_exclusions": [
+    "departure_return_comparison",
+    "revisit_map_alignment",
+    "room_nn",
+    "wall_return_separation",
+    "endpoint_closure",
+    "ATE_without_ground_truth"
+  ],
+  "source_snapshot": {
+    "path": "docs/experiments/lio_livo_8_conditions_v1/current_estimator_source.tar.gz",
+    "sha256": "d92a0fb8c704658fabd5024e1aebfe47e7e38a08d8c9c412067e8f3320114aea"
+  },
+  "source_snapshot_note": "current dirty source; binary-to-source reproducible build not verified",
+  "binaries": {
+    "f281": {
+      "path": "diagnostic_captures/pre_oct1_f281e70_20261020/workspace/install-docker/fast_livo2/lib/fast_livo2/fastlivo2_offline",
+      "sha256": "5a045a538e5a3ddac7c340cda037bb88a723d45c2d4fa1eaccabd87ca6bac5e3"
+    },
+    "temporal2": {
+      "path": "humble_ws/build/fast_livo2/fastlivo2_offline",
+      "sha256": "a618fa6ad3e380a2169af6e7620683ffc4d05fc1ee5c4326188f5ac569007de1"
+    }
+  },
+  "bags": {
+    "sep07": {
+      "path": "bags/raw_20260907_114335",
+      "metadata": {
+        "path": "bags/raw_20260907_114335/metadata.yaml",
+        "sha256": "8be7fe8db708c433e8c7c831710b1b518abbcd25e7acfa8e6db630a4d2fe4469"
+      },
+      "data_files": [
+        {
+          "path": "bags/raw_20260907_114335/raw_20260907_114335_0.db3",
+          "bytes": 21367996416,
+          "mtime_ns": 1788783036578662736,
+          "sha256": null
+        }
+      ],
+      "identity_status": "payload_hash_pending; size/mtime/metadata are not content identity proof"
+    },
+    "oct20": {
+      "path": "bags/raw_20261020_043530",
+      "metadata": {
+        "path": "bags/raw_20261020_043530/metadata.yaml",
+        "sha256": "b13f8cbfe62226f62260a4a3e35f2f7dc14b7a29d17b14670d26743b94d24102"
+      },
+      "data_files": [
+        {
+          "path": "bags/raw_20261020_043530/raw_20261020_043530_0.db3",
+          "bytes": 11182628864,
+          "mtime_ns": 1792472274571945088,
+          "sha256": null
+        }
+      ],
+      "identity_status": "payload_hash_pending; size/mtime/metadata are not content identity proof"
+    }
+  },
+  "runs": [
+    {
+      "id": "sep07_f281_lio",
+      "bag_id": "sep07",
+      "family": "f281",
+      "mode": "lio",
+      "frozen_config": {
+        "path": "docs/experiments/lio_livo_8_conditions_v1/configs/f281_lio.yaml",
+        "sha256": "f7fcf98d9d9eebbc2a13420c6202719ef4ba270c93ba5b407bf13d1e6b32f532"
+      },
+      "capture_frontend": "diagnostic_captures/pre_oct1_f281e70_20260907/lio/frontend",
+      "capture_params": {
+        "path": "diagnostic_captures/pre_oct1_f281e70_20260907/lio/params.yaml",
+        "sha256": "f7fcf98d9d9eebbc2a13420c6202719ef4ba270c93ba5b407bf13d1e6b32f532"
+      },
+      "poses": {
+        "path": "diagnostic_captures/pre_oct1_f281e70_20260907/lio/frontend/poses.csv",
+        "sha256": "c21c7d2540fe1383a048b717f82f020a25bf358399a80c4ae135802f37595668"
+      },
+      "historical_status": "read_all_diverged_late",
+      "parameter_differences": {},
+      "acceptance": "trajectory_available; diagnostic_schema_and_time_audit_pending"
+    },
+    {
+      "id": "sep07_f281_livo",
+      "bag_id": "sep07",
+      "family": "f281",
+      "mode": "livo",
+      "frozen_config": {
+        "path": "docs/experiments/lio_livo_8_conditions_v1/configs/f281_livo.yaml",
+        "sha256": "0099ef400137cfe7c57e769b4b64af5b9250b34f5ac7fe013eeba3dc7c967eec"
+      },
+      "capture_frontend": "diagnostic_captures/pre_oct1_f281e70_20260907/livo/frontend",
+      "capture_params": {
+        "path": "diagnostic_captures/pre_oct1_f281e70_20260907/livo/params.yaml",
+        "sha256": "0099ef400137cfe7c57e769b4b64af5b9250b34f5ac7fe013eeba3dc7c967eec"
+      },
+      "poses": {
+        "path": "diagnostic_captures/pre_oct1_f281e70_20260907/livo/frontend/poses.csv",
+        "sha256": "c8cbd614705d837ae290bacc1b87f860d898bcbbdcb500e8037519b4809afabf"
+      },
+      "historical_status": "read_all_diverged_late",
+      "parameter_differences": {},
+      "acceptance": "trajectory_available; diagnostic_schema_and_time_audit_pending"
+    },
+    {
+      "id": "oct20_f281_lio",
+      "bag_id": "oct20",
+      "family": "f281",
+      "mode": "lio",
+      "frozen_config": {
+        "path": "docs/experiments/lio_livo_8_conditions_v1/configs/f281_lio.yaml",
+        "sha256": "f7fcf98d9d9eebbc2a13420c6202719ef4ba270c93ba5b407bf13d1e6b32f532"
+      },
+      "capture_frontend": "diagnostic_captures/pre_oct1_f281e70_20261020/lio/frontend_retry",
+      "capture_params": {
+        "path": "diagnostic_captures/pre_oct1_f281e70_20261020/lio/params.yaml",
+        "sha256": "f7fcf98d9d9eebbc2a13420c6202719ef4ba270c93ba5b407bf13d1e6b32f532"
+      },
+      "poses": {
+        "path": "diagnostic_captures/pre_oct1_f281e70_20261020/lio/frontend_retry/poses.csv",
+        "sha256": "65c3c0bebaa3e7357ac5cba767dc20873fdce586bde80b3834bb8fa92feb53a4"
+      },
+      "historical_status": "read_all_teardown_exit139",
+      "parameter_differences": {},
+      "acceptance": "trajectory_available; diagnostic_schema_and_time_audit_pending"
+    },
+    {
+      "id": "oct20_f281_livo",
+      "bag_id": "oct20",
+      "family": "f281",
+      "mode": "livo",
+      "frozen_config": {
+        "path": "docs/experiments/lio_livo_8_conditions_v1/configs/f281_livo.yaml",
+        "sha256": "0099ef400137cfe7c57e769b4b64af5b9250b34f5ac7fe013eeba3dc7c967eec"
+      },
+      "capture_frontend": "diagnostic_captures/pre_oct1_f281e70_20261020/livo/frontend",
+      "capture_params": {
+        "path": "diagnostic_captures/pre_oct1_f281e70_20261020/livo/params.yaml",
+        "sha256": "0099ef400137cfe7c57e769b4b64af5b9250b34f5ac7fe013eeba3dc7c967eec"
+      },
+      "poses": {
+        "path": "diagnostic_captures/pre_oct1_f281e70_20261020/livo/frontend/poses.csv",
+        "sha256": "4a8da7f27579dd4473b3e47f583e2aac96d6f4c03bee30eb0f6738dac6c66f28"
+      },
+      "historical_status": "read_all_teardown_exit139",
+      "parameter_differences": {},
+      "acceptance": "trajectory_available; diagnostic_schema_and_time_audit_pending"
+    },
+    {
+      "id": "sep07_temporal2_lio",
+      "bag_id": "sep07",
+      "family": "temporal2",
+      "mode": "lio",
+      "frozen_config": {
+        "path": "docs/experiments/lio_livo_8_conditions_v1/configs/temporal2_lio.yaml",
+        "sha256": "4e4105bf0e5cb2ba2a64c7517d5968d8cbfaf49f38c5be38a535222ba92c9860"
+      },
+      "capture_frontend": "diagnostic_captures/online-20260930/relative-plane-fast-lio",
+      "capture_params": {
+        "path": "diagnostic_captures/online-20260930/relative-plane-fast-lio.yaml",
+        "sha256": "19535e27dc47c04ec3f5363e593794878ac9b6ca4e60a43488305eeb29e5c338"
+      },
+      "poses": {
+        "path": "diagnostic_captures/online-20260930/relative-plane-fast-lio/poses.csv",
+        "sha256": "eca65c5b73c08b7e04fde423d52a419436bd910fb5003cf081ed7a48756ab744"
+      },
+      "historical_status": "read_all",
+      "parameter_differences": {
+        "lio.diagnostics.detail.enabled": {
+          "frozen": false,
+          "capture": true
+        },
+        "lio.diagnostics.geometry.enabled": {
+          "frozen": false,
+          "capture": true
+        },
+        "offline.duration": {
+          "frozen": null,
+          "capture": 0.0
+        },
+        "offline.keyframe_interval": {
+          "frozen": null,
+          "capture": 0.5
+        },
+        "publish.map_en": {
+          "frozen": true,
+          "capture": false
+        }
+      },
+      "acceptance": "trajectory_available; diagnostic_schema_and_time_audit_pending"
+    },
+    {
+      "id": "sep07_temporal2_livo",
+      "bag_id": "sep07",
+      "family": "temporal2",
+      "mode": "livo",
+      "frozen_config": {
+        "path": "docs/experiments/lio_livo_8_conditions_v1/configs/temporal2_livo.yaml",
+        "sha256": "7bc6e3f32c50afa8b8efc0cb14246debe5b0d0f7fd53fbb4f1ee2ded6db03147"
+      },
+      "capture_frontend": "diagnostic_captures/adopted_online_20260907_20261028/livo/frontend",
+      "capture_params": {
+        "path": "diagnostic_captures/adopted_online_20260907_20261028/livo/params.yaml",
+        "sha256": "20300a20f1a42ca6ea260b67d8b99d7cd85df78c13f2373458cc70e640625cb7"
+      },
+      "poses": {
+        "path": "diagnostic_captures/adopted_online_20260907_20261028/livo/frontend/poses.csv",
+        "sha256": "f00d93fba967786ba676ae9250d9e98fcba432e48633d4eac521ae08695d8ff9"
+      },
+      "historical_status": "read_all",
+      "parameter_differences": {
+        "offline.duration": {
+          "frozen": null,
+          "capture": 0.0
+        },
+        "offline.keyframe_interval": {
+          "frozen": null,
+          "capture": 0.5
+        },
+        "offline.rate": {
+          "frozen": null,
+          "capture": 0.0
+        },
+        "publish.map_en": {
+          "frozen": true,
+          "capture": false
+        }
+      },
+      "acceptance": "trajectory_available; diagnostic_schema_and_time_audit_pending"
+    },
+    {
+      "id": "oct20_temporal2_lio",
+      "bag_id": "oct20",
+      "family": "temporal2",
+      "mode": "lio",
+      "frozen_config": {
+        "path": "docs/experiments/lio_livo_8_conditions_v1/configs/temporal2_lio.yaml",
+        "sha256": "4e4105bf0e5cb2ba2a64c7517d5968d8cbfaf49f38c5be38a535222ba92c9860"
+      },
+      "capture_frontend": "diagnostic_captures/temporal_vs_legacy_20261020/temporal_lio/frontend",
+      "capture_params": {
+        "path": "diagnostic_captures/temporal_vs_legacy_20261020/temporal_lio/params.yaml",
+        "sha256": "5f45d6eb5b4b0375cbb51be86be1c4abb40396cd3fcbeb88cde9108b63fe922c"
+      },
+      "poses": {
+        "path": "diagnostic_captures/temporal_vs_legacy_20261020/temporal_lio/frontend/poses.csv",
+        "sha256": "67598838466eb16574717721982f6aa08603fe58a12d9029cfa53d49557e7252"
+      },
+      "historical_status": "partial_235s_not_certified_healthy",
+      "parameter_differences": {
+        "offline.duration": {
+          "frozen": null,
+          "capture": 0.0
+        },
+        "offline.keyframe_interval": {
+          "frozen": null,
+          "capture": 0.5
+        },
+        "offline.rate": {
+          "frozen": null,
+          "capture": 0.0
+        },
+        "publish.map_en": {
+          "frozen": true,
+          "capture": false
+        }
+      },
+      "acceptance": "trajectory_available; diagnostic_schema_and_time_audit_pending"
+    },
+    {
+      "id": "oct20_temporal2_livo",
+      "bag_id": "oct20",
+      "family": "temporal2",
+      "mode": "livo",
+      "frozen_config": {
+        "path": "docs/experiments/lio_livo_8_conditions_v1/configs/temporal2_livo.yaml",
+        "sha256": "7bc6e3f32c50afa8b8efc0cb14246debe5b0d0f7fd53fbb4f1ee2ded6db03147"
+      },
+      "capture_frontend": "diagnostic_captures/adopted_online_20261020_20261101/livo_prefix_125s/frontend",
+      "capture_params": {
+        "path": "diagnostic_captures/adopted_online_20261020_20261101/livo_prefix_125s/params.yaml",
+        "sha256": "0e0bf7b15626213a0496e95d142b9b6a79f563de005077e34078e620051da51f"
+      },
+      "poses": {
+        "path": "diagnostic_captures/adopted_online_20261020_20261101/livo_prefix_125s/frontend/poses.csv",
+        "sha256": "7d85c98392485274d4736c784c7b0e1b68de14cbb80968198197f5a808a142a7"
+      },
+      "historical_status": "supervised_stop_122_9s",
+      "parameter_differences": {
+        "lio.diagnostics.detail.enabled": {
+          "frozen": false,
+          "capture": true
+        },
+        "lio.diagnostics.detail.end_sec": {
+          "frozen": 325.0,
+          "capture": 125.0
+        },
+        "lio.diagnostics.detail.start_sec": {
+          "frozen": 140.0,
+          "capture": 0.0
+        },
+        "lio.diagnostics.enabled": {
+          "frozen": false,
+          "capture": true
+        },
+        "lio.diagnostics.output_dir": {
+          "frozen": "",
+          "capture": "/home/srg-f-rei/fast_livo2_go2w/src/fast-livo2-go2w/diagnostic_captures/adopted_online_20261020_20261101/livo_prefix_125s/frontend/diagnostics"
+        },
+        "offline.duration": {
+          "frozen": null,
+          "capture": 125.0
+        },
+        "offline.keyframe_interval": {
+          "frozen": null,
+          "capture": 0.5
+        },
+        "offline.rate": {
+          "frozen": null,
+          "capture": 0.5
+        },
+        "publish.map_en": {
+          "frozen": true,
+          "capture": false
+        }
+      },
+      "acceptance": "trajectory_available; diagnostic_schema_and_time_audit_pending"
+    }
+  ],
+  "safety_policy": "AGENTS.md",
+  "analysis_contract": "README.md"
+}
